@@ -1,24 +1,23 @@
 //
-//  BotellasViewController.m
+//  ElectricidadViewController.m
 //  darsapp
 //
-//  Created by inf227al on 6/05/14.
+//  Created by inf227al on 7/05/14.
 //  Copyright (c) 2014 ___greensoft___. All rights reserved.
 //
 
-#import "BotellasViewController.h"
+#import "ElectricidadViewController.h"
 
-@interface BotellasViewController ()
+@interface ElectricidadViewController ()
 
 @property (nonatomic, strong) NSArray *items;
 
 @end
 
-@implementation BotellasViewController
-
+@implementation ElectricidadViewController
 
 //para el carrusel
-@synthesize carruselbotellas;
+@synthesize carruselelectricidad;
 @synthesize items;
 
 - (void)awakeFromNib
@@ -28,18 +27,19 @@
     //data of some kind - don't store data in your item views
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
-    self.items = @[@"Titulo_Plastico.png",@"1_Materiales.png",@"2_ProduccionPlastico.png",@"2_Proceso.png",@"2_Separacion.png",@"3_Fabricacion.png",@"4_ProcesoFabricacion.png",@"5_TrasladoYConsumo.png",@"6_Segregacion.png"];
+    self.items = @[];
     NSLog(@"%d",self.items.count);
-
+    
 }
 
 - (void)dealloc
 {
     //it's a good idea to set these to nil here to avoid
     //sending messages to a deallocated viewcontroller
-    carruselbotellas.delegate = nil;
-    carruselbotellas.dataSource = nil;
+    carruselelectricidad.delegate = nil;
+    carruselelectricidad.dataSource = nil;
 }
+
 
 
 
@@ -55,8 +55,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //configure carousel
-    carruselbotellas.type = iCarouselTypeInvertedTimeMachine;
+    // Do any additional setup after loading the view.
+    carruselelectricidad.type=iCarouselTypeInvertedTimeMachine;
 }
 
 - (void)didReceiveMemoryWarning
@@ -116,6 +116,5 @@
 {
     
 }
-
 
 @end

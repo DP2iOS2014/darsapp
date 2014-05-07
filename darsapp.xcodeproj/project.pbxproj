@@ -28,6 +28,17 @@
 		129D4D961919A70400D12423 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4D951919A70400D12423 /* iCarousel.m */; };
 		129D4D991919A86400D12423 /* BotellasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4D981919A86400D12423 /* BotellasViewController.m */; };
 		129D4D9C1919ADF200D12423 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4D9B1919ADF200D12423 /* page.png */; };
+		129D4D9F1919B74500D12423 /* InicioJuegoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4D9E1919B74500D12423 /* InicioJuegoViewController.m */; };
+		129D4DA31919BE2100D12423 /* RuletaSinFondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DA21919BE2100D12423 /* RuletaSinFondo.png */; };
+		129D4DA51919BE2A00D12423 /* botonSinFondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DA41919BE2900D12423 /* botonSinFondo.png */; };
+		129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DA71919BE6800D12423 /* RuletaJuegoViewController.m */; };
+		129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DAA1919C14900D12423 /* PreguntasViewController.m */; };
+		129D4DB01919C27200D12423 /* relojFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAC1919C27200D12423 /* relojFinal.png */; };
+		129D4DB11919C27200D12423 /* otraFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAD1919C27200D12423 /* otraFinal.png */; };
+		129D4DB21919C27200D12423 /* bombaFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAE1919C27200D12423 /* bombaFinal.png */; };
+		129D4DB31919C27200D12423 /* againFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAF1919C27200D12423 /* againFinal.png */; };
+		129D4DB61919C30700D12423 /* ClaseRespuesta.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DB51919C30700D12423 /* ClaseRespuesta.m */; };
+		129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DB81919C3DF00D12423 /* ClasePregunta.m */; };
 		129EE5D019085475008A72CF /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EE5CF19085475008A72CF /* email.png */; };
 		129EE5D21908679B008A72CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129EE5D11908679B008A72CF /* MessageUI.framework */; };
 		129EE5D519088A4C008A72CF /* NoticiasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EE5D419088A4C008A72CF /* NoticiasTableViewController.m */; };
@@ -130,6 +141,22 @@
 		129D4D971919A86400D12423 /* BotellasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotellasViewController.h; sourceTree = "<group>"; };
 		129D4D981919A86400D12423 /* BotellasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotellasViewController.m; sourceTree = "<group>"; };
 		129D4D9B1919ADF200D12423 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
+		129D4D9D1919B74500D12423 /* InicioJuegoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InicioJuegoViewController.h; sourceTree = "<group>"; };
+		129D4D9E1919B74500D12423 /* InicioJuegoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InicioJuegoViewController.m; sourceTree = "<group>"; };
+		129D4DA21919BE2100D12423 /* RuletaSinFondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RuletaSinFondo.png; sourceTree = "<group>"; };
+		129D4DA41919BE2900D12423 /* botonSinFondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botonSinFondo.png; sourceTree = "<group>"; };
+		129D4DA61919BE6800D12423 /* RuletaJuegoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuletaJuegoViewController.h; sourceTree = "<group>"; };
+		129D4DA71919BE6800D12423 /* RuletaJuegoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuletaJuegoViewController.m; sourceTree = "<group>"; };
+		129D4DA91919C14900D12423 /* PreguntasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreguntasViewController.h; sourceTree = "<group>"; };
+		129D4DAA1919C14900D12423 /* PreguntasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreguntasViewController.m; sourceTree = "<group>"; };
+		129D4DAC1919C27200D12423 /* relojFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = relojFinal.png; sourceTree = "<group>"; };
+		129D4DAD1919C27200D12423 /* otraFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otraFinal.png; sourceTree = "<group>"; };
+		129D4DAE1919C27200D12423 /* bombaFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bombaFinal.png; sourceTree = "<group>"; };
+		129D4DAF1919C27200D12423 /* againFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = againFinal.png; sourceTree = "<group>"; };
+		129D4DB41919C30700D12423 /* ClaseRespuesta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClaseRespuesta.h; sourceTree = "<group>"; };
+		129D4DB51919C30700D12423 /* ClaseRespuesta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClaseRespuesta.m; sourceTree = "<group>"; };
+		129D4DB71919C3DF00D12423 /* ClasePregunta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClasePregunta.h; sourceTree = "<group>"; };
+		129D4DB81919C3DF00D12423 /* ClasePregunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClasePregunta.m; sourceTree = "<group>"; };
 		129EE5CF19085475008A72CF /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		129EE5D11908679B008A72CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		129EE5D319088A4C008A72CF /* NoticiasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiasTableViewController.h; sourceTree = "<group>"; };
@@ -284,6 +311,36 @@
 			name = "Tab Informacion";
 			sourceTree = "<group>";
 		};
+		129D4DA01919B75300D12423 /* Juego */ = {
+			isa = PBXGroup;
+			children = (
+				129D4D9D1919B74500D12423 /* InicioJuegoViewController.h */,
+				129D4D9E1919B74500D12423 /* InicioJuegoViewController.m */,
+				129D4DA61919BE6800D12423 /* RuletaJuegoViewController.h */,
+				129D4DA71919BE6800D12423 /* RuletaJuegoViewController.m */,
+				129D4DA91919C14900D12423 /* PreguntasViewController.h */,
+				129D4DAA1919C14900D12423 /* PreguntasViewController.m */,
+				129D4DB41919C30700D12423 /* ClaseRespuesta.h */,
+				129D4DB51919C30700D12423 /* ClaseRespuesta.m */,
+				129D4DB71919C3DF00D12423 /* ClasePregunta.h */,
+				129D4DB81919C3DF00D12423 /* ClasePregunta.m */,
+			);
+			name = Juego;
+			sourceTree = "<group>";
+		};
+		129D4DA11919BE0D00D12423 /* Imagenes Juego */ = {
+			isa = PBXGroup;
+			children = (
+				129D4DA21919BE2100D12423 /* RuletaSinFondo.png */,
+				129D4DA41919BE2900D12423 /* botonSinFondo.png */,
+				129D4DAC1919C27200D12423 /* relojFinal.png */,
+				129D4DAD1919C27200D12423 /* otraFinal.png */,
+				129D4DAE1919C27200D12423 /* bombaFinal.png */,
+				129D4DAF1919C27200D12423 /* againFinal.png */,
+			);
+			name = "Imagenes Juego";
+			sourceTree = "<group>";
+		};
 		12A1F6F4190AC8FC001ED3BE /* Tabbar Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +405,8 @@
 		12F4CFCE18FF147500C8BFF5 /* darsapp */ = {
 			isa = PBXGroup;
 			children = (
+				129D4DA11919BE0D00D12423 /* Imagenes Juego */,
+				129D4DA01919B75300D12423 /* Juego */,
 				129D4D9A1919A87E00D12423 /* Tab Informacion */,
 				129D4D931919A58500D12423 /* UICarrousel */,
 				120FF1FF1913F39400A697D6 /* AFNetworking */,
@@ -501,14 +560,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129D4DB11919C27200D12423 /* otraFinal.png in Resources */,
 				12F4D00418FF206F00C8BFF5 /* Facebook-400x400.png in Resources */,
 				12FF2E96190AEEC600638774 /* grey_sandbag.png in Resources */,
+				129D4DA51919BE2A00D12423 /* botonSinFondo.png in Resources */,
 				12F4D00D18FF2CD300C8BFF5 /* congruent_pentagon.png in Resources */,
 				12A1F6FE190ACC56001ED3BE /* 103-map.png in Resources */,
 				129D4D9C1919ADF200D12423 /* page.png in Resources */,
 				12F4CFDF18FF147500C8BFF5 /* Main_iPad.storyboard in Resources */,
 				12A1F704190ACFC7001ED3BE /* flower-pot.png in Resources */,
 				12F4CFE418FF147500C8BFF5 /* Images.xcassets in Resources */,
+				129D4DB01919C27200D12423 /* relojFinal.png in Resources */,
 				12F4D00F18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png in Resources */,
 				12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */,
 				12F4D00818FF21CD00C8BFF5 /* contactar-tfno.png in Resources */,
@@ -528,6 +590,9 @@
 				12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */,
 				12A1F6F8190AC983001ED3BE /* phone-book.png in Resources */,
 				12A1F700190ACDF3001ED3BE /* 116-controller.png in Resources */,
+				129D4DA31919BE2100D12423 /* RuletaSinFondo.png in Resources */,
+				129D4DB31919C27200D12423 /* againFinal.png in Resources */,
+				129D4DB21919C27200D12423 /* bombaFinal.png in Resources */,
 				12A1F6FC190AC9AE001ED3BE /* recycle-bin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */,
 				120FF2291913F39400A697D6 /* AFSecurityPolicy.m in Sources */,
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
@@ -558,7 +624,10 @@
 				120FF22A1913F39400A697D6 /* AFURLConnectionOperation.m in Sources */,
 				120FF22F1913F39400A697D6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				120FF2351913F39400A697D6 /* UIWebView+AFNetworking.m in Sources */,
+				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
+				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,
 				120FF2251913F39400A697D6 /* AFHTTPRequestOperation.m in Sources */,
+				129D4DB61919C30700D12423 /* ClaseRespuesta.m in Sources */,
 				120FF2271913F39400A697D6 /* AFHTTPSessionManager.m in Sources */,
 				120FF2301913F39400A697D6 /* UIAlertView+AFNetworking.m in Sources */,
 				120FF22B1913F39400A697D6 /* AFURLRequestSerialization.m in Sources */,
@@ -573,6 +642,7 @@
 				120FF22C1913F39400A697D6 /* AFURLResponseSerialization.m in Sources */,
 				12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */,
 				12F4D00B18FF24C500C8BFF5 /* ContactanosTableViewController.m in Sources */,
+				129D4D9F1919B74500D12423 /* InicioJuegoViewController.m in Sources */,
 				120FF2341913F39400A697D6 /* UIRefreshControl+AFNetworking.m in Sources */,
 				12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */,
 				12F4CFD518FF147500C8BFF5 /* main.m in Sources */,

@@ -79,6 +79,14 @@
 		12A75826191AE54700E03C5E /* 2-1_ProduccionDistribucion.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7581D191AE54700E03C5E /* 2-1_ProduccionDistribucion.png */; };
 		12A75827191AE54700E03C5E /* 2-4_ProduccionDistribucion.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7581E191AE54700E03C5E /* 2-4_ProduccionDistribucion.png */; };
 		12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A75829191AEDD500E03C5E /* RutaBasuraViewController.m */; };
+		12A75834191AF36E00E03C5E /* 1_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7582C191AF36E00E03C5E /* 1_Separatas.png */; };
+		12A75835191AF36E00E03C5E /* 2_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7582D191AF36E00E03C5E /* 2_Separatas.png */; };
+		12A75836191AF36E00E03C5E /* 3_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7582E191AF36E00E03C5E /* 3_Separatas.png */; };
+		12A75837191AF36E00E03C5E /* 4_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A7582F191AF36E00E03C5E /* 4_Separatas.png */; };
+		12A75838191AF36E00E03C5E /* 5_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75830191AF36E00E03C5E /* 5_Separatas.png */; };
+		12A75839191AF36E00E03C5E /* 6_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75831191AF36E00E03C5E /* 6_Separatas.png */; };
+		12A7583A191AF36E00E03C5E /* 7_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75832191AF36E00E03C5E /* 7_Separatas.png */; };
+		12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75833191AF36E00E03C5E /* 8_Separatas.png */; };
 		12AFACC9190B017F0007F5C0 /* flechitaDARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACC8190B017F0007F5C0 /* flechitaDARS.png */; };
 		12AFACCD190B14260007F5C0 /* dars1.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACCC190B14260007F5C0 /* dars1.png */; };
 		12F4CFC918FF147500C8BFF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F4CFC818FF147500C8BFF5 /* Foundation.framework */; };
@@ -229,6 +237,14 @@
 		12A7581E191AE54700E03C5E /* 2-4_ProduccionDistribucion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-4_ProduccionDistribucion.png"; sourceTree = "<group>"; };
 		12A75828191AEDD500E03C5E /* RutaBasuraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RutaBasuraViewController.h; sourceTree = "<group>"; };
 		12A75829191AEDD500E03C5E /* RutaBasuraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RutaBasuraViewController.m; sourceTree = "<group>"; };
+		12A7582C191AF36E00E03C5E /* 1_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_Separatas.png; sourceTree = "<group>"; };
+		12A7582D191AF36E00E03C5E /* 2_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2_Separatas.png; sourceTree = "<group>"; };
+		12A7582E191AF36E00E03C5E /* 3_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3_Separatas.png; sourceTree = "<group>"; };
+		12A7582F191AF36E00E03C5E /* 4_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4_Separatas.png; sourceTree = "<group>"; };
+		12A75830191AF36E00E03C5E /* 5_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5_Separatas.png; sourceTree = "<group>"; };
+		12A75831191AF36E00E03C5E /* 6_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6_Separatas.png; sourceTree = "<group>"; };
+		12A75832191AF36E00E03C5E /* 7_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7_Separatas.png; sourceTree = "<group>"; };
+		12A75833191AF36E00E03C5E /* 8_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_Separatas.png; sourceTree = "<group>"; };
 		12AFACC8190B017F0007F5C0 /* flechitaDARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechitaDARS.png; sourceTree = "<group>"; };
 		12AFACCC190B14260007F5C0 /* dars1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dars1.png; sourceTree = "<group>"; };
 		12F4CFC518FF147500C8BFF5 /* darsapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = darsapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -434,6 +450,7 @@
 		12A757CD191ABFA800E03C5E /* Imagenes información */ = {
 			isa = PBXGroup;
 			children = (
+				12A7582B191AF35300E03C5E /* Ruta de la Separata */,
 				12A75815191AE50E00E03C5E /* Ruta de la Pila */,
 				12A757CE191ABFDC00E03C5E /* Ruta de la Botella */,
 			);
@@ -470,6 +487,21 @@
 				12A7581E191AE54700E03C5E /* 2-4_ProduccionDistribucion.png */,
 			);
 			name = "Ruta de la Pila";
+			sourceTree = "<group>";
+		};
+		12A7582B191AF35300E03C5E /* Ruta de la Separata */ = {
+			isa = PBXGroup;
+			children = (
+				12A7582C191AF36E00E03C5E /* 1_Separatas.png */,
+				12A7582D191AF36E00E03C5E /* 2_Separatas.png */,
+				12A7582E191AF36E00E03C5E /* 3_Separatas.png */,
+				12A7582F191AF36E00E03C5E /* 4_Separatas.png */,
+				12A75830191AF36E00E03C5E /* 5_Separatas.png */,
+				12A75831191AF36E00E03C5E /* 6_Separatas.png */,
+				12A75832191AF36E00E03C5E /* 7_Separatas.png */,
+				12A75833191AF36E00E03C5E /* 8_Separatas.png */,
+			);
+			name = "Ruta de la Separata";
 			sourceTree = "<group>";
 		};
 		12F4CFBC18FF147500C8BFF5 = {
@@ -669,6 +701,7 @@
 				12A75825191AE54700E03C5E /* 3_Pilas.png in Resources */,
 				12A7580C191AD23900E03C5E /* 6_Segregación.png in Resources */,
 				12F4D00418FF206F00C8BFF5 /* Facebook-400x400.png in Resources */,
+				12A75834191AF36E00E03C5E /* 1_Separatas.png in Resources */,
 				12FF2E96190AEEC600638774 /* grey_sandbag.png in Resources */,
 				129D4DA51919BE2A00D12423 /* botonSinFondo.png in Resources */,
 				12F4D00D18FF2CD300C8BFF5 /* congruent_pentagon.png in Resources */,
@@ -685,6 +718,7 @@
 				12A75804191AD23900E03C5E /* 2_Separación.png in Resources */,
 				12F4D00F18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png in Resources */,
 				12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */,
+				12A75839191AF36E00E03C5E /* 6_Separatas.png in Resources */,
 				12A7580B191AD23900E03C5E /* 2_Proceso.png in Resources */,
 				12F4D00818FF21CD00C8BFF5 /* contactar-tfno.png in Resources */,
 				12AFACC9190B017F0007F5C0 /* flechitaDARS.png in Resources */,
@@ -701,16 +735,22 @@
 				12AFACCD190B14260007F5C0 /* dars1.png in Resources */,
 				12A083FE19099DE000D010E6 /* ic_launcher.png in Resources */,
 				12F4CFD318FF147500C8BFF5 /* InfoPlist.strings in Resources */,
+				12A75838191AF36E00E03C5E /* 5_Separatas.png in Resources */,
+				12A75835191AF36E00E03C5E /* 2_Separatas.png in Resources */,
 				12A7581F191AE54700E03C5E /* 2-3_ProduccionDistribucion.png in Resources */,
 				12A1F6FA190AC9A4001ED3BE /* recycle.png in Resources */,
 				129EE5D019085475008A72CF /* email.png in Resources */,
+				12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */,
 				12F4D00618FF20C100C8BFF5 /* ios_homescreen_icon.png in Resources */,
 				12A1F702190ACEE9001ED3BE /* 189-plant.png in Resources */,
 				12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */,
 				12A75827191AE54700E03C5E /* 2-4_ProduccionDistribucion.png in Resources */,
 				12A1F6F8190AC983001ED3BE /* phone-book.png in Resources */,
+				12A7583A191AF36E00E03C5E /* 7_Separatas.png in Resources */,
 				12A1F700190ACDF3001ED3BE /* 116-controller.png in Resources */,
+				12A75837191AF36E00E03C5E /* 4_Separatas.png in Resources */,
 				129D4DA31919BE2100D12423 /* RuletaSinFondo.png in Resources */,
+				12A75836191AF36E00E03C5E /* 3_Separatas.png in Resources */,
 				129D4DB31919C27200D12423 /* againFinal.png in Resources */,
 				12A7580E191AD41F00E03C5E /* 1_Materiales.png in Resources */,
 				129D4DB21919C27200D12423 /* bombaFinal.png in Resources */,

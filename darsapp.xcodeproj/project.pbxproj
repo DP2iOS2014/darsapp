@@ -25,6 +25,9 @@
 		120FF2341913F39400A697D6 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2221913F39400A697D6 /* UIRefreshControl+AFNetworking.m */; };
 		120FF2351913F39400A697D6 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2241913F39400A697D6 /* UIWebView+AFNetworking.m */; };
 		120FF2881914061800A697D6 /* URLsJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2871914061800A697D6 /* URLsJson.m */; };
+		129D4D961919A70400D12423 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4D951919A70400D12423 /* iCarousel.m */; };
+		129D4D991919A86400D12423 /* BotellasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4D981919A86400D12423 /* BotellasViewController.m */; };
+		129D4D9C1919ADF200D12423 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4D9B1919ADF200D12423 /* page.png */; };
 		129EE5D019085475008A72CF /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EE5CF19085475008A72CF /* email.png */; };
 		129EE5D21908679B008A72CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129EE5D11908679B008A72CF /* MessageUI.framework */; };
 		129EE5D519088A4C008A72CF /* NoticiasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EE5D419088A4C008A72CF /* NoticiasTableViewController.m */; };
@@ -122,6 +125,11 @@
 		120FF2241913F39400A697D6 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		120FF2861914061800A697D6 /* URLsJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLsJson.h; sourceTree = "<group>"; };
 		120FF2871914061800A697D6 /* URLsJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLsJson.m; sourceTree = "<group>"; };
+		129D4D941919A70400D12423 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		129D4D951919A70400D12423 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		129D4D971919A86400D12423 /* BotellasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotellasViewController.h; sourceTree = "<group>"; };
+		129D4D981919A86400D12423 /* BotellasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BotellasViewController.m; sourceTree = "<group>"; };
+		129D4D9B1919ADF200D12423 /* page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page.png; sourceTree = "<group>"; };
 		129EE5CF19085475008A72CF /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		129EE5D11908679B008A72CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		129EE5D319088A4C008A72CF /* NoticiasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiasTableViewController.h; sourceTree = "<group>"; };
@@ -257,6 +265,25 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		129D4D931919A58500D12423 /* UICarrousel */ = {
+			isa = PBXGroup;
+			children = (
+				129D4D941919A70400D12423 /* iCarousel.h */,
+				129D4D951919A70400D12423 /* iCarousel.m */,
+			);
+			name = UICarrousel;
+			sourceTree = "<group>";
+		};
+		129D4D9A1919A87E00D12423 /* Tab Informacion */ = {
+			isa = PBXGroup;
+			children = (
+				129D4D971919A86400D12423 /* BotellasViewController.h */,
+				129D4D981919A86400D12423 /* BotellasViewController.m */,
+				129D4D9B1919ADF200D12423 /* page.png */,
+			);
+			name = "Tab Informacion";
+			sourceTree = "<group>";
+		};
 		12A1F6F4190AC8FC001ED3BE /* Tabbar Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +348,8 @@
 		12F4CFCE18FF147500C8BFF5 /* darsapp */ = {
 			isa = PBXGroup;
 			children = (
+				129D4D9A1919A87E00D12423 /* Tab Informacion */,
+				129D4D931919A58500D12423 /* UICarrousel */,
 				120FF1FF1913F39400A697D6 /* AFNetworking */,
 				120FF2131913F39400A697D6 /* UIKit+AFNetworking */,
 				12F4CFD718FF147500C8BFF5 /* AppDelegate.h */,
@@ -476,6 +505,7 @@
 				12FF2E96190AEEC600638774 /* grey_sandbag.png in Resources */,
 				12F4D00D18FF2CD300C8BFF5 /* congruent_pentagon.png in Resources */,
 				12A1F6FE190ACC56001ED3BE /* 103-map.png in Resources */,
+				129D4D9C1919ADF200D12423 /* page.png in Resources */,
 				12F4CFDF18FF147500C8BFF5 /* Main_iPad.storyboard in Resources */,
 				12A1F704190ACFC7001ED3BE /* flower-pot.png in Resources */,
 				12F4CFE418FF147500C8BFF5 /* Images.xcassets in Resources */,
@@ -521,7 +551,9 @@
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
+				129D4D991919A86400D12423 /* BotellasViewController.m in Sources */,
 				120FF22E1913F39400A697D6 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				129D4D961919A70400D12423 /* iCarousel.m in Sources */,
 				120FF2321913F39400A697D6 /* UIImageView+AFNetworking.m in Sources */,
 				120FF22A1913F39400A697D6 /* AFURLConnectionOperation.m in Sources */,
 				120FF22F1913F39400A697D6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -681,6 +713,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "darsapp/darsapp-Prefix.pch";
 				INFOPLIST_FILE = "darsapp/darsapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -694,6 +727,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "darsapp/darsapp-Prefix.pch";
 				INFOPLIST_FILE = "darsapp/darsapp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

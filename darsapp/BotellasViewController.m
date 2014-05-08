@@ -28,7 +28,7 @@
     //data of some kind - don't store data in your item views
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
-    self.items = @[@"flower-pot.png", @"189-plant.png" , @"116-controller.png" , @"103-map.png" , @"recycle-bin.png" , @"recycle.png" , @"phone-book.png" , @"newspaper.png" ];
+    self.items = @[@"Titulo_Plastico.png",@"1_Materiales.png",@"2_ProduccionPlastico.png",@"2_Proceso.png",@"2_Separacion.png",@"3_Fabricacion.png",@"4_ProcesoFabricacion.png",@"5_TrasladoYConsumo.png",@"6_Segregacion.png"];
     NSLog(@"%d",self.items.count);
 
 }
@@ -84,6 +84,9 @@
         view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200.0f, 200.0f)];
         
         ((UIImageView *)view).image = [UIImage imageNamed: self.items[index]];
+        
+        
+        
         
         view.contentMode = UIViewContentModeCenter;
         label = [[UILabel alloc] initWithFrame:view.bounds];

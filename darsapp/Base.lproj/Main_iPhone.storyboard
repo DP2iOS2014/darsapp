@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ja-Kw-sP6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ja-Kw-sP6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -478,7 +478,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNk-fO-O68" customClass="iCarousel">
-                                <rect key="frame" x="20" y="97" width="285" height="347"/>
+                                <rect key="frame" x="10" y="79" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
@@ -496,12 +496,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iW0-kY-JFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="-2906"/>
+            <point key="canvasLocation" x="2171" y="-3074"/>
         </scene>
-        <!--View Controller-->
+        <!--Pilas View Controller - Ruta de las Pilas-->
         <scene sceneID="2Tt-n3-0xr">
             <objects>
-                <viewController id="iOZ-bn-BO7" sceneMemberID="viewController">
+                <viewController id="iOZ-bn-BO7" customClass="PilasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xXq-uB-2hN"/>
                         <viewControllerLayoutGuide type="bottom" id="blP-5V-pxH"/>
@@ -509,18 +509,65 @@
                     <view key="view" contentMode="scaleToFill" id="mV3-hS-dpR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-uR-8d9" customClass="iCarousel">
+                                <rect key="frame" x="10" y="79" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iOZ-bn-BO7" id="tsI-9i-DCT"/>
+                                    <outlet property="delegate" destination="iOZ-bn-BO7" id="Of8-qJ-1Pc"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PAt-ar-0Nr"/>
+                    <navigationItem key="navigationItem" title="Ruta de las Pilas" id="PAt-ar-0Nr"/>
+                    <connections>
+                        <outlet property="carruselpilas" destination="eFP-uR-8d9" id="cgE-la-h88"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShN-6E-kKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2139" y="-2245"/>
+            <point key="canvasLocation" x="2191" y="-2393"/>
         </scene>
-        <!--View Controller-->
+        <!--Segregacion View Controller - Segregacion de Tachos-->
+        <scene sceneID="qll-I2-Joq">
+            <objects>
+                <viewController id="dSz-3U-7ad" customClass="SegregacionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Idf-8b-dBn"/>
+                        <viewControllerLayoutGuide type="bottom" id="RFd-Ux-SNd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNL-Wz-WZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ng-cc-LEc" customClass="iCarousel">
+                                <rect key="frame" x="10" y="79" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dSz-3U-7ad" id="51U-v9-KV9"/>
+                                    <outlet property="delegate" destination="dSz-3U-7ad" id="G78-lP-OHo"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Segregacion de Tachos" id="J8P-3Y-ouf"/>
+                    <connections>
+                        <outlet property="carruselsegregacion" destination="7Ng-cc-LEc" id="rbK-yy-yVo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AgZ-4M-9me" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="-1535"/>
+        </scene>
+        <!--Electricidad View Controller - Ruta de la Electricidad-->
         <scene sceneID="Ue1-WI-pca">
             <objects>
-                <viewController id="CrW-IH-69j" sceneMemberID="viewController">
+                <viewController id="CrW-IH-69j" customClass="ElectricidadViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZcL-Ct-cLn"/>
                         <viewControllerLayoutGuide type="bottom" id="FRf-yU-hvg"/>
@@ -528,18 +575,32 @@
                     <view key="view" contentMode="scaleToFill" id="wYp-Sy-3H3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Vu-QO-HiP" customClass="iCarousel">
+                                <rect key="frame" x="10" y="85" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CrW-IH-69j" id="Yja-kI-UQb"/>
+                                    <outlet property="delegate" destination="CrW-IH-69j" id="lDz-w7-Nph"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4RO-Qv-3mj"/>
+                    <navigationItem key="navigationItem" title="Ruta de la Electricidad" id="4RO-Qv-3mj"/>
+                    <connections>
+                        <outlet property="carruselelectricidad" destination="9Vu-QO-HiP" id="Vtx-eO-Ibp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KA-5B-6I9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2126" y="-1551"/>
+            <point key="canvasLocation" x="2374" y="-1687"/>
         </scene>
-        <!--View Controller-->
+        <!--Separatas View Controller - Ruta de las Separatas-->
         <scene sceneID="qA0-Iw-DEw">
             <objects>
-                <viewController id="QQc-AE-eo2" sceneMemberID="viewController">
+                <viewController id="QQc-AE-eo2" customClass="SeparatasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jj2-h7-AOM"/>
                         <viewControllerLayoutGuide type="bottom" id="KFT-Iu-RGv"/>
@@ -547,18 +608,32 @@
                     <view key="view" contentMode="scaleToFill" id="a7p-bu-4xe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-CH-yNv" customClass="iCarousel">
+                                <rect key="frame" x="10" y="79" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QQc-AE-eo2" id="Fma-p0-1Jv"/>
+                                    <outlet property="delegate" destination="QQc-AE-eo2" id="gBC-En-Sfy"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9GL-jF-PsM"/>
+                    <navigationItem key="navigationItem" title="Ruta de las Separatas" id="9GL-jF-PsM"/>
+                    <connections>
+                        <outlet property="carruselseparatas" destination="VeD-CH-yNv" id="IAo-e2-ivo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDo-aS-4yO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2498" y="-2389"/>
+            <point key="canvasLocation" x="2622" y="-2537"/>
         </scene>
-        <!--View Controller-->
+        <!--Mapa Tachos View Controller - Mapa -->
         <scene sceneID="2Rw-ki-kYc">
             <objects>
-                <viewController id="9cJ-BL-oAH" sceneMemberID="viewController">
+                <viewController id="9cJ-BL-oAH" customClass="MapaTachosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1RK-U1-goD"/>
                         <viewControllerLayoutGuide type="bottom" id="W5e-QV-pju"/>
@@ -566,13 +641,68 @@
                     <view key="view" contentMode="scaleToFill" id="e1k-vt-aIP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdp-HO-pGz" customClass="MapaTachosView">
+                                <rect key="frame" x="0.0" y="63" width="320" height="324"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oQS-TS-H4o">
+                                <rect key="frame" x="3" y="395" width="314" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="General"/>
+                                    <segment title="Papel"/>
+                                    <segment title="Pilas"/>
+                                    <segment title="Plastico"/>
+                                    <segment title="Vidrio"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JNF-i5-I4O"/>
+                    <navigationItem key="navigationItem" title="Mapa " id="JNF-i5-I4O"/>
+                    <connections>
+                        <outlet property="mapView" destination="Tdp-HO-pGz" id="rkm-VW-cfi"/>
+                        <outlet property="tipoSegmentControl" destination="oQS-TS-H4o" id="TDD-6S-rXR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6l-B8-GkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="-1300"/>
+            <point key="canvasLocation" x="1104" y="-666"/>
+        </scene>
+        <!--Ruta Basura View Controller - Ruta de la Basura-->
+        <scene sceneID="z3v-ZI-PZK">
+            <objects>
+                <viewController id="V2t-eu-qiv" customClass="RutaBasuraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TOj-0X-bSj"/>
+                        <viewControllerLayoutGuide type="bottom" id="GA2-a5-ILV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1gZ-ea-xXd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcC-6a-mfm" customClass="iCarousel">
+                                <rect key="frame" x="10" y="79" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="V2t-eu-qiv" id="TSA-aB-iYe"/>
+                                    <outlet property="delegate" destination="V2t-eu-qiv" id="g2Q-Ol-ite"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ruta de la Basura" id="0v8-Vg-dbx"/>
+                    <connections>
+                        <outlet property="carruselruta" destination="wcC-6a-mfm" id="tXh-0n-CpN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9d-zf-8sH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1606" y="-780"/>
         </scene>
         <!--Navigation Controller - Mapa-->
         <scene sceneID="SXE-ng-tkd">
@@ -591,7 +721,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNN-AM-JL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="566" y="-1300"/>
+            <point key="canvasLocation" x="578" y="-666"/>
         </scene>
         <!--Navigation Controller - Información-->
         <scene sceneID="gZl-K8-YPg">
@@ -643,11 +773,11 @@
                                             <segue destination="b6s-Lg-Soo" kind="push" id="G8U-7Y-baY"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="51" id="tFe-ZG-nL5">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="51" id="tFe-ZG-nL5">
                                         <rect key="frame" x="0.0" y="117" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tFe-ZG-nL5" id="fph-Hp-yKx">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Segregación" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Suq-cO-aL7">
@@ -658,12 +788,15 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dSz-3U-7ad" kind="push" id="bmB-mM-RPV"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="58" id="2Pm-GY-oI8">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="58" id="2Pm-GY-oI8">
                                         <rect key="frame" x="0.0" y="168" width="320" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Pm-GY-oI8" id="ccE-X6-ymv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ruta de la Basura" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20N-MO-6sh">
@@ -674,6 +807,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="V2t-eu-qiv" kind="push" id="CL9-VS-8UD"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

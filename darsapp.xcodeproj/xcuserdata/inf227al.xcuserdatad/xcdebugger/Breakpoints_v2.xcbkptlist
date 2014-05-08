@@ -92,6 +92,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "14"
                   endingLineNumber = "14"
+<<<<<<< HEAD
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
@@ -102,6 +103,12 @@
                </Location>
                <Location
                   shouldBeEnabled = "No"
+=======
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+>>>>>>> FETCH_HEAD
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[ElectricidadViewController setCarruselelectricidad:]"

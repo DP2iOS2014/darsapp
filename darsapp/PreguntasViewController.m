@@ -65,7 +65,7 @@
     self.btnOtroOpcion.enabled=juego.disponibilidadBoton;
     self.btnNuevaPregunta.enabled=juego.disponibilidadBoton;
     timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector:@selector(tick) userInfo:nil repeats:YES];
-   // [BarraProgreso setProgress:0.3f animated:NO];
+    
     
 }
 
@@ -270,9 +270,10 @@
     
    //  [BarraProgreso setProgress: 0.1f animated: YES];
     
+    [self.BarraProgreso setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
     
     
-    self.BarraProgreso.progress = [self.Tiempo.text floatValue]/30;
+    //self.BarraProgreso.progress = ;
     
     if([self.Tiempo.text intValue] == 0){
      

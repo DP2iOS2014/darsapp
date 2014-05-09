@@ -15,9 +15,10 @@
     @synchronized(self) {
         if (sharedMyManager == nil)
             sharedMyManager = [[self alloc] init];
+            sharedMyManager.Tiempo = 30;
             sharedMyManager.VidasReloj = 3;
-            sharedMyManager.Tiempo = 20;
             sharedMyManager.VidasBomba = 3;
+            sharedMyManager.VidasNPregunta=3;
             sharedMyManager.VidasOtraOpcion = 3;
             sharedMyManager.tieneOtraOpcion = NO;
             sharedMyManager.disponibilidadBoton=YES;

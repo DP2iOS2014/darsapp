@@ -14,6 +14,7 @@
 @property NSInteger Tiempo;
 @property NSInteger VidasBomba;
 @property NSInteger VidasOtraOpcion;
+@property NSInteger VidasNPregunta;
 @property BOOL tieneOtraOpcion;
 @property BOOL disponibilidadBoton;
 + (id)sharedManager;

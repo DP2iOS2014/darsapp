@@ -11,5 +11,7 @@
 @interface InicioJuegoViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnEmpezar;
 @property (weak, nonatomic) IBOutlet UIButton *btnContinuar;
+@property (strong, nonatomic) IBOutlet UIButton *btnRanking;
+@property (strong, nonatomic) IBOutlet UIButton *btnInstrucciones;
 
 @end

@@ -12,8 +12,8 @@
 {
     NSArray *ArregloPreguntas;
     BOOL tieneOtraOpcion;
-    
-    //IBOutlet UILabel *TimarLabel;
+    NSTimer * timer;
+   
     
 }
 
@@ -30,5 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *VidasBomba;
 @property (weak, nonatomic) IBOutlet UILabel *VidasOtraOpcion;
 @property (weak, nonatomic) IBOutlet UILabel *pregunta;
+@property (strong, nonatomic) IBOutlet UILabel *VidasNuevaPregunta;
+@property (strong, nonatomic) IBOutlet UIProgressView *BarraProgreso;
 
 @end

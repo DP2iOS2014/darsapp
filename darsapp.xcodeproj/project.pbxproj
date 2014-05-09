@@ -72,7 +72,6 @@
 		12A1F704190ACFC7001ED3BE /* flower-pot.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F703190ACFC7001ED3BE /* flower-pot.png */; };
 		12A1F708190AD496001ED3BE /* ricepaper_v3_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F706190AD496001ED3BE /* ricepaper_v3_@2X.png */; };
 		12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F707190AD496001ED3BE /* ricepaper_v3.png */; };
-		12A1FABE191C42CE0095179D /* preguntaProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FABD191C42CE0095179D /* preguntaProgressView.m */; };
 		12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC0191C46AC0095179D /* TimerPreguntas.m */; };
 		12A1FAC4191C56290095179D /* SingletonJuego.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC3191C56290095179D /* SingletonJuego.m */; };
 		12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A757E2191AC41800E03C5E /* PilasViewController.m */; };
@@ -267,8 +266,6 @@
 		12A1F703190ACFC7001ED3BE /* flower-pot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower-pot.png"; sourceTree = "<group>"; };
 		12A1F706190AD496001ED3BE /* ricepaper_v3_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ricepaper_v3_@2X.png"; sourceTree = "<group>"; };
 		12A1F707190AD496001ED3BE /* ricepaper_v3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ricepaper_v3.png; sourceTree = "<group>"; };
-		12A1FABC191C42CE0095179D /* preguntaProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preguntaProgressView.h; sourceTree = "<group>"; };
-		12A1FABD191C42CE0095179D /* preguntaProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preguntaProgressView.m; sourceTree = "<group>"; };
 		12A1FABF191C46AC0095179D /* TimerPreguntas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerPreguntas.h; sourceTree = "<group>"; };
 		12A1FAC0191C46AC0095179D /* TimerPreguntas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerPreguntas.m; sourceTree = "<group>"; };
 		12A1FAC2191C56290095179D /* SingletonJuego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonJuego.h; sourceTree = "<group>"; };
@@ -510,8 +507,6 @@
 				129D4DB51919C30700D12423 /* ClaseRespuesta.m */,
 				129D4DB71919C3DF00D12423 /* ClasePregunta.h */,
 				129D4DB81919C3DF00D12423 /* ClasePregunta.m */,
-				12A1FABC191C42CE0095179D /* preguntaProgressView.h */,
-				12A1FABD191C42CE0095179D /* preguntaProgressView.m */,
 				12A1FABF191C46AC0095179D /* TimerPreguntas.h */,
 				12A1FAC0191C46AC0095179D /* TimerPreguntas.m */,
 				12A1FAC2191C56290095179D /* SingletonJuego.h */,
@@ -978,7 +973,6 @@
 				120FF22F1913F39400A697D6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				120FF2351913F39400A697D6 /* UIWebView+AFNetworking.m in Sources */,
 				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
-				12A1FABE191C42CE0095179D /* preguntaProgressView.m in Sources */,
 				12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */,
 				12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */,
 				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,

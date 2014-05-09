@@ -40,9 +40,9 @@
     [super viewWillAppear:animated];
     
     //Diseño para el boton Empezar
-    self.btnEmpezar.layer.cornerRadius = 8;
-    //self.btnEmpezar.layer.borderWidth = 1;
-    self.btnEmpezar.layer.borderColor = [UIColor blackColor].CGColor;
+    self.btnEmpezar.layer.cornerRadius = 4;
+    self.btnEmpezar.layer.borderWidth = 3;
+    self.btnEmpezar.layer.borderColor = [UIColor whiteColor].CGColor;
     
     CAGradientLayer *degradado = [CAGradientLayer layer];
     degradado.colors = @[(id)[UIColor whiteColor].CGColor,(id)[UIColor colorWithRed:0.0f/255.0f green:68.0f/255.0f blue:0.0f/255.0f alpha:0.8f].CGColor];
@@ -51,15 +51,38 @@
     [self.btnEmpezar.layer insertSublayer:degradado atIndex:0];
     
     //Diseño para el boton Comenzar
-    self.btnContinuar.layer.cornerRadius = 8;
-    //self.btnContinuar.layer.borderWidth = 1;
-    self.btnContinuar.layer.borderColor = [UIColor blackColor].CGColor;
+    self.btnContinuar.layer.cornerRadius = 4;
+    self.btnContinuar.layer.borderWidth = 3;
+    self.btnContinuar.layer.borderColor = [UIColor whiteColor].CGColor;
     
     CAGradientLayer *degradado1 = [CAGradientLayer layer];
     degradado1.colors = @[(id)[UIColor whiteColor].CGColor,(id)[UIColor colorWithRed:0.0f/255.0f green:68.0f/255.0f blue:0.0f/255.0f alpha:0.8f].CGColor];
     degradado1.frame = self.btnContinuar.bounds;
     
     [self.btnContinuar.layer insertSublayer:degradado1 atIndex:0];
+    
+    //Diseño para el boton Ranking
+    self.btnRanking.layer.cornerRadius = 4;
+    self.btnRanking.layer.borderWidth = 3;
+    self.btnRanking.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    CAGradientLayer *degradado3 = [CAGradientLayer layer];
+    degradado3.colors = @[(id)[UIColor whiteColor].CGColor,(id)[UIColor colorWithRed:0.0f/255.0f green:68.0f/255.0f blue:0.0f/255.0f alpha:0.8f].CGColor];
+    degradado3.frame = self.btnRanking.bounds;
+    
+    [self.btnRanking.layer insertSublayer:degradado3 atIndex:0];
+    
+    
+    //Diseño para el boton Instrucciones
+    self.btnInstrucciones.layer.cornerRadius = 4;
+    self.btnInstrucciones.layer.borderWidth = 3;
+    self.btnInstrucciones.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    CAGradientLayer *degradado4 = [CAGradientLayer layer];
+    degradado4.colors = @[(id)[UIColor whiteColor].CGColor,(id)[UIColor colorWithRed:0.0f/255.0f green:68.0f/255.0f blue:0.0f/255.0f alpha:0.8f].CGColor];
+    degradado4.frame = self.btnInstrucciones.bounds;
+    
+    [self.btnInstrucciones.layer insertSublayer:degradado4 atIndex:0];
     
     
 }

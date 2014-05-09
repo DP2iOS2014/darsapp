@@ -322,7 +322,7 @@
                                 <rect key="frame" x="86" y="161" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Empezar">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.14586732511662648" green="0.35042649872448983" blue="0.21157836654807541" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -333,7 +333,7 @@
                                 <rect key="frame" x="86" y="212" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Continuar">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -341,14 +341,16 @@
                                 <rect key="frame" x="86" y="269" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ranking">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-X5-iix">
-                                <rect key="frame" x="90" y="320" width="140" height="30"/>
+                                <rect key="frame" x="86" y="321" width="140" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Instruciones">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
@@ -358,6 +360,8 @@
                     <connections>
                         <outlet property="btnContinuar" destination="UNy-ZR-13o" id="fCU-Pk-Sj3"/>
                         <outlet property="btnEmpezar" destination="HXS-CP-bh2" id="RVy-3l-XJQ"/>
+                        <outlet property="btnInstrucciones" destination="ChS-X5-iix" id="MLz-9f-Ffc"/>
+                        <outlet property="btnRanking" destination="Sy9-dQ-PzX" id="beu-QI-fDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6i-VP-2xP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -996,19 +1000,22 @@
                                 <state key="normal" image="otraFinal.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="SeApretoNuevaPregunta:" destination="mQJ-Vt-z41" eventType="touchUpInside" id="vN0-JP-imB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wf-Dg-sXN">
                                 <rect key="frame" x="70" y="208" width="180" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Respuesta 1">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="VerificarRespuesta1:" destination="mQJ-Vt-z41" eventType="touchUpInside" id="iPh-8j-Wq8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyR-A0-nqQ">
-                                <rect key="frame" x="70" y="241" width="180" height="40"/>
+                                <rect key="frame" x="70" y="249" width="180" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Respuesta 2">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1037,10 +1044,11 @@
                                     <action selector="VerificarRespuesta4:" destination="mQJ-Vt-z41" eventType="touchUpInside" id="hFN-Wu-nPz"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Como me llamo?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-hC-wjt">
-                                <rect key="frame" x="109" y="150" width="155" height="25"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Como me llamo?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="203" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-hC-wjt">
+                                <rect key="frame" x="70" y="130" width="203" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20'" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHR-ks-rXJ">
@@ -1068,7 +1076,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1OM-hj-4Dn" customClass="preguntaProgressView">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-rY-r1N">
+                                <rect key="frame" x="280" y="437" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.99999999999999989" translatesAutoresizingMaskIntoConstraints="NO" id="6N8-WX-5kd">
                                 <rect key="frame" x="40" y="105" width="150" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
@@ -1077,8 +1092,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="GCd-Rw-ylz"/>
                     <connections>
+                        <outlet property="BarraProgreso" destination="6N8-WX-5kd" id="HFp-Gj-gdq"/>
                         <outlet property="Tiempo" destination="aHR-ks-rXJ" id="O5d-e4-haA"/>
                         <outlet property="VidasBomba" destination="gIU-In-FKs" id="7ng-gs-4HZ"/>
+                        <outlet property="VidasNuevaPregunta" destination="kYe-rY-r1N" id="JTk-Xr-Moo"/>
                         <outlet property="VidasOtraOpcion" destination="mEr-Xa-L2K" id="Nse-gG-Flb"/>
                         <outlet property="VidasReloj" destination="Lev-Bm-Lwk" id="vNP-Pd-Q3J"/>
                         <outlet property="btnBomba" destination="5Ju-aF-WAZ" id="iHF-Dy-rhC"/>

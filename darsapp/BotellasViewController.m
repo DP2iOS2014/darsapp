@@ -41,6 +41,9 @@
     carruselbotellas.dataSource = nil;
 }
 
+- (IBAction)seApretoBoton:(id)sender {
+    [carruselbotellas scrollToItemAtIndex:0 animated:YES];
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -56,7 +59,7 @@
 {
     [super viewDidLoad];
     //configure carousel
-    carruselbotellas.type = iCarouselTypeInvertedTimeMachine;
+    carruselbotellas.type = iCarouselTypeCoverFlow;
 }
 
 - (void)didReceiveMemoryWarning

@@ -21,6 +21,10 @@
 @synthesize carruselseparatas;
 @synthesize items;
 
+- (IBAction)seApreto:(id)sender {
+    [carruselseparatas scrollToItemAtIndex:0 animated:YES];
+}
+
 - (void)awakeFromNib
 {
     //set up data
@@ -55,7 +59,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    carruselseparatas.type=iCarouselTypeInvertedTimeMachine;
+    carruselseparatas.type=iCarouselTypeCoverFlow;
 }
 
 - (void)didReceiveMemoryWarning

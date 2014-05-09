@@ -21,6 +21,10 @@
 @synthesize carruselruta;
 @synthesize items;
 
+- (IBAction)seApreto:(id)sender {
+    [carruselruta scrollToItemAtIndex:0 animated:YES];
+}
+
 - (void)awakeFromNib
 {
     //set up data
@@ -57,7 +61,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    carruselruta.type=iCarouselTypeInvertedTimeMachine;
+    carruselruta.type=iCarouselTypeCoverFlow;
 }
 
 - (void)didReceiveMemoryWarning

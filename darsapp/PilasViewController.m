@@ -20,6 +20,10 @@
 @synthesize carruselpilas;
 @synthesize items;
 
+- (IBAction)seApreto:(id)sender {
+    [carruselpilas scrollToItemAtIndex:0 animated:YES];
+}
+
 - (void)awakeFromNib
 {
     //set up data
@@ -58,7 +62,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    carruselpilas.type=iCarouselTypeInvertedTimeMachine;
+    carruselpilas.type=iCarouselTypeCoverFlow;
 }
 
 - (void)didReceiveMemoryWarning

@@ -20,6 +20,10 @@
 @synthesize carruselsegregacion;
 @synthesize items;
 
+- (IBAction)seApreto:(id)sender {
+     [carruselsegregacion scrollToItemAtIndex:0 animated:YES];
+}
+
 - (void)awakeFromNib
 {
     //set up data
@@ -27,7 +31,7 @@
     //data of some kind - don't store data in your item views
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
-    self.items = @[];
+    self.items = @[@"1_Verde.png",@"2_Plomo.png",@"3_Blanco.png",@"4_Azul.png",@"4_Rojo.png"];
     NSLog(@"%d",self.items.count);
     
 }
@@ -54,7 +58,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    carruselsegregacion.type=iCarouselTypeInvertedTimeMachine;
+    carruselsegregacion.type=iCarouselTypeCoverFlow;
 }
 
 - (void)didReceiveMemoryWarning33

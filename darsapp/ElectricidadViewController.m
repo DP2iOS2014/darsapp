@@ -20,6 +20,10 @@
 @synthesize carruselelectricidad;
 @synthesize items;
 
+- (IBAction)seApreto:(id)sender {
+    [carruselelectricidad scrollToItemAtIndex:0 animated:YES];
+}
+
 - (void)awakeFromNib
 {
     //set up data
@@ -27,7 +31,7 @@
     //data of some kind - don't store data in your item views
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
-    self.items = @[@"1_Electricidad.png",@"2_Electricidad.png",@"3_Electricidad.png",@"4_Electricidad.png",@"5_Electricidad.png",@"6_Electricidad.png",@"7_Electricidad.png",@"8_Electricidad.png"];
+    self.items = @[@"1_Electricidad.png",@"2_Electricidad.png",@"3_Electricidad.png",@"5_Electricidad.png",@"6_Electricidad.png",@"7_Electricidad.png",@"8_Electricidad.png"];
     NSLog(@"%lu",(unsigned long)self.items.count);
     
 }
@@ -56,7 +60,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    carruselelectricidad.type=iCarouselTypeInvertedTimeMachine;
+    carruselelectricidad.type=iCarouselTypeCoverFlow;
 }
 
 - (void)didReceiveMemoryWarning

@@ -14,4 +14,5 @@
 @property (nonatomic, strong) NSString *PreguntaARealizar;
 -(ClasePregunta*)initConPregunta:(NSString*)pregunta Respuestas:(NSArray*)respuestas;
 - (BOOL)EsPreguntaCorrecta:(NSInteger)opcion;
+- (NSInteger)traerOpcionCorrecta;
 @end

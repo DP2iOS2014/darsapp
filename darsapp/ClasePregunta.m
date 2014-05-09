@@ -27,6 +27,14 @@
 - (BOOL)EsPreguntaCorrecta:(NSInteger)opcion{
     return [[self.ArregloRespuestas objectAtIndex:opcion] correcta];
 }
+- (NSInteger)traerOpcionCorrecta{
+    for (int i=0; i<[_ArregloRespuestas count ]; i++) {
+        if([[_ArregloRespuestas objectAtIndex:i] correcta]){
+            return i;
+        }
+    }
+    return -1;
+}
 
 
 @end

@@ -28,7 +28,7 @@
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
     self.items = @[];
-    NSLog(@"%d",self.items.count);
+    NSLog(@"%lu",(unsigned long)self.items.count);
     
 }
 

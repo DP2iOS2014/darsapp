@@ -18,9 +18,10 @@
 @implementation PreguntasViewController
 
 {
+    SingletonJuego *juego;
     ClasePregunta *preguntaActual;
 }
-static SingletonJuego *juego;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -158,11 +159,45 @@ static SingletonJuego *juego;
             [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
         }
 
-        
-
     }else{
-    
-    
+        if(tieneOtraOpcion){
+            if(opcion==0){
+                [self.btnRespuesta1 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                self.btnRespuesta1.enabled=NO;
+            }else if (opcion==1) {
+                [self.btnRespuesta2 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                self.btnRespuesta2.enabled=NO;
+            }else if (opcion==2) {
+                [self.btnRespuesta3 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                self.btnRespuesta3.enabled=NO;
+            }else if (opcion==3) {
+                [self.btnRespuesta4 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                self.btnRespuesta4.enabled=NO;
+            }
+            tieneOtraOpcion=NO;
+            
+        }else{
+            NSInteger value= [preguntaActual traerOpcionCorrecta];
+            if(opcion==0){
+                [self.btnRespuesta1 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+            }else if (opcion==1) {
+                [self.btnRespuesta2 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+            }else if (opcion==2) {
+                [self.btnRespuesta3 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+            }else if (opcion==3) {
+                [self.btnRespuesta4 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+            }
+        
+            if(value==0){
+                [self.btnRespuesta1 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            }else if (value==1) {
+                [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            }else if (value==2) {
+                [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            }else if (value==3) {
+                [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            }
+        }
     
     }
     

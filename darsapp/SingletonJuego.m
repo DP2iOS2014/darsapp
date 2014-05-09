@@ -9,9 +9,9 @@
 #import "SingletonJuego.h"
 
 @implementation SingletonJuego
-+ (id)sharedManager{
 
-    static SingletonJuego *sharedMyManager = nil;
++ (id)sharedManager{
+    static SingletonJuego *sharedMyManager;
     @synchronized(self) {
         if (sharedMyManager == nil)
             sharedMyManager = [[self alloc] init];
@@ -26,5 +26,6 @@
     
     return sharedMyManager;
 }
+
 
 @end

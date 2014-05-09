@@ -17,4 +17,5 @@
 @property BOOL tieneOtraOpcion;
 @property BOOL disponibilidadBoton;
 + (id)sharedManager;
+
 @end

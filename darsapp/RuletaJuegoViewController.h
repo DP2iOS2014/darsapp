@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface RuletaJuegoViewController : UIViewController
-{
-    NSArray *ArregloPreguntas;
-}
+
 @property (weak, nonatomic) IBOutlet UIImageView *ruleta;
 
 

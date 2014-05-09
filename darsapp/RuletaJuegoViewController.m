@@ -7,8 +7,7 @@
 //
 
 #import "RuletaJuegoViewController.h"
-#import "ClasePregunta.h"
-#import "ClaseRespuesta.h"
+
 
 @interface RuletaJuegoViewController ()
 
@@ -28,22 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    ClaseRespuesta *resp1=[[ClaseRespuesta alloc] initConRespuesta:@"Naty" escorrecto:NO];
-    ClaseRespuesta *resp2=[[ClaseRespuesta alloc] initConRespuesta:@"Jorge" escorrecto:NO];
-    ClaseRespuesta *resp3=[[ClaseRespuesta alloc] initConRespuesta:@"Karina" escorrecto:NO];
-    ClaseRespuesta *resp4=[[ClaseRespuesta alloc] initConRespuesta:@"James" escorrecto:YES];
-    NSArray *ArregloResp=[NSArray arrayWithObjects:resp1,resp2,resp3,resp4,nil];
-    ClasePregunta *pregunta1=[[ClasePregunta alloc] initConPregunta:@"Como me Llamo"  Respuestas:ArregloResp];
-    ClaseRespuesta *resp5=[[ClaseRespuesta alloc] initConRespuesta:@"Naty" escorrecto:NO];
-    ClaseRespuesta *resp6=[[ClaseRespuesta alloc] initConRespuesta:@"Jorge" escorrecto:NO];
-    ClaseRespuesta *resp7=[[ClaseRespuesta alloc] initConRespuesta:@"Karina" escorrecto:NO];
-    ClaseRespuesta *resp8=[[ClaseRespuesta alloc] initConRespuesta:@"James" escorrecto:YES];
-    NSArray *ArregloResp1=[NSArray arrayWithObjects:resp5,resp6,resp7,resp8,nil];
-    ClasePregunta *pregunta2=[[ClasePregunta alloc] initConPregunta:@"Como me Llamo"  Respuestas:ArregloResp1];
-    
-    
-    
-    ArregloPreguntas =[NSArray arrayWithObjects:pregunta1,pregunta2,nil];
+
     
 }
 
@@ -54,6 +38,7 @@
 }
 - (IBAction)SeapretoBoton:(id)sender {
     [self rotateImageView:self.ruleta ];
+    
 }
 
 - (void)rotateImageView:(UIImageView *)iv

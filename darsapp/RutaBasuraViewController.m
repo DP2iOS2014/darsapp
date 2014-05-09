@@ -28,7 +28,7 @@
     //data of some kind - don't store data in your item views
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
-    self.items = @[];
+    self.items = @[@"1_DaleVidaATusResiduos.png",@"2_DaleVidaATusResiduos.png",@"3_DaleVidaATusResiduos.png",@"4_DaleVidaATusResiduos.png",@"4_PapelYCarton.png",@"5_DaleVidaATusResiduos.png",@"6_DaleVidaATusResiduos.png",@"7_DaleVidaATusResiduos.png",];
     NSLog(@"%d",self.items.count);
     
 }
@@ -57,6 +57,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    carruselruta.type=iCarouselTypeInvertedTimeMachine;
 }
 
 - (void)didReceiveMemoryWarning

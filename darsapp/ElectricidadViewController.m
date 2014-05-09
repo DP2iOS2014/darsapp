@@ -27,7 +27,7 @@
     //data of some kind - don't store data in your item views
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
-    self.items = @[];
+    self.items = @[@"1_Electricidad.png",@"2_Electricidad.png",@"3_Electricidad.png",@"4_Electricidad.png",@"5_Electricidad.png",@"6_Electricidad.png",@"7_Electricidad.png",@"8_Electricidad.png"];
     NSLog(@"%lu",(unsigned long)self.items.count);
     
 }

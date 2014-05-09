@@ -27,7 +27,7 @@
     //data of some kind - don't store data in your item views
     //or the recycling mechanism will destroy your data once
     //your item views move off-screen
-    self.items = @[@"titulo_Pilas.png", @"2-1_ProduccionDistribucion.png",@"2-2_ProduccionDistribucion.png",@"2-3_ProduccionDistribucion.png",@"2-4_ProduccionDistribucion.png",@"3_Pilas.png",@"4_Pilas.png", @"4_SegregacionPilas.png", @"5_SegregacionPilas.png"];
+    self.items = @[@"titulo_Pilas.png",@"2-1_ProduccionDistribucion.png",@"2-2_ProduccionDistribucion.png",@"2-3_ProduccionDistribucion.png",@"2-4_ProduccionDistribucion.png",@"3_Pilas.png",@"4_Pilas.png",@"4_SegregacionPilas.png",@"4-1_SegregacionPilas.png",@"5_SegregacionPilas.png",@"5-1_SegregacionPilas.png",@"5-2_SegregacionPilas.png",@"6_Pilas.png"];
     NSLog(@"%d",self.items.count);
     
 }

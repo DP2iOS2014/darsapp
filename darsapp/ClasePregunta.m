@@ -7,6 +7,7 @@
 //
 
 #import "ClasePregunta.h"
+#import "ClaseRespuesta.h"
 
 @implementation ClasePregunta
 
@@ -14,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        self.Pregunta=pregunta;
+        self.PreguntaARealizar=pregunta;
         self.ArregloRespuestas=respuestas;
     }
     
@@ -23,8 +24,8 @@
 
 }
 
-- (BOOL)EsPreguntaCorrecta:(NSString*)opcion{
-    return YES;
+- (BOOL)EsPreguntaCorrecta:(NSInteger)opcion{
+    return [[self.ArregloRespuestas objectAtIndex:opcion] correcta];
 }
 
 

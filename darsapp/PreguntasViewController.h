@@ -11,7 +11,12 @@
 @interface PreguntasViewController : UIViewController
 {
     NSArray *ArregloPreguntas;
+    BOOL tieneOtraOpcion;
+    
+    //IBOutlet UILabel *TimarLabel;
+    
 }
+
 @property (weak, nonatomic) IBOutlet UILabel *VidasReloj;
 @property (weak, nonatomic) IBOutlet UIButton *btnReloj;
 @property (weak, nonatomic) IBOutlet UIButton *btnBomba;

@@ -72,6 +72,9 @@
 		12A1F704190ACFC7001ED3BE /* flower-pot.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F703190ACFC7001ED3BE /* flower-pot.png */; };
 		12A1F708190AD496001ED3BE /* ricepaper_v3_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F706190AD496001ED3BE /* ricepaper_v3_@2X.png */; };
 		12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F707190AD496001ED3BE /* ricepaper_v3.png */; };
+		12A1FABE191C42CE0095179D /* preguntaProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FABD191C42CE0095179D /* preguntaProgressView.m */; };
+		12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC0191C46AC0095179D /* TimerPreguntas.m */; };
+		12A1FAC4191C56290095179D /* SingletonJuego.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC3191C56290095179D /* SingletonJuego.m */; };
 		12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A757E2191AC41800E03C5E /* PilasViewController.m */; };
 		12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A757E7191AD04D00E03C5E /* SeparatasViewController.m */; };
 		12A75804191AD23900E03C5E /* 2_Separación.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A757FB191AD23900E03C5E /* 2_Separación.png */; };
@@ -243,6 +246,12 @@
 		12A1F703190ACFC7001ED3BE /* flower-pot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flower-pot.png"; sourceTree = "<group>"; };
 		12A1F706190AD496001ED3BE /* ricepaper_v3_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ricepaper_v3_@2X.png"; sourceTree = "<group>"; };
 		12A1F707190AD496001ED3BE /* ricepaper_v3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ricepaper_v3.png; sourceTree = "<group>"; };
+		12A1FABC191C42CE0095179D /* preguntaProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = preguntaProgressView.h; sourceTree = "<group>"; };
+		12A1FABD191C42CE0095179D /* preguntaProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = preguntaProgressView.m; sourceTree = "<group>"; };
+		12A1FABF191C46AC0095179D /* TimerPreguntas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerPreguntas.h; sourceTree = "<group>"; };
+		12A1FAC0191C46AC0095179D /* TimerPreguntas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerPreguntas.m; sourceTree = "<group>"; };
+		12A1FAC2191C56290095179D /* SingletonJuego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonJuego.h; sourceTree = "<group>"; };
+		12A1FAC3191C56290095179D /* SingletonJuego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonJuego.m; sourceTree = "<group>"; };
 		12A757E1191AC41800E03C5E /* PilasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilasViewController.h; sourceTree = "<group>"; };
 		12A757E2191AC41800E03C5E /* PilasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilasViewController.m; sourceTree = "<group>"; };
 		12A757E6191AD04D00E03C5E /* SeparatasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatasViewController.h; sourceTree = "<group>"; };
@@ -459,6 +468,12 @@
 				129D4DB51919C30700D12423 /* ClaseRespuesta.m */,
 				129D4DB71919C3DF00D12423 /* ClasePregunta.h */,
 				129D4DB81919C3DF00D12423 /* ClasePregunta.m */,
+				12A1FABC191C42CE0095179D /* preguntaProgressView.h */,
+				12A1FABD191C42CE0095179D /* preguntaProgressView.m */,
+				12A1FABF191C46AC0095179D /* TimerPreguntas.h */,
+				12A1FAC0191C46AC0095179D /* TimerPreguntas.m */,
+				12A1FAC2191C56290095179D /* SingletonJuego.h */,
+				12A1FAC3191C56290095179D /* SingletonJuego.m */,
 			);
 			name = Juego;
 			sourceTree = "<group>";
@@ -853,6 +868,7 @@
 				12A75811191AD75E00E03C5E /* ElectricidadViewController.m in Sources */,
 				12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */,
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
+				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
 				129D4D991919A86400D12423 /* BotellasViewController.m in Sources */,
 				120FF22E1913F39400A697D6 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -862,6 +878,7 @@
 				120FF22F1913F39400A697D6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				120FF2351913F39400A697D6 /* UIWebView+AFNetworking.m in Sources */,
 				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
+				12A1FABE191C42CE0095179D /* preguntaProgressView.m in Sources */,
 				12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */,
 				12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */,
 				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,
@@ -881,6 +898,7 @@
 				129EE5D519088A4C008A72CF /* NoticiasTableViewController.m in Sources */,
 				12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */,
 				120FF2311913F39400A697D6 /* UIButton+AFNetworking.m in Sources */,
+				12A1FAC4191C56290095179D /* SingletonJuego.m in Sources */,
 				120FF22C1913F39400A697D6 /* AFURLResponseSerialization.m in Sources */,
 				12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */,
 				12F4D00B18FF24C500C8BFF5 /* ContactanosTableViewController.m in Sources */,

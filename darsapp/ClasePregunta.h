@@ -11,7 +11,7 @@
 @interface ClasePregunta : NSObject
 
 @property (nonatomic, strong) NSArray *ArregloRespuestas;
-@property (nonatomic, strong) NSString *Pregunta;
+@property (nonatomic, strong) NSString *PreguntaARealizar;
 -(ClasePregunta*)initConPregunta:(NSString*)pregunta Respuestas:(NSArray*)respuestas;
-- (BOOL)EsPreguntaCorrecta:(NSString*)opcion;
+- (BOOL)EsPreguntaCorrecta:(NSInteger)opcion;
 @end

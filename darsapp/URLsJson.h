@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface URLsJson : NSObject
-#define login @"http://200.16.7.111/dp2/b/jsonapi"
-#define prueba @"http://bab-servicios-desarrollo.apphb.com/Pedido_Services.svc/selectAll_Pedido"
+#define login @"http://200.16.7.111/dp2/rc/jsonapi"
+#define UbicacionTachos @"http://200.16.7.111/dp2/rc/jsonapi"
 @end

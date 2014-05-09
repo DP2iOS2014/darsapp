@@ -128,6 +128,7 @@
 		12EEAB2A191D4485002F0D6E /* 5_DaleVidaATusResiduos.png in Resources */ = {isa = PBXBuildFile; fileRef = 12EEAB22191D4485002F0D6E /* 5_DaleVidaATusResiduos.png */; };
 		12EEAB2B191D4485002F0D6E /* 6_DaleVidaATusResiduos.png in Resources */ = {isa = PBXBuildFile; fileRef = 12EEAB23191D4485002F0D6E /* 6_DaleVidaATusResiduos.png */; };
 		12EEAB2C191D4485002F0D6E /* 7_DaleVidaATusResiduos.png in Resources */ = {isa = PBXBuildFile; fileRef = 12EEAB24191D4485002F0D6E /* 7_DaleVidaATusResiduos.png */; };
+		12EEAB2E191D4E68002F0D6E /* atras.png in Resources */ = {isa = PBXBuildFile; fileRef = 12EEAB2D191D4E68002F0D6E /* atras.png */; };
 		12F4CFC918FF147500C8BFF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F4CFC818FF147500C8BFF5 /* Foundation.framework */; };
 		12F4CFCB18FF147500C8BFF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F4CFCA18FF147500C8BFF5 /* CoreGraphics.framework */; };
 		12F4CFCD18FF147500C8BFF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F4CFCC18FF147500C8BFF5 /* UIKit.framework */; };
@@ -330,6 +331,7 @@
 		12EEAB22191D4485002F0D6E /* 5_DaleVidaATusResiduos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5_DaleVidaATusResiduos.png; sourceTree = "<group>"; };
 		12EEAB23191D4485002F0D6E /* 6_DaleVidaATusResiduos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6_DaleVidaATusResiduos.png; sourceTree = "<group>"; };
 		12EEAB24191D4485002F0D6E /* 7_DaleVidaATusResiduos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7_DaleVidaATusResiduos.png; sourceTree = "<group>"; };
+		12EEAB2D191D4E68002F0D6E /* atras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atras.png; sourceTree = "<group>"; };
 		12F4CFC518FF147500C8BFF5 /* darsapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = darsapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12F4CFC818FF147500C8BFF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		12F4CFCA18FF147500C8BFF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -641,6 +643,7 @@
 		12EEAB1C191D4436002F0D6E /* Ruta de la Basura */ = {
 			isa = PBXGroup;
 			children = (
+				12EEAB2D191D4E68002F0D6E /* atras.png */,
 				12EEAB1D191D4485002F0D6E /* 1_DaleVidaATusResiduos.png */,
 				12EEAB1E191D4485002F0D6E /* 2_DaleVidaATusResiduos.png */,
 				12EEAB1F191D4485002F0D6E /* 3_DaleVidaATusResiduos.png */,
@@ -912,6 +915,7 @@
 				12EEAB16191D4431002F0D6E /* 3_Electricidad.png in Resources */,
 				12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */,
 				12EEAB1A191D4431002F0D6E /* 7_Electricidad.png in Resources */,
+				12EEAB2E191D4E68002F0D6E /* atras.png in Resources */,
 				12F4D00618FF20C100C8BFF5 /* ios_homescreen_icon.png in Resources */,
 				12A1F702190ACEE9001ED3BE /* 189-plant.png in Resources */,
 				12EEAB1B191D4431002F0D6E /* 8_Electricidad.png in Resources */,

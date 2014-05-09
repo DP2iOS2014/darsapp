@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *tFusuario;
 @property (weak, nonatomic) IBOutlet UITextField *tFContrasenha;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *cargando;
 
 @end

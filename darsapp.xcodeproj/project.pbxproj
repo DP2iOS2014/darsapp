@@ -41,6 +41,8 @@
 		12330CC9191AC35A00E85590 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CC8191AC35A00E85590 /* SystemConfiguration.framework */; };
 		12330CCD191AC66200E85590 /* MapaTachosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CCC191AC66200E85590 /* MapaTachosViewController.m */; };
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
+		12615579191D76A500374E68 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 12615578191D76A500374E68 /* forest.png */; };
+		1261557E191D915500374E68 /* tachito.png in Resources */ = {isa = PBXBuildFile; fileRef = 1261557D191D915500374E68 /* tachito.png */; };
 		129D4D961919A70400D12423 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4D951919A70400D12423 /* iCarousel.m */; };
 		129D4D991919A86400D12423 /* BotellasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4D981919A86400D12423 /* BotellasViewController.m */; };
 		129D4D9C1919ADF200D12423 /* page.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4D9B1919ADF200D12423 /* page.png */; };
@@ -224,6 +226,8 @@
 		12330CCC191AC66200E85590 /* MapaTachosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosViewController.m; sourceTree = "<group>"; };
 		12330CD1191ADBD500E85590 /* MapaTachosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaTachosView.h; sourceTree = "<group>"; };
 		12330CD2191ADBD500E85590 /* MapaTachosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosView.m; sourceTree = "<group>"; };
+		12615578191D76A500374E68 /* forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest.png; sourceTree = "<group>"; };
+		1261557D191D915500374E68 /* tachito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tachito.png; sourceTree = "<group>"; };
 		129D4D941919A70400D12423 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		129D4D951919A70400D12423 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		129D4D971919A86400D12423 /* BotellasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BotellasViewController.h; sourceTree = "<group>"; };
@@ -457,12 +461,21 @@
 		12330CCA191AC64100E85590 /* MapaTachos */ = {
 			isa = PBXGroup;
 			children = (
+				1261557A191D8AA400374E68 /* imagenesMapaTachos */,
 				12330CCB191AC66200E85590 /* MapaTachosViewController.h */,
 				12330CCC191AC66200E85590 /* MapaTachosViewController.m */,
 				12330CD1191ADBD500E85590 /* MapaTachosView.h */,
 				12330CD2191ADBD500E85590 /* MapaTachosView.m */,
 			);
 			name = MapaTachos;
+			sourceTree = "<group>";
+		};
+		1261557A191D8AA400374E68 /* imagenesMapaTachos */ = {
+			isa = PBXGroup;
+			children = (
+				1261557D191D915500374E68 /* tachito.png */,
+			);
+			name = imagenesMapaTachos;
 			sourceTree = "<group>";
 		};
 		129D4D931919A58500D12423 /* UICarrousel */ = {
@@ -769,6 +782,7 @@
 		12F4D00018FF203600C8BFF5 /* Logos Contactanos */ = {
 			isa = PBXGroup;
 			children = (
+				12615578191D76A500374E68 /* forest.png */,
 				12AFACCC190B14260007F5C0 /* dars1.png */,
 				129EE5CF19085475008A72CF /* email.png */,
 				12F4D00E18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png */,
@@ -867,6 +881,7 @@
 				12FF2E96190AEEC600638774 /* grey_sandbag.png in Resources */,
 				129D4DA51919BE2A00D12423 /* botonSinFondo.png in Resources */,
 				12F4D00D18FF2CD300C8BFF5 /* congruent_pentagon.png in Resources */,
+				1261557E191D915500374E68 /* tachito.png in Resources */,
 				12A1F6FE190ACC56001ED3BE /* 103-map.png in Resources */,
 				12EEAB02191D4416002F0D6E /* 3_Pilas.png in Resources */,
 				129D4D9C1919ADF200D12423 /* page.png in Resources */,
@@ -935,6 +950,7 @@
 				12A7580E191AD41F00E03C5E /* 1_Materiales.png in Resources */,
 				129D4DB21919C27200D12423 /* bombaFinal.png in Resources */,
 				12A1F6FC190AC9AE001ED3BE /* recycle-bin.png in Resources */,
+				12615579191D76A500374E68 /* forest.png in Resources */,
 				12EEAB27191D4485002F0D6E /* 3_DaleVidaATusResiduos.png in Resources */,
 				12330CB1191AC24100E85590 /* GoogleMaps.bundle in Resources */,
 				12EEAAFF191D4416002F0D6E /* 2-2_ProduccionDistribucion.png in Resources */,

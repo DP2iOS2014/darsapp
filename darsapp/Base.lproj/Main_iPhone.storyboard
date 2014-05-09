@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2fB-dY-lrg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ja-Kw-sP6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -293,10 +293,15 @@
                                 <color key="textColor" red="0.1176470667" green="0.52156865600000002" blue="0.086274512110000007" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Um1-Dh-Fad">
+                                <rect key="frame" x="150" y="265" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="cargando" destination="Um1-Dh-Fad" id="ifM-Ke-ci1"/>
                         <outlet property="tFContrasenha" destination="sds-H7-2Nf" id="4Ox-pa-MD8"/>
                         <outlet property="tFusuario" destination="qLb-uI-fjY" id="1Ex-G7-r3k"/>
                         <segue destination="2fB-dY-lrg" kind="modal" identifier="exito_login" id="0qS-A9-AW6"/>
@@ -650,7 +655,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdp-HO-pGz" customClass="MapaTachosView">
-                                <rect key="frame" x="0.0" y="63" width="320" height="324"/>
+                                <rect key="frame" x="0.0" y="93" width="320" height="294"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -665,11 +670,16 @@
                                     <segment title="Vidrio"/>
                                 </segments>
                             </segmentedControl>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HcY-pC-3zp">
+                                <rect key="frame" x="150" y="65" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa " id="JNF-i5-I4O"/>
                     <connections>
+                        <outlet property="cargando" destination="HcY-pC-3zp" id="QHr-Nh-b9V"/>
                         <outlet property="mapView" destination="Tdp-HO-pGz" id="rkm-VW-cfi"/>
                         <outlet property="tipoSegmentControl" destination="oQS-TS-H4o" id="TDD-6S-rXR"/>
                     </connections>

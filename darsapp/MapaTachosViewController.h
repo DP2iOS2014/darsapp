@@ -12,4 +12,5 @@
 @interface MapaTachosViewController : UIViewController
 @property (weak, nonatomic) IBOutlet MapaTachosView *mapView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipoSegmentControl;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *cargando;
 @end

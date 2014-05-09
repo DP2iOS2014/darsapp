@@ -8,6 +8,7 @@
 
 #import "MapaTachosViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "URLsJson.h"
 
 @interface MapaTachosViewController ()
 
@@ -16,6 +17,8 @@
 @implementation MapaTachosViewController
 {
     GMSMapView *mapView_;
+    NSDictionary * respuesta;
+    NSMutableArray * arregloMarkers;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[self recuperaListaDeTachos];
+    
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-12.068938
                                                             longitude:-77.080190
                                                                  zoom:15.60];
@@ -37,23 +42,85 @@
     mapView_.myLocationEnabled = YES;
     [self.mapView addSubview: mapView_];
     
-    GMSMarker *marker = [[GMSMarker alloc] init];
+    /*GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(-12.068938, -77.080190);
     marker.title = @"CAPU";
     marker.snippet = @"Capilla";
-    marker.map = mapView_;
+    marker.map = mapView_; */
     // Do any additional setup after loading the view.
-    UIButton* myLocationButton = (UIButton*)[[mapView_ subviews] lastObject];
-    myLocationButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
-    CGRect frame = myLocationButton.frame;
-    frame.origin.x = 5;
-    myLocationButton.frame = frame;
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) recuperaListaDeTachos{
+    ////////
+    //Hacer diccionario que paso llamado "consulta"
+    NSDictionary * cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"contenedor",@"tipo" , nil];
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@",consulta);
+    
+    //{"operacion":"Consulta","cuerpo" : { "tipo":"contenedor"}
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:UbicacionTachos parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+        
+        /*GMSMarker *marker = [[GMSMarker alloc] init];
+        marker.position = CLLocationCoordinate2DMake(, -77.080190);
+        marker.title = @"CAPU";
+        marker.snippet = @"Capilla";
+        marker.map = mapView_; */
+        
+        ////////////
+
+        for (int i=0; i<[arregloPosiciones count]; i++){
+            
+            NSString *lat = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_mm_latitud"];
+            NSString *lon = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_mm_longitud"];
+            double lt=[lat doubleValue];
+            double ln=[lon doubleValue];
+            NSString *name = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+            
+            // Instantiate and set the GMSMarker properties
+            GMSMarker *marker = [[GMSMarker alloc] init];
+            marker.appearAnimation=YES;
+            marker.position = CLLocationCoordinate2DMake(lt,ln);
+            marker.title = name;
+            marker.snippet = @"";
+            marker.map = mapView_;
+            
+            [arregloMarkers addObject:marker];
+            
+        }
+        //////////
+        
+    } failure:^(AFHTTPRequestOperation *task, NSError *error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [arregloMarkers removeAllObjects];
+    [mapView_ clear];
+    [self recuperaListaDeTachos];
 }
 
 /*

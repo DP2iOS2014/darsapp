@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface DarsLocalizacionAnnotation : NSObject
+@interface DarsLocalizacionAnnotation : NSObject<MKAnnotation>
 
 - (id)initWithName:(NSString*)name address:(NSString*)address coordinate:(CLLocationCoordinate2D)coordinate;
 - (MKMapItem*)mapItem;

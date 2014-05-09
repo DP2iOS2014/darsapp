@@ -34,13 +34,14 @@
 {
     [super viewDidLoad];
     //[self recuperaListaDeTachos];
-    
+    //self.cargando.alpha = 0;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-12.068938
                                                             longitude:-77.080190
                                                                  zoom:15.60];
     mapView_ = [GMSMapView mapWithFrame:self.mapView.bounds camera:camera];
     mapView_.myLocationEnabled = YES;
     [self.mapView addSubview: mapView_];
+    
     
     /*GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(-12.068938, -77.080190);
@@ -60,6 +61,7 @@
 -(void) recuperaListaDeTachos{
     ////////
     //Hacer diccionario que paso llamado "consulta"
+    self.cargando.alpha = 1;
     NSDictionary * cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"contenedor",@"tipo" , nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
@@ -73,7 +75,7 @@
     [manager POST:UbicacionTachos parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuesta = responseObject;
         NSLog(@"JSON: %@", respuesta);
-        
+        self.cargando.alpha = 0; 
         NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
         NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
         
@@ -98,10 +100,12 @@
             marker.appearAnimation=YES;
             marker.position = CLLocationCoordinate2DMake(lt,ln);
             marker.title = name;
-            marker.snippet = @"";
+            marker.snippet = @"prueba";
+            marker.icon = [UIImage imageNamed:@"tachito.png"];
             marker.map = mapView_;
             
             [arregloMarkers addObject:marker];
+           
             
         }
         //////////

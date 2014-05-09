@@ -31,6 +31,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.cargando.alpha = 0 ;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                          action:@selector(dismissKeyboard)];
     
@@ -53,6 +54,7 @@
 
 
 - (IBAction)ApretoIngresar:(id)sender {
+    self.cargando.alpha = 1 ;
     // Arreglo de los indices(indices son Strings)
     NSArray *keys = [NSArray arrayWithObjects:@"hacer", @"username",@"password", nil];
     // Arreglo de los objeto que se tendran dentro del diccionario
@@ -87,21 +89,25 @@
             
             UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Debe ingresar Usuario y/o Contraseña" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [miAlert show];
+            self.cargando.alpha = 0 ;
             
         }else if([self.tFusuario.text isEqualToString:@""] && ![self.tFContrasenha.text isEqualToString:@""]){
             //Falta colocar usuario
             
             UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Debe ingresar Usuario" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [miAlert show];
+            self.cargando.alpha = 0 ;
             
         }else if(![self.tFusuario.text isEqualToString:@""] && [self.tFContrasenha.text isEqualToString:@""]){
             //Falta colocar contrasenha
             UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Debe ingresar Contraseña" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [miAlert show];
+            self.cargando.alpha = 0 ;
         }
         else {
             UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Usuario o contraseña incorrecta" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [miAlert show];
+            self.cargando.alpha = 0 ;
         }
 
     } failure:^(AFHTTPRequestOperation *task, NSError *error) {
@@ -111,6 +117,7 @@
                                                   cancelButtonTitle:@"Ok"
                                                   otherButtonTitles:nil];
         [alertView show];
+        self.cargando.alpha = 0 ;
     }];
     
     //////////

@@ -70,7 +70,7 @@
             annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             annotationView.enabled = YES;
             annotationView.canShowCallout = YES;
-            //annotationView.image = [UIImage imageNamed:@"dars1.png"];//here we use a nice image instead of the default pins
+            annotationView.image = [UIImage imageNamed:@"dars1.png"];//here we use a nice image instead of the default pins
         } else {
             annotationView.annotation = annotation;
         }

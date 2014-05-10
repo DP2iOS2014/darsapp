@@ -164,6 +164,10 @@
         self.btnBomba.enabled=NO;
         self.btnOtroOpcion.enabled=NO;
         self.btnNuevaPregunta.enabled=NO;
+        
+        //NSUserDefaults *miDefault= [NSUserDefaults standardUserDefaults];
+        
+        
     }
 }
 - (IBAction)SeApretoNuevaPregunta:(id)sender {
@@ -269,7 +273,7 @@
     
     
    //  [BarraProgreso setProgress: 0.1f animated: YES];
-    
+  //  self.BarraProgreso.layer.delegate = self;
     [self.BarraProgreso setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
     
     

@@ -11,19 +11,23 @@
 @implementation SingletonJuego
 
 + (id)sharedManager{
+
+    static dispatch_once_t once;
     static SingletonJuego *sharedMyManager;
-    @synchronized(self) {
-        if (sharedMyManager == nil)
-            sharedMyManager = [[self alloc] init];
-            sharedMyManager.Tiempo = 30;
-            sharedMyManager.VidasReloj = 3;
-            sharedMyManager.VidasBomba = 3;
-            sharedMyManager.VidasNPregunta=3;
-            sharedMyManager.VidasOtraOpcion = 3;
-            sharedMyManager.tieneOtraOpcion = NO;
-            sharedMyManager.disponibilidadBoton=YES;
-    }
-    
+    dispatch_once(&once, ^{
+        
+        
+        sharedMyManager = [[self alloc] init];
+        sharedMyManager.Tiempo = 30;
+        sharedMyManager.VidasReloj = 3;
+        sharedMyManager.VidasBomba = 3;
+        sharedMyManager.VidasNPregunta=3;
+        sharedMyManager.VidasOtraOpcion = 3;
+        sharedMyManager.tieneOtraOpcion = NO;
+        sharedMyManager.disponibilidadBoton=YES;
+        
+        
+    });
     
     return sharedMyManager;
 }

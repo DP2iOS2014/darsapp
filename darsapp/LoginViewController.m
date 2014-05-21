@@ -32,12 +32,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.cargando.alpha = 0 ;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                         action:@selector(dismissKeyboard)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
     
-     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"grey_sandbag.png"]]];
+     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondologin.jpg"]]];
 }
 
 - (void)didReceiveMemoryWarning

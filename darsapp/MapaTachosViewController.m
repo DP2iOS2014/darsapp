@@ -58,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) recuperaListaDeTachos{
+-(void) recuperaListaDeTachosDeTipo:(NSString*)tipoTacho{
     ////////
     //Hacer diccionario que paso llamado "consulta"
     self.cargando.alpha = 1;
@@ -91,21 +91,32 @@
             
             NSString *lat = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_mm_latitud"];
             NSString *lon = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_mm_longitud"];
+            NSString *tipo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_contenedor"];
             double lt=[lat doubleValue];
             double ln=[lon doubleValue];
             NSString *name = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
             
-            // Instantiate and set the GMSMarker properties
-            GMSMarker *marker = [[GMSMarker alloc] init];
-            marker.appearAnimation=YES;
-            marker.position = CLLocationCoordinate2DMake(lt,ln);
-            marker.title = name;
-            marker.snippet = @"prueba";
-            marker.icon = [UIImage imageNamed:@"tachito.png"];
-            marker.map = mapView_;
-            
-            [arregloMarkers addObject:marker];
-           
+            if([tipo isEqualToString:tipoTacho]){
+                // Instantiate and set the GMSMarker properties
+                GMSMarker *marker = [[GMSMarker alloc] init];
+                marker.appearAnimation=YES;
+                marker.position = CLLocationCoordinate2DMake(lt,ln);
+                marker.title = name;
+                marker.snippet = @"prueba";
+                if([tipoTacho isEqualToString:@"Contenedor general"]){
+                    marker.icon = [UIImage imageNamed:@"tachito.png"];
+                }else if ([tipoTacho isEqualToString:@"Contenedor de papel"]){
+                    marker.icon = [UIImage imageNamed:@"tachito5.png"];
+                }else if ([tipoTacho isEqualToString:@"Contenedor de pilas"]){
+                    marker.icon = [UIImage imageNamed:@"tachito4.png"];
+                }else if ([tipoTacho isEqualToString:@"Contenedor de plastico"]){
+                    marker.icon = [UIImage imageNamed:@"tachito3.png"];
+                }else if ([tipoTacho isEqualToString:@"Contenedor de vidrio"]){
+                    marker.icon = [UIImage imageNamed:@"tachito2.png"];
+                }
+                marker.map = mapView_;
+                [arregloMarkers addObject:marker];
+            }
             
         }
         //////////
@@ -124,8 +135,34 @@
 -(void)viewWillAppear:(BOOL)animated{
     [arregloMarkers removeAllObjects];
     [mapView_ clear];
-    [self recuperaListaDeTachos];
+    [self.tipoSegmentControl setSelectedSegmentIndex:0];
+    [self recuperaListaDeTachosDeTipo:@"Contenedor general"];
 }
+
+- (IBAction)cambioDeTacho:(UISegmentedControl *)sender {
+    if([sender selectedSegmentIndex]==0){
+        [arregloMarkers removeAllObjects];
+        [mapView_ clear];
+        [self recuperaListaDeTachosDeTipo:@"Contenedor general"];
+    }else if([sender selectedSegmentIndex]==1){
+        [arregloMarkers removeAllObjects];
+        [mapView_ clear];
+        [self recuperaListaDeTachosDeTipo:@"Contenedor de papel"];
+    }else if([sender selectedSegmentIndex]==2){
+        [arregloMarkers removeAllObjects];
+        [mapView_ clear];
+        [self recuperaListaDeTachosDeTipo:@"Contenedor de pilas"];
+    }else if([sender selectedSegmentIndex]==3){
+        [arregloMarkers removeAllObjects];
+        [mapView_ clear];
+        [self recuperaListaDeTachosDeTipo:@"Contenedor de plastico"];
+    }else if([sender selectedSegmentIndex]==4){
+        [arregloMarkers removeAllObjects];
+        [mapView_ clear];
+        [self recuperaListaDeTachosDeTipo:@"Contenedor de vidrio"];
+    }
+}
+
 
 /*
 #pragma mark - Navigation

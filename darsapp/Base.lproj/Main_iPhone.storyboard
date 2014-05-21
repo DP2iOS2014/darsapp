@@ -723,7 +723,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oQS-TS-H4o">
-                                <rect key="frame" x="3" y="395" width="314" height="29"/>
+                                <rect key="frame" x="2" y="395" width="314" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="General"/>
@@ -732,6 +732,9 @@
                                     <segment title="Plastico"/>
                                     <segment title="Vidrio"/>
                                 </segments>
+                                <connections>
+                                    <action selector="cambioDeTacho:" destination="9cJ-BL-oAH" eventType="valueChanged" id="go0-oZ-mTn"/>
+                                </connections>
                             </segmentedControl>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="HcY-pC-3zp">
                                 <rect key="frame" x="150" y="65" width="20" height="20"/>

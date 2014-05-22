@@ -11,5 +11,6 @@
 @interface LiderAmbientalCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imagen;
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
+@property (weak, nonatomic) IBOutlet UILabel *txtlabel;
 
 @end

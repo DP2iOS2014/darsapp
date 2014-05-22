@@ -1179,15 +1179,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="H0j-bM-KqL" imageView="BLU-4A-rDN" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Inz-tj-Shx">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="H0j-bM-KqL" imageView="BLU-4A-rDN" rowHeight="60" style="IBUITableViewCellStyleDefault" id="Inz-tj-Shx">
                                         <rect key="frame" x="0.0" y="244" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Inz-tj-Shx" id="Pbj-fF-CEt">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Energia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H0j-bM-KqL">
-                                                    <rect key="frame" x="88" y="0.0" width="197" height="59"/>
+                                                    <rect key="frame" x="88" y="0.0" width="217" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1199,9 +1199,6 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="J1l-bF-VPu" kind="push" id="Kfa-ye-x4J"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="aII-nz-5ar" imageView="Kay-8a-jLU" rowHeight="60" style="IBUITableViewCellStyleDefault" id="VV8-xq-rd2">
                                         <rect key="frame" x="0.0" y="304" width="320" height="60"/>
@@ -1317,6 +1314,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tipos de Lider Ambiental" id="SMf-qV-mwg"/>
+                    <connections>
+                        <segue destination="J1l-bF-VPu" kind="push" identifier="idsegue" id="r0P-9Z-vqi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EM-eO-jmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1351,11 +1351,11 @@
                                             <rect key="frame" x="191" y="80" width="32" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-NB-WIZ">
-                                            <rect key="frame" x="93" y="20" width="42" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="223" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-NB-WIZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="223" height="118"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1365,6 +1365,7 @@
                                 <connections>
                                     <outlet property="icon" destination="CPE-uN-KTr" id="TM1-BB-kfe"/>
                                     <outlet property="imagen" destination="RBD-eJ-Qqo" id="31s-1b-uj9"/>
+                                    <outlet property="txtlabel" destination="tKP-NB-WIZ" id="vqZ-gh-WJs"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

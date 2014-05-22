@@ -137,11 +137,16 @@
           }];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self performSegueWithIdentifier:@"idsegue" sender:self];
+}
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     LiderAmbientalViewController *escenadestino = segue.destinationViewController;
     escenadestino.respuestajson= respuesta;
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     escenadestino.indice= selectedIndexPath.row;
+    
 };
 
 @end

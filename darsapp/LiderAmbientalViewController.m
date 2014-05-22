@@ -16,6 +16,9 @@
 @implementation LiderAmbientalViewController{
 
     NSArray * arregloprueba;
+    NSMutableArray *buenaspracticas;
+    NSMutableArray *puntajes;
+    
 }
 
 
@@ -33,13 +36,74 @@
 {
     [super viewDidLoad];
     
-    arregloprueba=@[@"Compras1.png",@"Compras2.png",@"Compras3.png",@"Compras4.png",@"Compras5.png",@"Compras6.png",@"Compras7.png",@"Compras8.png",@"Compras9.png",@"Compras10.png",@"Compras11.png",@"Compras12.png",@"Compras13.png",@"Compras14.png",@"Compras15.png",@"Compras16.png"];
+    
+    //lectura de datos
+    
+    NSDictionary * diccionarioPosiciones = [self.respuestajson objectForKey:@"cuerpo"];
+    NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+    buenaspracticas = [[NSMutableArray alloc] init];
+    
+    //PARA SACAR LOS DATOS
+    
+    for(int i=0; i<[arregloPosiciones count];i++){
+        NSString *descripcion = [[arregloPosiciones objectAtIndex:i] objectForKey:@"descripcion"];
+        NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+        NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+        NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_tema"];
+        double punt=[puntaje doubleValue];
+        double idtema=0;
+        
+        if ([tema isEqualToString:@"agua"]) {
+            idtema=0;
+        };
+        if ([tema isEqualToString:@"espacios verdes"]) {
+            idtema=1;
+        };
+        if ([tema isEqualToString:@"compras"]) {
+            idtema=2;
+        };
+        if ([tema isEqualToString:@"Energia"]) {
+            idtema=3;
+        };
+        if ([tema isEqualToString:@"liderazgo"]) {
+            idtema=4;
+        };
+        if ([tema isEqualToString:@"papeles"]) {
+            idtema=5;
+        };
+        if ([tema isEqualToString:@"residuos solidos"]) {
+            idtema=6;
+        };
+        if ([tema isEqualToString:@"aire y ruido"]) {
+            idtema=7;
+        };
+        if ([tema isEqualToString:@"tranporte"]) {
+            idtema=8;
+        };
+     
+        if(self.indice==idtema){
+            [buenaspracticas addObject:titulo];
+            [puntajes   addObject:puntaje];
+        }
+    
+    }
+    
+    NSLog(@"JSON: %@", self.respuestajson);
+    
+    /////////////VERIFICO QUE TEMA APRETO////////////////
+        
+    
     [self.collectionView setAllowsMultipleSelection:YES];
     
     // Do any additional setup after loading the view.
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*) self.collectionView.collectionViewLayout;
     
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 8, 20, 8);
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,24 +120,26 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return arregloprueba.count;
+    return buenaspracticas.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     LiderAmbientalCell *cell= [collectionView dequeueReusableCellWithReuseIdentifier:@"idimagen" forIndexPath:indexPath];
     
-    cell.imagen.image = [UIImage imageNamed:[arregloprueba objectAtIndex:indexPath.row]];
+    cell.imagen.image = [UIImage imageNamed:@"images.jpeg"];
     
     NSArray * indexitems = [self.collectionView indexPathsForSelectedItems];
     
     if([indexitems containsObject:indexPath]){
         cell.imagen.alpha=0.3;
         cell.icon.alpha=1;
+        cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
         
     }else{
         cell.imagen.alpha=1;
         cell.icon.alpha=0;
+        cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
     }
     
     return cell;

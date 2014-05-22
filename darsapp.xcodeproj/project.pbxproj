@@ -25,6 +25,7 @@
 		120FF2341913F39400A697D6 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2221913F39400A697D6 /* UIRefreshControl+AFNetworking.m */; };
 		120FF2351913F39400A697D6 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2241913F39400A697D6 /* UIWebView+AFNetworking.m */; };
 		120FF2881914061800A697D6 /* URLsJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2871914061800A697D6 /* URLsJson.m */; };
+		1224BB5B192E9161006ED075 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB5A192E9161006ED075 /* MyFlowLayout.m */; };
 		12330CAF191AC11500E85590 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CAE191AC11500E85590 /* GoogleMaps.framework */; };
 		12330CB1191AC24100E85590 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 12330CB0191AC24100E85590 /* GoogleMaps.bundle */; };
 		12330CB3191AC29800E85590 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CB2191AC29800E85590 /* AVFoundation.framework */; };
@@ -271,6 +272,8 @@
 		120FF2241913F39400A697D6 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		120FF2861914061800A697D6 /* URLsJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLsJson.h; sourceTree = "<group>"; };
 		120FF2871914061800A697D6 /* URLsJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLsJson.m; sourceTree = "<group>"; };
+		1224BB59192E9161006ED075 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		1224BB5A192E9161006ED075 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
 		12330CAE191AC11500E85590 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		12330CB0191AC24100E85590 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		12330CB2191AC29800E85590 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -744,6 +747,8 @@
 				128AC03C192D3B110015AEF4 /* TemasAdmTableViewController.m */,
 				1276EA06192D4FB000B49816 /* LiderAmbientalCell.h */,
 				1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */,
+				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
+				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -1294,6 +1299,7 @@
 				129D4D991919A86400D12423 /* BotellasViewController.m in Sources */,
 				120FF22E1913F39400A697D6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				12E53C57191D7CAA00911B7C /* InformacionTableViewController.m in Sources */,
+				1224BB5B192E9161006ED075 /* MyFlowLayout.m in Sources */,
 				129D4D961919A70400D12423 /* iCarousel.m in Sources */,
 				12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */,
 				120FF2321913F39400A697D6 /* UIImageView+AFNetworking.m in Sources */,

@@ -8,6 +8,9 @@
 
 #import "GrillaAmbientalizateViewController.h"
 #import "GrillaAmbientalizateCell.h"
+//////
+#import "MyFlowLayout.h"
+//////
 //#import "RecipeCollectionHeaderView.h"
 
 
@@ -33,6 +36,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    ///////
+    MyFlowLayout *myLayout = [[MyFlowLayout alloc]init];
+    myLayout.headerReferenceSize = CGSizeMake(0, 50);
+    myLayout.footerReferenceSize = CGSizeMake(0, 50);
+[myLayout setItemSize:CGSizeMake(146, 118)];
+    [self.collectionView setCollectionViewLayout:myLayout animated:YES];
+    
+    UIGestureRecognizer *pinchRecognizer =
+    [[UIPinchGestureRecognizer alloc] initWithTarget:self
+                                              action:@selector(handlePinch:)];
+    
+    [self.collectionView addGestureRecognizer:pinchRecognizer];
+
+    //////
     arregloImagenes = @[@"cl01.jpg",@"cl02.jpg",@"cl03.jpg",@"cl04.jpg",@"cl05.jpg",@"cl06.jpg",@"cl07.jpg",@"cl08.jpg",@"cl09.jpg",@"cl10.jpg",@"cl11.jpg"];
     [self.collectionView setAllowsMultipleSelection:YES];
     // Do any additional setup after loading the view.
@@ -132,6 +149,46 @@
             
         } completion:nil];
 }
+
+//////
+- (IBAction)handlePinch:(UIPinchGestureRecognizer *)sender {
+    
+    // Get a reference to the flow layout
+    
+    MyFlowLayout *layout =
+    (MyFlowLayout *)self.collectionView.collectionViewLayout;
+    
+    // If this is the start of the gesture
+    if (sender.state == UIGestureRecognizerStateBegan)
+    {
+        // Get the initial location of the pinch?
+        CGPoint initialPinchPoint =
+        [sender locationInView:self.collectionView];
+        
+        //Convert pinch location into a specific cell
+        NSIndexPath *pinchedCellPath =
+        [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
+        
+        // Store the indexPath to cell
+        layout.currentCellPath = pinchedCellPath;
+    }
+    else if (sender.state == UIGestureRecognizerStateChanged)
+    {
+        // Store the new center location of the selected cell
+        layout.currentCellCenter =
+        [sender locationInView:self.collectionView];
+        // Store the scale value
+        layout.currentCellScale = sender.scale;
+    }
+    else
+    {
+        [self.collectionView performBatchUpdates:^{
+            layout.currentCellPath = nil;
+            layout.currentCellScale = 1.0;
+        } completion:nil];
+    }
+}
+/////
 
 /*
 #pragma mark - Navigation

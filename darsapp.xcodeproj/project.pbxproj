@@ -44,7 +44,6 @@
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
 		12615579191D76A500374E68 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 12615578191D76A500374E68 /* forest.png */; };
 		1261557E191D915500374E68 /* tachito.png in Resources */ = {isa = PBXBuildFile; fileRef = 1261557D191D915500374E68 /* tachito.png */; };
-		1268D8B5192E734800755907 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1268D8B4192E734800755907 /* images.jpeg */; };
 		1276EA08192D4FB000B49816 /* LiderAmbientalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */; };
 		1276EA1A192D62C400B49816 /* Compras1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1276EA0A192D62C400B49816 /* Compras1.png */; };
 		1276EA1B192D62C400B49816 /* Compras2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1276EA0B192D62C400B49816 /* Compras2.png */; };
@@ -295,7 +294,6 @@
 		12330CD2191ADBD500E85590 /* MapaTachosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosView.m; sourceTree = "<group>"; };
 		12615578191D76A500374E68 /* forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest.png; sourceTree = "<group>"; };
 		1261557D191D915500374E68 /* tachito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tachito.png; sourceTree = "<group>"; };
-		1268D8B4192E734800755907 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = ../../../Downloads/images.jpeg; sourceTree = "<group>"; };
 		1276EA06192D4FB000B49816 /* LiderAmbientalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiderAmbientalCell.h; sourceTree = "<group>"; };
 		1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiderAmbientalCell.m; sourceTree = "<group>"; };
 		1276EA0A192D62C400B49816 /* Compras1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Compras1.png; sourceTree = "<group>"; };
@@ -749,12 +747,8 @@
 				128AC03C192D3B110015AEF4 /* TemasAdmTableViewController.m */,
 				1276EA06192D4FB000B49816 /* LiderAmbientalCell.h */,
 				1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */,
-
-
 				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
 				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
-
-				1268D8B4192E734800755907 /* images.jpeg */,
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -1236,7 +1230,6 @@
 				12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */,
 				12EEAB01191D4416002F0D6E /* 2-4_ProduccionDistribucion.png in Resources */,
 				12EFB94F192D46D000AAAAB2 /* tachito5.png in Resources */,
-				1268D8B5192E734800755907 /* images.jpeg in Resources */,
 				12EEAB26191D4485002F0D6E /* 2_DaleVidaATusResiduos.png in Resources */,
 				12A128EA191ED74C00397B90 /* cl09.jpg in Resources */,
 				12EEAB19191D4431002F0D6E /* 6_Electricidad.png in Resources */,

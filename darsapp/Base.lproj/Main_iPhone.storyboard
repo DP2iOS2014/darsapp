@@ -1343,7 +1343,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="223" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="RBD-eJ-Qqo">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBD-eJ-Qqo">
                                             <rect key="frame" x="0.0" y="0.0" width="228" height="118"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
@@ -1402,7 +1402,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iNP-Ok-hE3">
-                                            <rect key="frame" x="677" y="0.0" width="187" height="153"/>
+                                            <rect key="frame" x="677" y="0.0" width="379" height="289"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-c8-dCT">
@@ -1742,7 +1742,6 @@
         <image name="email.png" width="512" height="512"/>
         <image name="energia.png" width="260" height="264"/>
         <image name="flower-pot.png" width="30" height="30"/>
-        <image name="images.jpeg" width="300" height="168"/>
         <image name="ios_homescreen_icon.png" width="1024" height="1024"/>
         <image name="iphone_maps_icon_ios6.png" width="542" height="543"/>
         <image name="liderazgo.png" width="519" height="516"/>

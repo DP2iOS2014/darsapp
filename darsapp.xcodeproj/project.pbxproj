@@ -750,11 +750,11 @@
 				1276EA06192D4FB000B49816 /* LiderAmbientalCell.h */,
 				1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */,
 
+
 				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
 				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
 
 				1268D8B4192E734800755907 /* images.jpeg */,
-
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";

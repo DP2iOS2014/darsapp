@@ -11,4 +11,5 @@
 @interface URLsJson : NSObject
 #define login @"http://200.16.7.111/dp2/rc/jsonapi"
 #define UbicacionTachos @"http://200.16.7.111/dp2/rc/jsonapi"
+#define Buenaspracticas @"http://200.16.7.111/dp2/rc/jsonapi"
 @end

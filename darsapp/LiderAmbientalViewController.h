@@ -10,4 +10,7 @@
 
 @interface LiderAmbientalViewController : UICollectionViewController
 
+@property (nonatomic,strong) NSDictionary *respuestajson;
+@property NSInteger indice;
+
 @end

@@ -92,7 +92,36 @@
         NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
         NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tema"];
         double punt=[puntaje doubleValue];
-        double idtema=[tema doubleValue];
+        double idtema;
+            
+        if ([tema isEqualToString:@"agua"]) {
+            idtema=1;
+        };
+            if ([tema isEqualToString:@"espacios verdes"]) {
+                idtema=2;
+            };
+            if ([tema isEqualToString:@"compras"]) {
+                idtema=3;
+            };
+            if ([tema isEqualToString:@"energia"]) {
+                idtema=4;
+            };
+            if ([tema isEqualToString:@"liderazgo"]) {
+                idtema=5;
+            };
+            if ([tema isEqualToString:@"papeles"]) {
+                idtema=6;
+            };
+            if ([tema isEqualToString:@"residuos solidos"]) {
+                idtema=7;
+            };
+            if ([tema isEqualToString:@"aire y ruido"]) {
+                idtema=8;
+            };
+            if ([tema isEqualToString:@"tranporte"]) {
+                idtema=9;
+            };
+            
             
      
         
@@ -111,8 +140,8 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     LiderAmbientalViewController *escenadestino = segue.destinationViewController;
     escenadestino.respuestajson= respuesta;
-    //escenadestino.indice=
-
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    escenadestino.indice= selectedIndexPath.row;
 };
 
 @end

@@ -44,7 +44,6 @@
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
 		12615579191D76A500374E68 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 12615578191D76A500374E68 /* forest.png */; };
 		1261557E191D915500374E68 /* tachito.png in Resources */ = {isa = PBXBuildFile; fileRef = 1261557D191D915500374E68 /* tachito.png */; };
-		1268D8B5192E734800755907 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1268D8B4192E734800755907 /* images.jpeg */; };
 		1276EA08192D4FB000B49816 /* LiderAmbientalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */; };
 		1276EA1A192D62C400B49816 /* Compras1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1276EA0A192D62C400B49816 /* Compras1.png */; };
 		1276EA1B192D62C400B49816 /* Compras2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1276EA0B192D62C400B49816 /* Compras2.png */; };
@@ -93,6 +92,7 @@
 		129EE5D21908679B008A72CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129EE5D11908679B008A72CF /* MessageUI.framework */; };
 		129EE5D519088A4C008A72CF /* NoticiasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EE5D419088A4C008A72CF /* NoticiasTableViewController.m */; };
 		129EE5D819088A75008A72CF /* CeldaNoticiasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EE5D719088A75008A72CF /* CeldaNoticiasTableViewCell.m */; };
+		129F4918192E9C0100DF8793 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 129F4917192E9C0100DF8793 /* images.jpeg */; };
 		12A083FE19099DE000D010E6 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A083FD19099DE000D010E6 /* ic_launcher.png */; };
 		12A128CE191EAE4D00397B90 /* GrillaAmbientalizateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128CD191EAE4D00397B90 /* GrillaAmbientalizateViewController.m */; };
 		12A128D1191EB74200397B90 /* GrillaAmbientalizateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128D0191EB74200397B90 /* GrillaAmbientalizateCell.m */; };
@@ -295,7 +295,6 @@
 		12330CD2191ADBD500E85590 /* MapaTachosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosView.m; sourceTree = "<group>"; };
 		12615578191D76A500374E68 /* forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest.png; sourceTree = "<group>"; };
 		1261557D191D915500374E68 /* tachito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tachito.png; sourceTree = "<group>"; };
-		1268D8B4192E734800755907 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = ../../../Downloads/images.jpeg; sourceTree = "<group>"; };
 		1276EA06192D4FB000B49816 /* LiderAmbientalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiderAmbientalCell.h; sourceTree = "<group>"; };
 		1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiderAmbientalCell.m; sourceTree = "<group>"; };
 		1276EA0A192D62C400B49816 /* Compras1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Compras1.png; sourceTree = "<group>"; };
@@ -356,6 +355,7 @@
 		129EE5D419088A4C008A72CF /* NoticiasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiasTableViewController.m; sourceTree = "<group>"; };
 		129EE5D619088A75008A72CF /* CeldaNoticiasTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaNoticiasTableViewCell.h; sourceTree = "<group>"; };
 		129EE5D719088A75008A72CF /* CeldaNoticiasTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaNoticiasTableViewCell.m; sourceTree = "<group>"; };
+		129F4917192E9C0100DF8793 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		12A083FD19099DE000D010E6 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		12A128CC191EAE4D00397B90 /* GrillaAmbientalizateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaAmbientalizateViewController.h; sourceTree = "<group>"; };
 		12A128CD191EAE4D00397B90 /* GrillaAmbientalizateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrillaAmbientalizateViewController.m; sourceTree = "<group>"; };
@@ -749,12 +749,9 @@
 				128AC03C192D3B110015AEF4 /* TemasAdmTableViewController.m */,
 				1276EA06192D4FB000B49816 /* LiderAmbientalCell.h */,
 				1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */,
-
-
 				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
 				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
-
-				1268D8B4192E734800755907 /* images.jpeg */,
+				129F4917192E9C0100DF8793 /* images.jpeg */,
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -1236,7 +1233,7 @@
 				12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */,
 				12EEAB01191D4416002F0D6E /* 2-4_ProduccionDistribucion.png in Resources */,
 				12EFB94F192D46D000AAAAB2 /* tachito5.png in Resources */,
-				1268D8B5192E734800755907 /* images.jpeg in Resources */,
+				129F4918192E9C0100DF8793 /* images.jpeg in Resources */,
 				12EEAB26191D4485002F0D6E /* 2_DaleVidaATusResiduos.png in Resources */,
 				12A128EA191ED74C00397B90 /* cl09.jpg in Resources */,
 				12EEAB19191D4431002F0D6E /* 6_Electricidad.png in Resources */,

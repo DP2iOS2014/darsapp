@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TemasAdmTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UILabel *puntaje;
 
 @end

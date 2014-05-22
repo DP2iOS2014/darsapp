@@ -18,6 +18,7 @@
     NSArray * arregloprueba;
     NSMutableArray *buenaspracticas;
     NSMutableArray *puntajes;
+    double puntajeUsuario;
     
 }
 
@@ -42,7 +43,7 @@
     NSDictionary * diccionarioPosiciones = [self.respuestajson objectForKey:@"cuerpo"];
     NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
     buenaspracticas = [[NSMutableArray alloc] init];
-    
+    puntajes = [[NSMutableArray alloc]init];
     //PARA SACAR LOS DATOS
     
     for(int i=0; i<[arregloPosiciones count];i++){
@@ -103,6 +104,18 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+    
+    
+    double puntajeHecho = puntajeUsuario;
+    
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    
+    double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumulado"];
+    
+    double nuevoPuntaje = puntajeActual + puntajeHecho;
+    
+    
+    [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumulado"];
     
 }
 
@@ -181,6 +194,8 @@
         }];
         
     }
+    
+    puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -192,6 +207,8 @@
         
         
     } completion:nil];
+    
+    puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] - puntajeUsuario;
 }
 
 //PARA MANDAR DE UNA ESCENA A OTRA

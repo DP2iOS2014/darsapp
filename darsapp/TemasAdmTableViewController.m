@@ -42,6 +42,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    
+    double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumulado"];
+    
+    self.puntaje.text = [NSString stringWithFormat:@"%0.2f", puntajeActual];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -61,7 +71,7 @@
 {
 
     // Return the number of rows in the section.
-    return 8;
+    return 10;
 }
 
 -(void) recuperaEcoTipsLider{
@@ -138,7 +148,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(indexPath.row<8)
     [self performSegueWithIdentifier:@"idsegue" sender:self];
+    
+    
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

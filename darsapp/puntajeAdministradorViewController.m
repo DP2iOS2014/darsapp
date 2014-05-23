@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"congruent_pentagon.png"]]];
+     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
 }
 - (void) viewWillAppear:(BOOL)animated{
@@ -36,6 +36,29 @@
     double puntajeActual = [datosDeUsuario doubleForKey:@"puntajeAcumulado"];
     
     self.puntajeLabel.text = [NSString stringWithFormat:@"%0.2f",puntajeActual];
+    
+    //PARA MOSTRAR IMAGEN Y TEXTO RESULTADO
+    
+    if(puntajeActual>=0 && puntajeActual<30){
+        self.textoResultado.text=@"Practicante Ambiental";
+        self.imagenResultado.image = [UIImage imageNamed:@"PracticanteAmbiental.png"];
+    };
+    if(puntajeActual>=30 && puntajeActual<70){
+        self.textoResultado.text=@"Asistente Ambiental";
+        self.imagenResultado.image = [UIImage imageNamed:@"AsistenteAmbiental.png"];
+    };
+    if(puntajeActual>=70 && puntajeActual<120){
+        self.textoResultado.text=@"Especialista Ambiental";
+        self.imagenResultado.image = [UIImage imageNamed:@"EspecialistaAmbiental.png"];
+    };
+    if(puntajeActual>=120 && puntajeActual<200){
+        self.textoResultado.text=@"Senior Ambiental";
+        self.imagenResultado.image = [UIImage imageNamed:@"SeniorAmbiental.png"];
+    };
+    if(puntajeActual>=200){
+        self.textoResultado.text=@"Lider Ambiental";
+        self.imagenResultado.image = [UIImage imageNamed:@"LiderAmbiental.png"];
+    };
     
 }
 - (void)didReceiveMemoryWarning

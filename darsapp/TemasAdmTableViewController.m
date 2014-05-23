@@ -156,11 +156,14 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier  isEqual: @"idsegue"]){
     LiderAmbientalViewController *escenadestino = segue.destinationViewController;
     escenadestino.respuestajson= respuesta;
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     escenadestino.indice= selectedIndexPath.row;
+    }
     
 };
+
 
 @end

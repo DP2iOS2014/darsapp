@@ -8,6 +8,7 @@
 
 #import "GrillaAmbientalizateViewController.h"
 #import "GrillaAmbientalizateCell.h"
+#import "SingletonEcoTips.h"
 //////
 #import "MyFlowLayout.h"
 //////
@@ -25,12 +26,13 @@
     NSArray * arregloImagenes;
     NSDictionary * respuesta;
     NSMutableArray *arregloRespuesta;
-    
+    NSMutableArray *estados;
     NSArray * arregloprueba;
     NSMutableArray *ecotips;
     NSMutableArray *puntajes;
     double puntajeUsuario;
     double puntajeActual;
+    SingletonEcoTips * ecoTips;
 }
 
 
@@ -50,6 +52,7 @@
     
     ecotips = [[NSMutableArray alloc] init];
     puntajes = [[NSMutableArray alloc]init];
+    estados = [[NSMutableArray alloc]init];
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ecotips", @"tipo", @[], @"filtro", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
@@ -79,6 +82,7 @@
              
          [ecotips addObject:nombre_archivo];
          [puntajes   addObject:puntaje];
+         [estados addObject:estado];
              
          }
         [self.collectionView reloadData];
@@ -97,6 +101,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    ecoTips= [SingletonEcoTips sharedManager];
     [self recuperaEcoTipsLider];
     
     self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
@@ -149,10 +154,20 @@
     cell.imagen.image = [UIImage imageNamed:[ecotips objectAtIndex:indexPath.row]];
     
     NSArray * indexItems = [self.collectionView indexPathsForSelectedItems];
-    
-    if([indexItems containsObject:indexPath]){
-        cell.imagen.alpha=0.3;
-        cell.imagenCheck.alpha = 1;
+    if ([ecoTips.ArregloEstados count]!=0) {
+        if([[ecoTips.ArregloEstados objectAtIndex:indexPath.row] isEqual:@1]){
+            cell.imagen.alpha=0.3;
+            cell.imagenCheck.alpha = 1;
+            [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:nil];
+            cell.selected = YES;
+        }else{
+            cell.imagen.alpha=1;
+            cell.imagenCheck.alpha = 0;
+            [self.collectionView deselectItemAtIndexPath:indexPath animated:YES
+             ];
+            cell.selected = NO;
+
+        }
     }else{
         cell.imagen.alpha=1;
         cell.imagenCheck.alpha = 0;
@@ -217,6 +232,8 @@
     
     
     [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumuladoEcoTips"];
+    estados[indexPath.row] = @1;
+    [ecoTips setArregloEstados:estados];
     
 }
 
@@ -242,6 +259,8 @@
     
     
     [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumuladoEcoTips"];
+    estados[indexPath.row] = @0;
+    [ecoTips setArregloEstados:estados];
 }
 
 //////

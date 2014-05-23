@@ -146,6 +146,7 @@
 		12A6715F192FEAEB00E03C72 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A6715E192FEAEB00E03C72 /* backButton.png */; };
 		12A67161192FEAEF00E03C72 /* twitterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A67160192FEAEF00E03C72 /* twitterButton.png */; };
 		12A67163192FF15A00E03C72 /* checkButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A67162192FF15A00E03C72 /* checkButton.png */; };
+		12A671661930090300E03C72 /* SingletonEcoTips.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A671651930090300E03C72 /* SingletonEcoTips.m */; };
 		12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A757E2191AC41800E03C5E /* PilasViewController.m */; };
 		12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A757E7191AD04D00E03C5E /* SeparatasViewController.m */; };
 		12A75804191AD23900E03C5E /* 2_Separación.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A757FB191AD23900E03C5E /* 2_Separación.png */; };
@@ -440,6 +441,8 @@
 		12A6715E192FEAEB00E03C72 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
 		12A67160192FEAEF00E03C72 /* twitterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterButton.png; sourceTree = "<group>"; };
 		12A67162192FF15A00E03C72 /* checkButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkButton.png; sourceTree = "<group>"; };
+		12A671641930090300E03C72 /* SingletonEcoTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonEcoTips.h; sourceTree = "<group>"; };
+		12A671651930090300E03C72 /* SingletonEcoTips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonEcoTips.m; sourceTree = "<group>"; };
 		12A757E1191AC41800E03C5E /* PilasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilasViewController.h; sourceTree = "<group>"; };
 		12A757E2191AC41800E03C5E /* PilasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilasViewController.m; sourceTree = "<group>"; };
 		12A757E6191AD04D00E03C5E /* SeparatasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatasViewController.h; sourceTree = "<group>"; };
@@ -799,13 +802,12 @@
 				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
 				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
 				129F4917192E9C0100DF8793 /* images.jpeg */,
-
 				1260E96E192FA3FF00D915D7 /* SingletonAmbientalizate.h */,
 				1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */,
-
 				12A14459192FB1D10035F214 /* puntajeAdministradorViewController.h */,
 				12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */,
-
+				12A671641930090300E03C72 /* SingletonEcoTips.h */,
+				12A671651930090300E03C72 /* SingletonEcoTips.m */,
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -1427,6 +1429,7 @@
 				129EE5D819088A75008A72CF /* CeldaNoticiasTableViewCell.m in Sources */,
 				120FF22D1913F39400A697D6 /* AFURLSessionManager.m in Sources */,
 				12A75814191ADCF500E03C5E /* SegregacionViewController.m in Sources */,
+				12A671661930090300E03C72 /* SingletonEcoTips.m in Sources */,
 				12F4CFD918FF147500C8BFF5 /* AppDelegate.m in Sources */,
 				120FF2261913F39400A697D6 /* AFHTTPRequestOperationManager.m in Sources */,
 				120FF2331913F39400A697D6 /* UIProgressView+AFNetworking.m in Sources */,

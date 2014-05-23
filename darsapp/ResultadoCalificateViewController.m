@@ -38,6 +38,12 @@
     
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    
+    self.lblPuntaje.text = [NSString stringWithFormat:@"%0.2f", self.puntaje];
+    
+}
+
 /*
 #pragma mark - Navigation
 

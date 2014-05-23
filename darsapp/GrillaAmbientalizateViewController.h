@@ -12,4 +12,7 @@
 {
     int num;
 }
+
+@property (nonatomic,strong) NSDictionary *respuestajson;
+
 @end

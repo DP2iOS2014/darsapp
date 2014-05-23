@@ -98,7 +98,7 @@
 		12A128D1191EB74200397B90 /* GrillaAmbientalizateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128D0191EB74200397B90 /* GrillaAmbientalizateCell.m */; };
 		12A128D5191ED3D000397B90 /* administrativo.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A128D3191ED3D000397B90 /* administrativo.png */; };
 		12A128D6191ED3D000397B90 /* no_administrativo.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A128D4191ED3D000397B90 /* no_administrativo.png */; };
-		12A128E2191ED74C00397B90 /* cl01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12A128D7191ED74C00397B90 /* cl01.jpg */; };
+		12A128E2191ED74C00397B90 /* tomatodo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12A128D7191ED74C00397B90 /* tomatodo.jpg */; };
 		12A128E3191ED74C00397B90 /* cl02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12A128D8191ED74C00397B90 /* cl02.jpg */; };
 		12A128E4191ED74C00397B90 /* cl03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12A128D9191ED74C00397B90 /* cl03.jpg */; };
 		12A128E5191ED74C00397B90 /* cl04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12A128DA191ED74C00397B90 /* cl04.jpg */; };
@@ -363,7 +363,7 @@
 		12A128D0191EB74200397B90 /* GrillaAmbientalizateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrillaAmbientalizateCell.m; sourceTree = "<group>"; };
 		12A128D3191ED3D000397B90 /* administrativo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = administrativo.png; sourceTree = "<group>"; };
 		12A128D4191ED3D000397B90 /* no_administrativo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_administrativo.png; sourceTree = "<group>"; };
-		12A128D7191ED74C00397B90 /* cl01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cl01.jpg; sourceTree = "<group>"; };
+		12A128D7191ED74C00397B90 /* tomatodo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tomatodo.jpg; sourceTree = "<group>"; };
 		12A128D8191ED74C00397B90 /* cl02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cl02.jpg; sourceTree = "<group>"; };
 		12A128D9191ED74C00397B90 /* cl03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cl03.jpg; sourceTree = "<group>"; };
 		12A128DA191ED74C00397B90 /* cl04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cl04.jpg; sourceTree = "<group>"; };
@@ -751,10 +751,7 @@
 				1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */,
 				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
 				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
-
-
 				129F4917192E9C0100DF8793 /* images.jpeg */,
-
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -762,7 +759,7 @@
 		12A128D2191ED3BA00397B90 /* imagenes Ambientalizate */ = {
 			isa = PBXGroup;
 			children = (
-				12A128D7191ED74C00397B90 /* cl01.jpg */,
+				12A128D7191ED74C00397B90 /* tomatodo.jpg */,
 				12A128D8191ED74C00397B90 /* cl02.jpg */,
 				12A128D9191ED74C00397B90 /* cl03.jpg */,
 				12A128DA191ED74C00397B90 /* cl04.jpg */,
@@ -1220,7 +1217,7 @@
 				129EE5D019085475008A72CF /* email.png in Resources */,
 				12EEAB14191D4431002F0D6E /* 1_Electricidad.png in Resources */,
 				12EEAB16191D4431002F0D6E /* 3_Electricidad.png in Resources */,
-				12A128E2191ED74C00397B90 /* cl01.jpg in Resources */,
+				12A128E2191ED74C00397B90 /* tomatodo.jpg in Resources */,
 				12A128D5191ED3D000397B90 /* administrativo.png in Resources */,
 				12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */,
 				12EEAB1A191D4431002F0D6E /* 7_Electricidad.png in Resources */,
@@ -1236,10 +1233,7 @@
 				12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */,
 				12EEAB01191D4416002F0D6E /* 2-4_ProduccionDistribucion.png in Resources */,
 				12EFB94F192D46D000AAAAB2 /* tachito5.png in Resources */,
-
-
 				129F4918192E9C0100DF8793 /* images.jpeg in Resources */,
-
 				12EEAB26191D4485002F0D6E /* 2_DaleVidaATusResiduos.png in Resources */,
 				12A128EA191ED74C00397B90 /* cl09.jpg in Resources */,
 				12EEAB19191D4431002F0D6E /* 6_Electricidad.png in Resources */,

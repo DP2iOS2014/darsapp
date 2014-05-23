@@ -13,6 +13,8 @@
 //////
 //#import "RecipeCollectionHeaderView.h"
 
+#import "URLsJson.h"
+#import "ResultadoCalificateViewController.h"
 
 @interface GrillaAmbientalizateViewController ()
 
@@ -21,6 +23,14 @@
 @implementation GrillaAmbientalizateViewController
 {
     NSArray * arregloImagenes;
+    NSDictionary * respuesta;
+    NSMutableArray *arregloRespuesta;
+    
+    NSArray * arregloprueba;
+    NSMutableArray *ecotips;
+    NSMutableArray *puntajes;
+    double puntajeUsuario;
+    double puntajeActual;
 }
 
 
@@ -33,9 +43,61 @@
     return self;
 }
 
+
+-(void) recuperaEcoTipsLider{
+    
+    //PARA ENVIAR PRIMI
+    
+    ecotips = [[NSMutableArray alloc] init];
+    puntajes = [[NSMutableArray alloc]init];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ecotips", @"tipo", @[], @"filtro", nil];
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+        
+        //PARA SACAR LOS DATOS
+        
+         for(int i=0; i<[arregloPosiciones count];i++){
+         NSString *nombre_archivo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
+         NSString *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+         NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+         NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+             
+         double punt=[puntaje doubleValue];
+         double  est=[estado doubleValue];
+             
+         [ecotips addObject:nombre_archivo];
+         [puntajes   addObject:puntaje];
+             
+         }
+        [self.collectionView reloadData];
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self recuperaEcoTipsLider];
     ///////
     MyFlowLayout *myLayout = [[MyFlowLayout alloc]init];
     myLayout.headerReferenceSize = CGSizeMake(0, 50);
@@ -50,12 +112,13 @@
     [self.collectionView addGestureRecognizer:pinchRecognizer];
 
     //////
-    arregloImagenes = @[@"cl01.jpg",@"cl02.jpg",@"cl03.jpg",@"cl04.jpg",@"cl05.jpg",@"cl06.jpg",@"cl07.jpg",@"cl08.jpg",@"cl09.jpg",@"cl10.jpg",@"cl11.jpg"];
+    
     [self.collectionView setAllowsMultipleSelection:YES];
     // Do any additional setup after loading the view.
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 8, 20, 8);
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -70,15 +133,15 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return arregloImagenes.count;
+    return ecotips.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
     GrillaAmbientalizateCell *cell= [collectionView dequeueReusableCellWithReuseIdentifier:@"miItem" forIndexPath:indexPath];
-    
-    cell.imagen.image = [UIImage imageNamed:[arregloImagenes objectAtIndex:indexPath.row]];
+    NSLog(@"blablabla @%",ecotips);
+    cell.imagen.image = [UIImage imageNamed:[ecotips objectAtIndex:indexPath.row]];
     
     NSArray * indexItems = [self.collectionView indexPathsForSelectedItems];
     
@@ -137,6 +200,19 @@
         }];
     
     }
+        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
+    
+    double puntajeHecho = puntajeUsuario;
+    
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    
+    double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumuladoEcoTips"];
+    
+    double nuevoPuntaje = puntajeActual + puntajeHecho;
+    
+    
+    [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumuladoEcoTips"];
+    
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -148,6 +224,19 @@
             
             
         } completion:nil];
+    
+        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] - puntajeUsuario;
+    
+    double puntajeHecho = puntajeUsuario;
+    
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    
+    double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumuladoEcoTips"];
+    
+    double nuevoPuntaje = puntajeActual + puntajeHecho;
+    
+    
+    [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumuladoEcoTips"];
 }
 
 //////
@@ -187,7 +276,17 @@
             layout.currentCellScale = 1.0;
         } completion:nil];
     }
+    
+    
 }
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ResultadoCalificateViewController *escenadestino = segue.destinationViewController;
+    escenadestino.respuestajson= respuesta;
+    escenadestino.puntaje= puntajeActual;
+    
+};
+
 /////
 
 /*

@@ -1504,10 +1504,19 @@
                                     <action selector="RegresarPrincipal:" destination="0S3-cc-2Ac" eventType="touchUpInside" id="Bka-o2-eyR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu puntaje es: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAK-LV-S3n">
+                                <rect key="frame" x="78" y="273" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="fr5-Lm-tSX"/>
+                    <connections>
+                        <outlet property="lblPuntaje" destination="JAK-LV-S3n" id="Mmi-xg-9aA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxc-PI-FdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

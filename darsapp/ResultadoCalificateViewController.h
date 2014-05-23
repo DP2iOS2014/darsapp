@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ResultadoCalificateViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *lblPuntaje;
+@property (nonatomic,strong) NSDictionary *respuestajson;
+
+@property double puntaje;
 
 @end

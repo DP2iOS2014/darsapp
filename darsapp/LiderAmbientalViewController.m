@@ -159,11 +159,16 @@
             cell.imagen.alpha=0.3;
             cell.icon.alpha=1;
             cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
+            [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:nil];
+            cell.selected = YES;
         
         }else{
             cell.imagen.alpha=1;
             cell.icon.alpha=0;
             cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
+            [self.collectionView deselectItemAtIndexPath:indexPath animated:YES
+             ];
+            cell.selected = NO; 
         }
     }else {
     
@@ -201,7 +206,7 @@
     
 
     //Aqui gira la imagen
-    if(celda.imagen.alpha==1){
+    //if(celda.imagen.alpha==1){
    
             [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             
@@ -211,7 +216,7 @@
             } completion:^(BOOL finished) {
                 celda.icon.alpha = 1;
             }];
-    }
+    //}
     
         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
     

@@ -13,6 +13,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *tFusuario;
 @property (weak, nonatomic) IBOutlet UITextField *tFContrasenha;
+@property (weak, nonatomic) IBOutlet UILabel *txtUsuario;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *cargando;
+@property (weak, nonatomic) IBOutlet UILabel *txtPass;
+@property (weak, nonatomic) IBOutlet UIButton *btnIngresar;
+@property (weak, nonatomic) IBOutlet UIButton *btnVisitante;
 
 @end

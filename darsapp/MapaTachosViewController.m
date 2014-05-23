@@ -33,6 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
+    
+    
     //[self recuperaListaDeTachos];
     //self.cargando.alpha = 0;
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-12.068938

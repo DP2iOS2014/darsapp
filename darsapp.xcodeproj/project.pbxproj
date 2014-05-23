@@ -128,6 +128,24 @@
 		12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F707190AD496001ED3BE /* ricepaper_v3.png */; };
 		12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC0191C46AC0095179D /* TimerPreguntas.m */; };
 		12A1FAC4191C56290095179D /* SingletonJuego.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC3191C56290095179D /* SingletonJuego.m */; };
+		12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67140192FDF8400E03C72 /* Roboto-Black.ttf */; };
+		12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67141192FDF8400E03C72 /* Roboto-BlackItalic.ttf */; };
+		12A6714E192FDF8400E03C72 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67142192FDF8400E03C72 /* Roboto-Bold.ttf */; };
+		12A6714F192FDF8400E03C72 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67143192FDF8400E03C72 /* Roboto-BoldItalic.ttf */; };
+		12A67150192FDF8400E03C72 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67144192FDF8400E03C72 /* Roboto-Italic.ttf */; };
+		12A67151192FDF8400E03C72 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67145192FDF8400E03C72 /* Roboto-Light.ttf */; };
+		12A67152192FDF8400E03C72 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67146192FDF8400E03C72 /* Roboto-LightItalic.ttf */; };
+		12A67153192FDF8400E03C72 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67147192FDF8400E03C72 /* Roboto-Medium.ttf */; };
+		12A67154192FDF8400E03C72 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67148192FDF8400E03C72 /* Roboto-MediumItalic.ttf */; };
+		12A67155192FDF8400E03C72 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67149192FDF8400E03C72 /* Roboto-Regular.ttf */; };
+		12A67156192FDF8400E03C72 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A6714A192FDF8400E03C72 /* Roboto-Thin.ttf */; };
+		12A67157192FDF8400E03C72 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A6714B192FDF8400E03C72 /* Roboto-ThinItalic.ttf */; };
+		12A67159192FE3D700E03C72 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A67158192FE3D700E03C72 /* fondo.png */; };
+		12A6715B192FE6EB00E03C72 /* NavigatorBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A6715A192FE6EB00E03C72 /* NavigatorBar.png */; };
+		12A6715D192FEAE600E03C72 /* facebookButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A6715C192FEAE600E03C72 /* facebookButton.png */; };
+		12A6715F192FEAEB00E03C72 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A6715E192FEAEB00E03C72 /* backButton.png */; };
+		12A67161192FEAEF00E03C72 /* twitterButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A67160192FEAEF00E03C72 /* twitterButton.png */; };
+		12A67163192FF15A00E03C72 /* checkButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A67162192FF15A00E03C72 /* checkButton.png */; };
 		12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A757E2191AC41800E03C5E /* PilasViewController.m */; };
 		12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A757E7191AD04D00E03C5E /* SeparatasViewController.m */; };
 		12A75804191AD23900E03C5E /* 2_Separación.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A757FB191AD23900E03C5E /* 2_Separación.png */; };
@@ -404,6 +422,24 @@
 		12A1FAC0191C46AC0095179D /* TimerPreguntas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerPreguntas.m; sourceTree = "<group>"; };
 		12A1FAC2191C56290095179D /* SingletonJuego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonJuego.h; sourceTree = "<group>"; };
 		12A1FAC3191C56290095179D /* SingletonJuego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonJuego.m; sourceTree = "<group>"; };
+		12A67140192FDF8400E03C72 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "FONTS/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		12A67141192FDF8400E03C72 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "FONTS/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		12A67142192FDF8400E03C72 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "FONTS/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		12A67143192FDF8400E03C72 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BoldItalic.ttf"; path = "FONTS/Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		12A67144192FDF8400E03C72 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "FONTS/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		12A67145192FDF8400E03C72 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "FONTS/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		12A67146192FDF8400E03C72 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-LightItalic.ttf"; path = "FONTS/Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		12A67147192FDF8400E03C72 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "FONTS/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		12A67148192FDF8400E03C72 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-MediumItalic.ttf"; path = "FONTS/Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		12A67149192FDF8400E03C72 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "FONTS/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		12A6714A192FDF8400E03C72 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "FONTS/Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		12A6714B192FDF8400E03C72 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-ThinItalic.ttf"; path = "FONTS/Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		12A67158192FE3D700E03C72 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo.png; sourceTree = "<group>"; };
+		12A6715A192FE6EB00E03C72 /* NavigatorBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigatorBar.png; sourceTree = "<group>"; };
+		12A6715C192FEAE600E03C72 /* facebookButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookButton.png; sourceTree = "<group>"; };
+		12A6715E192FEAEB00E03C72 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
+		12A67160192FEAEF00E03C72 /* twitterButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterButton.png; sourceTree = "<group>"; };
+		12A67162192FF15A00E03C72 /* checkButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkButton.png; sourceTree = "<group>"; };
 		12A757E1191AC41800E03C5E /* PilasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PilasViewController.h; sourceTree = "<group>"; };
 		12A757E2191AC41800E03C5E /* PilasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PilasViewController.m; sourceTree = "<group>"; };
 		12A757E6191AD04D00E03C5E /* SeparatasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatasViewController.h; sourceTree = "<group>"; };
@@ -824,6 +860,31 @@
 			name = "Login Images";
 			sourceTree = "<group>";
 		};
+		12A6713F192FDF5B00E03C72 /* Fuentes */ = {
+			isa = PBXGroup;
+			children = (
+				12A67162192FF15A00E03C72 /* checkButton.png */,
+				12A67160192FEAEF00E03C72 /* twitterButton.png */,
+				12A6715E192FEAEB00E03C72 /* backButton.png */,
+				12A6715C192FEAE600E03C72 /* facebookButton.png */,
+				12A67158192FE3D700E03C72 /* fondo.png */,
+				12A6715A192FE6EB00E03C72 /* NavigatorBar.png */,
+				12A67140192FDF8400E03C72 /* Roboto-Black.ttf */,
+				12A67141192FDF8400E03C72 /* Roboto-BlackItalic.ttf */,
+				12A67142192FDF8400E03C72 /* Roboto-Bold.ttf */,
+				12A67143192FDF8400E03C72 /* Roboto-BoldItalic.ttf */,
+				12A67144192FDF8400E03C72 /* Roboto-Italic.ttf */,
+				12A67145192FDF8400E03C72 /* Roboto-Light.ttf */,
+				12A67146192FDF8400E03C72 /* Roboto-LightItalic.ttf */,
+				12A67147192FDF8400E03C72 /* Roboto-Medium.ttf */,
+				12A67148192FDF8400E03C72 /* Roboto-MediumItalic.ttf */,
+				12A67149192FDF8400E03C72 /* Roboto-Regular.ttf */,
+				12A6714A192FDF8400E03C72 /* Roboto-Thin.ttf */,
+				12A6714B192FDF8400E03C72 /* Roboto-ThinItalic.ttf */,
+			);
+			name = Fuentes;
+			sourceTree = "<group>";
+		};
 		12A757CD191ABFA800E03C5E /* Imagenes información */ = {
 			isa = PBXGroup;
 			children = (
@@ -987,6 +1048,7 @@
 		12F4CFCE18FF147500C8BFF5 /* darsapp */ = {
 			isa = PBXGroup;
 			children = (
+				12A6713F192FDF5B00E03C72 /* Fuentes */,
 				12A128CB191EAE3000397B90 /* Ambientalizate */,
 				12330CCA191AC64100E85590 /* MapaTachos */,
 				12A757CD191ABFA800E03C5E /* Imagenes información */,
@@ -1166,14 +1228,19 @@
 				12EEAB2A191D4485002F0D6E /* 5_DaleVidaATusResiduos.png in Resources */,
 				12FF2E96190AEEC600638774 /* grey_sandbag.png in Resources */,
 				129D4DA51919BE2A00D12423 /* botonSinFondo.png in Resources */,
+				12A67154192FDF8400E03C72 /* Roboto-MediumItalic.ttf in Resources */,
+				12A67151192FDF8400E03C72 /* Roboto-Light.ttf in Resources */,
 				12F4D00D18FF2CD300C8BFF5 /* congruent_pentagon.png in Resources */,
 				1261557E191D915500374E68 /* tachito.png in Resources */,
 				12A1F6FE190ACC56001ED3BE /* 103-map.png in Resources */,
+				12A6715B192FE6EB00E03C72 /* NavigatorBar.png in Resources */,
+				12A6715F192FEAEB00E03C72 /* backButton.png in Resources */,
 				12E53C6C191D8C2F00911B7C /* 4_Azul.png in Resources */,
 				12EEAB02191D4416002F0D6E /* 3_Pilas.png in Resources */,
 				129D4D9C1919ADF200D12423 /* page.png in Resources */,
 				12E53C5F191D85C000911B7C /* 1627.png in Resources */,
 				1276EA28192D62C400B49816 /* Compras15.png in Resources */,
+				12A6715D192FEAE600E03C72 /* facebookButton.png in Resources */,
 				12F4CFDF18FF147500C8BFF5 /* Main_iPad.storyboard in Resources */,
 				12EEAB09191D4416002F0D6E /* 6_Pilas.png in Resources */,
 				12E53C6F191D912900911B7C /* pin1.png in Resources */,
@@ -1187,10 +1254,12 @@
 				12A128E5191ED74C00397B90 /* ventana.jpg in Resources */,
 				1276EA1B192D62C400B49816 /* Compras2.png in Resources */,
 				12EEAB17191D4431002F0D6E /* 4_Electricidad.png in Resources */,
+				12A67159192FE3D700E03C72 /* fondo.png in Resources */,
 				12EEAB05191D4416002F0D6E /* 4-1_SegregacionPilas.png in Resources */,
 				12EEAB2C191D4485002F0D6E /* 7_DaleVidaATusResiduos.png in Resources */,
 				12A75804191AD23900E03C5E /* 2_Separación.png in Resources */,
 				12F4D00F18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png in Resources */,
+				12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */,
 				12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */,
 				1276EA1A192D62C400B49816 /* Compras1.png in Resources */,
 				12EEAB15191D4431002F0D6E /* 2_Electricidad.png in Resources */,
@@ -1239,13 +1308,21 @@
 				12A128D5191ED3D000397B90 /* administrativo.png in Resources */,
 				12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */,
 				12EEAB1A191D4431002F0D6E /* 7_Electricidad.png in Resources */,
+				12A67157192FDF8400E03C72 /* Roboto-ThinItalic.ttf in Resources */,
+				12A6714F192FDF8400E03C72 /* Roboto-BoldItalic.ttf in Resources */,
 				128AC050192D3EBB0015AEF4 /* ruido.png in Resources */,
 				12EEAB2E191D4E68002F0D6E /* atras.png in Resources */,
+				12A6714E192FDF8400E03C72 /* Roboto-Bold.ttf in Resources */,
 				12F4D00618FF20C100C8BFF5 /* ios_homescreen_icon.png in Resources */,
+				12A67153192FDF8400E03C72 /* Roboto-Medium.ttf in Resources */,
 				12A1F702190ACEE9001ED3BE /* 189-plant.png in Resources */,
 				12EEAB1B191D4431002F0D6E /* 8_Electricidad.png in Resources */,
+				12A67150192FDF8400E03C72 /* Roboto-Italic.ttf in Resources */,
 				12E53C69191D8C2F00911B7C /* 1_Verde.png in Resources */,
+				12A67155192FDF8400E03C72 /* Roboto-Regular.ttf in Resources */,
 				128AC049192D3EBB0015AEF4 /* agua.png in Resources */,
+				12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */,
+				12A67161192FEAEF00E03C72 /* twitterButton.png in Resources */,
 				1276EA1D192D62C400B49816 /* Compras4.png in Resources */,
 				12EEAB2B191D4485002F0D6E /* 6_DaleVidaATusResiduos.png in Resources */,
 				12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */,
@@ -1253,6 +1330,7 @@
 				12EFB94F192D46D000AAAAB2 /* tachito5.png in Resources */,
 				129F4918192E9C0100DF8793 /* images.jpeg in Resources */,
 				12EEAB26191D4485002F0D6E /* 2_DaleVidaATusResiduos.png in Resources */,
+				12A67163192FF15A00E03C72 /* checkButton.png in Resources */,
 				12A128EA191ED74C00397B90 /* papel.jpg in Resources */,
 				12EEAB19191D4431002F0D6E /* 6_Electricidad.png in Resources */,
 				12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */,
@@ -1266,12 +1344,14 @@
 				12EEAB06191D4416002F0D6E /* 5_SegregacionPilas.png in Resources */,
 				12EEAB03191D4416002F0D6E /* 4_Pilas.png in Resources */,
 				12EEAB04191D4416002F0D6E /* 4_SegregacionPilas.png in Resources */,
+				12A67156192FDF8400E03C72 /* Roboto-Thin.ttf in Resources */,
 				12EEAB08191D4416002F0D6E /* 5-2_SegregacionPilas.png in Resources */,
 				12A1F700190ACDF3001ED3BE /* 116-controller.png in Resources */,
 				12EFB94E192D46D000AAAAB2 /* tachito4.png in Resources */,
 				12A75837191AF36E00E03C5E /* 4_Separatas.png in Resources */,
 				129D4DA31919BE2100D12423 /* RuletaSinFondo.png in Resources */,
 				12A75836191AF36E00E03C5E /* 3_Separatas.png in Resources */,
+				12A67152192FDF8400E03C72 /* Roboto-LightItalic.ttf in Resources */,
 				129D4DB31919C27200D12423 /* againFinal.png in Resources */,
 				12EEAB28191D4485002F0D6E /* 4_DaleVidaATusResiduos.png in Resources */,
 				12E53C5D191D81DD00911B7C /* 1682.png in Resources */,

@@ -98,6 +98,11 @@
 {
     [super viewDidLoad];
     [self recuperaEcoTipsLider];
+    
+    self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    
+    
     ///////
     MyFlowLayout *myLayout = [[MyFlowLayout alloc]init];
     myLayout.headerReferenceSize = CGSizeMake(0, 50);

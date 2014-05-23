@@ -283,6 +283,8 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     ResultadoCalificateViewController *escenadestino = segue.destinationViewController;
     escenadestino.respuestajson= respuesta;
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumuladoEcoTips"];
     escenadestino.puntaje= puntajeActual;
     
 };

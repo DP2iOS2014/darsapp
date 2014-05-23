@@ -85,6 +85,7 @@
         if(self.indice==idtema){
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];
+            
         }
     
     }

@@ -111,6 +111,7 @@
 		12A128EC191ED74C00397B90 /* cl11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12A128E1191ED74C00397B90 /* cl11.jpg */; };
 		12A128EE191ED89000397B90 /* Check-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A128ED191ED89000397B90 /* Check-icon.png */; };
 		12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128F0191EDC9300397B90 /* ResultadoCalificateViewController.m */; };
+		12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */; };
 		12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */; };
 		12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6F2190AC57F001ED3BE /* UbicanosViewController.m */; };
 		12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F6F5190AC927001ED3BE /* newspaper.png */; };
@@ -377,6 +378,8 @@
 		12A128ED191ED89000397B90 /* Check-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Check-icon.png"; sourceTree = "<group>"; };
 		12A128EF191EDC9300397B90 /* ResultadoCalificateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultadoCalificateViewController.h; sourceTree = "<group>"; };
 		12A128F0191EDC9300397B90 /* ResultadoCalificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadoCalificateViewController.m; sourceTree = "<group>"; };
+		12A14459192FB1D10035F214 /* puntajeAdministradorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = puntajeAdministradorViewController.h; sourceTree = "<group>"; };
+		12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = puntajeAdministradorViewController.m; sourceTree = "<group>"; };
 		12A1F6EE190ABC6C001ED3BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		12A1F6F1190AC57F001ED3BE /* UbicanosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UbicanosViewController.h; sourceTree = "<group>"; };
@@ -752,6 +755,8 @@
 				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
 				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
 				129F4917192E9C0100DF8793 /* images.jpeg */,
+				12A14459192FB1D10035F214 /* puntajeAdministradorViewController.h */,
+				12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */,
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -1300,6 +1305,7 @@
 				128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */,
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
+				12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */,
 				129D4D991919A86400D12423 /* BotellasViewController.m in Sources */,
 				120FF22E1913F39400A697D6 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				12E53C57191D7CAA00911B7C /* InformacionTableViewController.m in Sources */,

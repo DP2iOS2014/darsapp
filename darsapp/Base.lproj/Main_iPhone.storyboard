@@ -1312,12 +1312,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3y-ju-rkf">
-                                                    <rect key="frame" x="98" y="11" width="83" height="21"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWc-g1-DXG">
+                                                    <rect key="frame" x="116" y="7" width="88" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Ver progreso">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="xmK-WS-ww9" kind="push" id="hwU-go-lgu"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1331,13 +1335,66 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Tipos de Lider Ambiental" id="SMf-qV-mwg"/>
                     <connections>
-                        <outlet property="puntaje" destination="V3y-ju-rkf" id="ha8-Gn-2AO"/>
                         <segue destination="J1l-bF-VPu" kind="push" identifier="idsegue" id="r0P-9Z-vqi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EM-eO-jmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1925" y="-4998"/>
+        </scene>
+        <!--Puntaje Administrador View Controller-->
+        <scene sceneID="B5a-gY-ZZv">
+            <objects>
+                <viewController id="xmK-WS-ww9" customClass="puntajeAdministradorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N5N-u0-V4z"/>
+                        <viewControllerLayoutGuide type="bottom" id="yPQ-YV-TB1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nkw-GS-1sf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u8i-aW-oXV">
+                                <rect key="frame" x="69" y="253" width="182" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-9t-wij">
+                                <rect key="frame" x="69" y="273" width="182" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FUf-w2-p6q"/>
+                    <connections>
+                        <outlet property="puntajeLabel" destination="Vh0-9t-wij" id="3bm-fZ-ZGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2lV-3U-GzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481" y="-4745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vDc-ha-NU6">
+            <objects>
+                <viewController id="TSa-eg-Wnu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mDr-8z-L3i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pkk-Pc-SbC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5do-Mj-OGF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WTQ-4r-VA3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Xe-Z2-weU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2977" y="-4804"/>
         </scene>
         <!--Lider Ambiental View Controller - Eco Tips Lider Ambiental-->
         <scene sceneID="vpC-Up-lbN">
@@ -1395,7 +1452,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xB-TW-qvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2476" y="-5417"/>
+            <point key="canvasLocation" x="2972" y="-5712"/>
         </scene>
         <!--Grilla Ambientalizate View Controller - Ambientalizate-->
         <scene sceneID="0mv-2p-bVV">
@@ -1520,7 +1577,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxc-PI-FdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2361" y="-4281"/>
+            <point key="canvasLocation" x="2961" y="-3953"/>
         </scene>
         <!--Ruleta Juego View Controller-->
         <scene sceneID="AnR-1R-PfW">

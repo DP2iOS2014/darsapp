@@ -10,6 +10,8 @@
 
 @interface puntajeAdministradorViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *puntajeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imagenResultado;
+@property (weak, nonatomic) IBOutlet UILabel *textoResultado;
 
 
 

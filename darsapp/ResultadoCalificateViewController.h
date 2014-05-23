@@ -13,5 +13,7 @@
 @property (nonatomic,strong) NSDictionary *respuestajson;
 
 @property double puntaje;
+@property (weak, nonatomic) IBOutlet UIImageView *imagenResultado;
+@property (weak, nonatomic) IBOutlet UILabel *textoResultado;
 
 @end

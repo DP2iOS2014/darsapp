@@ -171,6 +171,11 @@
 		12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75833191AF36E00E03C5E /* 8_Separatas.png */; };
 		12AFACC9190B017F0007F5C0 /* flechitaDARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACC8190B017F0007F5C0 /* flechitaDARS.png */; };
 		12AFACCD190B14260007F5C0 /* dars1.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACCC190B14260007F5C0 /* dars1.png */; };
+		12DDC97E19300508005E820A /* AsistenteAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC97D19300508005E820A /* AsistenteAmbiental.png */; };
+		12DDC98019300511005E820A /* EspecialistaAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC97F19300511005E820A /* EspecialistaAmbiental.png */; };
+		12DDC9821930051A005E820A /* LiderAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC9811930051A005E820A /* LiderAmbiental.png */; };
+		12DDC98419300520005E820A /* PracticanteAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC98319300520005E820A /* PracticanteAmbiental.png */; };
+		12DDC98619300526005E820A /* SeniorAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC98519300525005E820A /* SeniorAmbiental.png */; };
 		12E53C57191D7CAA00911B7C /* InformacionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E53C56191D7CAA00911B7C /* InformacionTableViewController.m */; };
 		12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E53C58191D7D2700911B7C /* fonditoverde.png */; };
 		12E53C5B191D81BC00911B7C /* 1718.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E53C5A191D81BC00911B7C /* 1718.png */; };
@@ -472,6 +477,11 @@
 		12A75833191AF36E00E03C5E /* 8_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_Separatas.png; sourceTree = "<group>"; };
 		12AFACC8190B017F0007F5C0 /* flechitaDARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechitaDARS.png; sourceTree = "<group>"; };
 		12AFACCC190B14260007F5C0 /* dars1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dars1.png; sourceTree = "<group>"; };
+		12DDC97D19300508005E820A /* AsistenteAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AsistenteAmbiental.png; sourceTree = "<group>"; };
+		12DDC97F19300511005E820A /* EspecialistaAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EspecialistaAmbiental.png; sourceTree = "<group>"; };
+		12DDC9811930051A005E820A /* LiderAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LiderAmbiental.png; sourceTree = "<group>"; };
+		12DDC98319300520005E820A /* PracticanteAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PracticanteAmbiental.png; sourceTree = "<group>"; };
+		12DDC98519300525005E820A /* SeniorAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SeniorAmbiental.png; sourceTree = "<group>"; };
 		12E53C55191D7CAA00911B7C /* InformacionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformacionTableViewController.h; sourceTree = "<group>"; };
 		12E53C56191D7CAA00911B7C /* InformacionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformacionTableViewController.m; sourceTree = "<group>"; };
 		12E53C58191D7D2700911B7C /* fonditoverde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fonditoverde.png; sourceTree = "<group>"; };
@@ -695,6 +705,7 @@
 		128AC03E192D3E800015AEF4 /* Imagenes lider Ambiental */ = {
 			isa = PBXGroup;
 			children = (
+				12DDC97C193004BE005E820A /* Resultado */,
 				1276EA09192D629F00B49816 /* Compras */,
 				128AC03F192D3EA50015AEF4 /* Tipos */,
 			);
@@ -806,8 +817,10 @@
 				1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */,
 				12A14459192FB1D10035F214 /* puntajeAdministradorViewController.h */,
 				12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */,
+
 				12A671641930090300E03C72 /* SingletonEcoTips.h */,
 				12A671651930090300E03C72 /* SingletonEcoTips.m */,
+
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -956,6 +969,18 @@
 				12A75833191AF36E00E03C5E /* 8_Separatas.png */,
 			);
 			name = "Ruta de la Separata";
+			sourceTree = "<group>";
+		};
+		12DDC97C193004BE005E820A /* Resultado */ = {
+			isa = PBXGroup;
+			children = (
+				12DDC97D19300508005E820A /* AsistenteAmbiental.png */,
+				12DDC97F19300511005E820A /* EspecialistaAmbiental.png */,
+				12DDC9811930051A005E820A /* LiderAmbiental.png */,
+				12DDC98319300520005E820A /* PracticanteAmbiental.png */,
+				12DDC98519300525005E820A /* SeniorAmbiental.png */,
+			);
+			name = Resultado;
 			sourceTree = "<group>";
 		};
 		12E53C63191D8C0C00911B7C /* Segregacion */ = {
@@ -1215,6 +1240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				128AC04F192D3EBB0015AEF4 /* residuos.png in Resources */,
+				12DDC97E19300508005E820A /* AsistenteAmbiental.png in Resources */,
 				129D4DB11919C27200D12423 /* otraFinal.png in Resources */,
 				12EEAB0A191D4416002F0D6E /* titulo_Pilas.png in Resources */,
 				1276EA20192D62C400B49816 /* Compras7.png in Resources */,
@@ -1264,6 +1290,7 @@
 				12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */,
 				12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */,
 				1276EA1A192D62C400B49816 /* Compras1.png in Resources */,
+				12DDC9821930051A005E820A /* LiderAmbiental.png in Resources */,
 				12EEAB15191D4431002F0D6E /* 2_Electricidad.png in Resources */,
 				12A128E7191ED74C00397B90 /* ropa.jpg in Resources */,
 				12A75839191AF36E00E03C5E /* 6_Separatas.png in Resources */,
@@ -1288,6 +1315,8 @@
 				12F4CFDC18FF147500C8BFF5 /* Main_iPhone.storyboard in Resources */,
 				12A75807191AD23900E03C5E /* 2_ProduccionPlastico.png in Resources */,
 				1276EA29192D62C400B49816 /* Compras16.png in Resources */,
+				12DDC98419300520005E820A /* PracticanteAmbiental.png in Resources */,
+				12DDC98619300526005E820A /* SeniorAmbiental.png in Resources */,
 				12A75806191AD23900E03C5E /* Titulo_Plastico.png in Resources */,
 				12EFB94C192D46D000AAAAB2 /* tachito2.png in Resources */,
 				12FF2E95190AEEC600638774 /* grey_sandbag_@2X.png in Resources */,
@@ -1325,6 +1354,7 @@
 				128AC049192D3EBB0015AEF4 /* agua.png in Resources */,
 				12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */,
 				12A67161192FEAEF00E03C72 /* twitterButton.png in Resources */,
+				12DDC98019300511005E820A /* EspecialistaAmbiental.png in Resources */,
 				1276EA1D192D62C400B49816 /* Compras4.png in Resources */,
 				12EEAB2B191D4485002F0D6E /* 6_DaleVidaATusResiduos.png in Resources */,
 				12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */,

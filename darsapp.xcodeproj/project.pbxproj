@@ -42,6 +42,7 @@
 		12330CC9191AC35A00E85590 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CC8191AC35A00E85590 /* SystemConfiguration.framework */; };
 		12330CCD191AC66200E85590 /* MapaTachosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CCC191AC66200E85590 /* MapaTachosViewController.m */; };
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
+		1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */; };
 		12615579191D76A500374E68 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 12615578191D76A500374E68 /* forest.png */; };
 		1261557E191D915500374E68 /* tachito.png in Resources */ = {isa = PBXBuildFile; fileRef = 1261557D191D915500374E68 /* tachito.png */; };
 		1276EA08192D4FB000B49816 /* LiderAmbientalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1276EA07192D4FB000B49816 /* LiderAmbientalCell.m */; };
@@ -293,6 +294,8 @@
 		12330CCC191AC66200E85590 /* MapaTachosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosViewController.m; sourceTree = "<group>"; };
 		12330CD1191ADBD500E85590 /* MapaTachosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaTachosView.h; sourceTree = "<group>"; };
 		12330CD2191ADBD500E85590 /* MapaTachosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosView.m; sourceTree = "<group>"; };
+		1260E96E192FA3FF00D915D7 /* SingletonAmbientalizate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonAmbientalizate.h; sourceTree = "<group>"; };
+		1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonAmbientalizate.m; sourceTree = "<group>"; };
 		12615578191D76A500374E68 /* forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest.png; sourceTree = "<group>"; };
 		1261557D191D915500374E68 /* tachito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tachito.png; sourceTree = "<group>"; };
 		1276EA06192D4FB000B49816 /* LiderAmbientalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiderAmbientalCell.h; sourceTree = "<group>"; };
@@ -752,6 +755,8 @@
 				1224BB59192E9161006ED075 /* MyFlowLayout.h */,
 				1224BB5A192E9161006ED075 /* MyFlowLayout.m */,
 				129F4917192E9C0100DF8793 /* images.jpeg */,
+				1260E96E192FA3FF00D915D7 /* SingletonAmbientalizate.h */,
+				1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */,
 			);
 			name = Ambientalizate;
 			sourceTree = "<group>";
@@ -1295,6 +1300,7 @@
 				120FF2291913F39400A697D6 /* AFSecurityPolicy.m in Sources */,
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
 				12A75811191AD75E00E03C5E /* ElectricidadViewController.m in Sources */,
+				1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */,
 				12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */,
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
 				128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "LiderAmbientalViewController.h"
 #import "LiderAmbientalCell.h"
+#import "SingletonAmbientalizate.h"
 
 @interface LiderAmbientalViewController ()
 
@@ -18,7 +19,9 @@
     NSArray * arregloprueba;
     NSMutableArray *buenaspracticas;
     NSMutableArray *puntajes;
+    NSMutableArray *estados;
     double puntajeUsuario;
+    SingletonAmbientalizate *Ambientalizate;
     
 }
 
@@ -36,7 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    Ambientalizate= [SingletonAmbientalizate sharedManager];
     
     //lectura de datos
     
@@ -44,6 +47,7 @@
     NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
     buenaspracticas = [[NSMutableArray alloc] init];
     puntajes = [[NSMutableArray alloc]init];
+    estados = [[NSMutableArray alloc]init];
     //PARA SACAR LOS DATOS
     
     for(int i=0; i<[arregloPosiciones count];i++){
@@ -51,8 +55,10 @@
         NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
         NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
         NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_tema"];
-        double punt=[puntaje doubleValue];
+        NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+        
         double idtema=0;
+
         
         if ([tema isEqualToString:@"agua"]) {
             idtema=0;
@@ -85,7 +91,7 @@
         if(self.indice==idtema){
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];
-            
+            [estados addObject:estado];
         }
     
     }
@@ -114,9 +120,11 @@
     double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumulado"];
     
     double nuevoPuntaje = puntajeActual + puntajeHecho;
-    
+
     
     [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumulado"];
+    
+    
     
 }
 
@@ -145,15 +153,23 @@
     
     NSArray * indexitems = [self.collectionView indexPathsForSelectedItems];
     
-    if([indexitems containsObject:indexPath]){
-        cell.imagen.alpha=0.3;
-        cell.icon.alpha=1;
-        cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
+    if ([Ambientalizate.ArregloEstados count]!=0) {
         
-    }else{
-        cell.imagen.alpha=1;
-        cell.icon.alpha=0;
-        cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
+        if( [[Ambientalizate.ArregloEstados objectAtIndex:indexPath.row] isEqual:@1]){
+            cell.imagen.alpha=0.3;
+            cell.icon.alpha=1;
+            cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
+        
+        }else{
+            cell.imagen.alpha=1;
+            cell.icon.alpha=0;
+            cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
+        }
+    }else {
+    
+    cell.imagen.alpha=1;
+    cell.icon.alpha=0;
+    cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
     }
     
     return cell;
@@ -183,33 +199,44 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     LiderAmbientalCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
     
+
     //Aqui gira la imagen
     if(celda.imagen.alpha==1){
-        [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+   
+            [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             
-            celda.imagen.alpha=0.3;
+                celda.imagen.alpha=0.3;
             
             
-        } completion:^(BOOL finished) {
-            celda.icon.alpha = 1;
-        }];
-        
+            } completion:^(BOOL finished) {
+                celda.icon.alpha = 1;
+            }];
     }
     
-    puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
+        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
+    
+        estados[indexPath.row] = @1;
+        [Ambientalizate setArregloEstados:estados];
+    
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
     LiderAmbientalCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
-    celda.icon.alpha = 0;
-    [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-        
-        celda.imagen.alpha=1;
-        
-        
-    } completion:nil];
     
-    puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] - puntajeUsuario;
+
+         celda.icon.alpha = 0;
+         [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        
+             celda.imagen.alpha=1;
+        
+        
+         } completion:nil];
+    
+         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] - puntajeUsuario;
+    
+         estados[indexPath.row] = @0;
+        [Ambientalizate setArregloEstados:estados];
+    
 }
 
 //PARA MANDAR DE UNA ESCENA A OTRA

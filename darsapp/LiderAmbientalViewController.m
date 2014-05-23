@@ -109,20 +109,25 @@
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 8, 20, 8);
     
 }
+- (void)viewWillAppear:(BOOL)animated{
+    
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    puntajeUsuario = [datosUsuario doubleForKey:@"puntajeAcumulado"];
 
+}
 - (void)viewWillDisappear:(BOOL)animated {
     
     
     double puntajeHecho = puntajeUsuario;
     
-    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+   // NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
     
-    double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumulado"];
+    //double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumulado"];
     
-    double nuevoPuntaje = puntajeActual + puntajeHecho;
+    //double nuevoPuntaje = puntajeActual + puntajeHecho;
 
     
-    [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumulado"];
+    [[NSUserDefaults standardUserDefaults] setDouble:puntajeHecho forKey:@"puntajeAcumulado"];
     
     
     
@@ -237,7 +242,7 @@
         
          } completion:nil];
     
-         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] - puntajeUsuario;
+         puntajeUsuario = puntajeUsuario - [[puntajes objectAtIndex:indexPath.row] doubleValue] ;
     
          estados[indexPath.row] = @0;
         [Ambientalizate setArregloEstados:estados];

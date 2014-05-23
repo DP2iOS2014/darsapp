@@ -203,7 +203,29 @@
     return reusableview;
 }
 
-
+- (void)viewWillAppear:(BOOL)animated{
+    
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    puntajeUsuario = [datosUsuario doubleForKey:@"puntajeAcumuladoEcoTips"];
+    
+}
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    
+    double puntajeHecho = puntajeUsuario;
+    
+    // NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    
+    //double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumulado"];
+    
+    //double nuevoPuntaje = puntajeActual + puntajeHecho;
+    
+    
+    [[NSUserDefaults standardUserDefaults] setDouble:puntajeHecho forKey:@"puntajeAcumuladoEcoTips"];
+    
+    
+    
+}
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     GrillaAmbientalizateCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
@@ -222,16 +244,7 @@
     }
         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
     
-    double puntajeHecho = puntajeUsuario;
     
-    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
-    
-    double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumuladoEcoTips"];
-    
-    double nuevoPuntaje = puntajeActual + puntajeHecho;
-    
-    
-    [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumuladoEcoTips"];
     estados[indexPath.row] = @1;
     [ecoTips setArregloEstados:estados];
     
@@ -247,19 +260,9 @@
             
         } completion:nil];
     
-        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] - puntajeUsuario;
+        puntajeUsuario = puntajeUsuario - [[puntajes objectAtIndex:indexPath.row] doubleValue];
     
-    double puntajeHecho = puntajeUsuario;
-    
-    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
-    
-    double puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumuladoEcoTips"];
-    
-    double nuevoPuntaje = puntajeActual + puntajeHecho;
-    
-    
-    [[NSUserDefaults standardUserDefaults] setDouble:nuevoPuntaje forKey:@"puntajeAcumuladoEcoTips"];
-    estados[indexPath.row] = @0;
+       estados[indexPath.row] = @0;
     [ecoTips setArregloEstados:estados];
 }
 
@@ -307,9 +310,8 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     ResultadoCalificateViewController *escenadestino = segue.destinationViewController;
     escenadestino.respuestajson= respuesta;
-    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
-    puntajeActual = [datosDeMemoria doubleForKey:@"puntajeAcumuladoEcoTips"];
-    escenadestino.puntaje= puntajeActual;
+    
+    escenadestino.puntaje= puntajeUsuario;
     
 };
 

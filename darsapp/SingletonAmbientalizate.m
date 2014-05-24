@@ -25,7 +25,7 @@ static SingletonAmbientalizate *sharedMyManager;
 }
 
 + (void) setEstado:(NSMutableArray*)arregloEstado{
-    sharedMyManager.ArregloEstados=arregloEstado;
+    sharedMyManager.ArregloEstados= [NSMutableArray arrayWithArray:arregloEstado];
 
 }
 

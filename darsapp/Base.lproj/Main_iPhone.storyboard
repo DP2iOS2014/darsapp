@@ -317,7 +317,7 @@
             </objects>
             <point key="canvasLocation" x="-735" y="-1819"/>
         </scene>
-        <!--Inicio Juego View Controller-->
+        <!--Inicio Juego View Controller - Juego-->
         <scene sceneID="b8a-g0-ND7">
             <objects>
                 <viewController id="tu2-8m-JJQ" customClass="InicioJuegoViewController" sceneMemberID="viewController">
@@ -365,9 +365,8 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.80599221962535261" green="0.81447305484693877" blue="0.45053326116384906" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="mfe-p8-b70"/>
+                    <navigationItem key="navigationItem" title="Juego" id="mfe-p8-b70"/>
                     <connections>
                         <outlet property="btnContinuar" destination="UNy-ZR-13o" id="fCU-Pk-Sj3"/>
                         <outlet property="btnEmpezar" destination="HXS-CP-bh2" id="RVy-3l-XJQ"/>
@@ -837,7 +836,7 @@
         <scene sceneID="Beh-CR-YbG">
             <objects>
                 <tableViewController id="CAF-ml-XeR" customClass="InformacionTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w5f-3t-Tku">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="w5f-3t-Tku">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -956,13 +955,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oEh-sy-VAu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Proyectos" image="flower-pot.png" id="BkS-uS-S1z"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PzC-6F-Xhw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" backIndicatorImage="backButton.png" backIndicatorTransitionMaskImage="backButton.png" id="PzC-6F-Xhw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.333059828" green="0.78993796859999998" blue="0.82281759509999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.23999999999999999" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.333059828" green="0.78993796859999998" blue="0.82281759509999997" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="25"/>
+                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
@@ -1453,7 +1453,7 @@
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="J1l-bF-VPu" customClass="LiderAmbientalViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="2Yn-t8-RbZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B3p-TG-0FW">
                             <size key="itemSize" width="223" height="118"/>
@@ -1463,7 +1463,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="idimagen" id="bJL-mT-SfS" customClass="LiderAmbientalCell">
-                                <rect key="frame" x="49" y="64" width="223" height="118"/>
+                                <rect key="frame" x="49" y="0.0" width="223" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="223" height="118"/>
@@ -1501,6 +1501,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Eco Tips Lider Ambiental" id="HFA-KK-qbj"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xB-TW-qvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1533,7 +1534,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-c8-dCT">
-                                            <rect key="frame" x="0.0" y="0.0" width="146" height="118"/>
+                                            <rect key="frame" x="-1" y="0.0" width="146" height="118"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="GVZ-RP-lfA">

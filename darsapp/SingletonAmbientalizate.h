@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SingletonAmbientalizate : NSObject
-@property NSMutableArray * ArregloEstados;
+@property (nonatomic,strong) NSMutableArray * ArregloEstados;
 + (id)sharedManager;
 + (void) setEstado:(NSMutableArray*)arregloEstado;
 + (NSMutableArray*) getEstado;

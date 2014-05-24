@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[LiderAmbientalViewController viewDidLoad]:LiderAmbientalViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "Ambientalizate.ArregloEstados">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LiderAmbientalViewController collectionView:cellForItemAtIndexPath:]:LiderAmbientalViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LiderAmbientalViewController collectionView:didSelectItemAtIndexPath:]:LiderAmbientalViewController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

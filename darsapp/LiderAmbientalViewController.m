@@ -91,11 +91,16 @@
         if(self.indice==idtema){
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];
+            
             [estados addObject:estado];
         }
     
     }
     
+    if([Ambientalizate.ArregloEstados count]==0){
+        Ambientalizate.ArregloEstados= [NSMutableArray arrayWithArray:estados];
+    
+    }
     NSLog(@"JSON: %@", self.respuestajson);
     
     /////////////VERIFICO QUE TEMA APRETO////////////////
@@ -156,24 +161,23 @@
     
     cell.imagen.image = [UIImage imageNamed:@"images.jpeg"];
     
-    NSArray * indexitems = [self.collectionView indexPathsForSelectedItems];
     
     if ([Ambientalizate.ArregloEstados count]!=0) {
+
         
-        if( [[Ambientalizate.ArregloEstados objectAtIndex:indexPath.row] isEqual:@1]){
+        [@"perro" isEqualToString:@"perro"];
+        
+        NSNumber *miEstado = Ambientalizate.ArregloEstados[indexPath.row];
+        
+        if(miEstado.intValue == 1){
             cell.imagen.alpha=0.3;
             cell.icon.alpha=1;
             cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
-            [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:nil];
-            cell.selected = YES;
-        
+            
         }else{
             cell.imagen.alpha=1;
             cell.icon.alpha=0;
             cell.txtlabel.text=[buenaspracticas objectAtIndex:indexPath.row];
-            [self.collectionView deselectItemAtIndexPath:indexPath animated:YES
-             ];
-            cell.selected = NO; 
         }
     }else {
     
@@ -207,47 +211,77 @@
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    collectionView.userInteractionEnabled = NO;
+    self.navigationItem.backBarButtonItem.enabled = NO;
+    
     LiderAmbientalCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
     
 
+    
+   [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    
+    
+    NSNumber * miestado=[Ambientalizate.ArregloEstados objectAtIndex:indexPath.row];
+    
+    
+    if(miestado.intValue==0){
+        
+        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
+        
+        Ambientalizate.ArregloEstados[indexPath.row] = @1;
+        [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+            
+            celda.imagen.alpha=0.3;
+            
+            
+        } completion:^(BOOL finished) {
+            celda.icon.alpha = 1;
+            collectionView.userInteractionEnabled = YES;
+            self.navigationItem.backBarButtonItem.enabled = YES;
+            
+        }];
+        
+       
+        
+        
+    
+    
+    }else{
+    
+        puntajeUsuario = puntajeUsuario - [[puntajes objectAtIndex:indexPath.row] doubleValue] ;
+        
+        
+        celda.icon.alpha = 0;
+        [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
+            
+            celda.imagen.alpha=1;
+            
+            
+        } completion:^(BOOL finished) {
+            collectionView.userInteractionEnabled = YES;
+            self.navigationItem.backBarButtonItem.enabled = YES;
+        }];
+        
+        
+        
+        Ambientalizate.ArregloEstados[indexPath.row] = @0;
+      
+
+    }
+    
+    
+  
+    
     //Aqui gira la imagen
     //if(celda.imagen.alpha==1){
    
-            [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-            
-                celda.imagen.alpha=0.3;
-            
-            
-            } completion:^(BOOL finished) {
-                celda.icon.alpha = 1;
-            }];
     //}
     
-        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
-    
-        estados[indexPath.row] = @1;
-        [Ambientalizate setArregloEstados:estados];
     
 }
 
--(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    LiderAmbientalCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
-    
-
-         celda.icon.alpha = 0;
-         [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
-        
-             celda.imagen.alpha=1;
-        
-        
-         } completion:nil];
-    
-         puntajeUsuario = puntajeUsuario - [[puntajes objectAtIndex:indexPath.row] doubleValue] ;
-    
-         estados[indexPath.row] = @0;
-        [Ambientalizate setArregloEstados:estados];
-    
-}
 
 //PARA MANDAR DE UNA ESCENA A OTRA
 

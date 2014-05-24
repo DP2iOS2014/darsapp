@@ -14,6 +14,9 @@
 {
     // Override point for customization after application launch.
     [GMSServices provideAPIKey:@"AIzaSyD4Yv_7isiHiXOUc7s4821tCi6tpRILy4s"];
+    
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:85.0/255 green:201.0/255 blue:210.0/255 alpha:1]];
+    
     return YES;
 }
 							

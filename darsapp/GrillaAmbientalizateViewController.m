@@ -296,12 +296,21 @@
         // Store the scale value
         layout.currentCellScale = sender.scale;
     }
-    else
+    else if(sender.state == UIGestureRecognizerStateEnded)
     {
+        
+        if(layout.itemSize.width*layout.currentCellScale>self.collectionView.frame.size.width){
+            [self.collectionView performBatchUpdates:^{
+                    layout.currentCellScale = self.collectionView.frame.size.width/layout.itemSize.width;
+            } completion:nil];
+        }else{
+        
+        
         [self.collectionView performBatchUpdates:^{
             layout.currentCellPath = nil;
             layout.currentCellScale = 1.0;
         } completion:nil];
+        }
     }
     
     

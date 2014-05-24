@@ -31,6 +31,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
     self.cargando.alpha = 0 ;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     

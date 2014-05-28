@@ -703,12 +703,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tdp-HO-pGz" customClass="MapaTachosView">
-                                <rect key="frame" x="0.0" y="93" width="320" height="294"/>
+                                <rect key="frame" x="0.0" y="107" width="320" height="349"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oQS-TS-H4o">
-                                <rect key="frame" x="2" y="395" width="314" height="29"/>
+                                <rect key="frame" x="3" y="71" width="314" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="General"/>
@@ -716,6 +716,7 @@
                                     <segment title="Pilas"/>
                                     <segment title="Plastico"/>
                                     <segment title="Vidrio"/>
+                                    <segment title="Todos"/>
                                 </segments>
                                 <color key="tintColor" red="0.333059828" green="0.78993796859999998" blue="0.82281759509999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>

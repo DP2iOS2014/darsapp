@@ -46,8 +46,6 @@
     mapView_ = [GMSMapView mapWithFrame:self.mapView.bounds camera:camera];
     mapView_.myLocationEnabled = YES;
     [self.mapView addSubview: mapView_];
-    
-    
     /*GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(-12.068938, -77.080190);
     marker.title = @"CAPU";
@@ -107,7 +105,7 @@
                 marker.appearAnimation=YES;
                 marker.position = CLLocationCoordinate2DMake(lt,ln);
                 marker.title = name;
-                marker.snippet = @"prueba";
+                //marker.snippet = @"prueba";
                 if([tipoTacho isEqualToString:@"Contenedor general"]){
                     marker.icon = [UIImage imageNamed:@"tachito.png"];
                 }else if ([tipoTacho isEqualToString:@"Contenedor de papel"]){
@@ -117,6 +115,28 @@
                 }else if ([tipoTacho isEqualToString:@"Contenedor de plastico"]){
                     marker.icon = [UIImage imageNamed:@"tachito3.png"];
                 }else if ([tipoTacho isEqualToString:@"Contenedor de vidrio"]){
+                    marker.icon = [UIImage imageNamed:@"tachito2.png"];
+                }
+                marker.map = mapView_;
+                [arregloMarkers addObject:marker];
+            }
+            
+            if([tipoTacho isEqualToString:@"Todos"]){
+                // Instantiate and set the GMSMarker properties
+                GMSMarker *marker = [[GMSMarker alloc] init];
+                marker.appearAnimation=YES;
+                marker.position = CLLocationCoordinate2DMake(lt,ln);
+                marker.title = name;
+                //marker.snippet = @"prueba";
+                if([tipo isEqualToString:@"Contenedor general"]){
+                    marker.icon = [UIImage imageNamed:@"tachito.png"];
+                }else if ([tipo isEqualToString:@"Contenedor de papel"]){
+                    marker.icon = [UIImage imageNamed:@"tachito5.png"];
+                }else if ([tipo isEqualToString:@"Contenedor de pilas"]){
+                    marker.icon = [UIImage imageNamed:@"tachito4.png"];
+                }else if ([tipo isEqualToString:@"Contenedor de plastico"]){
+                    marker.icon = [UIImage imageNamed:@"tachito3.png"];
+                }else if ([tipo isEqualToString:@"Contenedor de vidrio"]){
                     marker.icon = [UIImage imageNamed:@"tachito2.png"];
                 }
                 marker.map = mapView_;
@@ -165,6 +185,10 @@
         [arregloMarkers removeAllObjects];
         [mapView_ clear];
         [self recuperaListaDeTachosDeTipo:@"Contenedor de vidrio"];
+    }else if([sender selectedSegmentIndex]==5){
+        [arregloMarkers removeAllObjects];
+        [mapView_ clear];
+        [self recuperaListaDeTachosDeTipo:@"Todos"];
     }
 }
 

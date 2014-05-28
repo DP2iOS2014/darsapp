@@ -11,6 +11,7 @@
 #import "ClaseRespuesta.h"
 #import "preguntaProgressView.h"
 #import "SingletonJuego.h"
+#import "URLsJson.h"
 @interface PreguntasViewController ()
 
 @end
@@ -20,6 +21,11 @@
 {
     SingletonJuego *juego;
     ClasePregunta *preguntaActual;
+    NSDictionary * respuesta;
+    
+    NSMutableArray *buenaspracticas;
+    NSMutableArray *puntajes;
+    NSMutableArray *estados;
 }
 
 
@@ -35,7 +41,9 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
+    [self recuperaEcoTipsLider];
     juego= [SingletonJuego sharedManager];
 
     ClaseRespuesta *resp1=[[ClaseRespuesta alloc] initConRespuesta:@"Naty" escorrecto:NO];
@@ -68,6 +76,68 @@
     
     
 }
+
+-(void) recuperaEcoTipsLider{
+    
+    //PARA ENVIAR PRIMI
+    NSDictionary *cuerpo2 = [NSDictionary dictionaryWithObjectsAndKeys:@"tipo_pregunta",@"Segregación", nil];
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"pregunta", @"tipo", cuerpo2, @"taxonomias", nil];
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:Preguntas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+        
+        buenaspracticas = [[NSMutableArray alloc] init];
+        puntajes = [[NSMutableArray alloc]init];
+        estados = [[NSMutableArray alloc]init];
+        //PARA SACAR LOS DATOS
+        
+        for(int i=0; i<[arregloPosiciones count];i++){
+            NSString *rpta_indice = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_respcorr_value"];
+            NSString *tipo_pregunta = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_pregunta"];
+            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+            NSNumber *tema_id = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tid"];
+            
+            double idtema=0;
+            
+            
+            
+            
+            if(self.indice==idtema){
+                [buenaspracticas addObject:titulo];
+                [puntajes   addObject:puntaje];
+                
+                [estados addObject:estado];
+            }
+            
+        }
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

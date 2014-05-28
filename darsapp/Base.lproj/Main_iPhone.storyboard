@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ja-Kw-sP6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ja-Kw-sP6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -1140,14 +1140,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Agua" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zxJ-wR-PW4">
-                                                    <rect key="frame" x="69" y="0.0" width="236" height="39"/>
+                                                    <rect key="frame" x="60" y="0.0" width="245" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="agua.png" id="BSl-wv-9cQ">
-                                                    <rect key="frame" x="15" y="0.0" width="39" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_agua.png" id="BSl-wv-9cQ">
+                                                    <rect key="frame" x="15" y="0.0" width="30" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1162,14 +1162,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Area Verde" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1go-Tz-B9x">
-                                                    <rect key="frame" x="70" y="0.0" width="235" height="39"/>
+                                                    <rect key="frame" x="60" y="0.0" width="245" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="areaverde.png" id="UiO-jI-m7K">
-                                                    <rect key="frame" x="15" y="0.0" width="40" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_areas_verdes.png" id="UiO-jI-m7K">
+                                                    <rect key="frame" x="15" y="0.0" width="30" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1206,14 +1206,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Energia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H0j-bM-KqL">
-                                                    <rect key="frame" x="68" y="0.0" width="237" height="39"/>
+                                                    <rect key="frame" x="60" y="0.0" width="245" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="energia.png" id="BLU-4A-rDN">
-                                                    <rect key="frame" x="15" y="0.0" width="38" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_energia.png" id="BLU-4A-rDN">
+                                                    <rect key="frame" x="15" y="0.0" width="30" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1228,14 +1228,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Liderazgo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aII-nz-5ar">
-                                                    <rect key="frame" x="69" y="0.0" width="236" height="39"/>
+                                                    <rect key="frame" x="61" y="0.0" width="244" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="liderazgo.png" id="Kay-8a-jLU">
-                                                    <rect key="frame" x="15" y="0.0" width="39" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_liderazgo.png" id="Kay-8a-jLU">
+                                                    <rect key="frame" x="15" y="0.0" width="31" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1250,14 +1250,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Papeles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bbf-DB-Maw">
-                                                    <rect key="frame" x="69" y="0.0" width="236" height="39"/>
+                                                    <rect key="frame" x="61" y="0.0" width="244" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="papeles.png" id="Y9b-fm-hEN">
-                                                    <rect key="frame" x="15" y="0.0" width="39" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_papel.png" id="Y9b-fm-hEN">
+                                                    <rect key="frame" x="15" y="0.0" width="31" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1272,14 +1272,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Residuos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K9g-2s-bHM">
-                                                    <rect key="frame" x="69" y="0.0" width="236" height="39"/>
+                                                    <rect key="frame" x="60" y="0.0" width="245" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="residuos.png" id="DuO-Sr-S06">
-                                                    <rect key="frame" x="15" y="0.0" width="39" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_residuos.png" id="DuO-Sr-S06">
+                                                    <rect key="frame" x="15" y="0.0" width="30" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1294,14 +1294,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Ruido" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UuR-nS-88t">
-                                                    <rect key="frame" x="68" y="0.0" width="237" height="39"/>
+                                                    <rect key="frame" x="61" y="0.0" width="244" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="ruido.png" id="NgG-8z-zFF">
-                                                    <rect key="frame" x="15" y="0.0" width="38" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_aire.png" id="NgG-8z-zFF">
+                                                    <rect key="frame" x="15" y="0.0" width="31" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1316,14 +1316,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Transporte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JPz-6N-Gbi">
-                                                    <rect key="frame" x="70" y="0.0" width="235" height="39"/>
+                                                    <rect key="frame" x="61" y="0.0" width="244" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="transporte.png" id="Xic-MT-0CI">
-                                                    <rect key="frame" x="15" y="0.0" width="40" height="39"/>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tema_transporte.png" id="Xic-MT-0CI">
+                                                    <rect key="frame" x="15" y="0.0" width="31" height="39"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
@@ -1505,7 +1505,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xB-TW-qvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="-5716"/>
+            <point key="canvasLocation" x="2481" y="-5518"/>
         </scene>
         <!--Grilla Ambientalizate View Controller - Eco Tips-->
         <scene sceneID="0mv-2p-bVV">
@@ -1887,8 +1887,6 @@
         <image name="Titulo_Plastico.png" width="300" height="300"/>
         <image name="administrativo.png" width="512" height="512"/>
         <image name="againFinal.png" width="54" height="44"/>
-        <image name="agua.png" width="261" height="262"/>
-        <image name="areaverde.png" width="264" height="260"/>
         <image name="atras.png" width="512" height="508"/>
         <image name="backButton.png" width="42" height="42"/>
         <image name="bombaFinal.png" width="54" height="45"/>
@@ -1900,22 +1898,24 @@
         <image name="contact.png" width="305" height="100"/>
         <image name="contactar-tfno.png" width="1520" height="1569"/>
         <image name="email.png" width="512" height="512"/>
-        <image name="energia.png" width="260" height="264"/>
         <image name="facebookButton.png" width="52" height="52"/>
         <image name="flower-pot.png" width="30" height="30"/>
         <image name="iphone_maps_icon_ios6.png" width="542" height="543"/>
-        <image name="liderazgo.png" width="519" height="516"/>
         <image name="logo.png" width="420" height="449"/>
         <image name="no_administrativo.png" width="512" height="512"/>
         <image name="otraFinal.png" width="54" height="44"/>
-        <image name="papeles.png" width="260" height="262"/>
         <image name="phone-book.png" width="30" height="30"/>
         <image name="recycle.png" width="30" height="30"/>
         <image name="relojFinal.png" width="54" height="44"/>
-        <image name="residuos.png" width="256" height="256"/>
-        <image name="ruido.png" width="257" height="262"/>
+        <image name="tema_agua.png" width="111" height="142"/>
+        <image name="tema_aire.png" width="111" height="141"/>
+        <image name="tema_areas_verdes.png" width="109" height="140"/>
+        <image name="tema_energia.png" width="111" height="144"/>
+        <image name="tema_liderazgo.png" width="111" height="141"/>
+        <image name="tema_papel.png" width="112" height="141"/>
+        <image name="tema_residuos.png" width="109" height="141"/>
+        <image name="tema_transporte.png" width="111" height="140"/>
         <image name="titulo_Pilas.png" width="300" height="300"/>
-        <image name="transporte.png" width="263" height="259"/>
         <image name="twitterButton.png" width="52" height="52"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "darsapp/PreguntasViewController.m"
-            timestampString = "421348289.72186"
+            timestampString = "422992006.2204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "darsapp/PreguntasViewController.m"
-            timestampString = "421348289.72186"
+            timestampString = "422992006.2204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-recuperaEcoTipsLider"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "darsapp/PreguntasViewController.m"
-            timestampString = "421348289.72186"
+            timestampString = "422992006.2204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "darsapp/PreguntasViewController.m"
-            timestampString = "421348289.72186"
+            timestampString = "422992006.2204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
             landmarkName = "-SeApretoBomba:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "darsapp/PreguntasViewController.m"
-            timestampString = "421358196.952969"
+            timestampString = "422992006.2204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "316"
+            endingLineNumber = "316"
             landmarkName = "-tick"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "darsapp/PreguntasViewController.m"
-            timestampString = "421358115.29211"
+            timestampString = "422992006.2204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "darsapp/PreguntasViewController.m"
-            timestampString = "421375877.329878"
+            timestampString = "422992006.2204"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
             landmarkName = "-SeApretoRespuesta:"
             landmarkType = "5">
          </BreakpointContent>
@@ -205,7 +205,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "158"
             endingLineNumber = "158"
-            landmarkName = "-prepareForSegue:sender:"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -237,8 +237,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "128"
             endingLineNumber = "128"
-            landmarkName = "@implementation LiderAmbientalViewController"
-            landmarkType = "3">
+            landmarkName = "-viewWillDisappear:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -269,7 +269,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "199"
             endingLineNumber = "199"
-            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            landmarkName = "-collectionView:viewForSupplementaryElementOfKind:atIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -317,7 +317,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
-            landmarkName = "-viewWillDisappear:"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -333,7 +333,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "116"
             endingLineNumber = "116"
-            landmarkName = "-viewWillDisappear:"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -3,26 +3,12 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[LiderAmbientalViewController viewDidLoad]:LiderAmbientalViewController.m">
+         contextName = "-[PreguntasViewController CreaPregunta:]:PreguntasViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "Ambientalizate.ArregloEstados">
+               value = "arregloPosiciones">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LiderAmbientalViewController collectionView:cellForItemAtIndexPath:]:LiderAmbientalViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "">
-            </PersistentString>
-            <PersistentString
-               value = "indexPath.row">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[LiderAmbientalViewController collectionView:didSelectItemAtIndexPath:]:LiderAmbientalViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

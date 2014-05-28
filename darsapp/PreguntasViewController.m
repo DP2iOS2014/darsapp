@@ -21,11 +21,13 @@
 {
     SingletonJuego *juego;
     ClasePregunta *preguntaActual;
-    NSDictionary * respuesta;
+    NSDictionary * respuestajson;
     
-    NSMutableArray *buenaspracticas;
-    NSMutableArray *puntajes;
-    NSMutableArray *estados;
+    NSString *rpta_indice;
+    NSInteger rpta;
+    NSString *titulo;
+    NSArray *opciones;
+
 }
 
 
@@ -46,7 +48,7 @@
     [self recuperaEcoTipsLider];
     juego= [SingletonJuego sharedManager];
 
-    ClaseRespuesta *resp1=[[ClaseRespuesta alloc] initConRespuesta:@"Naty" escorrecto:NO];
+    /*ClaseRespuesta *resp1=[[ClaseRespuesta alloc] initConRespuesta:@"Naty" escorrecto:NO];
     ClaseRespuesta *resp2=[[ClaseRespuesta alloc] initConRespuesta:@"Jorge" escorrecto:NO];
     ClaseRespuesta *resp3=[[ClaseRespuesta alloc] initConRespuesta:@"Karina" escorrecto:NO];
     ClaseRespuesta *resp4=[[ClaseRespuesta alloc] initConRespuesta:@"James" escorrecto:YES];
@@ -61,7 +63,7 @@
     
     
     ArregloPreguntas =[NSArray arrayWithObjects:pregunta1,pregunta2,nil];
-    
+    */
     tieneOtraOpcion=NO;
     self.Tiempo.text= [[NSString alloc] initWithFormat:@"%ld",(long)juego.Tiempo] ;
     self.VidasReloj.text= [[NSString alloc] initWithFormat:@"%ld",(long)juego.VidasReloj] ;
@@ -79,8 +81,33 @@
 
 -(void) recuperaEcoTipsLider{
     
+    NSInteger idtipopregunta=0;
+    NSString *tipotema;
+    
     //PARA ENVIAR PRIMI
-    NSDictionary *cuerpo2 = [NSDictionary dictionaryWithObjectsAndKeys:@"tipo_pregunta",@"Segregación", nil];
+
+    if(self.idtema==1){
+        tipotema= @"Segregación";
+    }
+    
+    if(self.idtema==2){
+        tipotema= @"";
+    }
+    
+    if(self.idtema==3){
+        tipotema= @"";
+    }
+    
+    if(self.idtema==4){
+        tipotema= @"";
+    }
+    
+    if(self.idtema==5){
+        tipotema= @"Corona";
+    }
+    
+ 
+    NSDictionary *cuerpo2 = [NSDictionary dictionaryWithObjectsAndKeys:@"tipo_pregunta",tipotema,nil];
     
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"pregunta", @"tipo", cuerpo2, @"taxonomias", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
@@ -92,31 +119,37 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     [manager POST:Preguntas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuesta = responseObject;
-        NSLog(@"JSON: %@", respuesta);
+        respuestajson = responseObject;
+        NSLog(@"JSON: %@", respuestajson);
         
-        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+        NSDictionary * diccionarioPosiciones = [respuestajson objectForKey:@"cuerpo"];
         NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
         
-        buenaspracticas = [[NSMutableArray alloc] init];
-        puntajes = [[NSMutableArray alloc]init];
-        estados = [[NSMutableArray alloc]init];
+
         //PARA SACAR LOS DATOS
         
         for(int i=0; i<[arregloPosiciones count];i++){
-            NSString *rpta_indice = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_respcorr_value"];
+            rpta_indice = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_respcorr_value"];
+            
+            rpta= rpta_indice.intValue;
+            
             NSString *tipo_pregunta = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_pregunta"];
-            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+            titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
             NSNumber *tema_id = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tid"];
-            
-            
-        }
+            opciones=[[NSArray alloc] initWithArray:[[arregloPosiciones objectAtIndex:i] objectForKey:@"listaPreguntas"]];
+                 
+        };
+        self.pregunta.text=titulo;
         
+        
+        [self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
+        [self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
+        [self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
+        [self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
         
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
-              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                                  message:[error localizedDescription]
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor" message:[error localizedDescription]
                                                                  delegate:nil
                                                         cancelButtonTitle:@"Ok"
                                                         otherButtonTitles:nil];
@@ -145,14 +178,14 @@
 }
 */
 -(void) CreaPregunta:(NSInteger) numero{
-    preguntaActual=[ArregloPreguntas objectAtIndex:numero];
-    self.pregunta.text=[[ArregloPreguntas objectAtIndex:numero] PreguntaARealizar];
-    NSArray *resp=[[ArregloPreguntas objectAtIndex:numero] ArregloRespuestas];
+    //preguntaActual=[ArregloPreguntas objectAtIndex:numero];
+    self.pregunta.text=titulo;
+    //NSArray *resp=[[ArregloPreguntas objectAtIndex:numero] ArregloRespuestas];
     
-    [self.btnRespuesta1 setTitle: [[resp objectAtIndex:0] respuesta] forState: UIControlStateNormal];
-    [self.btnRespuesta2 setTitle: [[resp objectAtIndex:1] respuesta] forState: UIControlStateNormal];
-    [self.btnRespuesta3 setTitle: [[resp objectAtIndex:2] respuesta] forState: UIControlStateNormal];
-    [self.btnRespuesta4 setTitle: [[resp objectAtIndex:3] respuesta] forState: UIControlStateNormal];
+    [self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
+    [self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
+    [self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
+    [self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
 
     
 }
@@ -241,8 +274,11 @@
 }
 
 -(void)SeApretoRespuesta:(NSInteger)opcion{
-    BOOL correcto=[preguntaActual EsPreguntaCorrecta:opcion];
-    
+    //BOOL correcto=[preguntaActual EsPreguntaCorrecta:opcion];
+    BOOL correcto;
+    if (opcion==rpta) {
+        correcto=YES;
+    };
     
     if(correcto==YES){
         if(opcion==0){
@@ -318,7 +354,7 @@
     
 
     
-    [self CreaPregunta:0];
+    //[self CreaPregunta:0];
     
     
     

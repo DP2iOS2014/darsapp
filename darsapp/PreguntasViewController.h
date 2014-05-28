@@ -32,5 +32,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *pregunta;
 @property (strong, nonatomic) IBOutlet UILabel *VidasNuevaPregunta;
 @property (strong, nonatomic) IBOutlet UIProgressView *BarraProgreso;
+@property NSInteger *idtema;
+@property NSString *tipo_tema; 
 
 @end

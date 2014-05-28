@@ -88,6 +88,7 @@
 		129EE5D21908679B008A72CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129EE5D11908679B008A72CF /* MessageUI.framework */; };
 		129EE5D519088A4C008A72CF /* NoticiasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EE5D419088A4C008A72CF /* NoticiasTableViewController.m */; };
 		129EE5D819088A75008A72CF /* CeldaNoticiasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EE5D719088A75008A72CF /* CeldaNoticiasTableViewCell.m */; };
+		129F0DCA19368FEE007922F8 /* backButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 129F0DC919368FEE007922F8 /* backButton2.png */; };
 		129F4918192E9C0100DF8793 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 129F4917192E9C0100DF8793 /* images.jpeg */; };
 		12A083FE19099DE000D010E6 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A083FD19099DE000D010E6 /* ic_launcher.png */; };
 		12A128CE191EAE4D00397B90 /* GrillaAmbientalizateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128CD191EAE4D00397B90 /* GrillaAmbientalizateViewController.m */; };
@@ -383,6 +384,7 @@
 		129EE5D419088A4C008A72CF /* NoticiasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticiasTableViewController.m; sourceTree = "<group>"; };
 		129EE5D619088A75008A72CF /* CeldaNoticiasTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaNoticiasTableViewCell.h; sourceTree = "<group>"; };
 		129EE5D719088A75008A72CF /* CeldaNoticiasTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaNoticiasTableViewCell.m; sourceTree = "<group>"; };
+		129F0DC919368FEE007922F8 /* backButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton2.png; sourceTree = "<group>"; };
 		129F4917192E9C0100DF8793 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		12A083FD19099DE000D010E6 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		12A128CC191EAE4D00397B90 /* GrillaAmbientalizateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaAmbientalizateViewController.h; sourceTree = "<group>"; };
@@ -866,6 +868,7 @@
 		12A6713F192FDF5B00E03C72 /* Fuentes */ = {
 			isa = PBXGroup;
 			children = (
+				129F0DC919368FEE007922F8 /* backButton2.png */,
 				12A67162192FF15A00E03C72 /* checkButton.png */,
 				12A67160192FEAEF00E03C72 /* twitterButton.png */,
 				12A6715E192FEAEB00E03C72 /* backButton.png */,
@@ -1335,6 +1338,7 @@
 				12A128D6191ED3D000397B90 /* no_administrativo.png in Resources */,
 				12EEAB25191D4485002F0D6E /* 1_DaleVidaATusResiduos.png in Resources */,
 				12A128EB191ED74C00397B90 /* naturaleza.jpg in Resources */,
+				129F0DCA19368FEE007922F8 /* backButton2.png in Resources */,
 				12F4CFD318FF147500C8BFF5 /* InfoPlist.strings in Resources */,
 				12A75838191AF36E00E03C5E /* 5_Separatas.png in Resources */,
 				12A75835191AF36E00E03C5E /* 2_Separatas.png in Resources */,

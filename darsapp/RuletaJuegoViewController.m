@@ -7,6 +7,7 @@
 //
 
 #import "RuletaJuegoViewController.h"
+#import "PreguntasViewController.h"
 
 
 @interface RuletaJuegoViewController ()
@@ -15,8 +16,12 @@
 
 @implementation RuletaJuegoViewController
 
+    NSInteger *numerotema;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
+
+    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -63,15 +68,16 @@
 {
     [self performSegueWithIdentifier:@"ViewPreguntas" sender:self];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqual:@"ViewPreguntas"]) {
+        PreguntasViewController *escenadestino = segue.destinationViewController;
+        
+        //ACA SE PONE EL ID DEL TEMA QUE SALIO EN LA RULETA
+        escenadestino.idtema = 1;
+    }
+
+};
 
 @end

@@ -108,6 +108,7 @@
 		12A128EE191ED89000397B90 /* Check-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A128ED191ED89000397B90 /* Check-icon.png */; };
 		12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128F0191EDC9300397B90 /* ResultadoCalificateViewController.m */; };
 		12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */; };
+		12A15B09193673450062D5AF /* tema_compras.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A15B08193673450062D5AF /* tema_compras.png */; };
 		12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */; };
 		12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6F2190AC57F001ED3BE /* UbicanosViewController.m */; };
 		12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F6F5190AC927001ED3BE /* newspaper.png */; };
@@ -406,6 +407,7 @@
 		12A128F0191EDC9300397B90 /* ResultadoCalificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadoCalificateViewController.m; sourceTree = "<group>"; };
 		12A14459192FB1D10035F214 /* puntajeAdministradorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = puntajeAdministradorViewController.h; sourceTree = "<group>"; };
 		12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = puntajeAdministradorViewController.m; sourceTree = "<group>"; };
+		12A15B08193673450062D5AF /* tema_compras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_compras.png; sourceTree = "<group>"; };
 		12A1F6EE190ABC6C001ED3BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		12A1F6F1190AC57F001ED3BE /* UbicanosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UbicanosViewController.h; sourceTree = "<group>"; };
@@ -968,6 +970,7 @@
 				12D8719A19364C950035F0E0 /* tema_liderazgo.png */,
 				12D871A219364D480035F0E0 /* tema_aire.png */,
 				12D8719819364C7E0035F0E0 /* tema_energia.png */,
+				12A15B08193673450062D5AF /* tema_compras.png */,
 				12D871A019364D410035F0E0 /* tema_transporte.png */,
 				12D8719619364BD10035F0E0 /* tema_areas_verdes.png */,
 				12D8719419364B7D0035F0E0 /* tema_agua.png */,
@@ -1379,6 +1382,7 @@
 				1276EA22192D62C400B49816 /* Compras9.png in Resources */,
 				12A7583A191AF36E00E03C5E /* 7_Separatas.png in Resources */,
 				12EEAB06191D4416002F0D6E /* 5_SegregacionPilas.png in Resources */,
+				12A15B09193673450062D5AF /* tema_compras.png in Resources */,
 				12EEAB03191D4416002F0D6E /* 4_Pilas.png in Resources */,
 				12EEAB04191D4416002F0D6E /* 4_SegregacionPilas.png in Resources */,
 				12A67156192FDF8400E03C72 /* Roboto-Thin.ttf in Resources */,

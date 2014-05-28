@@ -109,17 +109,6 @@
             NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
             NSNumber *tema_id = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tid"];
             
-            double idtema=0;
-            
-            
-            
-            
-            if(self.indice==idtema){
-                [buenaspracticas addObject:titulo];
-                [puntajes   addObject:puntaje];
-                
-                [estados addObject:estado];
-            }
             
         }
         

@@ -228,43 +228,59 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    collectionView.userInteractionEnabled = NO;
+    self.navigationItem.backBarButtonItem.enabled = NO;
+    
     GrillaAmbientalizateCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
     
-    //Aqui gira la imagen
-    if(celda.imagen.alpha==1){
-        [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+    NSNumber * mistado = [estados objectAtIndex:indexPath.row];
+    
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+
+    
+    
+    if (mistado.intValue == 0) {
         
+        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
+         estados[indexPath.row] = @1;
+        
+        [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+            
             celda.imagen.alpha=0.3;
-        
-        
+            
+            
         } completion:^(BOOL finished) {
             celda.imagenCheck.alpha = 1;
+            collectionView.userInteractionEnabled = YES;
+            self.navigationItem.backBarButtonItem.enabled = YES;
+            
         }];
-    
-    }
-        puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
-    
-    
-    estados[indexPath.row] = @1;
-    [ecoTips setArregloEstados:estados];
-    
-}
-
--(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-    GrillaAmbientalizateCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
-    celda.imagenCheck.alpha = 0;
-        [UIView transitionWithView:celda.imagen duration:1 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        [ecoTips setArregloEstados:estados];
+        
+    }else{
+         puntajeUsuario = puntajeUsuario - [[puntajes objectAtIndex:indexPath.row] doubleValue];
+        
+        celda.imagenCheck.alpha = 0;
+        [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             
             celda.imagen.alpha=1;
             
             
-        } completion:nil];
+        }completion:^(BOOL finished) {
+            collectionView.userInteractionEnabled = YES;
+            self.navigationItem.backBarButtonItem.enabled = YES;
+        }];
+        
+        estados[indexPath.row] = @0;
+        [ecoTips setArregloEstados:estados];
+        
+    }
     
-        puntajeUsuario = puntajeUsuario - [[puntajes objectAtIndex:indexPath.row] doubleValue];
     
-       estados[indexPath.row] = @0;
-    [ecoTips setArregloEstados:estados];
 }
+
 
 //////
 - (IBAction)handlePinch:(UIPinchGestureRecognizer *)sender {

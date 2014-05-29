@@ -67,6 +67,7 @@
 		1276EA29192D62C400B49816 /* Compras16.png in Resources */ = {isa = PBXBuildFile; fileRef = 1276EA19192D62C400B49816 /* Compras16.png */; };
 		1276EA2B192D687200B49816 /* fondologin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1276EA2A192D687200B49816 /* fondologin.jpg */; };
 		1276EA2D192D687E00B49816 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1276EA2C192D687E00B49816 /* logo.png */; };
+		1279F4CD19379AD500A32A7B /* CeldaTemas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1279F4CC19379AD500A32A7B /* CeldaTemas.m */; };
 		128AC03D192D3B110015AEF4 /* TemasAdmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128AC03C192D3B110015AEF4 /* TemasAdmTableViewController.m */; };
 		128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 128AC053192D472F0015AEF4 /* LiderAmbientalViewController.m */; };
 		128FAF70192FB23E0065D633 /* GrillaInicialAmbientalizate.m in Sources */ = {isa = PBXBuildFile; fileRef = 128FAF6F192FB23E0065D633 /* GrillaInicialAmbientalizate.m */; };
@@ -351,6 +352,8 @@
 		1276EA19192D62C400B49816 /* Compras16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Compras16.png; sourceTree = "<group>"; };
 		1276EA2A192D687200B49816 /* fondologin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondologin.jpg; sourceTree = "<group>"; };
 		1276EA2C192D687E00B49816 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1279F4CB19379AD500A32A7B /* CeldaTemas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaTemas.h; sourceTree = "<group>"; };
+		1279F4CC19379AD500A32A7B /* CeldaTemas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaTemas.m; sourceTree = "<group>"; };
 		128AC03B192D3B110015AEF4 /* TemasAdmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemasAdmTableViewController.h; sourceTree = "<group>"; };
 		128AC03C192D3B110015AEF4 /* TemasAdmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemasAdmTableViewController.m; sourceTree = "<group>"; };
 		128AC052192D472F0015AEF4 /* LiderAmbientalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiderAmbientalViewController.h; sourceTree = "<group>"; };
@@ -1100,6 +1103,8 @@
 				12F4D00918FF24C500C8BFF5 /* ContactanosTableViewController.h */,
 				12F4D00A18FF24C500C8BFF5 /* ContactanosTableViewController.m */,
 				12F4CFDA18FF147500C8BFF5 /* Main_iPhone.storyboard */,
+				1279F4CB19379AD500A32A7B /* CeldaTemas.h */,
+				1279F4CC19379AD500A32A7B /* CeldaTemas.m */,
 				12E53C60191D86F100911B7C /* RutasTableViewController.h */,
 				12E53C61191D86F100911B7C /* RutasTableViewController.m */,
 				12E53C55191D7CAA00911B7C /* InformacionTableViewController.h */,
@@ -1474,6 +1479,7 @@
 				120FF22D1913F39400A697D6 /* AFURLSessionManager.m in Sources */,
 				12A75814191ADCF500E03C5E /* SegregacionViewController.m in Sources */,
 				12A671661930090300E03C72 /* SingletonEcoTips.m in Sources */,
+				1279F4CD19379AD500A32A7B /* CeldaTemas.m in Sources */,
 				12F4CFD918FF147500C8BFF5 /* AppDelegate.m in Sources */,
 				120FF2261913F39400A697D6 /* AFHTTPRequestOperationManager.m in Sources */,
 				120FF2331913F39400A697D6 /* UIProgressView+AFNetworking.m in Sources */,

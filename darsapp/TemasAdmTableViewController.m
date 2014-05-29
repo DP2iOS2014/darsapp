@@ -9,6 +9,7 @@
 #import "TemasAdmTableViewController.h"
 #import "URLsJson.h"
 #import "LiderAmbientalViewController.h"
+#import "CeldaTemas.h"
 
 @interface TemasAdmTableViewController ()
 
@@ -17,7 +18,10 @@
 @implementation TemasAdmTableViewController{
 
     NSDictionary * respuesta;
+    NSDictionary *respuestatemas;
     NSMutableArray *arregloRespuesta;
+    NSMutableArray *titulos;
+    
 
 }
 
@@ -33,7 +37,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self recuperaEcoTipsLider];
+    //[self recuperaEcoTipsLider];
+    titulos = [[NSMutableArray alloc] init];
+    [self recuperoTemas];
+    
     
     self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -75,14 +82,60 @@
 {
 
     // Return the number of rows in the section.
-    return 10;
+    return titulos.count ;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CeldaTemas *cell = [tableView dequeueReusableCellWithIdentifier: @"CeldaTemas"];
+    cell.lblTema.text=titulos[indexPath.row];
+    return cell;
+}
+
+-(void) recuperoTemas{
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"tema_buenaspracticas", @"tipo", @[], @"filtro", nil];
+    
+        NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+
+    NSLog(@"%@", consulta);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuestatemas = responseObject;
+        NSLog(@"JSON: %@", respuestatemas);
+        
+        NSDictionary * diccionarioPosiciones = [respuestatemas objectForKey:@"cuerpo"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+        
+        //PARA SACAR LOS DATOS
+        
+        for(int i=0; i<[arregloPosiciones count];i++){
+            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+            NSString *nombreimagen = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
+            
+            [titulos addObject:titulo];
+            
+        }
+        
+        [self.tableView reloadData];
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
 }
 
 -(void) recuperaEcoTipsLider{
 
     //PARA ENVIAR PRIMI
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"buenaspracticas", @"tipo", @[], @"filtro", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"buenaspracticas", @"tipo", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
     NSLog(@"%@", consulta);
@@ -162,7 +215,7 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier  isEqual: @"idsegue"]){
     LiderAmbientalViewController *escenadestino = segue.destinationViewController;
-    escenadestino.respuestajson= respuesta;
+    //escenadestino.respuestajson= respuesta;
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     escenadestino.indice= selectedIndexPath.row;
     }

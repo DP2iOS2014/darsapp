@@ -110,7 +110,7 @@
 		12A128EE191ED89000397B90 /* Check-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A128ED191ED89000397B90 /* Check-icon.png */; };
 		12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128F0191EDC9300397B90 /* ResultadoCalificateViewController.m */; };
 		12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */; };
-		12A15B09193673450062D5AF /* tema_compras.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A15B08193673450062D5AF /* tema_compras.png */; };
+		12A15B09193673450062D5AF /* Adquisiscion de Productos y Servicios.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A15B08193673450062D5AF /* Adquisiscion de Productos y Servicios.png */; };
 		12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */; };
 		12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6F2190AC57F001ED3BE /* UbicanosViewController.m */; };
 		12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F6F5190AC927001ED3BE /* newspaper.png */; };
@@ -168,14 +168,14 @@
 		12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75833191AF36E00E03C5E /* 8_Separatas.png */; };
 		12AFACC9190B017F0007F5C0 /* flechitaDARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACC8190B017F0007F5C0 /* flechitaDARS.png */; };
 		12AFACCD190B14260007F5C0 /* dars1.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACCC190B14260007F5C0 /* dars1.png */; };
-		12D8719519364B7D0035F0E0 /* tema_agua.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719419364B7D0035F0E0 /* tema_agua.png */; };
-		12D8719719364BD10035F0E0 /* tema_areas_verdes.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719619364BD10035F0E0 /* tema_areas_verdes.png */; };
-		12D8719919364C7E0035F0E0 /* tema_energia.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719819364C7E0035F0E0 /* tema_energia.png */; };
-		12D8719B19364C950035F0E0 /* tema_liderazgo.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719A19364C950035F0E0 /* tema_liderazgo.png */; };
-		12D8719D19364CB00035F0E0 /* tema_papel.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719C19364CB00035F0E0 /* tema_papel.png */; };
-		12D8719F19364CC50035F0E0 /* tema_residuos.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719E19364CC50035F0E0 /* tema_residuos.png */; };
-		12D871A119364D410035F0E0 /* tema_transporte.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D871A019364D410035F0E0 /* tema_transporte.png */; };
-		12D871A319364D480035F0E0 /* tema_aire.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D871A219364D480035F0E0 /* tema_aire.png */; };
+		12D8719519364B7D0035F0E0 /* Agua.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719419364B7D0035F0E0 /* Agua.png */; };
+		12D8719719364BD10035F0E0 /* Espacios Verdes.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719619364BD10035F0E0 /* Espacios Verdes.png */; };
+		12D8719919364C7E0035F0E0 /* Energia.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719819364C7E0035F0E0 /* Energia.png */; };
+		12D8719B19364C950035F0E0 /* Liderazgo Ambiental y Capacidad Organizativa.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719A19364C950035F0E0 /* Liderazgo Ambiental y Capacidad Organizativa.png */; };
+		12D8719D19364CB00035F0E0 /* Papel de Escritorio.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719C19364CB00035F0E0 /* Papel de Escritorio.png */; };
+		12D8719F19364CC50035F0E0 /* Residuos Solidos.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719E19364CC50035F0E0 /* Residuos Solidos.png */; };
+		12D871A119364D410035F0E0 /* Transporte.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D871A019364D410035F0E0 /* Transporte.png */; };
+		12D871A319364D480035F0E0 /* Aire y Ruido.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D871A219364D480035F0E0 /* Aire y Ruido.png */; };
 		12DDC97E19300508005E820A /* AsistenteAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC97D19300508005E820A /* AsistenteAmbiental.png */; };
 		12DDC98019300511005E820A /* EspecialistaAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC97F19300511005E820A /* EspecialistaAmbiental.png */; };
 		12DDC9821930051A005E820A /* LiderAmbiental.png in Resources */ = {isa = PBXBuildFile; fileRef = 12DDC9811930051A005E820A /* LiderAmbiental.png */; };
@@ -412,7 +412,7 @@
 		12A128F0191EDC9300397B90 /* ResultadoCalificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultadoCalificateViewController.m; sourceTree = "<group>"; };
 		12A14459192FB1D10035F214 /* puntajeAdministradorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = puntajeAdministradorViewController.h; sourceTree = "<group>"; };
 		12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = puntajeAdministradorViewController.m; sourceTree = "<group>"; };
-		12A15B08193673450062D5AF /* tema_compras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_compras.png; sourceTree = "<group>"; };
+		12A15B08193673450062D5AF /* Adquisiscion de Productos y Servicios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Adquisiscion de Productos y Servicios.png"; sourceTree = "<group>"; };
 		12A1F6EE190ABC6C001ED3BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		12A1F6F1190AC57F001ED3BE /* UbicanosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UbicanosViewController.h; sourceTree = "<group>"; };
@@ -480,14 +480,14 @@
 		12A75833191AF36E00E03C5E /* 8_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_Separatas.png; sourceTree = "<group>"; };
 		12AFACC8190B017F0007F5C0 /* flechitaDARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechitaDARS.png; sourceTree = "<group>"; };
 		12AFACCC190B14260007F5C0 /* dars1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dars1.png; sourceTree = "<group>"; };
-		12D8719419364B7D0035F0E0 /* tema_agua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_agua.png; sourceTree = "<group>"; };
-		12D8719619364BD10035F0E0 /* tema_areas_verdes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_areas_verdes.png; sourceTree = "<group>"; };
-		12D8719819364C7E0035F0E0 /* tema_energia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_energia.png; sourceTree = "<group>"; };
-		12D8719A19364C950035F0E0 /* tema_liderazgo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_liderazgo.png; sourceTree = "<group>"; };
-		12D8719C19364CB00035F0E0 /* tema_papel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_papel.png; sourceTree = "<group>"; };
-		12D8719E19364CC50035F0E0 /* tema_residuos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_residuos.png; sourceTree = "<group>"; };
-		12D871A019364D410035F0E0 /* tema_transporte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_transporte.png; sourceTree = "<group>"; };
-		12D871A219364D480035F0E0 /* tema_aire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tema_aire.png; sourceTree = "<group>"; };
+		12D8719419364B7D0035F0E0 /* Agua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Agua.png; sourceTree = "<group>"; };
+		12D8719619364BD10035F0E0 /* Espacios Verdes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Espacios Verdes.png"; sourceTree = "<group>"; };
+		12D8719819364C7E0035F0E0 /* Energia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Energia.png; sourceTree = "<group>"; };
+		12D8719A19364C950035F0E0 /* Liderazgo Ambiental y Capacidad Organizativa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Liderazgo Ambiental y Capacidad Organizativa.png"; sourceTree = "<group>"; };
+		12D8719C19364CB00035F0E0 /* Papel de Escritorio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Papel de Escritorio.png"; sourceTree = "<group>"; };
+		12D8719E19364CC50035F0E0 /* Residuos Solidos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Residuos Solidos.png"; sourceTree = "<group>"; };
+		12D871A019364D410035F0E0 /* Transporte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Transporte.png; sourceTree = "<group>"; };
+		12D871A219364D480035F0E0 /* Aire y Ruido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Aire y Ruido.png"; sourceTree = "<group>"; };
 		12DDC97D19300508005E820A /* AsistenteAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AsistenteAmbiental.png; sourceTree = "<group>"; };
 		12DDC97F19300511005E820A /* EspecialistaAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EspecialistaAmbiental.png; sourceTree = "<group>"; };
 		12DDC9811930051A005E820A /* LiderAmbiental.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LiderAmbiental.png; sourceTree = "<group>"; };
@@ -971,15 +971,15 @@
 		12D871931936469A0035F0E0 /* Temas */ = {
 			isa = PBXGroup;
 			children = (
-				12D8719C19364CB00035F0E0 /* tema_papel.png */,
-				12D8719E19364CC50035F0E0 /* tema_residuos.png */,
-				12D8719A19364C950035F0E0 /* tema_liderazgo.png */,
-				12D871A219364D480035F0E0 /* tema_aire.png */,
-				12D8719819364C7E0035F0E0 /* tema_energia.png */,
-				12A15B08193673450062D5AF /* tema_compras.png */,
-				12D871A019364D410035F0E0 /* tema_transporte.png */,
-				12D8719619364BD10035F0E0 /* tema_areas_verdes.png */,
-				12D8719419364B7D0035F0E0 /* tema_agua.png */,
+				12D8719C19364CB00035F0E0 /* Papel de Escritorio.png */,
+				12D8719E19364CC50035F0E0 /* Residuos Solidos.png */,
+				12D8719A19364C950035F0E0 /* Liderazgo Ambiental y Capacidad Organizativa.png */,
+				12D871A219364D480035F0E0 /* Aire y Ruido.png */,
+				12D8719819364C7E0035F0E0 /* Energia.png */,
+				12A15B08193673450062D5AF /* Adquisiscion de Productos y Servicios.png */,
+				12D871A019364D410035F0E0 /* Transporte.png */,
+				12D8719619364BD10035F0E0 /* Espacios Verdes.png */,
+				12D8719419364B7D0035F0E0 /* Agua.png */,
 			);
 			name = Temas;
 			sourceTree = "<group>";
@@ -1290,9 +1290,9 @@
 				12A1F704190ACFC7001ED3BE /* flower-pot.png in Resources */,
 				12F4CFE418FF147500C8BFF5 /* Images.xcassets in Resources */,
 				129D4DB01919C27200D12423 /* relojFinal.png in Resources */,
-				12D8719919364C7E0035F0E0 /* tema_energia.png in Resources */,
+				12D8719919364C7E0035F0E0 /* Energia.png in Resources */,
 				12A128EC191ED74C00397B90 /* cuarto.jpg in Resources */,
-				12D871A119364D410035F0E0 /* tema_transporte.png in Resources */,
+				12D871A119364D410035F0E0 /* Transporte.png in Resources */,
 				12A128E5191ED74C00397B90 /* ventana.jpg in Resources */,
 				1276EA1B192D62C400B49816 /* Compras2.png in Resources */,
 				12EEAB17191D4431002F0D6E /* 4_Electricidad.png in Resources */,
@@ -1307,9 +1307,9 @@
 				12DDC9821930051A005E820A /* LiderAmbiental.png in Resources */,
 				12EEAB15191D4431002F0D6E /* 2_Electricidad.png in Resources */,
 				12A128E7191ED74C00397B90 /* ropa.jpg in Resources */,
-				12D8719B19364C950035F0E0 /* tema_liderazgo.png in Resources */,
+				12D8719B19364C950035F0E0 /* Liderazgo Ambiental y Capacidad Organizativa.png in Resources */,
 				12702B6F19300D13002CC216 /* buenas_practicas.png in Resources */,
-				12D8719519364B7D0035F0E0 /* tema_agua.png in Resources */,
+				12D8719519364B7D0035F0E0 /* Agua.png in Resources */,
 				12A75839191AF36E00E03C5E /* 6_Separatas.png in Resources */,
 				12A128EE191ED89000397B90 /* Check-icon.png in Resources */,
 				12EFB94D192D46D000AAAAB2 /* tachito3.png in Resources */,
@@ -1331,10 +1331,10 @@
 				12F4CFDC18FF147500C8BFF5 /* Main_iPhone.storyboard in Resources */,
 				12A75807191AD23900E03C5E /* 2_ProduccionPlastico.png in Resources */,
 				1276EA29192D62C400B49816 /* Compras16.png in Resources */,
-				12D8719F19364CC50035F0E0 /* tema_residuos.png in Resources */,
+				12D8719F19364CC50035F0E0 /* Residuos Solidos.png in Resources */,
 				12DDC98419300520005E820A /* PracticanteAmbiental.png in Resources */,
 				12DDC98619300526005E820A /* SeniorAmbiental.png in Resources */,
-				12D871A319364D480035F0E0 /* tema_aire.png in Resources */,
+				12D871A319364D480035F0E0 /* Aire y Ruido.png in Resources */,
 				12A75806191AD23900E03C5E /* Titulo_Plastico.png in Resources */,
 				12EFB94C192D46D000AAAAB2 /* tachito2.png in Resources */,
 				12FF2E95190AEEC600638774 /* grey_sandbag_@2X.png in Resources */,
@@ -1349,7 +1349,7 @@
 				12A75835191AF36E00E03C5E /* 2_Separatas.png in Resources */,
 				12A1F6FA190AC9A4001ED3BE /* recycle.png in Resources */,
 				12E53C5B191D81BC00911B7C /* 1718.png in Resources */,
-				12D8719D19364CB00035F0E0 /* tema_papel.png in Resources */,
+				12D8719D19364CB00035F0E0 /* Papel de Escritorio.png in Resources */,
 				129EE5D019085475008A72CF /* email.png in Resources */,
 				12EEAB14191D4431002F0D6E /* 1_Electricidad.png in Resources */,
 				12EEAB16191D4431002F0D6E /* 3_Electricidad.png in Resources */,
@@ -1382,7 +1382,7 @@
 				12A67163192FF15A00E03C72 /* checkButton.png in Resources */,
 				12A128EA191ED74C00397B90 /* papel.jpg in Resources */,
 				12EEAB19191D4431002F0D6E /* 6_Electricidad.png in Resources */,
-				12D8719719364BD10035F0E0 /* tema_areas_verdes.png in Resources */,
+				12D8719719364BD10035F0E0 /* Espacios Verdes.png in Resources */,
 				12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */,
 				12A1F6F8190AC983001ED3BE /* phone-book.png in Resources */,
 				12A128E4191ED74C00397B90 /* playa2.jpg in Resources */,
@@ -1391,7 +1391,7 @@
 				1276EA22192D62C400B49816 /* Compras9.png in Resources */,
 				12A7583A191AF36E00E03C5E /* 7_Separatas.png in Resources */,
 				12EEAB06191D4416002F0D6E /* 5_SegregacionPilas.png in Resources */,
-				12A15B09193673450062D5AF /* tema_compras.png in Resources */,
+				12A15B09193673450062D5AF /* Adquisiscion de Productos y Servicios.png in Resources */,
 				12EEAB03191D4416002F0D6E /* 4_Pilas.png in Resources */,
 				12EEAB04191D4416002F0D6E /* 4_SegregacionPilas.png in Resources */,
 				12A67156192FDF8400E03C72 /* Roboto-Thin.ttf in Resources */,

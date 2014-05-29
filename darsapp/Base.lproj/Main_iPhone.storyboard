@@ -1708,18 +1708,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="hUs-YZ-MvE"/>
                     <connections>
+                        <outlet property="btnGiraRuleta" destination="nP9-cT-6Lk" id="Bxp-Qu-4AU"/>
                         <outlet property="ruleta" destination="zyv-be-fzm" id="37y-qQ-P4g"/>
-                        <segue destination="mQJ-Vt-z41" kind="push" identifier="ViewPreguntas" id="JAq-Fb-1S1"/>
+                        <segue destination="mQJ-Vt-z41" kind="modal" identifier="ViewPreguntas" modalTransitionStyle="flipHorizontal" id="JAq-Fb-1S1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-7T-C74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="-3507"/>
+            <point key="canvasLocation" x="1679" y="-3497"/>
         </scene>
         <!--Preguntas View Controller-->
         <scene sceneID="Rhe-ss-9Cl">
             <objects>
-                <viewController id="mQJ-Vt-z41" customClass="PreguntasViewController" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="mQJ-Vt-z41" customClass="PreguntasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hP2-9K-hE5"/>
                         <viewControllerLayoutGuide type="bottom" id="gWW-vd-WuD"/>

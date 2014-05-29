@@ -11,6 +11,7 @@
 @interface RuletaJuegoViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *ruleta;
+@property (strong, nonatomic) IBOutlet UIButton *btnGiraRuleta;
 
 
 @end

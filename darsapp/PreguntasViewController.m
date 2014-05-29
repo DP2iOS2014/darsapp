@@ -381,6 +381,25 @@
         
     }
     
+    
+    
+    
+}
+
+
+-(void)irASeleccionado
+{
+    [self performSegueWithIdentifier:@"ViewPreguntas" sender:self];
+}
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier isEqual:@"ViewPreguntas"]) {
+        PreguntasViewController *escenadestino = segue.destinationViewController;
+        
+        //ACA SE PONE EL ID DEL TEMA QUE SALIO EN LA RULETA
+        escenadestino.idtema = 1;
+    }
 }
 
 

@@ -42,25 +42,118 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)SeapretoBoton:(id)sender {
+    self.btnGiraRuleta.userInteractionEnabled=NO;
     [self rotateImageView:self.ruleta ];
+    self.btnGiraRuleta.userInteractionEnabled=YES;
     
 }
 
 - (void)rotateImageView:(UIImageView *)iv
 {
-    [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionCurveLinear
+    [UIView animateWithDuration:.1 delay:0 options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          
-                         iv.transform = CGAffineTransformRotate(iv.transform, M_PI/2);
+                         iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
                          
                      }
                      completion:^(BOOL finished) {
-                         if(finished)
-                             //Esto se ejecuta en un hilo aparte
-                             [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
                          
-                         //  [self rotateImageView:iv];
+                      [UIView animateWithDuration:.08 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                          iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                      } completion:^(BOOL finished) {
+                          
+                          [UIView animateWithDuration:.09 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                              
+                              iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                          } completion:^(BOOL finished) {
+                              
+                              
+                              [UIView animateWithDuration:.1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                  
+                                  iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                              } completion:^(BOOL finished) {
+                                  
+                                  
+                                  [UIView animateWithDuration:.11 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                      
+                                      iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                  } completion:^(BOOL finished) {
+                                      
+                                      [UIView animateWithDuration:.12 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                          
+                                          iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                      } completion:^(BOOL finished) {
+                                          
+                                          [UIView animateWithDuration:.13 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                              
+                                              iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                          } completion:^(BOOL finished) {
+                                              
+                                              [UIView animateWithDuration:.14 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                                  
+                                                  iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                              } completion:^(BOOL finished) {
+                                                  
+                                                  [UIView animateWithDuration:.15 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                                      
+                                                      iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                  } completion:^(BOOL finished) {
+                                                      
+                                                      [UIView animateWithDuration:.19 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                                          
+                                                          iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                      } completion:^(BOOL finished) {
+                                                          
+                                                          [UIView animateWithDuration:.21 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                                              
+                                                              iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                          } completion:^(BOOL finished) {
+                                                              
+                                                              [UIView animateWithDuration:.23 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                                                  
+                                                                  iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                              } completion:^(BOOL finished) {
+                                                                  
+                                                                  [UIView animateWithDuration:.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                                                      
+                                                                      iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                                  } completion:^(BOOL finished) {
+                                                                      if(finished)
+                                                                          //Esto se ejecuta en un hilo aparte
+                                                                          [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+                                                                      
+                                                                      //  [self rotateImageView:iv];
+                                                                  }];
+ 
+                                                              }];
+
+                                                          }];
+
+                                                      }];
+
+                                                  }];
+
+                                              }];
+
+                                          }];
+
+                                      }];
+
+                                  }];
+
+                                  
+                              }];
+
+
+                              
+                          }];
+
+                      }];
+                         
+                        
                      }];
+
+
 }
 
 

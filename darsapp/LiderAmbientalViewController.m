@@ -9,6 +9,7 @@
 #import "LiderAmbientalViewController.h"
 #import "LiderAmbientalCell.h"
 #import "SingletonAmbientalizate.h"
+#import "URLsJson.h"
 
 @interface LiderAmbientalViewController ()
 
@@ -16,6 +17,7 @@
 
 @implementation LiderAmbientalViewController{
 
+    NSDictionary * respuesta;
     NSArray * arregloprueba;
     NSMutableArray *buenaspracticas;
     NSMutableArray *puntajes;
@@ -36,75 +38,75 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    Ambientalizate= [SingletonAmbientalizate sharedManager];
+
+-(void) recuperaBuenasPracticas{
     
     //lectura de datos
+    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:@"field_tipotema",@"campo", @"agua",@"valor",nil];
     
-    NSDictionary * diccionarioPosiciones = [self.respuestajson objectForKey:@"cuerpo"];
-    NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"buenaspracticas", @"tipo", @[filtro2], @"filtro", nil];
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
     buenaspracticas = [[NSMutableArray alloc] init];
     puntajes = [[NSMutableArray alloc]init];
     estados = [[NSMutableArray alloc]init];
     //PARA SACAR LOS DATOS
     
-    for(int i=0; i<[arregloPosiciones count];i++){
-        NSString *descripcion = [[arregloPosiciones objectAtIndex:i] objectForKey:@"descripcion"];
-        NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-        NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
-        NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_tema"];
-        NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:Buenaspracticas2 parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
         
-        double idtema=0;
-
+        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
         
-        if ([tema isEqualToString:@"agua"]) {
-            idtema=0;
-        };
-        if ([tema isEqualToString:@"espacios verdes"]) {
-            idtema=1;
-        };
-        if ([tema isEqualToString:@"compras"]) {
-            idtema=2;
-        };
-        if ([tema isEqualToString:@"Energia"]) {
-            idtema=3;
-        };
-        if ([tema isEqualToString:@"liderazgo"]) {
-            idtema=4;
-        };
-        if ([tema isEqualToString:@"papeles"]) {
-            idtema=5;
-        };
-        if ([tema isEqualToString:@"residuos solidos"]) {
-            idtema=6;
-        };
-        if ([tema isEqualToString:@"aire y ruido"]) {
-            idtema=7;
-        };
-        if ([tema isEqualToString:@"tranporte"]) {
-            idtema=8;
-        };
-     
-        if(self.indice==idtema){
+        //PARA SACAR LOS DATOS
+        
+        for(int i=0; i<[arregloPosiciones count];i++){
+            NSString *descripcion = [[arregloPosiciones objectAtIndex:i] objectForKey:@"descripcion"];
+            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+            NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_tema"];
+            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+            
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];
-            
             [estados addObject:estado];
+            
+            
         }
-    
+        [self.collectionView reloadData];
     }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
     
+    
+    
+    
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    Ambientalizate= [SingletonAmbientalizate sharedManager];
+    [self recuperaBuenasPracticas];
+    
+
     if([Ambientalizate.ArregloEstados count]==0){
         Ambientalizate.ArregloEstados= [NSMutableArray arrayWithArray:estados];
-    
-    }
-    NSLog(@"JSON: %@", self.respuestajson);
-    
-    /////////////VERIFICO QUE TEMA APRETO////////////////
         
+    }
     
     [self.collectionView setAllowsMultipleSelection:YES];
     
@@ -112,8 +114,10 @@
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*) self.collectionView.collectionViewLayout;
     
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 8, 20, 8);
-    
+
 }
+
+
 - (void)viewWillAppear:(BOOL)animated{
     
     NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];

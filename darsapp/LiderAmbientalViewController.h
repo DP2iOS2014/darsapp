@@ -12,5 +12,6 @@
 
 @property (nonatomic,strong) NSDictionary *respuestajson;
 @property NSInteger indice;
+@property NSString *tema;
 
 @end

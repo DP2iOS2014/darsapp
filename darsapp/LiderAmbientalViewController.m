@@ -42,7 +42,7 @@
 -(void) recuperaBuenasPracticas{
     
     //lectura de datos
-    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:@"field_tipotema",@"campo", @"agua",@"valor",nil];
+    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:@"field_tipotema",@"campo",self.tema,@"valor",nil];
     
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"buenaspracticas", @"tipo", @[filtro2], @"filtro", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
@@ -79,8 +79,8 @@
             
             
         }
-        if([Ambientalizate.ArregloEstados count]==0){
-            Ambientalizate.ArregloEstados= [NSMutableArray arrayWithArray:estados];
+        if([[Ambientalizate.ArregloEstados objectAtIndex:self.indice] count]==0){
+            [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indice];
             
         }
         [self.collectionView reloadData];
@@ -103,7 +103,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Ambientalizate= [SingletonAmbientalizate sharedManager];
+    Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
+    
     [self recuperaBuenasPracticas];
     
     
@@ -165,12 +166,12 @@
     cell.imagen.image = [UIImage imageNamed:@"images.jpeg"];
     
     
-    if ([Ambientalizate.ArregloEstados count]!=0) {
+    if ([[Ambientalizate.ArregloEstados objectAtIndex:self.indice] count]!=0) {
 
         
         [@"perro" isEqualToString:@"perro"];
         
-        NSNumber *miEstado = Ambientalizate.ArregloEstados[indexPath.row];
+        NSNumber *miEstado = [Ambientalizate.ArregloEstados objectAtIndex:self.indice][indexPath.row];
         
         if(miEstado.intValue == 1){
             cell.imagen.alpha=0.3;
@@ -226,14 +227,14 @@
     
     
     
-    NSNumber * miestado=[Ambientalizate.ArregloEstados objectAtIndex:indexPath.row];
+    NSNumber * miestado=[[Ambientalizate.ArregloEstados objectAtIndex:self.indice] objectAtIndex:indexPath.row];
     
     
     if(miestado.intValue==0){
         
         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
         
-        Ambientalizate.ArregloEstados[indexPath.row] = @1;
+        [Ambientalizate.ArregloEstados objectAtIndex:self.indice][indexPath.row] = @1;
         [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             
             celda.imagen.alpha=0.3;
@@ -269,7 +270,7 @@
         
         
         
-        Ambientalizate.ArregloEstados[indexPath.row] = @0;
+        [Ambientalizate.ArregloEstados objectAtIndex:self.indice][indexPath.row] = @0;
       
 
     }

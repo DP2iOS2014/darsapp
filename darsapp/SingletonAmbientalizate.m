@@ -12,26 +12,34 @@
 
 static SingletonAmbientalizate *sharedMyManager;
 
-+ (id)sharedManager{
++ (id)sharedManager:(NSInteger)cantidadFilas{
     
     static dispatch_once_t once;
     dispatch_once(&once, ^{
         
         sharedMyManager = [[self alloc] init];
         sharedMyManager.ArregloEstados = [[NSMutableArray alloc] init];
+        
+        
+        for(int i=0;i<cantidadFilas;i++){
+            
+            [sharedMyManager.ArregloEstados addObject:[[NSMutableArray alloc] init]];
+            
+        }
     });
     
     return sharedMyManager;
 }
 
-+ (void) setEstado:(NSMutableArray*)arregloEstado{
-    sharedMyManager.ArregloEstados= [NSMutableArray arrayWithArray:arregloEstado];
++ (void) setEstado:(NSMutableArray*)arregloEstado yIndice:(NSInteger)indiceArreglo{
+    
+    [sharedMyManager.ArregloEstados setObject:arregloEstado atIndexedSubscript:indiceArreglo];
 
 }
 
 
-+ (NSMutableArray*) getEstado{
-    return sharedMyManager.ArregloEstados;
++ (NSMutableArray*) getEstado: (NSInteger)IndiceArreglo{
+    return [sharedMyManager.ArregloEstados objectAtIndex:IndiceArreglo];
 
 }
 

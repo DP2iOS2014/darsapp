@@ -157,6 +157,8 @@
     //escenadestino.respuestajson= respuesta;
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     escenadestino.indice= selectedIndexPath.row;
+    escenadestino.tema= [titulos objectAtIndex:selectedIndexPath.row];
+        escenadestino.cantidadFilas = titulos.count;
     }
     
 };

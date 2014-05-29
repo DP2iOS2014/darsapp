@@ -112,7 +112,7 @@
     MyFlowLayout *myLayout = [[MyFlowLayout alloc]init];
     myLayout.headerReferenceSize = CGSizeMake(0, 50);
     myLayout.footerReferenceSize = CGSizeMake(0, 50);
-[myLayout setItemSize:CGSizeMake(146, 118)];
+    [myLayout setItemSize:CGSizeMake(146, 118)];
     [self.collectionView setCollectionViewLayout:myLayout animated:YES];
     
     UIGestureRecognizer *pinchRecognizer =

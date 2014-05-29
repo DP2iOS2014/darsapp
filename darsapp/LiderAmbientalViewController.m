@@ -79,6 +79,10 @@
             
             
         }
+        if([Ambientalizate.ArregloEstados count]==0){
+            Ambientalizate.ArregloEstados= [NSMutableArray arrayWithArray:estados];
+            
+        }
         [self.collectionView reloadData];
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
@@ -102,11 +106,6 @@
     Ambientalizate= [SingletonAmbientalizate sharedManager];
     [self recuperaBuenasPracticas];
     
-
-    if([Ambientalizate.ArregloEstados count]==0){
-        Ambientalizate.ArregloEstados= [NSMutableArray arrayWithArray:estados];
-        
-    }
     
     [self.collectionView setAllowsMultipleSelection:YES];
     

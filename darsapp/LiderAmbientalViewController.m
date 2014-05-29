@@ -57,7 +57,7 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
-    [manager POST:Buenaspracticas2 parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+    [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuesta = responseObject;
         NSLog(@"JSON: %@", respuesta);
         

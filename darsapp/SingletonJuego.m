@@ -25,6 +25,10 @@
         sharedMyManager.VidasOtraOpcion = 3;
         sharedMyManager.tieneOtraOpcion = NO;
         sharedMyManager.disponibilidadBoton=YES;
+        sharedMyManager.disponibilidadRespuesta1 = YES;
+        sharedMyManager.disponibilidadRespuesta2 = YES;
+        sharedMyManager.disponibilidadRespuesta3 = YES;
+        sharedMyManager.disponibilidadRespuesta4 = YES;
         
         
     });

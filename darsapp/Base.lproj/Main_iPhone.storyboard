@@ -1544,6 +1544,7 @@
         <!--Preguntas View Controller-->
         <scene sceneID="Rhe-ss-9Cl">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAJ-w0-GQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController modalTransitionStyle="flipHorizontal" id="mQJ-Vt-z41" customClass="PreguntasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hP2-9K-hE5"/>
@@ -1702,7 +1703,6 @@
                         <outlet property="pregunta" destination="nQn-hC-wjt" id="7TY-tg-uMd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bAJ-w0-GQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2112" y="-3507"/>
         </scene>

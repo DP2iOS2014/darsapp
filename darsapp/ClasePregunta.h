@@ -12,7 +12,9 @@
 
 @property (nonatomic, strong) NSArray *ArregloRespuestas;
 @property (nonatomic, strong) NSString *PreguntaARealizar;
--(ClasePregunta*)initConPregunta:(NSString*)pregunta Respuestas:(NSArray*)respuestas;
-- (BOOL)EsPreguntaCorrecta:(NSInteger)opcion;
-- (NSInteger)traerOpcionCorrecta;
+@property (nonatomic, strong) NSNumber* PuntajePregunta;
+@property (nonatomic, strong) NSNumber* RespuestaCorrecta;
+
+-(ClasePregunta*)initConPregunta:(NSString*)pregunta Respuestas:(NSArray*)respuestas Puntaje:(NSNumber*)ptj RespCorrecta: (NSNumber*)resp;
+
 @end

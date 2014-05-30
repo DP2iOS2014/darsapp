@@ -17,6 +17,11 @@
 @property NSInteger VidasNPregunta;
 @property BOOL tieneOtraOpcion;
 @property BOOL disponibilidadBoton;
+@property BOOL disponibilidadRespuesta1;
+@property BOOL disponibilidadRespuesta2;
+@property BOOL disponibilidadRespuesta3;
+@property BOOL disponibilidadRespuesta4;
+
 + (id)sharedManager;
 
 @end

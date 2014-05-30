@@ -7,33 +7,23 @@
 //
 
 #import "ClasePregunta.h"
-#import "ClaseRespuesta.h"
+
 
 @implementation ClasePregunta
 
--(ClasePregunta *)initConPregunta:(NSString *)pregunta Respuestas:(NSArray *)respuestas
+-(ClasePregunta *)initConPregunta:(NSString *)pregunta Respuestas:(NSArray *)respuestas Puntaje:(NSNumber*) ptj RespCorrecta: (NSNumber*)resp
 {
     self = [super init];
     if (self) {
         self.PreguntaARealizar=pregunta;
         self.ArregloRespuestas=respuestas;
+        self.PuntajePregunta=ptj;
+        self.RespuestaCorrecta=resp;
     }
     
     return self;
 
 
-}
-
-- (BOOL)EsPreguntaCorrecta:(NSInteger)opcion{
-    return [[self.ArregloRespuestas objectAtIndex:opcion] correcta];
-}
-- (NSInteger)traerOpcionCorrecta{
-    for (int i=0; i<[_ArregloRespuestas count ]; i++) {
-        if([[_ArregloRespuestas objectAtIndex:i] correcta]){
-            return i;
-        }
-    }
-    return -1;
 }
 
 

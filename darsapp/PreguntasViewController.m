@@ -8,7 +8,6 @@
 
 #import "PreguntasViewController.h"
 #import "ClasePregunta.h"
-#import "ClaseRespuesta.h"
 #import "preguntaProgressView.h"
 #import "SingletonJuego.h"
 #import "URLsJson.h"
@@ -23,10 +22,7 @@
     ClasePregunta *preguntaActual;
     NSDictionary * respuestajson;
     
-    NSString *rpta_indice;
-    NSInteger rpta;
-    NSString *titulo;
-    NSArray *opciones;
+    NSInteger puntajeActual;
 
 }
 
@@ -48,22 +44,10 @@
     [self recuperaEcoTipsLider];
     juego= [SingletonJuego sharedManager];
 
-    /*ClaseRespuesta *resp1=[[ClaseRespuesta alloc] initConRespuesta:@"Naty" escorrecto:NO];
-    ClaseRespuesta *resp2=[[ClaseRespuesta alloc] initConRespuesta:@"Jorge" escorrecto:NO];
-    ClaseRespuesta *resp3=[[ClaseRespuesta alloc] initConRespuesta:@"Karina" escorrecto:NO];
-    ClaseRespuesta *resp4=[[ClaseRespuesta alloc] initConRespuesta:@"James" escorrecto:YES];
-    NSArray *ArregloResp=[NSArray arrayWithObjects:resp1,resp2,resp3,resp4,nil];
-    ClasePregunta *pregunta1=[[ClasePregunta alloc] initConPregunta:@"¿Como me Llamo?"  Respuestas:ArregloResp];
-    ClaseRespuesta *resp5=[[ClaseRespuesta alloc] initConRespuesta:@"1" escorrecto:NO];
-    ClaseRespuesta *resp6=[[ClaseRespuesta alloc] initConRespuesta:@"2" escorrecto:NO];
-    ClaseRespuesta *resp7=[[ClaseRespuesta alloc] initConRespuesta:@"5" escorrecto:NO];
-    ClaseRespuesta *resp8=[[ClaseRespuesta alloc] initConRespuesta:@"25" escorrecto:YES];
-    NSArray *ArregloResp1=[NSArray arrayWithObjects:resp5,resp6,resp7,resp8,nil];
-    ClasePregunta *pregunta2=[[ClasePregunta alloc] initConPregunta:@"¿Cuantos tipos de reciclaje existe?"  Respuestas:ArregloResp1];
     
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    puntajeActual = [datosUsuario doubleForKey:@"puntajeActualJuegoRuleta"];
     
-    ArregloPreguntas =[NSArray arrayWithObjects:pregunta1,pregunta2,nil];
-    */
     tieneOtraOpcion=NO;
     self.Tiempo.text= [[NSString alloc] initWithFormat:@"%ld",(long)juego.Tiempo] ;
     self.VidasReloj.text= [[NSString alloc] initWithFormat:@"%ld",(long)juego.VidasReloj] ;
@@ -77,15 +61,28 @@
     timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector:@selector(tick) userInfo:nil repeats:YES];
     
     
+    self.btnRespuesta1.enabled = juego.disponibilidadRespuesta1;
+    self.btnRespuesta2.enabled = juego.disponibilidadRespuesta2;
+    self.btnRespuesta3.enabled = juego.disponibilidadRespuesta3;
+    self.btnRespuesta4.enabled = juego.disponibilidadRespuesta4;
+    
+    
 }
 
 -(void) recuperaEcoTipsLider{
     
+    
+    
+    NSInteger puntaje;
+    
     NSInteger idtipopregunta=0;
     NSString *tipotema;
     
+    puntaje = 10;
+    
+    
     //PARA ENVIAR PRIMI
-
+    
     if(self.idtema==1){
         tipotema= @"Segregación";
     }
@@ -128,24 +125,36 @@
 
         //PARA SACAR LOS DATOS
         
-        for(int i=0; i<[arregloPosiciones count];i++){
-            rpta_indice = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_respcorr_value"];
+        //for(int i=0; i<[arregloPosiciones count];i++){
+            NSString *rpta_indice = [[arregloPosiciones objectAtIndex:0] objectForKey:@"field_respcorr_value"];
+        
+            NSInteger rpta = rpta_indice.intValue;
             
-            rpta= rpta_indice.intValue;
-            
-            NSString *tipo_pregunta = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_pregunta"];
-            titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-            NSNumber *tema_id = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tid"];
-            opciones=[[NSArray alloc] initWithArray:[[arregloPosiciones objectAtIndex:i] objectForKey:@"listaPreguntas"]];
+            NSString *tipo_pregunta = [[arregloPosiciones objectAtIndex:0] objectForKey:@"tipo_pregunta"];
+            NSString *titulo = [[arregloPosiciones objectAtIndex:0] objectForKey:@"title"];
+            NSNumber *tema_id = [[arregloPosiciones objectAtIndex:0] objectForKey:@"tid"];
+            NSArray *opciones=[[NSArray alloc] initWithArray:[[arregloPosiciones objectAtIndex:0] objectForKey:@"listaPreguntas"]];
                  
-        };
-        self.pregunta.text=titulo;
+       // };
+        
+
         
         
-        [self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
-        [self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
-        [self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
-        [self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
+        preguntaActual=[[ ClasePregunta alloc] initConPregunta:titulo Respuestas:opciones Puntaje: [[NSNumber alloc] initWithInteger:puntaje ] RespCorrecta:[[NSNumber alloc] initWithInteger:rpta]];
+    
+        
+        self.pregunta.text=preguntaActual.PreguntaARealizar;
+        [self.btnRespuesta1 setTitle: [preguntaActual.ArregloRespuestas objectAtIndex:0] forState: UIControlStateNormal];
+        [self.btnRespuesta2 setTitle: [preguntaActual.ArregloRespuestas objectAtIndex:1] forState: UIControlStateNormal];
+        [self.btnRespuesta3 setTitle: [preguntaActual.ArregloRespuestas objectAtIndex:2] forState: UIControlStateNormal];
+        [self.btnRespuesta4 setTitle: [preguntaActual.ArregloRespuestas objectAtIndex:3] forState: UIControlStateNormal];
+        
+        //self.pregunta.text=titulo;
+        //[self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
+        //[self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
+        //[self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
+        //[self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
+        
         
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
@@ -157,6 +166,7 @@
           }];
 
     
+   
     
 }
 
@@ -166,6 +176,47 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(void) terminarJuego: (BOOL) Correcta
+{
+    
+    
+    if(Correcta){
+        
+        puntajeActual = puntajeActual + [preguntaActual.PuntajePregunta integerValue];
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:puntajeActual forKey:@"puntajeActualJuegoRuleta"];
+        
+    }
+    juego.Tiempo = 30;
+    juego.tieneOtraOpcion = NO;
+    juego.disponibilidadBoton=YES;
+    juego.disponibilidadRespuesta1 = YES;
+    juego.disponibilidadRespuesta2 = YES;
+    juego.disponibilidadRespuesta3 = YES;
+    juego.disponibilidadRespuesta4 = YES;
+    
+    //Mandar puntaje a back END
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
+    if(puntajeActual>puntajeMaximo){
+        
+    [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
+
+        
+        
+    }
+    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:4];
+
+}
+
+-(void)irASeleccionado
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 /*
 #pragma mark - Navigation
@@ -177,18 +228,19 @@
     // Pass the selected object to the new view controller.
 }
 */
--(void) CreaPregunta:(NSInteger) numero{
+//-(void) CreaPregunta:(NSInteger) numero{
     //preguntaActual=[ArregloPreguntas objectAtIndex:numero];
-    self.pregunta.text=titulo;
+  //  self.pregunta.text=titulo;
     //NSArray *resp=[[ArregloPreguntas objectAtIndex:numero] ArregloRespuestas];
     
-    [self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
-    [self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
-    [self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
-    [self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
+    //[self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
+    //[self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
+    //[self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
+    //[self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
 
     
-}
+//}
+
 - (IBAction)SeApretoReloj:(id)sender {
     if( juego.VidasReloj  >0) {
         juego.Tiempo= juego.Tiempo;
@@ -206,7 +258,7 @@
 - (IBAction)SeApretoBomba:(id)sender {
     
     if( [self.VidasBomba.text intValue]  >0) {
-        NSInteger value= [preguntaActual traerOpcionCorrecta];
+        NSInteger value=[preguntaActual.RespuestaCorrecta integerValue];
         
         int valor1 = arc4random()%3;
         int valor2 = arc4random()%3;
@@ -257,9 +309,6 @@
         self.btnOtroOpcion.enabled=NO;
         self.btnNuevaPregunta.enabled=NO;
         
-        //NSUserDefaults *miDefault= [NSUserDefaults standardUserDefaults];
-        
-        
     }
 }
 - (IBAction)SeApretoNuevaPregunta:(id)sender {
@@ -269,26 +318,46 @@
         self.btnBomba.enabled=NO;
         self.btnOtroOpcion.enabled=NO;
         self.btnNuevaPregunta.enabled=NO;
-        [self CreaPregunta:1];
+        [self recuperaEcoTipsLider];
     }
 }
 
 -(void)SeApretoRespuesta:(NSInteger)opcion{
-    //BOOL correcto=[preguntaActual EsPreguntaCorrecta:opcion];
-    BOOL correcto;
-    if (opcion==rpta) {
+    BOOL correcto=NO;
+    if (opcion==[preguntaActual.RespuestaCorrecta integerValue]) {
         correcto=YES;
     };
     
     if(correcto==YES){
         if(opcion==0){
             [self.btnRespuesta1 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            self.btnRespuesta1.userInteractionEnabled = NO;
+            self.btnRespuesta2.enabled = NO;
+            self.btnRespuesta3.enabled = NO;
+            self.btnRespuesta4.enabled = NO;
+            [self terminarJuego:TRUE];
+            
         }else if (opcion==1) {
             [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            self.btnRespuesta1.enabled = NO;
+            self.btnRespuesta2.userInteractionEnabled = NO;
+            self.btnRespuesta3.enabled = NO;
+            self.btnRespuesta4.enabled = NO;
+            [self terminarJuego:TRUE];
         }else if (opcion==2) {
             [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            self.btnRespuesta1.enabled = NO;
+            self.btnRespuesta2.enabled = NO;
+            self.btnRespuesta3.userInteractionEnabled = NO;
+            self.btnRespuesta4.enabled = NO;
+            [self terminarJuego:TRUE];
         }else if (opcion==3) {
             [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            self.btnRespuesta1.enabled = NO;
+            self.btnRespuesta2.enabled = NO;
+            self.btnRespuesta3.enabled = NO;
+            self.btnRespuesta4.userInteractionEnabled = NO;
+            [self terminarJuego:TRUE];
         }
 
     }else{
@@ -309,11 +378,20 @@
             tieneOtraOpcion=NO;
             
         }else{
-            NSInteger value= [preguntaActual traerOpcionCorrecta];
+            NSInteger value= [preguntaActual.RespuestaCorrecta integerValue];
             if(opcion==0){
                 [self.btnRespuesta1 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                self.btnRespuesta1.enabled = NO;
+                self.btnRespuesta2.enabled = NO;
+                self.btnRespuesta3.enabled = NO;
+                self.btnRespuesta4.enabled = NO;
+                
             }else if (opcion==1) {
                 [self.btnRespuesta2 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                self.btnRespuesta1.enabled = NO;
+                self.btnRespuesta2.enabled = NO;
+                self.btnRespuesta3.enabled = NO;
+                self.btnRespuesta4.enabled = NO;
             }else if (opcion==2) {
                 [self.btnRespuesta3 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
             }else if (opcion==3) {
@@ -322,12 +400,32 @@
         
             if(value==0){
                 [self.btnRespuesta1 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+                self.btnRespuesta1.userInteractionEnabled = NO;
+                self.btnRespuesta2.enabled = NO;
+                self.btnRespuesta3.enabled = NO;
+                self.btnRespuesta4.enabled = NO;
+                [self terminarJuego:FALSE];
             }else if (value==1) {
                 [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+                self.btnRespuesta1.enabled = NO;
+                self.btnRespuesta2.userInteractionEnabled = NO;
+                self.btnRespuesta3.enabled = NO;
+                self.btnRespuesta4.enabled = NO;
+                [self terminarJuego:FALSE];
             }else if (value==2) {
                 [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+                self.btnRespuesta1.enabled = NO;
+                self.btnRespuesta2.enabled = NO;
+                self.btnRespuesta3.userInteractionEnabled = NO;
+                self.btnRespuesta4.enabled = NO;
+                [self terminarJuego:FALSE];
             }else if (value==3) {
                 [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+                self.btnRespuesta1.enabled = NO;
+                self.btnRespuesta2.enabled = NO;
+                self.btnRespuesta3.enabled = NO;
+                self.btnRespuesta4.userInteractionEnabled = NO;
+                [self terminarJuego:FALSE];
             }
         }
     
@@ -352,12 +450,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
-
-    
     //[self CreaPregunta:0];
-    
-    
-    
 
 }
 
@@ -365,19 +458,14 @@
 
    self.Tiempo.text = [ [NSString alloc] initWithFormat:@"%d", [self.Tiempo.text intValue] -1] ;
     
-    
-    
-   //  [BarraProgreso setProgress: 0.1f animated: YES];
-  //  self.BarraProgreso.layer.delegate = self;
     [self.BarraProgreso setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
-    
-    
-    //self.BarraProgreso.progress = ;
     
     if([self.Tiempo.text intValue] == 0){
      
        
         [timer invalidate];
+        [self terminarJuego:FALSE];
+        
         
     }
     
@@ -387,20 +475,8 @@
 }
 
 
--(void)irASeleccionado
-{
-    [self performSegueWithIdentifier:@"ViewPreguntas" sender:self];
-}
 
 
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqual:@"ViewPreguntas"]) {
-        PreguntasViewController *escenadestino = segue.destinationViewController;
-        
-        //ACA SE PONE EL ID DEL TEMA QUE SALIO EN LA RULETA
-        escenadestino.idtema = 1;
-    }
-}
 
 
 @end

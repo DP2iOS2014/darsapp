@@ -83,7 +83,6 @@
 		129D4DB11919C27200D12423 /* otraFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAD1919C27200D12423 /* otraFinal.png */; };
 		129D4DB21919C27200D12423 /* bombaFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAE1919C27200D12423 /* bombaFinal.png */; };
 		129D4DB31919C27200D12423 /* againFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAF1919C27200D12423 /* againFinal.png */; };
-		129D4DB61919C30700D12423 /* ClaseRespuesta.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DB51919C30700D12423 /* ClaseRespuesta.m */; };
 		129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DB81919C3DF00D12423 /* ClasePregunta.m */; };
 		129EE5D019085475008A72CF /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EE5CF19085475008A72CF /* email.png */; };
 		129EE5D21908679B008A72CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129EE5D11908679B008A72CF /* MessageUI.framework */; };
@@ -377,8 +376,6 @@
 		129D4DAD1919C27200D12423 /* otraFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = otraFinal.png; sourceTree = "<group>"; };
 		129D4DAE1919C27200D12423 /* bombaFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bombaFinal.png; sourceTree = "<group>"; };
 		129D4DAF1919C27200D12423 /* againFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = againFinal.png; sourceTree = "<group>"; };
-		129D4DB41919C30700D12423 /* ClaseRespuesta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClaseRespuesta.h; sourceTree = "<group>"; };
-		129D4DB51919C30700D12423 /* ClaseRespuesta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClaseRespuesta.m; sourceTree = "<group>"; };
 		129D4DB71919C3DF00D12423 /* ClasePregunta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClasePregunta.h; sourceTree = "<group>"; };
 		129D4DB81919C3DF00D12423 /* ClasePregunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClasePregunta.m; sourceTree = "<group>"; };
 		129EE5CF19085475008A72CF /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
@@ -761,8 +758,6 @@
 				129D4DA71919BE6800D12423 /* RuletaJuegoViewController.m */,
 				129D4DA91919C14900D12423 /* PreguntasViewController.h */,
 				129D4DAA1919C14900D12423 /* PreguntasViewController.m */,
-				129D4DB41919C30700D12423 /* ClaseRespuesta.h */,
-				129D4DB51919C30700D12423 /* ClaseRespuesta.m */,
 				129D4DB71919C3DF00D12423 /* ClasePregunta.h */,
 				129D4DB81919C3DF00D12423 /* ClasePregunta.m */,
 				12A1FABF191C46AC0095179D /* TimerPreguntas.h */,
@@ -1469,7 +1464,6 @@
 				12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */,
 				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,
 				120FF2251913F39400A697D6 /* AFHTTPRequestOperation.m in Sources */,
-				129D4DB61919C30700D12423 /* ClaseRespuesta.m in Sources */,
 				120FF2271913F39400A697D6 /* AFHTTPSessionManager.m in Sources */,
 				12A128D1191EB74200397B90 /* GrillaAmbientalizateCell.m in Sources */,
 				12330CCD191AC66200E85590 /* MapaTachosViewController.m in Sources */,

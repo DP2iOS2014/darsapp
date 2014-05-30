@@ -45,11 +45,11 @@
     [super viewWillAppear:animated];
     
     //Diseño para el boton Empezar
-    self.btnEmpezar.layer.cornerRadius = 4;
-    self.btnEmpezar.layer.borderWidth = 3;
-    self.btnEmpezar.layer.borderColor = [UIColor whiteColor].CGColor;
+    //self.btnEmpezar.layer.cornerRadius = 4;
+    //self.btnEmpezar.layer.borderWidth = 3;
+    //self.btnEmpezar.layer.borderColor = [UIColor whiteColor].CGColor;
     
-    CAGradientLayer *degradado = [CAGradientLayer layer];
+    /*CAGradientLayer *degradado = [CAGradientLayer layer];
     degradado.colors = @[(id)[UIColor whiteColor].CGColor,(id)[UIColor colorWithRed:0.0f/255.0f green:68.0f/255.0f blue:0.0f/255.0f alpha:0.8f].CGColor];
     degradado.frame = self.btnEmpezar.bounds;
     
@@ -87,7 +87,7 @@
     degradado4.colors = @[(id)[UIColor whiteColor].CGColor,(id)[UIColor colorWithRed:0.0f/255.0f green:68.0f/255.0f blue:0.0f/255.0f alpha:0.8f].CGColor];
     degradado4.frame = self.btnInstrucciones.bounds;
     
-    [self.btnInstrucciones.layer insertSublayer:degradado4 atIndex:0];
+    [self.btnInstrucciones.layer insertSublayer:degradado4 atIndex:0];*/
     
     
 }

@@ -167,6 +167,8 @@
 		12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75833191AF36E00E03C5E /* 8_Separatas.png */; };
 		12AFACC9190B017F0007F5C0 /* flechitaDARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACC8190B017F0007F5C0 /* flechitaDARS.png */; };
 		12AFACCD190B14260007F5C0 /* dars1.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACCC190B14260007F5C0 /* dars1.png */; };
+		12D1DD621938D8FB00BF81A5 /* circunferencia 300ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */; };
+		12D1DD641938D9A200BF81A5 /* botón girar 72ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */; };
 		12D8719519364B7D0035F0E0 /* Agua.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719419364B7D0035F0E0 /* Agua.png */; };
 		12D8719719364BD10035F0E0 /* Espacios Verdes.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719619364BD10035F0E0 /* Espacios Verdes.png */; };
 		12D8719919364C7E0035F0E0 /* Energia.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719819364C7E0035F0E0 /* Energia.png */; };
@@ -477,6 +479,8 @@
 		12A75833191AF36E00E03C5E /* 8_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_Separatas.png; sourceTree = "<group>"; };
 		12AFACC8190B017F0007F5C0 /* flechitaDARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechitaDARS.png; sourceTree = "<group>"; };
 		12AFACCC190B14260007F5C0 /* dars1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dars1.png; sourceTree = "<group>"; };
+		12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circunferencia 300ppp.png"; sourceTree = "<group>"; };
+		12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botón girar 72ppp.png"; sourceTree = "<group>"; };
 		12D8719419364B7D0035F0E0 /* Agua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Agua.png; sourceTree = "<group>"; };
 		12D8719619364BD10035F0E0 /* Espacios Verdes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Espacios Verdes.png"; sourceTree = "<group>"; };
 		12D8719819364C7E0035F0E0 /* Energia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Energia.png; sourceTree = "<group>"; };
@@ -773,10 +777,12 @@
 			children = (
 				129D4DA21919BE2100D12423 /* RuletaSinFondo.png */,
 				129D4DA41919BE2900D12423 /* botonSinFondo.png */,
+				12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */,
 				129D4DAC1919C27200D12423 /* relojFinal.png */,
 				129D4DAD1919C27200D12423 /* otraFinal.png */,
 				129D4DAE1919C27200D12423 /* bombaFinal.png */,
 				129D4DAF1919C27200D12423 /* againFinal.png */,
+				12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */,
 			);
 			name = "Imagenes Juego";
 			sourceTree = "<group>";
@@ -1273,6 +1279,7 @@
 				12A6715F192FEAEB00E03C72 /* backButton.png in Resources */,
 				12E53C6C191D8C2F00911B7C /* 4_Azul.png in Resources */,
 				12EEAB02191D4416002F0D6E /* 3_Pilas.png in Resources */,
+				12D1DD621938D8FB00BF81A5 /* circunferencia 300ppp.png in Resources */,
 				129D4D9C1919ADF200D12423 /* page.png in Resources */,
 				12E53C5F191D85C000911B7C /* 1627.png in Resources */,
 				1276EA28192D62C400B49816 /* Compras15.png in Resources */,
@@ -1342,6 +1349,7 @@
 				12F4CFD318FF147500C8BFF5 /* InfoPlist.strings in Resources */,
 				12A75838191AF36E00E03C5E /* 5_Separatas.png in Resources */,
 				12A75835191AF36E00E03C5E /* 2_Separatas.png in Resources */,
+				12D1DD641938D9A200BF81A5 /* botón girar 72ppp.png in Resources */,
 				12A1F6FA190AC9A4001ED3BE /* recycle.png in Resources */,
 				12E53C5B191D81BC00911B7C /* 1718.png in Resources */,
 				12D8719D19364CB00035F0E0 /* Papel de Escritorio.png in Resources */,

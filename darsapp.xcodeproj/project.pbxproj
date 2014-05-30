@@ -84,6 +84,31 @@
 		129D4DB21919C27200D12423 /* bombaFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAE1919C27200D12423 /* bombaFinal.png */; };
 		129D4DB31919C27200D12423 /* againFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAF1919C27200D12423 /* againFinal.png */; };
 		129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DB81919C3DF00D12423 /* ClasePregunta.m */; };
+		129EDB551938DDBE0088735B /* categorias_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB541938DDBE0088735B /* categorias_tittle.png */; };
+		129EDB571938DDC90088735B /* comodines_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB561938DDC90088735B /* comodines_tittle.png */; };
+		129EDB591938DDD10088735B /* comojugar_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB581938DDD10088735B /* comojugar_tittle.png */; };
+		129EDB5C1938DE6F0088735B /* AyudaJuegoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EDB5B1938DE6F0088735B /* AyudaJuegoTableViewController.m */; };
+		129EDB5F1938E25E0088735B /* InstruccionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EDB5E1938E25E0088735B /* InstruccionesViewController.m */; };
+		129EDB611938E4BD0088735B /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB601938E4BD0088735B /* leftarrow.png */; };
+		129EDB631938E4C50088735B /* manito.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB621938E4C50088735B /* manito.png */; };
+		129EDB651938E4CC0088735B /* nuevapartida.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB641938E4CC0088735B /* nuevapartida.png */; };
+		129EDB671938E4D70088735B /* numero.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB661938E4D70088735B /* numero.png */; };
+		129EDB691938E4E70088735B /* porcentaje15.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB681938E4E70088735B /* porcentaje15.png */; };
+		129EDB6B1938E5170088735B /* pregunta.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB6A1938E5170088735B /* pregunta.png */; };
+		129EDB6D1938E52D0088735B /* reglas.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB6C1938E52D0088735B /* reglas.png */; };
+		129EDB6F1938E5340088735B /* reloj.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB6E1938E5340088735B /* reloj.png */; };
+		129EDB711938E53A0088735B /* rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB701938E53A0088735B /* rightarrow.png */; };
+		129EDB731938E5460088735B /* tijeras.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB721938E5460088735B /* tijeras.png */; };
+		129EDB751938E6FF0088735B /* backButtonDerecha.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB741938E6FF0088735B /* backButtonDerecha.png */; };
+		129EDB771938E7CD0088735B /* continuarpartida.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB761938E7CD0088735B /* continuarpartida.png */; };
+		129EDB791938EB3E0088735B /* floppy.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB781938EB3E0088735B /* floppy.png */; };
+		129EDB7B1938F2070088735B /* cliconGirar.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB7A1938F2070088735B /* cliconGirar.png */; };
+		129EDB7D1938F2FF0088735B /* ruletita.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB7C1938F2FF0088735B /* ruletita.png */; };
+		129EDB801938F36D0088735B /* Instrucciones2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EDB7F1938F36D0088735B /* Instrucciones2ViewController.m */; };
+		129EDB831938F38A0088735B /* Instrucciones3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EDB821938F38A0088735B /* Instrucciones3ViewController.m */; };
+		129EDB861938F3A30088735B /* Instrucciones4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EDB851938F3A30088735B /* Instrucciones4ViewController.m */; };
+		129EDB881938F6170088735B /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB871938F6170088735B /* skull.png */; };
+		129EDB8B1938FF980088735B /* ComodinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EDB8A1938FF980088735B /* ComodinesViewController.m */; };
 		129EE5D019085475008A72CF /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EE5CF19085475008A72CF /* email.png */; };
 		129EE5D21908679B008A72CF /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129EE5D11908679B008A72CF /* MessageUI.framework */; };
 		129EE5D519088A4C008A72CF /* NoticiasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129EE5D419088A4C008A72CF /* NoticiasTableViewController.m */; };
@@ -380,6 +405,37 @@
 		129D4DAF1919C27200D12423 /* againFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = againFinal.png; sourceTree = "<group>"; };
 		129D4DB71919C3DF00D12423 /* ClasePregunta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClasePregunta.h; sourceTree = "<group>"; };
 		129D4DB81919C3DF00D12423 /* ClasePregunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClasePregunta.m; sourceTree = "<group>"; };
+		129EDB541938DDBE0088735B /* categorias_tittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = categorias_tittle.png; sourceTree = "<group>"; };
+		129EDB561938DDC90088735B /* comodines_tittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comodines_tittle.png; sourceTree = "<group>"; };
+		129EDB581938DDD10088735B /* comojugar_tittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comojugar_tittle.png; sourceTree = "<group>"; };
+		129EDB5A1938DE6F0088735B /* AyudaJuegoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AyudaJuegoTableViewController.h; sourceTree = "<group>"; };
+		129EDB5B1938DE6F0088735B /* AyudaJuegoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AyudaJuegoTableViewController.m; sourceTree = "<group>"; };
+		129EDB5D1938E25E0088735B /* InstruccionesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstruccionesViewController.h; path = ../InstruccionesViewController.h; sourceTree = "<group>"; };
+		129EDB5E1938E25E0088735B /* InstruccionesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstruccionesViewController.m; path = ../InstruccionesViewController.m; sourceTree = "<group>"; };
+		129EDB601938E4BD0088735B /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
+		129EDB621938E4C50088735B /* manito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manito.png; sourceTree = "<group>"; };
+		129EDB641938E4CC0088735B /* nuevapartida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuevapartida.png; sourceTree = "<group>"; };
+		129EDB661938E4D70088735B /* numero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numero.png; sourceTree = "<group>"; };
+		129EDB681938E4E70088735B /* porcentaje15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = porcentaje15.png; sourceTree = "<group>"; };
+		129EDB6A1938E5170088735B /* pregunta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pregunta.png; sourceTree = "<group>"; };
+		129EDB6C1938E52D0088735B /* reglas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reglas.png; sourceTree = "<group>"; };
+		129EDB6E1938E5340088735B /* reloj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reloj.png; sourceTree = "<group>"; };
+		129EDB701938E53A0088735B /* rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightarrow.png; sourceTree = "<group>"; };
+		129EDB721938E5460088735B /* tijeras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tijeras.png; sourceTree = "<group>"; };
+		129EDB741938E6FF0088735B /* backButtonDerecha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButtonDerecha.png; sourceTree = "<group>"; };
+		129EDB761938E7CD0088735B /* continuarpartida.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continuarpartida.png; sourceTree = "<group>"; };
+		129EDB781938EB3E0088735B /* floppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floppy.png; sourceTree = "<group>"; };
+		129EDB7A1938F2070088735B /* cliconGirar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cliconGirar.png; sourceTree = "<group>"; };
+		129EDB7C1938F2FF0088735B /* ruletita.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ruletita.png; sourceTree = "<group>"; };
+		129EDB7E1938F36D0088735B /* Instrucciones2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instrucciones2ViewController.h; sourceTree = "<group>"; };
+		129EDB7F1938F36D0088735B /* Instrucciones2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instrucciones2ViewController.m; sourceTree = "<group>"; };
+		129EDB811938F38A0088735B /* Instrucciones3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Instrucciones3ViewController.h; path = ../Instrucciones3ViewController.h; sourceTree = "<group>"; };
+		129EDB821938F38A0088735B /* Instrucciones3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Instrucciones3ViewController.m; path = ../Instrucciones3ViewController.m; sourceTree = "<group>"; };
+		129EDB841938F3A30088735B /* Instrucciones4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Instrucciones4ViewController.h; path = ../Instrucciones4ViewController.h; sourceTree = "<group>"; };
+		129EDB851938F3A30088735B /* Instrucciones4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Instrucciones4ViewController.m; path = ../Instrucciones4ViewController.m; sourceTree = "<group>"; };
+		129EDB871938F6170088735B /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skull.png; sourceTree = "<group>"; };
+		129EDB891938FF980088735B /* ComodinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComodinesViewController.h; sourceTree = "<group>"; };
+		129EDB8A1938FF980088735B /* ComodinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComodinesViewController.m; sourceTree = "<group>"; };
 		129EE5CF19085475008A72CF /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		129EE5D11908679B008A72CF /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		129EE5D319088A4C008A72CF /* NoticiasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticiasTableViewController.h; sourceTree = "<group>"; };
@@ -756,6 +812,16 @@
 		129D4DA01919B75300D12423 /* Juego */ = {
 			isa = PBXGroup;
 			children = (
+				129EDB891938FF980088735B /* ComodinesViewController.h */,
+				129EDB8A1938FF980088735B /* ComodinesViewController.m */,
+				129EDB841938F3A30088735B /* Instrucciones4ViewController.h */,
+				129EDB851938F3A30088735B /* Instrucciones4ViewController.m */,
+				129EDB811938F38A0088735B /* Instrucciones3ViewController.h */,
+				129EDB821938F38A0088735B /* Instrucciones3ViewController.m */,
+				129EDB7E1938F36D0088735B /* Instrucciones2ViewController.h */,
+				129EDB7F1938F36D0088735B /* Instrucciones2ViewController.m */,
+				129EDB5D1938E25E0088735B /* InstruccionesViewController.h */,
+				129EDB5E1938E25E0088735B /* InstruccionesViewController.m */,
 				129D4D9D1919B74500D12423 /* InicioJuegoViewController.h */,
 				129D4D9E1919B74500D12423 /* InicioJuegoViewController.m */,
 				129D4DA61919BE6800D12423 /* RuletaJuegoViewController.h */,
@@ -775,6 +841,25 @@
 		129D4DA11919BE0D00D12423 /* Imagenes Juego */ = {
 			isa = PBXGroup;
 			children = (
+				129EDB871938F6170088735B /* skull.png */,
+				129EDB7C1938F2FF0088735B /* ruletita.png */,
+				129EDB7A1938F2070088735B /* cliconGirar.png */,
+				129EDB781938EB3E0088735B /* floppy.png */,
+				129EDB761938E7CD0088735B /* continuarpartida.png */,
+				129EDB741938E6FF0088735B /* backButtonDerecha.png */,
+				129EDB721938E5460088735B /* tijeras.png */,
+				129EDB701938E53A0088735B /* rightarrow.png */,
+				129EDB6E1938E5340088735B /* reloj.png */,
+				129EDB6C1938E52D0088735B /* reglas.png */,
+				129EDB6A1938E5170088735B /* pregunta.png */,
+				129EDB681938E4E70088735B /* porcentaje15.png */,
+				129EDB661938E4D70088735B /* numero.png */,
+				129EDB641938E4CC0088735B /* nuevapartida.png */,
+				129EDB621938E4C50088735B /* manito.png */,
+				129EDB601938E4BD0088735B /* leftarrow.png */,
+				129EDB581938DDD10088735B /* comojugar_tittle.png */,
+				129EDB561938DDC90088735B /* comodines_tittle.png */,
+				129EDB541938DDBE0088735B /* categorias_tittle.png */,
 				129D4DA21919BE2100D12423 /* RuletaSinFondo.png */,
 				129D4DA41919BE2900D12423 /* botonSinFondo.png */,
 				12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */,
@@ -782,7 +867,12 @@
 				129D4DAD1919C27200D12423 /* otraFinal.png */,
 				129D4DAE1919C27200D12423 /* bombaFinal.png */,
 				129D4DAF1919C27200D12423 /* againFinal.png */,
+
 				12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */,
+
+				129EDB5A1938DE6F0088735B /* AyudaJuegoTableViewController.h */,
+				129EDB5B1938DE6F0088735B /* AyudaJuegoTableViewController.m */,
+
 			);
 			name = "Imagenes Juego";
 			sourceTree = "<group>";
@@ -1255,7 +1345,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129EDB6F1938E5340088735B /* reloj.png in Resources */,
 				12DDC97E19300508005E820A /* AsistenteAmbiental.png in Resources */,
+				129EDB611938E4BD0088735B /* leftarrow.png in Resources */,
 				129D4DB11919C27200D12423 /* otraFinal.png in Resources */,
 				12EEAB0A191D4416002F0D6E /* titulo_Pilas.png in Resources */,
 				1276EA20192D62C400B49816 /* Compras7.png in Resources */,
@@ -1276,6 +1368,7 @@
 				1261557E191D915500374E68 /* tachito.png in Resources */,
 				12A1F6FE190ACC56001ED3BE /* 103-map.png in Resources */,
 				12A6715B192FE6EB00E03C72 /* NavigatorBar.png in Resources */,
+				129EDB751938E6FF0088735B /* backButtonDerecha.png in Resources */,
 				12A6715F192FEAEB00E03C72 /* backButton.png in Resources */,
 				12E53C6C191D8C2F00911B7C /* 4_Azul.png in Resources */,
 				12EEAB02191D4416002F0D6E /* 3_Pilas.png in Resources */,
@@ -1302,13 +1395,16 @@
 				12EEAB05191D4416002F0D6E /* 4-1_SegregacionPilas.png in Resources */,
 				12EEAB2C191D4485002F0D6E /* 7_DaleVidaATusResiduos.png in Resources */,
 				12A75804191AD23900E03C5E /* 2_Separación.png in Resources */,
+				129EDB791938EB3E0088735B /* floppy.png in Resources */,
 				12F4D00F18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png in Resources */,
 				12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */,
 				12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */,
 				1276EA1A192D62C400B49816 /* Compras1.png in Resources */,
 				12DDC9821930051A005E820A /* LiderAmbiental.png in Resources */,
 				12EEAB15191D4431002F0D6E /* 2_Electricidad.png in Resources */,
+				129EDB6B1938E5170088735B /* pregunta.png in Resources */,
 				12A128E7191ED74C00397B90 /* ropa.jpg in Resources */,
+				129EDB731938E5460088735B /* tijeras.png in Resources */,
 				12D8719B19364C950035F0E0 /* Liderazgo Ambiental y Capacidad Organizativa.png in Resources */,
 				12702B6F19300D13002CC216 /* buenas_practicas.png in Resources */,
 				12D8719519364B7D0035F0E0 /* Agua.png in Resources */,
@@ -1323,9 +1419,12 @@
 				12A75809191AD23900E03C5E /* 3_Fabricación.png in Resources */,
 				12EEAB07191D4416002F0D6E /* 5-1_SegregacionPilas.png in Resources */,
 				1276EA25192D62C400B49816 /* Compras12.png in Resources */,
+				129EDB711938E53A0088735B /* rightarrow.png in Resources */,
 				1276EA2D192D687E00B49816 /* logo.png in Resources */,
+				129EDB6D1938E52D0088735B /* reglas.png in Resources */,
 				12EEAB18191D4431002F0D6E /* 5_Electricidad.png in Resources */,
 				12FF2E99190AEED300638774 /* lyonnette_@2X.png in Resources */,
+				129EDB7D1938F2FF0088735B /* ruletita.png in Resources */,
 				1276EA24192D62C400B49816 /* Compras11.png in Resources */,
 				12A128E8191ED74C00397B90 /* pilas.jpg in Resources */,
 				12FF2E9A190AEED300638774 /* lyonnette.png in Resources */,
@@ -1338,10 +1437,12 @@
 				12DDC98619300526005E820A /* SeniorAmbiental.png in Resources */,
 				12D871A319364D480035F0E0 /* Aire y Ruido.png in Resources */,
 				12A75806191AD23900E03C5E /* Titulo_Plastico.png in Resources */,
+				129EDB691938E4E70088735B /* porcentaje15.png in Resources */,
 				12EFB94C192D46D000AAAAB2 /* tachito2.png in Resources */,
 				12FF2E95190AEEC600638774 /* grey_sandbag_@2X.png in Resources */,
 				12AFACCD190B14260007F5C0 /* dars1.png in Resources */,
 				12A083FE19099DE000D010E6 /* ic_launcher.png in Resources */,
+				129EDB7B1938F2070088735B /* cliconGirar.png in Resources */,
 				12A128D6191ED3D000397B90 /* no_administrativo.png in Resources */,
 				12EEAB25191D4485002F0D6E /* 1_DaleVidaATusResiduos.png in Resources */,
 				12A128EB191ED74C00397B90 /* naturaleza.jpg in Resources */,
@@ -1354,12 +1455,14 @@
 				12E53C5B191D81BC00911B7C /* 1718.png in Resources */,
 				12D8719D19364CB00035F0E0 /* Papel de Escritorio.png in Resources */,
 				129EE5D019085475008A72CF /* email.png in Resources */,
+				129EDB571938DDC90088735B /* comodines_tittle.png in Resources */,
 				12EEAB14191D4431002F0D6E /* 1_Electricidad.png in Resources */,
 				12EEAB16191D4431002F0D6E /* 3_Electricidad.png in Resources */,
 				12A128E2191ED74C00397B90 /* tomatodo.jpg in Resources */,
 				12A128D5191ED3D000397B90 /* administrativo.png in Resources */,
 				12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */,
 				12EEAB1A191D4431002F0D6E /* 7_Electricidad.png in Resources */,
+				129EDB551938DDBE0088735B /* categorias_tittle.png in Resources */,
 				12A67157192FDF8400E03C72 /* Roboto-ThinItalic.ttf in Resources */,
 				12A6714F192FDF8400E03C72 /* Roboto-BoldItalic.ttf in Resources */,
 				12EEAB2E191D4E68002F0D6E /* atras.png in Resources */,
@@ -1383,25 +1486,30 @@
 				129F4918192E9C0100DF8793 /* images.jpeg in Resources */,
 				12EEAB26191D4485002F0D6E /* 2_DaleVidaATusResiduos.png in Resources */,
 				12A67163192FF15A00E03C72 /* checkButton.png in Resources */,
+				129EDB881938F6170088735B /* skull.png in Resources */,
 				12A128EA191ED74C00397B90 /* papel.jpg in Resources */,
 				12EEAB19191D4431002F0D6E /* 6_Electricidad.png in Resources */,
 				12D8719719364BD10035F0E0 /* Espacios Verdes.png in Resources */,
 				12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */,
 				12A1F6F8190AC983001ED3BE /* phone-book.png in Resources */,
+				129EDB651938E4CC0088735B /* nuevapartida.png in Resources */,
 				12A128E4191ED74C00397B90 /* playa2.jpg in Resources */,
 				12EEAB00191D4416002F0D6E /* 2-3_ProduccionDistribucion.png in Resources */,
 				12A128E6191ED74C00397B90 /* ducha.jpg in Resources */,
 				1276EA22192D62C400B49816 /* Compras9.png in Resources */,
 				12A7583A191AF36E00E03C5E /* 7_Separatas.png in Resources */,
+				129EDB771938E7CD0088735B /* continuarpartida.png in Resources */,
 				12EEAB06191D4416002F0D6E /* 5_SegregacionPilas.png in Resources */,
 				12A15B09193673450062D5AF /* Adquisiscion de Productos y Servicios.png in Resources */,
 				12EEAB03191D4416002F0D6E /* 4_Pilas.png in Resources */,
+				129EDB591938DDD10088735B /* comojugar_tittle.png in Resources */,
 				12EEAB04191D4416002F0D6E /* 4_SegregacionPilas.png in Resources */,
 				12A67156192FDF8400E03C72 /* Roboto-Thin.ttf in Resources */,
 				12EEAB08191D4416002F0D6E /* 5-2_SegregacionPilas.png in Resources */,
 				12A1F700190ACDF3001ED3BE /* 116-controller.png in Resources */,
 				12EFB94E192D46D000AAAAB2 /* tachito4.png in Resources */,
 				12A75837191AF36E00E03C5E /* 4_Separatas.png in Resources */,
+				129EDB631938E4C50088735B /* manito.png in Resources */,
 				129D4DA31919BE2100D12423 /* RuletaSinFondo.png in Resources */,
 				12A75836191AF36E00E03C5E /* 3_Separatas.png in Resources */,
 				12A67152192FDF8400E03C72 /* Roboto-LightItalic.ttf in Resources */,
@@ -1416,6 +1524,7 @@
 				1276EA23192D62C400B49816 /* Compras10.png in Resources */,
 				12615579191D76A500374E68 /* forest.png in Resources */,
 				12EEAB27191D4485002F0D6E /* 3_DaleVidaATusResiduos.png in Resources */,
+				129EDB671938E4D70088735B /* numero.png in Resources */,
 				12330CB1191AC24100E85590 /* GoogleMaps.bundle in Resources */,
 				1276EA1F192D62C400B49816 /* Compras6.png in Resources */,
 				1276EA27192D62C400B49816 /* Compras14.png in Resources */,
@@ -1443,13 +1552,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				12E53C62191D86F100911B7C /* RutasTableViewController.m in Sources */,
+				129EDB861938F3A30088735B /* Instrucciones4ViewController.m in Sources */,
 				129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */,
 				120FF2291913F39400A697D6 /* AFSecurityPolicy.m in Sources */,
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
 				12A75811191AD75E00E03C5E /* ElectricidadViewController.m in Sources */,
 				1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */,
 				12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */,
+				129EDB8B1938FF980088735B /* ComodinesViewController.m in Sources */,
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
+				129EDB5C1938DE6F0088735B /* AyudaJuegoTableViewController.m in Sources */,
 				128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */,
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
@@ -1469,6 +1581,7 @@
 				128AC03D192D3B110015AEF4 /* TemasAdmTableViewController.m in Sources */,
 				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
 				12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */,
+				129EDB831938F38A0088735B /* Instrucciones3ViewController.m in Sources */,
 				12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */,
 				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,
 				120FF2251913F39400A697D6 /* AFHTTPRequestOperation.m in Sources */,
@@ -1482,6 +1595,7 @@
 				12A75814191ADCF500E03C5E /* SegregacionViewController.m in Sources */,
 				12A671661930090300E03C72 /* SingletonEcoTips.m in Sources */,
 				1279F4CD19379AD500A32A7B /* CeldaTemas.m in Sources */,
+				129EDB801938F36D0088735B /* Instrucciones2ViewController.m in Sources */,
 				12F4CFD918FF147500C8BFF5 /* AppDelegate.m in Sources */,
 				120FF2261913F39400A697D6 /* AFHTTPRequestOperationManager.m in Sources */,
 				120FF2331913F39400A697D6 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1491,6 +1605,7 @@
 				120FF2311913F39400A697D6 /* UIButton+AFNetworking.m in Sources */,
 				12A1FAC4191C56290095179D /* SingletonJuego.m in Sources */,
 				120FF22C1913F39400A697D6 /* AFURLResponseSerialization.m in Sources */,
+				129EDB5F1938E25E0088735B /* InstruccionesViewController.m in Sources */,
 				12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */,
 				128FAF70192FB23E0065D633 /* GrillaInicialAmbientalizate.m in Sources */,
 				12F4D00B18FF24C500C8BFF5 /* ContactanosTableViewController.m in Sources */,

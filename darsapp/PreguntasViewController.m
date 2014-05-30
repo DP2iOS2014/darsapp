@@ -24,6 +24,7 @@
     NSDictionary * respuestajson;
     SystemSoundID audioEffect;
     NSInteger puntajeActual;
+    UIAlertView *alertView;
 
 }
 
@@ -160,7 +161,7 @@
         
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
-              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor" message:[error localizedDescription]
+              alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor" message:[error localizedDescription]
                                                                  delegate:nil
                                                         cancelButtonTitle:@"Ok"
                                                         otherButtonTitles:nil];
@@ -217,12 +218,14 @@
 }
 
 -(void)irAHacerHora{
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Haz Perdido"
+    if(!alertView.visible){
+    alertView = [[UIAlertView alloc] initWithTitle:@"Haz Perdido"
                                                         message:@"Vuelve a Intentarlo"
                                                        delegate:self
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
     [alertView show];
+    }
 }
 
 -(void)irASeleccionado

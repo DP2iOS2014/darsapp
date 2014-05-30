@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PreguntasViewController : UIViewController
+@protocol preguntasDelegate <NSObject>
+@optional
+-(void)apretoOkAlFallaPregunta;
+
+@end
+
+@interface PreguntasViewController : UIViewController<UIAlertViewDelegate>
 {
     NSArray *ArregloPreguntas;
     BOOL tieneOtraOpcion;
@@ -16,6 +22,7 @@
    
     
 }
+@property (nonatomic, weak) id <preguntasDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *VidasReloj;
 @property (weak, nonatomic) IBOutlet UIButton *btnReloj;
@@ -33,6 +40,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *VidasNuevaPregunta;
 @property (strong, nonatomic) IBOutlet UIProgressView *BarraProgreso;
 @property int idtema;
-@property NSString *tipo_tema; 
+@property NSString *tipo_tema;
+
 
 @end

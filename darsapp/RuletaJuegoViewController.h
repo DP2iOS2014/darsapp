@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RuletaJuegoViewController : UIViewController
+#import "PreguntasViewController.h"
+@interface RuletaJuegoViewController : UIViewController<preguntasDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *ruleta;
 @property (strong, nonatomic) IBOutlet UIButton *btnGiraRuleta;

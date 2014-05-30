@@ -139,7 +139,8 @@
                                                                   CGFloat angulo=72.0f*(M_PI/180.0f);
                                                                   
                                                                       if(finished){
-                                                                          numerotema =  arc4random()%4;
+                                                                          //numerotema =  arc4random()%4;
+                                                                          numerotema =  arc4random()%3;
                                                                           
                                                                           if(numerotema==0){
                                                                                [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
@@ -267,6 +268,10 @@
 
 }
 
+-(void)apretoOkAlFallaPregunta{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 
 -(void)irASeleccionado
 {
@@ -277,7 +282,7 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqual:@"ViewPreguntas"]) {
         PreguntasViewController *escenadestino = segue.destinationViewController;
-        
+        escenadestino.delegate = self;
         //ACA SE PONE EL ID DEL TEMA QUE SALIO EN LA RULETA
         escenadestino.idtema = numerotema;
     }

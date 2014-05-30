@@ -85,15 +85,15 @@
     //PARA ENVIAR PRIMI
     
     if(self.idtema==0){
-        tipotema= @"Segregación";
+        tipotema= @"Cultura Ambiental";
     }
     
     if(self.idtema==1){
-        tipotema= @"Segregación";
+        tipotema= @"Datos Curiosos";
     }
     
     if(self.idtema==2){
-        tipotema= @"Segregación";
+        tipotema= @"Proyectos DARS";
     }
     
     if(self.idtema==3){
@@ -188,6 +188,16 @@
         puntajeActual = puntajeActual + [preguntaActual.PuntajePregunta integerValue];
         
         [[NSUserDefaults standardUserDefaults] setInteger:puntajeActual forKey:@"puntajeActualJuegoRuleta"];
+    
+        juego.Tiempo = 30;
+        juego.tieneOtraOpcion = NO;
+        juego.disponibilidadBoton=YES;
+        juego.disponibilidadRespuesta1 = YES;
+        juego.disponibilidadRespuesta2 = YES;
+        juego.disponibilidadRespuesta3 = YES;
+        juego.disponibilidadRespuesta4 = YES;
+        [timer invalidate];
+        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:4];
         
     }else{
         //Mandar puntaje a back END
@@ -197,32 +207,35 @@
             [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
             
         }
+        [self performSelector:@selector(irAHacerHora) withObject:nil afterDelay:2];
         
-        juego.VidasReloj = 3;
-        juego.VidasBomba = 3;
-        juego.VidasNPregunta=3;
-        juego.VidasOtraOpcion = 3;
-    
-    
     }
-    juego.Tiempo = 30;
-    juego.tieneOtraOpcion = NO;
-    juego.disponibilidadBoton=YES;
-    juego.disponibilidadRespuesta1 = YES;
-    juego.disponibilidadRespuesta2 = YES;
-    juego.disponibilidadRespuesta3 = YES;
-    juego.disponibilidadRespuesta4 = YES;
     
-        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:4];
+    
 
+}
+
+-(void)irAHacerHora{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Haz Perdido"
+                                                        message:@"Vuelve a Intentarlo"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
 }
 
 -(void)irASeleccionado
 {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+        [timer invalidate];
+        [self.delegate apretoOkAlFallaPregunta];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 /*
 #pragma mark - Navigation
@@ -309,6 +322,7 @@
 - (IBAction)SeApretoOtraOpcion:(id)sender {
     if( [self.VidasOtraOpcion.text intValue]  >0) {
         self.VidasOtraOpcion.text=[[NSString alloc] initWithFormat:@"%d", [ self.VidasOtraOpcion.text intValue]-1];
+        juego.VidasOtraOpcion=juego.VidasOtraOpcion-1;
         tieneOtraOpcion=YES;
         self.btnReloj.enabled=NO;
         self.btnBomba.enabled=NO;
@@ -320,6 +334,7 @@
 - (IBAction)SeApretoNuevaPregunta:(id)sender {
     if( [self.VidasNuevaPregunta.text intValue]  >0) {
         self.VidasNuevaPregunta.text=[[NSString alloc] initWithFormat:@"%d", [ self.VidasNuevaPregunta.text intValue]-1];
+        juego.VidasNPregunta=juego.VidasNPregunta-1;
         self.btnReloj.enabled=NO;
         self.btnBomba.enabled=NO;
         self.btnOtroOpcion.enabled=NO;
@@ -467,8 +482,6 @@
     [self.BarraProgreso setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
     
     if([self.Tiempo.text intValue] == 0){
-     
-       
         [timer invalidate];
         [self terminarJuego:FALSE];
         

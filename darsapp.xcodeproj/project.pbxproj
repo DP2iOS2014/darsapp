@@ -202,6 +202,7 @@
 		12C3651119393E50002B2197 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650D19393E50002B2197 /* red.png */; };
 		12C3651219393E50002B2197 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650E19393E50002B2197 /* yellow.png */; };
 		12C3651519394056002B2197 /* CategoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C3651419394056002B2197 /* CategoriasViewController.m */; };
+		12C365171939430C002B2197 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C365161939430C002B2197 /* center.png */; };
 		12D1DD621938D8FB00BF81A5 /* circunferencia 300ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */; };
 		12D1DD641938D9A200BF81A5 /* botón girar 72ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */; };
 		12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD6619393CEB00BF81A5 /* Bomb.wav */; };
@@ -560,6 +561,7 @@
 		12C3650E19393E50002B2197 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
 		12C3651319394056002B2197 /* CategoriasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriasViewController.h; sourceTree = "<group>"; };
 		12C3651419394056002B2197 /* CategoriasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriasViewController.m; sourceTree = "<group>"; };
+		12C365161939430C002B2197 /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = center.png; sourceTree = "<group>"; };
 		12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circunferencia 300ppp.png"; sourceTree = "<group>"; };
 		12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botón girar 72ppp.png"; sourceTree = "<group>"; };
 		12D1DD6619393CEB00BF81A5 /* Bomb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bomb.wav; sourceTree = "<group>"; };
@@ -882,6 +884,7 @@
 		129D4DA11919BE0D00D12423 /* Imagenes Juego */ = {
 			isa = PBXGroup;
 			children = (
+				12C365161939430C002B2197 /* center.png */,
 				12C3650B19393E50002B2197 /* blue.png */,
 				12C3650C19393E50002B2197 /* green.png */,
 				12C3650D19393E50002B2197 /* red.png */,
@@ -1427,6 +1430,7 @@
 				129EDB751938E6FF0088735B /* backButtonDerecha.png in Resources */,
 				12A6715F192FEAEB00E03C72 /* backButton.png in Resources */,
 				12E53C6C191D8C2F00911B7C /* 4_Azul.png in Resources */,
+				12C365171939430C002B2197 /* center.png in Resources */,
 				12EEAB02191D4416002F0D6E /* 3_Pilas.png in Resources */,
 				12D1DD621938D8FB00BF81A5 /* circunferencia 300ppp.png in Resources */,
 				129D4D9C1919ADF200D12423 /* page.png in Resources */,

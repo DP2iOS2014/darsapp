@@ -41,6 +41,22 @@
     
 }
 
+- (void) viewWillAppear:(BOOL)animated{
+    
+    NSUserDefaults * datosDeUsuario = [NSUserDefaults standardUserDefaults];
+    
+    double puntajeActual = [datosDeUsuario doubleForKey:@"puntajeActualJuegoRuleta"];
+    
+    self.ptjActual.text = [NSString stringWithFormat:@"%0.2f",puntajeActual];
+    
+    
+    double puntajeMaximo = [datosDeUsuario doubleForKey:@"puntajeMaximoRuleta"];
+    
+    self.ptjMaximo.text = [NSString stringWithFormat:@"%0.2f",puntajeMaximo];
+
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -118,8 +134,7 @@
                                                                   
                                                                   iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
                                                               } completion:^(BOOL finished) {
-                                                                  
-                                                                  CGFloat grados = 72.0f;
+                                                                
                                                                   
                                                                   CGFloat angulo=72.0f*(M_PI/180.0f);
                                                                   
@@ -127,6 +142,7 @@
                                                                           numerotema =  arc4random()%4;
                                                                           
                                                                           if(numerotema==0){
+                                                                               [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
                                             
                                                                           }else if (numerotema==1){
                                                                               [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{

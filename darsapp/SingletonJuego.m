@@ -36,5 +36,23 @@
     return sharedMyManager;
 }
 
++(void) ResetearValores{
+    SingletonJuego * temporal = [self sharedManager];
+    temporal.Tiempo = 30;
+    temporal.VidasReloj = 3;
+    temporal.VidasBomba = 3;
+    temporal.VidasNPregunta=3;
+    temporal.VidasOtraOpcion = 3;
+    temporal.tieneOtraOpcion = NO;
+    temporal.disponibilidadBoton=YES;
+    temporal.disponibilidadRespuesta1 = YES;
+    temporal.disponibilidadRespuesta2 = YES;
+    temporal.disponibilidadRespuesta3 = YES;
+    temporal.disponibilidadRespuesta4 = YES;
+    
+
+    
+    
+}
 
 @end

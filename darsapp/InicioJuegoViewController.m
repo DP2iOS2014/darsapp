@@ -7,12 +7,16 @@
 //
 
 #import "InicioJuegoViewController.h"
-
+#import "SingletonJuego.h"
 @interface InicioJuegoViewController ()
 
 @end
 
-@implementation InicioJuegoViewController
+@implementation InicioJuegoViewController{
+    
+    SingletonJuego * juego;
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
 }
 
@@ -84,6 +89,19 @@
     
     [self.btnInstrucciones.layer insertSublayer:degradado4 atIndex:0];
     
+    
+}
+- (IBAction)btnEmpezarJuego:(id)sender {
+    
+     juego = [SingletonJuego sharedManager];
+        [SingletonJuego ResetearValores];
+    
+    [self performSegueWithIdentifier:@"escena_juego" sender:self];
+    
+}
+- (IBAction)btnContinuarJuego:(id)sender {
+    
+     [self performSegueWithIdentifier:@"escena_juego" sender:self];
     
 }
 /*

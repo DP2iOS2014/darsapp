@@ -41,6 +41,7 @@
 {
     
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     [self recuperaEcoTipsLider];
     juego= [SingletonJuego sharedManager];
 
@@ -75,7 +76,7 @@
     
     NSInteger puntaje;
     
-    NSInteger idtipopregunta=0;
+    //NSInteger idtipopregunta=0;
     NSString *tipotema;
     
     puntaje = 10;
@@ -83,24 +84,24 @@
     
     //PARA ENVIAR PRIMI
     
+    if(self.idtema==0){
+        tipotema= @"Segregación";
+    }
+    
     if(self.idtema==1){
         tipotema= @"Segregación";
     }
     
     if(self.idtema==2){
-        tipotema= @"";
+        tipotema= @"Segregación";
     }
     
     if(self.idtema==3){
-        tipotema= @"";
+        tipotema= @"Segregación";
     }
     
     if(self.idtema==4){
-        tipotema= @"";
-    }
-    
-    if(self.idtema==5){
-        tipotema= @"Corona";
+        tipotema= @"Segregación";
     }
     
  
@@ -258,7 +259,7 @@
 - (IBAction)SeApretoBomba:(id)sender {
     
     if( [self.VidasBomba.text intValue]  >0) {
-        NSInteger value=[preguntaActual.RespuestaCorrecta integerValue];
+        int value=[preguntaActual.RespuestaCorrecta intValue];
         
         int valor1 = arc4random()%3;
         int valor2 = arc4random()%3;

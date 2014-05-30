@@ -337,7 +337,7 @@
                                     <color key="titleShadowColor" red="0.14586732511662648" green="0.35042649872448983" blue="0.21157836654807541" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XrB-wS-iVQ" kind="push" id="QWY-XN-4Kq"/>
+                                    <action selector="btnEmpezarJuego:" destination="tu2-8m-JJQ" eventType="touchUpInside" id="30F-PR-D8k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-ZR-13o">
@@ -347,6 +347,9 @@
                                     <color key="titleColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.1458673251" green="0.35042649869999998" blue="0.2115783665" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnContinuarJuego:" destination="tu2-8m-JJQ" eventType="touchUpInside" id="Vxd-1F-AYG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy9-dQ-PzX">
                                 <rect key="frame" x="86" y="269" width="140" height="30"/>
@@ -372,11 +375,12 @@
                         <outlet property="btnEmpezar" destination="HXS-CP-bh2" id="RVy-3l-XJQ"/>
                         <outlet property="btnInstrucciones" destination="ChS-X5-iix" id="MLz-9f-Ffc"/>
                         <outlet property="btnRanking" destination="Sy9-dQ-PzX" id="beu-QI-fDu"/>
+                        <segue destination="XrB-wS-iVQ" kind="push" identifier="escena_juego" id="sWe-2s-ee4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b6i-VP-2xP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="-3515"/>
+            <point key="canvasLocation" x="612" y="-3635"/>
         </scene>
         <!--Rutas Table View Controller - Campaña de las Rutas-->
         <scene sceneID="Y2J-NN-Kgo">
@@ -948,7 +952,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sl6-en-QIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-96" y="-3515"/>
+            <point key="canvasLocation" x="16" y="-3683"/>
         </scene>
         <!--Navigation Controller - Proyectos-->
         <scene sceneID="uLL-zJ-pAm">
@@ -1520,7 +1524,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-7T-C74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1523" y="-5177"/>
+            <point key="canvasLocation" x="1359" y="-3683"/>
         </scene>
         <!--Preguntas View Controller-->
         <scene sceneID="Rhe-ss-9Cl">
@@ -1685,7 +1689,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAJ-w0-GQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128" y="-5177"/>
+            <point key="canvasLocation" x="2124" y="-3683"/>
         </scene>
     </scenes>
     <resources>

@@ -23,5 +23,5 @@
 @property BOOL disponibilidadRespuesta4;
 
 + (id)sharedManager;
-
++ (void)ResetearValores;
 @end

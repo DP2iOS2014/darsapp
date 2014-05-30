@@ -42,6 +42,8 @@
 		12330CC9191AC35A00E85590 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CC8191AC35A00E85590 /* SystemConfiguration.framework */; };
 		12330CCD191AC66200E85590 /* MapaTachosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CCC191AC66200E85590 /* MapaTachosViewController.m */; };
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
+		124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */; };
+		124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */; };
 		1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */; };
 		12615579191D76A500374E68 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 12615578191D76A500374E68 /* forest.png */; };
 		1261557E191D915500374E68 /* tachito.png in Resources */ = {isa = PBXBuildFile; fileRef = 1261557D191D915500374E68 /* tachito.png */; };
@@ -324,6 +326,10 @@
 		12330CCC191AC66200E85590 /* MapaTachosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosViewController.m; sourceTree = "<group>"; };
 		12330CD1191ADBD500E85590 /* MapaTachosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaTachosView.h; sourceTree = "<group>"; };
 		12330CD2191ADBD500E85590 /* MapaTachosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosView.m; sourceTree = "<group>"; };
+		124DAE791938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeleccionAdmNoAdmTableViewCell.h; sourceTree = "<group>"; };
+		124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeleccionAdmNoAdmTableViewCell.m; sourceTree = "<group>"; };
+		124DAE7C1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeleccionAdmNoAdmTableViewController.h; sourceTree = "<group>"; };
+		124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeleccionAdmNoAdmTableViewController.m; sourceTree = "<group>"; };
 		1260E96E192FA3FF00D915D7 /* SingletonAmbientalizate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonAmbientalizate.h; sourceTree = "<group>"; };
 		1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonAmbientalizate.m; sourceTree = "<group>"; };
 		12615578191D76A500374E68 /* forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest.png; sourceTree = "<group>"; };
@@ -675,6 +681,17 @@
 			name = MapaTachos;
 			sourceTree = "<group>";
 		};
+		124DAE781938F31000736A7C /* SeleccionAmbientalizateAdm */ = {
+			isa = PBXGroup;
+			children = (
+				124DAE791938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.h */,
+				124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */,
+				124DAE7C1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.h */,
+				124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */,
+			);
+			name = SeleccionAmbientalizateAdm;
+			sourceTree = "<group>";
+		};
 		1261557A191D8AA400374E68 /* imagenesMapaTachos */ = {
 			isa = PBXGroup;
 			children = (
@@ -784,6 +801,7 @@
 		12A128CB191EAE3000397B90 /* Ambientalizate */ = {
 			isa = PBXGroup;
 			children = (
+				124DAE781938F31000736A7C /* SeleccionAmbientalizateAdm */,
 				128AC03E192D3E800015AEF4 /* Imagenes lider Ambiental */,
 				12A128D2191ED3BA00397B90 /* imagenes Ambientalizate */,
 				12A128CC191EAE4D00397B90 /* GrillaAmbientalizateViewController.h */,
@@ -1462,6 +1480,7 @@
 				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
 				12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */,
 				12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */,
+				124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */,
 				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,
 				120FF2251913F39400A697D6 /* AFHTTPRequestOperation.m in Sources */,
 				120FF2271913F39400A697D6 /* AFHTTPSessionManager.m in Sources */,
@@ -1476,6 +1495,7 @@
 				1279F4CD19379AD500A32A7B /* CeldaTemas.m in Sources */,
 				12F4CFD918FF147500C8BFF5 /* AppDelegate.m in Sources */,
 				120FF2261913F39400A697D6 /* AFHTTPRequestOperationManager.m in Sources */,
+				124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */,
 				120FF2331913F39400A697D6 /* UIProgressView+AFNetworking.m in Sources */,
 				120FF2881914061800A697D6 /* URLsJson.m in Sources */,
 				129EE5D519088A4C008A72CF /* NoticiasTableViewController.m in Sources */,

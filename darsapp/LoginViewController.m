@@ -90,8 +90,16 @@
     [manager POST:login parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuesta = responseObject;
         NSLog(@"JSON: %@", respuesta);
-        
-        if (((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netin"]).intValue == 1) {
+        int netin = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netin"]).intValue;
+        int netalu = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netalu"]).intValue;
+        if ( netin == 1 || netalu == 1) {
+            if(netin ==1){
+                [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netin"];
+                [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netalu"];
+            }else if(netalu == 1){
+                [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netalu"];
+                [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netin"];
+            }
             [self performSegueWithIdentifier:@"exito_login" sender:self];
         }
         else {
@@ -118,18 +126,12 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
-    NSString *NombreUsuario = self.tFusuario.text;
     
-    NSString *ContraseñaUsuario = self.tFContrasenha.text;
-    
-    [[NSUserDefaults standardUserDefaults] setObject:NombreUsuario forKey:@"NombreUsuario"];
-    
-    [[NSUserDefaults standardUserDefaults] setObject:ContraseñaUsuario forKey:@"ContraseñaUsuario"];
     
     
 }
 - (IBAction)ApretoVisitante:(id)sender {
-    
+    [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"Visitante"];
     [self performSegueWithIdentifier:@"exito_login" sender:self];
     
 }
@@ -165,6 +167,27 @@
         NSLog(@"JSON: %@", respuesta);
         
         if (((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netin"]).intValue == 1) {
+            NSString *NombreUsuario = self.tFusuario.text;
+            
+            NSString *ContraseñaUsuario = self.tFContrasenha.text;
+            
+            [[NSUserDefaults standardUserDefaults] setObject:NombreUsuario forKey:@"NombreUsuario"];
+            [[NSUserDefaults standardUserDefaults] setObject:ContraseñaUsuario forKey:@"ContraseñaUsuario"];
+            [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"Visitante"];
+            
+            int netin = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netin"]).intValue;
+            int netalu = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netalu"]).intValue;
+            if ( netin == 1 || netalu == 1) {
+                if(netin ==1){
+                    [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netin"];
+                    [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netalu"];
+                }else if(netalu == 1){
+                    [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netalu"];
+                    [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netin"];
+                }
+                [self performSegueWithIdentifier:@"exito_login" sender:self];
+            }
+            
             [self performSegueWithIdentifier:@"exito_login" sender:self];
         }else if([self.tFusuario.text isEqualToString:@""] && [self.tFContrasenha.text isEqualToString:@""]){
             //Falta colocar usuario y contrasena

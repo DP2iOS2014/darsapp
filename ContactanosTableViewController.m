@@ -74,6 +74,12 @@
             //ubicanos
             }
             else if (indexPath.row==1){
+                NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+                NSString * visitante = [datosDeMemoria stringForKey:@"Visitante"];
+                if ([visitante isEqualToString:@"S"]) {
+                    UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No puede realizar llamadas como visitante" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [miAlert show];
+                }else{
             //telefono
                 
                 if([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:@"tel://991370292"]]){
@@ -82,6 +88,8 @@
                     miURLString = @"";
                     UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No se puede llamar" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                     [miAlert show];
+                }
+                    
                 }
             } else{
                 

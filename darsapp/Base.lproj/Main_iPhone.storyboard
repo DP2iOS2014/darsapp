@@ -452,7 +452,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7OW-iB-J8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="909" y="-3410"/>
+            <point key="canvasLocation" x="1233" y="-3362"/>
         </scene>
         <!--Comodines View Controller - Comodines-->
         <scene sceneID="VEe-I8-2lB">
@@ -541,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r9b-Yw-kfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="-2866"/>
+            <point key="canvasLocation" x="2280" y="-3198"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PBE-sj-nHp">
@@ -556,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gQ-4F-fiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="-4252"/>
+            <point key="canvasLocation" x="2280" y="-4548"/>
         </scene>
         <!--Instrucciones View Controller - Instrucciones-->
         <scene sceneID="V6S-uO-FAw">
@@ -617,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiq-rb-NYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1448" y="-3543"/>
+            <point key="canvasLocation" x="2292" y="-3855"/>
         </scene>
         <!--Instrucciones2 View Controller - Instrucciones-->
         <scene sceneID="zwf-L5-tbp">
@@ -682,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22z-oX-r8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1818" y="-3544"/>
+            <point key="canvasLocation" x="2750" y="-3864"/>
         </scene>
         <!--Instrucciones3 View Controller - Instrucciones-->
         <scene sceneID="fiK-bh-zfd">
@@ -741,7 +741,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hz-2j-Stv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2181" y="-3542"/>
+            <point key="canvasLocation" x="3245" y="-3864"/>
         </scene>
         <!--Instrucciones4 View Controller - Instrucciones-->
         <scene sceneID="gz2-s2-sao">
@@ -792,7 +792,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTR-pq-AMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2543" y="-3541"/>
+            <point key="canvasLocation" x="3703" y="-3864"/>
         </scene>
         <!--Rutas Table View Controller - Campaña de las Rutas-->
         <scene sceneID="Y2J-NN-Kgo">
@@ -930,7 +930,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iW0-kY-JFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="-2548"/>
+            <point key="canvasLocation" x="2148" y="-2500"/>
         </scene>
         <!--Pilas View Controller - Ruta de las Pilas-->
         <scene sceneID="2Tt-n3-0xr">
@@ -1834,7 +1834,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f2s-No-HmZ">
-                                <rect key="frame" x="96" y="476" width="42" height="21"/>
+                                <rect key="frame" x="96" y="476" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1862,13 +1862,17 @@
                     <navigationItem key="navigationItem" id="hUs-YZ-MvE"/>
                     <connections>
                         <outlet property="btnGiraRuleta" destination="nP9-cT-6Lk" id="Bxp-Qu-4AU"/>
+                        <outlet property="ptjActual" destination="f2s-No-HmZ" id="hOu-mC-3hS"/>
+                        <outlet property="ptjMaximo" destination="9BT-eb-le5" id="Gdb-Ne-oEn"/>
                         <outlet property="ruleta" destination="zyv-be-fzm" id="37y-qQ-P4g"/>
                         <segue destination="mQJ-Vt-z41" kind="modal" identifier="ViewPreguntas" modalTransitionStyle="flipHorizontal" id="JAq-Fb-1S1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-7T-C74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359" y="-3683"/>
+
+            <point key="canvasLocation" x="1199" y="-4759"/>
+
         </scene>
         <!--Preguntas View Controller-->
         <scene sceneID="Rhe-ss-9Cl">
@@ -2029,7 +2033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAJ-w0-GQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="-3683"/>
+            <point key="canvasLocation" x="1736" y="-4759"/>
         </scene>
     </scenes>
     <resources>

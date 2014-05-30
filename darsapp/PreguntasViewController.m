@@ -189,6 +189,21 @@
         
         [[NSUserDefaults standardUserDefaults] setInteger:puntajeActual forKey:@"puntajeActualJuegoRuleta"];
         
+    }else{
+        //Mandar puntaje a back END
+        NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+        int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
+        if(puntajeActual>puntajeMaximo){
+            [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
+            
+        }
+        
+        juego.VidasReloj = 3;
+        juego.VidasBomba = 3;
+        juego.VidasNPregunta=3;
+        juego.VidasOtraOpcion = 3;
+    
+    
     }
     juego.Tiempo = 30;
     juego.tieneOtraOpcion = NO;
@@ -198,17 +213,7 @@
     juego.disponibilidadRespuesta3 = YES;
     juego.disponibilidadRespuesta4 = YES;
     
-    //Mandar puntaje a back END
-    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
-    int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
-    if(puntajeActual>puntajeMaximo){
-        
-    [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
-
-        
-        
-    }
-    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:4];
+        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:4];
 
 }
 

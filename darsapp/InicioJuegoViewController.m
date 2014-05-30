@@ -96,6 +96,9 @@
      juego = [SingletonJuego sharedManager];
         [SingletonJuego ResetearValores];
     
+    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"puntajeActualJuegoRuleta"];
+    
+    
     [self performSegueWithIdentifier:@"escena_juego" sender:self];
     
 }

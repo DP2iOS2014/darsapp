@@ -194,6 +194,14 @@
 		12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75833191AF36E00E03C5E /* 8_Separatas.png */; };
 		12AFACC9190B017F0007F5C0 /* flechitaDARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACC8190B017F0007F5C0 /* flechitaDARS.png */; };
 		12AFACCD190B14260007F5C0 /* dars1.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACCC190B14260007F5C0 /* dars1.png */; };
+		12C3650619393790002B2197 /* circulote.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650519393790002B2197 /* circulote.png */; };
+		12C3650819393C05002B2197 /* y9izE5EcE.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650719393C05002B2197 /* y9izE5EcE.png */; };
+		12C3650A19393C82002B2197 /* 4c9p68pcE.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650919393C82002B2197 /* 4c9p68pcE.png */; };
+		12C3650F19393E50002B2197 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650B19393E50002B2197 /* blue.png */; };
+		12C3651019393E50002B2197 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650C19393E50002B2197 /* green.png */; };
+		12C3651119393E50002B2197 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650D19393E50002B2197 /* red.png */; };
+		12C3651219393E50002B2197 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650E19393E50002B2197 /* yellow.png */; };
+		12C3651519394056002B2197 /* CategoriasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C3651419394056002B2197 /* CategoriasViewController.m */; };
 		12D1DD621938D8FB00BF81A5 /* circunferencia 300ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */; };
 		12D1DD641938D9A200BF81A5 /* botón girar 72ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */; };
 		12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD6619393CEB00BF81A5 /* Bomb.wav */; };
@@ -543,6 +551,15 @@
 		12A75833191AF36E00E03C5E /* 8_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_Separatas.png; sourceTree = "<group>"; };
 		12AFACC8190B017F0007F5C0 /* flechitaDARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechitaDARS.png; sourceTree = "<group>"; };
 		12AFACCC190B14260007F5C0 /* dars1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dars1.png; sourceTree = "<group>"; };
+		12C3650519393790002B2197 /* circulote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circulote.png; sourceTree = "<group>"; };
+		12C3650719393C05002B2197 /* y9izE5EcE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y9izE5EcE.png; sourceTree = "<group>"; };
+		12C3650919393C82002B2197 /* 4c9p68pcE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4c9p68pcE.png; sourceTree = "<group>"; };
+		12C3650B19393E50002B2197 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		12C3650C19393E50002B2197 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		12C3650D19393E50002B2197 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		12C3650E19393E50002B2197 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
+		12C3651319394056002B2197 /* CategoriasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriasViewController.h; sourceTree = "<group>"; };
+		12C3651419394056002B2197 /* CategoriasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriasViewController.m; sourceTree = "<group>"; };
 		12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circunferencia 300ppp.png"; sourceTree = "<group>"; };
 		12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botón girar 72ppp.png"; sourceTree = "<group>"; };
 		12D1DD6619393CEB00BF81A5 /* Bomb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bomb.wav; sourceTree = "<group>"; };
@@ -834,6 +851,8 @@
 		129D4DA01919B75300D12423 /* Juego */ = {
 			isa = PBXGroup;
 			children = (
+				12C3651319394056002B2197 /* CategoriasViewController.h */,
+				12C3651419394056002B2197 /* CategoriasViewController.m */,
 				129EDB891938FF980088735B /* ComodinesViewController.h */,
 				129EDB8A1938FF980088735B /* ComodinesViewController.m */,
 				129EDB841938F3A30088735B /* Instrucciones4ViewController.h */,
@@ -863,6 +882,13 @@
 		129D4DA11919BE0D00D12423 /* Imagenes Juego */ = {
 			isa = PBXGroup;
 			children = (
+				12C3650B19393E50002B2197 /* blue.png */,
+				12C3650C19393E50002B2197 /* green.png */,
+				12C3650D19393E50002B2197 /* red.png */,
+				12C3650E19393E50002B2197 /* yellow.png */,
+				12C3650919393C82002B2197 /* 4c9p68pcE.png */,
+				12C3650719393C05002B2197 /* y9izE5EcE.png */,
+				12C3650519393790002B2197 /* circulote.png */,
 				129EDB871938F6170088735B /* skull.png */,
 				129EDB7C1938F2FF0088735B /* ruletita.png */,
 				129EDB7A1938F2070088735B /* cliconGirar.png */,
@@ -1410,6 +1436,7 @@
 				12F4CFDF18FF147500C8BFF5 /* Main_iPad.storyboard in Resources */,
 				12EEAB09191D4416002F0D6E /* 6_Pilas.png in Resources */,
 				12E53C6F191D912900911B7C /* pin1.png in Resources */,
+				12C3650F19393E50002B2197 /* blue.png in Resources */,
 				12A75805191AD23900E03C5E /* 5_TrasladoYConsumo.png in Resources */,
 				12E53C6B191D8C2F00911B7C /* 3_Blanco.png in Resources */,
 				12A1F704190ACFC7001ED3BE /* flower-pot.png in Resources */,
@@ -1469,7 +1496,9 @@
 				12A75806191AD23900E03C5E /* Titulo_Plastico.png in Resources */,
 				129EDB691938E4E70088735B /* porcentaje15.png in Resources */,
 				12EFB94C192D46D000AAAAB2 /* tachito2.png in Resources */,
+				12C3650819393C05002B2197 /* y9izE5EcE.png in Resources */,
 				12FF2E95190AEEC600638774 /* grey_sandbag_@2X.png in Resources */,
+				12C3651219393E50002B2197 /* yellow.png in Resources */,
 				12AFACCD190B14260007F5C0 /* dars1.png in Resources */,
 				12A083FE19099DE000D010E6 /* ic_launcher.png in Resources */,
 				129EDB7B1938F2070088735B /* cliconGirar.png in Resources */,
@@ -1502,6 +1531,7 @@
 				12A1F702190ACEE9001ED3BE /* 189-plant.png in Resources */,
 				12EEAB1B191D4431002F0D6E /* 8_Electricidad.png in Resources */,
 				12702B7119300D13002CC216 /* contact.png in Resources */,
+				12C3651119393E50002B2197 /* red.png in Resources */,
 				12A67150192FDF8400E03C72 /* Roboto-Italic.ttf in Resources */,
 				12E53C69191D8C2F00911B7C /* 1_Verde.png in Resources */,
 				12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */,
@@ -1511,7 +1541,9 @@
 				12DDC98019300511005E820A /* EspecialistaAmbiental.png in Resources */,
 				1276EA1D192D62C400B49816 /* Compras4.png in Resources */,
 				12EEAB2B191D4485002F0D6E /* 6_DaleVidaATusResiduos.png in Resources */,
+				12C3650A19393C82002B2197 /* 4c9p68pcE.png in Resources */,
 				12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */,
+				12C3651019393E50002B2197 /* green.png in Resources */,
 				12EEAB01191D4416002F0D6E /* 2-4_ProduccionDistribucion.png in Resources */,
 				12EFB94F192D46D000AAAAB2 /* tachito5.png in Resources */,
 				129F4918192E9C0100DF8793 /* images.jpeg in Resources */,
@@ -1523,6 +1555,7 @@
 				12D8719719364BD10035F0E0 /* Espacios Verdes.png in Resources */,
 				12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */,
 				12A1F6F8190AC983001ED3BE /* phone-book.png in Resources */,
+				12C3650619393790002B2197 /* circulote.png in Resources */,
 				129EDB651938E4CC0088735B /* nuevapartida.png in Resources */,
 				12A128E4191ED74C00397B90 /* playa2.jpg in Resources */,
 				12EEAB00191D4416002F0D6E /* 2-3_ProduccionDistribucion.png in Resources */,
@@ -1646,6 +1679,7 @@
 				120FF2341913F39400A697D6 /* UIRefreshControl+AFNetworking.m in Sources */,
 				12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */,
 				12F4CFD518FF147500C8BFF5 /* main.m in Sources */,
+				12C3651519394056002B2197 /* CategoriasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

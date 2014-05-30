@@ -196,6 +196,8 @@
 		12AFACCD190B14260007F5C0 /* dars1.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACCC190B14260007F5C0 /* dars1.png */; };
 		12D1DD621938D8FB00BF81A5 /* circunferencia 300ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */; };
 		12D1DD641938D9A200BF81A5 /* botón girar 72ppp.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */; };
+		12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12D1DD6619393CEB00BF81A5 /* Bomb.wav */; };
+		12D1DD6919393DA800BF81A5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D1DD6819393DA800BF81A5 /* AudioToolbox.framework */; };
 		12D8719519364B7D0035F0E0 /* Agua.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719419364B7D0035F0E0 /* Agua.png */; };
 		12D8719719364BD10035F0E0 /* Espacios Verdes.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719619364BD10035F0E0 /* Espacios Verdes.png */; };
 		12D8719919364C7E0035F0E0 /* Energia.png in Resources */ = {isa = PBXBuildFile; fileRef = 12D8719819364C7E0035F0E0 /* Energia.png */; };
@@ -543,6 +545,8 @@
 		12AFACCC190B14260007F5C0 /* dars1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dars1.png; sourceTree = "<group>"; };
 		12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circunferencia 300ppp.png"; sourceTree = "<group>"; };
 		12D1DD631938D9A200BF81A5 /* botón girar 72ppp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botón girar 72ppp.png"; sourceTree = "<group>"; };
+		12D1DD6619393CEB00BF81A5 /* Bomb.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bomb.wav; sourceTree = "<group>"; };
+		12D1DD6819393DA800BF81A5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		12D8719419364B7D0035F0E0 /* Agua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Agua.png; sourceTree = "<group>"; };
 		12D8719619364BD10035F0E0 /* Espacios Verdes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Espacios Verdes.png"; sourceTree = "<group>"; };
 		12D8719819364C7E0035F0E0 /* Energia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Energia.png; sourceTree = "<group>"; };
@@ -645,6 +649,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D1DD6919393DA800BF81A5 /* AudioToolbox.framework in Frameworks */,
 				12330CC9191AC35A00E85590 /* SystemConfiguration.framework in Frameworks */,
 				12330CC7191AC34D00E85590 /* QuartzCore.framework in Frameworks */,
 				12330CC5191AC33B00E85590 /* OpenGLES.framework in Frameworks */,
@@ -884,12 +889,9 @@
 				129D4DAD1919C27200D12423 /* otraFinal.png */,
 				129D4DAE1919C27200D12423 /* bombaFinal.png */,
 				129D4DAF1919C27200D12423 /* againFinal.png */,
-
 				12D1DD611938D8FB00BF81A5 /* circunferencia 300ppp.png */,
-
 				129EDB5A1938DE6F0088735B /* AyudaJuegoTableViewController.h */,
 				129EDB5B1938DE6F0088735B /* AyudaJuegoTableViewController.m */,
-
 			);
 			name = "Imagenes Juego";
 			sourceTree = "<group>";
@@ -1077,6 +1079,14 @@
 			name = "Ruta de la Separata";
 			sourceTree = "<group>";
 		};
+		12D1DD6519393CDA00BF81A5 /* Sonido */ = {
+			isa = PBXGroup;
+			children = (
+				12D1DD6619393CEB00BF81A5 /* Bomb.wav */,
+			);
+			name = Sonido;
+			sourceTree = "<group>";
+		};
 		12D871931936469A0035F0E0 /* Temas */ = {
 			isa = PBXGroup;
 			children = (
@@ -1170,6 +1180,7 @@
 		12F4CFC718FF147500C8BFF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				12D1DD6819393DA800BF81A5 /* AudioToolbox.framework */,
 				12330CC8191AC35A00E85590 /* SystemConfiguration.framework */,
 				12330CC6191AC34D00E85590 /* QuartzCore.framework */,
 				12330CC4191AC33B00E85590 /* OpenGLES.framework */,
@@ -1197,6 +1208,7 @@
 		12F4CFCE18FF147500C8BFF5 /* darsapp */ = {
 			isa = PBXGroup;
 			children = (
+				12D1DD6519393CDA00BF81A5 /* Sonido */,
 				12A6713F192FDF5B00E03C72 /* Fuentes */,
 				12A128CB191EAE3000397B90 /* Ambientalizate */,
 				12330CCA191AC64100E85590 /* MapaTachos */,
@@ -1492,6 +1504,7 @@
 				12702B7119300D13002CC216 /* contact.png in Resources */,
 				12A67150192FDF8400E03C72 /* Roboto-Italic.ttf in Resources */,
 				12E53C69191D8C2F00911B7C /* 1_Verde.png in Resources */,
+				12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */,
 				12A67155192FDF8400E03C72 /* Roboto-Regular.ttf in Resources */,
 				12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */,
 				12A67161192FEAEF00E03C72 /* twitterButton.png in Resources */,

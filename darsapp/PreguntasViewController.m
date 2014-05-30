@@ -11,6 +11,7 @@
 #import "preguntaProgressView.h"
 #import "SingletonJuego.h"
 #import "URLsJson.h"
+#import <AudioToolbox/AudioToolbox.h>
 @interface PreguntasViewController ()
 
 @end
@@ -21,7 +22,7 @@
     SingletonJuego *juego;
     ClasePregunta *preguntaActual;
     NSDictionary * respuestajson;
-    
+    SystemSoundID audioEffect;
     NSInteger puntajeActual;
 
 }
@@ -276,6 +277,16 @@
 }
 - (IBAction)SeApretoBomba:(id)sender {
     
+    NSString *path  = [[NSBundle mainBundle] pathForResource:@"Bomb" ofType:@"wav"];
+    NSURL *pathURL = [NSURL fileURLWithPath : path];
+    
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+    AudioServicesPlaySystemSound(audioEffect);
+    
+
+    
+    
     if( [self.VidasBomba.text intValue]  >0) {
         int value=[preguntaActual.RespuestaCorrecta intValue];
         
@@ -494,7 +505,9 @@
 }
 
 
-
+-(void)dealloc{
+    AudioServicesDisposeSystemSoundID(audioEffect);
+}
 
 
 

@@ -18,7 +18,7 @@
 {
 
     int numerotema;
-    double rotacion;
+    CGFloat rotacion;
 }
 
 
@@ -53,6 +53,8 @@
     double puntajeMaximo = [datosDeUsuario doubleForKey:@"puntajeMaximoRuleta"];
     
     self.ptjMaximo.text = [NSString stringWithFormat:@"%0.2f",puntajeMaximo];
+    
+    self.ruleta.transform=CGAffineTransformMakeRotation(0);
 
 }
 
@@ -71,72 +73,75 @@
 
 - (void)rotateImageView:(UIImageView *)iv
 {
+    //rotacion=(M_PI/2);
+    rotacion=-(M_PI/2);
     [UIView animateWithDuration:.1 delay:0 options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          
-                         iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                         iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                          
                      }
                      completion:^(BOOL finished) {
                          
                       [UIView animateWithDuration:.08 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                          iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                          iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                       } completion:^(BOOL finished) {
                           
                           [UIView animateWithDuration:.09 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                               
-                              iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                              iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                           } completion:^(BOOL finished) {
                               
                               
                               [UIView animateWithDuration:.1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                   
-                                  iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                  iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                               } completion:^(BOOL finished) {
                                   
                                   
                                   [UIView animateWithDuration:.11 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                       
-                                      iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                      iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                   } completion:^(BOOL finished) {
                                       
                                       [UIView animateWithDuration:.12 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                           
-                                          iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                          iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                       } completion:^(BOOL finished) {
                                           
                                           [UIView animateWithDuration:.13 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                               
-                                              iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                              iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                           } completion:^(BOOL finished) {
                                               
                                               [UIView animateWithDuration:.14 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                   
-                                                  iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                  iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                               } completion:^(BOOL finished) {
                                                   
                                                   [UIView animateWithDuration:.15 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                       
-                                                      iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                      iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                                   } completion:^(BOOL finished) {
                                                       
                                                       [UIView animateWithDuration:.19 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                           
-                                                          iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                          iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                                       } completion:^(BOOL finished) {
                                                           
                                                           [UIView animateWithDuration:.21 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                               
-                                                              iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                              iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                                           } completion:^(BOOL finished) {
                                                               
                                                               [UIView animateWithDuration:.23 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                   
-                                                                  iv.transform = CGAffineTransformRotate(iv.transform, (M_PI/2));
+                                                                  iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                                               } completion:^(BOOL finished) {
                                                                 
                                                                   
-                                                                  CGFloat angulo=72.0f*(M_PI/180.0f);
+                                                                 // CGFloat angulo=72.0f*(M_PI/180.0f);
+                                                                  CGFloat angulo=-(M_PI/2.0f);
                                                                   
                                                                       if(finished){
                                                                           //numerotema =  arc4random()%4;

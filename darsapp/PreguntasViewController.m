@@ -87,19 +87,19 @@
     //PARA ENVIAR PRIMI
     
     if(self.idtema==0){
-        tipotema= @"Cultura Ambiental";
+        tipotema=@"Proyectos DARS" ;
     }
     
     if(self.idtema==1){
-        tipotema= @"Datos Curiosos";
+        tipotema= @"Segregación";
     }
     
     if(self.idtema==2){
-        tipotema= @"Proyectos DARS";
+        tipotema= @"Cultura Ambiental";
     }
     
     if(self.idtema==3){
-        tipotema= @"Segregación";
+        tipotema= @"Datos Curiosos";
     }
     
     if(self.idtema==4){
@@ -107,7 +107,7 @@
     }
     
  
-    NSDictionary *cuerpo2 = [NSDictionary dictionaryWithObjectsAndKeys:@"tipo_pregunta",tipotema,nil];
+    NSDictionary *cuerpo2 = [NSDictionary dictionaryWithObjectsAndKeys:tipotema,@"tipo_pregunta",nil];
     
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"pregunta", @"tipo", cuerpo2, @"taxonomias", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
@@ -280,17 +280,14 @@
 }
 - (IBAction)SeApretoBomba:(id)sender {
     
-    NSString *path  = [[NSBundle mainBundle] pathForResource:@"Bomb" ofType:@"wav"];
-    NSURL *pathURL = [NSURL fileURLWithPath : path];
-    
-    
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
-    AudioServicesPlaySystemSound(audioEffect);
-    
-
-    
-    
     if( [self.VidasBomba.text intValue]  >0) {
+        NSString *path  = [[NSBundle mainBundle] pathForResource:@"Bomb" ofType:@"wav"];
+        NSURL *pathURL = [NSURL fileURLWithPath : path];
+        
+        
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+        
         int value=[preguntaActual.RespuestaCorrecta intValue];
         
         int valor1 = arc4random()%3;

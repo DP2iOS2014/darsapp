@@ -13,6 +13,8 @@
 #import "URLsJson.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "SFSConfettiScreen.h"
+#import "YLProgressBar.h"
+
 @interface PreguntasViewController ()
 
 @end
@@ -40,13 +42,28 @@
     return self;
 }
 
+
+- (void)initRoundedFatProgressBar
+{
+    
+    _progressBarRoundedFat.progressTintColor        = [UIColor colorWithRed:239/255.0f green:225/255.0f blue:13/255.0f alpha:1.0f];
+    _progressBarRoundedFat.stripesColor             = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.36f];
+    
+}
+
+
+
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
     
-    
+    //Barra de progreso
+    [self initRoundedFatProgressBar];
+    //Fondo de pantalla
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
+    
+    
     [self recuperaEcoTipsLider];
     juego= [SingletonJuego sharedManager];
 
@@ -64,9 +81,8 @@
     self.btnBomba.enabled=juego.disponibilidadBoton;
     self.btnOtroOpcion.enabled=juego.disponibilidadBoton;
     self.btnNuevaPregunta.enabled=juego.disponibilidadBoton;
+    
     timer = [NSTimer scheduledTimerWithTimeInterval: 1.0 target: self selector:@selector(tick) userInfo:nil repeats:YES];
-    
-    
     self.btnRespuesta1.enabled = juego.disponibilidadRespuesta1;
     self.btnRespuesta2.enabled = juego.disponibilidadRespuesta2;
     self.btnRespuesta3.enabled = juego.disponibilidadRespuesta3;
@@ -79,6 +95,73 @@
     
     
 }
+
+- (void)viewDidUnload
+{
+    self.progressBarRoundedFat        = nil;
+    self.colorsSegmented              = nil;
+    
+    [super viewDidUnload];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[super viewDidDisappear:animated];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    } else
+    {
+        return UIInterfaceOrientationMaskAll;
+    }
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationPortrait;
+}
+
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated
+{
+    [_progressBarRoundedFat setProgress:progress animated:animated];
+}
+
+
 
 -(void) recuperaEcoTipsLider{
     
@@ -159,13 +242,7 @@
         [self.btnRespuesta2 setTitle: [preguntaActual.ArregloRespuestas objectAtIndex:1] forState: UIControlStateNormal];
         [self.btnRespuesta3 setTitle: [preguntaActual.ArregloRespuestas objectAtIndex:2] forState: UIControlStateNormal];
         [self.btnRespuesta4 setTitle: [preguntaActual.ArregloRespuestas objectAtIndex:3] forState: UIControlStateNormal];
-        
-        //self.pregunta.text=titulo;
-        //[self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
-        //[self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
-        //[self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
-        //[self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
-        
+       
         
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
@@ -184,101 +261,9 @@
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
--(void) terminarJuego: (BOOL) Correcta
-{
-    
-    
-    if(Correcta){
-        SFSConfettiScreen * confetti = [[SFSConfettiScreen alloc] initWithFrame:CGRectMake(0, 0, 400, 400)];
-        [self.view addSubview:confetti];
-        
-        puntajeActual = puntajeActual + [preguntaActual.PuntajePregunta integerValue];
-        
-        [[NSUserDefaults standardUserDefaults] setInteger:puntajeActual forKey:@"puntajeActualJuegoRuleta"];
-    
-        juego.Tiempo = 30;
-        juego.tieneOtraOpcion = NO;
-        juego.disponibilidadBoton=YES;
-        juego.disponibilidadRespuesta1 = YES;
-        juego.disponibilidadRespuesta2 = YES;
-        juego.disponibilidadRespuesta3 = YES;
-        juego.disponibilidadRespuesta4 = YES;
-        //self.btnReloj.userInteractionEnabled=YES;
-        //self.btnBomba.userInteractionEnabled=YES;
-        //self.btnOtroOpcion.userInteractionEnabled=YES;
-        //self.btnNuevaPregunta.userInteractionEnabled=YES;
-        [timer invalidate];
-        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:3];
-        
-    }else{
-        //Mandar puntaje a back END
-        NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
-        int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
-        if(puntajeActual>puntajeMaximo){
-            [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
-            
-        }
-        [self performSelector:@selector(irAHacerHora) withObject:nil afterDelay:2];
-        
-    }
-    
-    
-
-}
-
--(void)irAHacerHora{
-    if(!alertView.visible){
-    alertView = [[UIAlertView alloc] initWithTitle:@"Haz Perdido"
-                                                        message:@"Vuelve a Intentarlo"
-                                                       delegate:self
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-    [alertView show];
-    }
-}
-
--(void)irASeleccionado
-{
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-        [timer invalidate];
-        [self.delegate apretoOkAlFallaPregunta];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-//-(void) CreaPregunta:(NSInteger) numero{
-    //preguntaActual=[ArregloPreguntas objectAtIndex:numero];
-  //  self.pregunta.text=titulo;
-    //NSArray *resp=[[ArregloPreguntas objectAtIndex:numero] ArregloRespuestas];
-    
-    //[self.btnRespuesta1 setTitle: [opciones objectAtIndex:0] forState: UIControlStateNormal];
-    //[self.btnRespuesta2 setTitle: [opciones objectAtIndex:1] forState: UIControlStateNormal];
-    //[self.btnRespuesta3 setTitle: [opciones objectAtIndex:2] forState: UIControlStateNormal];
-    //[self.btnRespuesta4 setTitle: [opciones objectAtIndex:3] forState: UIControlStateNormal];
-
-    
-//}
+/*Seleccion de Poderes*/
 
 - (IBAction)SeApretoReloj:(id)sender {
     if( juego.VidasReloj  >0) {
@@ -368,6 +353,23 @@
         self.btnNuevaPregunta.enabled=NO;
         [self recuperaEcoTipsLider];
     }
+}
+
+/* termino se apreto boton*/
+
+/*Selecciono pregunta*/
+- (IBAction)VerificarRespuesta1:(id)sender {
+    [self SeApretoRespuesta:0];
+}
+
+- (IBAction)VerificarRespuesta2:(id)sender {
+    [self SeApretoRespuesta:1];
+}
+- (IBAction)VerificarRespuesta3:(id)sender {
+    [self SeApretoRespuesta:2];
+}
+- (IBAction)VerificarRespuesta4:(id)sender {
+    [self SeApretoRespuesta:3];
 }
 
 -(void)SeApretoRespuesta:(NSInteger)opcion{
@@ -507,42 +509,92 @@
 
 }
 
-- (IBAction)VerificarRespuesta1:(id)sender {
-    [self SeApretoRespuesta:0];
-}
+/* termino seleccionar respuesta*/
 
-- (IBAction)VerificarRespuesta2:(id)sender {
-    [self SeApretoRespuesta:1];
-}
-- (IBAction)VerificarRespuesta3:(id)sender {
-    [self SeApretoRespuesta:2];
-}
-- (IBAction)VerificarRespuesta4:(id)sender {
-    [self SeApretoRespuesta:3];
-}
 
-- (void)viewWillAppear:(BOOL)animated {
+
+/*Terminar Juego*/
+-(void) terminarJuego: (BOOL) Correcta
+{
     
-    //[self CreaPregunta:0];
-
+    
+    if(Correcta){
+        SFSConfettiScreen * confetti = [[SFSConfettiScreen alloc] initWithFrame:CGRectMake(0, 0, 400, 400)];
+        [self.view addSubview:confetti];
+        
+        puntajeActual = puntajeActual + [preguntaActual.PuntajePregunta integerValue];
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:puntajeActual forKey:@"puntajeActualJuegoRuleta"];
+        
+        juego.Tiempo = 30;
+        juego.tieneOtraOpcion = NO;
+        juego.disponibilidadBoton=YES;
+        juego.disponibilidadRespuesta1 = YES;
+        juego.disponibilidadRespuesta2 = YES;
+        juego.disponibilidadRespuesta3 = YES;
+        juego.disponibilidadRespuesta4 = YES;
+        [timer invalidate];
+        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:3];
+        
+    }else{
+        //Mandar puntaje a back END
+        NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+        int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
+        if(puntajeActual>puntajeMaximo){
+            [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
+            
+        }
+        [self performSelector:@selector(irAHacerHora) withObject:nil afterDelay:2];
+        
+    }
+    
+    
+    
 }
+
+-(void)irAHacerHora{
+    if(!alertView.visible){
+        alertView = [[UIAlertView alloc] initWithTitle:@"Haz Perdido"
+                                               message:@"Vuelve a Intentarlo"
+                                              delegate:self
+                                     cancelButtonTitle:@"Ok"
+                                     otherButtonTitles:nil];
+        [alertView show];
+    }
+}
+
+-(void)irASeleccionado
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [timer invalidate];
+    [self.delegate apretoOkAlFallaPregunta];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+/*Se termino el termino juego*/
+
+
+
+
+
 
 - (void) tick {
 
    self.Tiempo.text = [ [NSString alloc] initWithFormat:@"%d", [self.Tiempo.text intValue] -1] ;
+   //[self.BarraProgreso setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
     
-    [self.BarraProgreso setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
-    
+    [self.progressBarRoundedFat setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
     if([self.Tiempo.text intValue] == 0){
         [timer invalidate];
         [self terminarJuego:FALSE];
         
         
     }
-    
-    
-    
-    
 }
 
 

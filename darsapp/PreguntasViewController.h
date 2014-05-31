@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YLProgressBar.h"
 
 @protocol preguntasDelegate <NSObject>
 @optional
@@ -38,9 +39,17 @@
 @property (weak, nonatomic) IBOutlet UILabel *VidasOtraOpcion;
 @property (weak, nonatomic) IBOutlet UILabel *pregunta;
 @property (strong, nonatomic) IBOutlet UILabel *VidasNuevaPregunta;
-@property (strong, nonatomic) IBOutlet UIProgressView *BarraProgreso;
 @property int idtema;
 @property NSString *tipo_tema;
+@property (nonatomic, strong) IBOutlet YLProgressBar      *progressBarRoundedFat;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *colorsSegmented;
+
+
+// Manage progress bars
+- (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
+
+// Configure progress bars
+- (void)initRoundedFatProgressBar;
 
 
 @end

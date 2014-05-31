@@ -14,4 +14,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnRanking;
 @property (strong, nonatomic) IBOutlet UIButton *btnInstrucciones;
 
+
+
+
+
+
+
+@property (strong, nonatomic) IBOutlet UIButton *pruebaBackButton;
+
 @end

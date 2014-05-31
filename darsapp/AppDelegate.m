@@ -17,6 +17,11 @@
     
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:85.0/255 green:201.0/255 blue:210.0/255 alpha:1]];
     
+    UIImage *backOriginal =[UIImage imageNamed:@"backButton2"];
+    
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[backOriginal imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+
+    
     return YES;
 }
 							

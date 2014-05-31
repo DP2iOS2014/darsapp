@@ -32,6 +32,18 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
+    
+    
+    UIImage *original = self.pruebaBackButton.imageView.image;
+    
+    [self.pruebaBackButton setImage:[original imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+}
+- (IBAction)apreteBoniBackButton:(UIButton *)sender {
+    
+    UIActionSheet *a = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"OK" destructiveButtonTitle:nil otherButtonTitles:nil];
+    
+    [a showInView:self.view];
+    
 }
 
 - (void)didReceiveMemoryWarning

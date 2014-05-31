@@ -289,6 +289,8 @@
 		12F4D00F18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png in Resources */ = {isa = PBXBuildFile; fileRef = 12F4D00E18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png */; };
 		12F91D3919117E5F009655B2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F91D3819117E5F009655B2 /* MapKit.framework */; };
 		12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 12F91D3B1911852D009655B2 /* DarsLocalizacionAnnotation.m */; };
+		12FDC15A193A421900C99957 /* backBonito.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FDC159193A421900C99957 /* backBonito.png */; };
+		12FDC15E193A4D0F00C99957 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FDC15C193A4D0F00C99957 /* spark.png */; };
 		12FF2E95190AEEC600638774 /* grey_sandbag_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FF2E93190AEEC600638774 /* grey_sandbag_@2X.png */; };
 		12FF2E96190AEEC600638774 /* grey_sandbag.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FF2E94190AEEC600638774 /* grey_sandbag.png */; };
 		12FF2E99190AEED300638774 /* lyonnette_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FF2E97190AEED300638774 /* lyonnette_@2X.png */; };
@@ -657,6 +659,8 @@
 		12F91D3819117E5F009655B2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12F91D3A1911852D009655B2 /* DarsLocalizacionAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DarsLocalizacionAnnotation.h; sourceTree = "<group>"; };
 		12F91D3B1911852D009655B2 /* DarsLocalizacionAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DarsLocalizacionAnnotation.m; sourceTree = "<group>"; };
+		12FDC159193A421900C99957 /* backBonito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBonito.png; sourceTree = "<group>"; };
+		12FDC15C193A4D0F00C99957 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		12FF2E93190AEEC600638774 /* grey_sandbag_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grey_sandbag_@2X.png"; sourceTree = "<group>"; };
 		12FF2E94190AEEC600638774 /* grey_sandbag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey_sandbag.png; sourceTree = "<group>"; };
 		12FF2E97190AEED300638774 /* lyonnette_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lyonnette_@2X.png"; sourceTree = "<group>"; };
@@ -1250,6 +1254,8 @@
 				120FF2131913F39400A697D6 /* UIKit+AFNetworking */,
 				12F4CFD718FF147500C8BFF5 /* AppDelegate.h */,
 				12F4CFD818FF147500C8BFF5 /* AppDelegate.m */,
+				12FDC159193A421900C99957 /* backBonito.png */,
+				12FDC15C193A4D0F00C99957 /* spark.png */,
 				12F4D00918FF24C500C8BFF5 /* ContactanosTableViewController.h */,
 				12F4D00A18FF24C500C8BFF5 /* ContactanosTableViewController.m */,
 				12F4CFDA18FF147500C8BFF5 /* Main_iPhone.storyboard */,
@@ -1449,6 +1455,7 @@
 				12D8719919364C7E0035F0E0 /* Energia.png in Resources */,
 				12A128EC191ED74C00397B90 /* cuarto.jpg in Resources */,
 				12D871A119364D410035F0E0 /* Transporte.png in Resources */,
+				12FDC15E193A4D0F00C99957 /* spark.png in Resources */,
 				12A128E5191ED74C00397B90 /* ventana.jpg in Resources */,
 				1276EA1B192D62C400B49816 /* Compras2.png in Resources */,
 				12EEAB17191D4431002F0D6E /* 4_Electricidad.png in Resources */,
@@ -1538,6 +1545,7 @@
 				12C3651119393E50002B2197 /* red.png in Resources */,
 				12A67150192FDF8400E03C72 /* Roboto-Italic.ttf in Resources */,
 				12E53C69191D8C2F00911B7C /* 1_Verde.png in Resources */,
+				12FDC15A193A421900C99957 /* backBonito.png in Resources */,
 				12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */,
 				12A67155192FDF8400E03C72 /* Roboto-Regular.ttf in Resources */,
 				12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */,

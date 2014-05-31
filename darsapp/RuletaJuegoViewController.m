@@ -75,8 +75,8 @@
 
 - (void)rotateImageView:(UIImageView *)iv
 {
-    //rotacion=(M_PI/2);
-    rotacion=-(M_PI/2);
+    rotacion=(M_PI/2);
+    //rotacion=-(M_PI/2);
     [UIView animateWithDuration:.1 delay:0 options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          
@@ -138,16 +138,20 @@
                                                               
                                                               [UIView animateWithDuration:.23 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                   
-                                                                  iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                                                  
+                                                                  
+                                                                  CGAffineTransformRotate(iv.transform, rotacion);
                                                               } completion:^(BOOL finished) {
                                                                 
                                                                   
-                                                                 // CGFloat angulo=72.0f*(M_PI/180.0f);
-                                                                  CGFloat angulo=-(M_PI/2.0f);
+                                                                 
+                                                                  
+                                                                  CGFloat angulo=72.0f*(M_PI/180.0f);
+                                                                  //CGFloat angulo=-(M_PI/2.0f);
                                                                   
                                                                       if(finished){
-                                                                          //numerotema =  arc4random()%4;
-                                                                          numerotema =  arc4random()%3;
+                                                                          numerotema =  arc4random()%4;
+                                                                          //numerotema =  arc4random()%3;
                                                                           
                                                                           if(numerotema==0){
                                                                                [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
@@ -156,7 +160,8 @@
                                                                               [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                   
                                                                                 
-                                                                                  iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                  //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                         iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                               } completion:^(BOOL finished) {
                                                                                   //Esto se ejecuta en un hilo aparte
                                                                                   if(finished)
@@ -167,13 +172,15 @@
                                                                           }else if (numerotema==2){
                                                                               [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                   
-                                                                                  iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                  //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                       iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                               } completion:^(BOOL finished) {
                                                                                   
                                                                                   if(finished){
                                                                                       [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                       
-                                                                                          iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                          //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                               iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                       }  completion:^(BOOL finished) {
                                                                                       //Esto se ejecuta en un hilo aparte
                                                                                           if(finished)
@@ -188,16 +195,19 @@
                                                                           }else if (numerotema==3){
                                                                               [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                   
-                                                                                  iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                  //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                       iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                               } completion:^(BOOL finished) {
                                                                                   
                                                                                   [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                       
-                                                                                      iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                      //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                           iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                   } completion:^(BOOL finished) {
                                                                                       [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                           
-                                                                                          iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                          //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                               iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                       } completion:^(BOOL finished) {
                                                                                           //Esto se ejecuta en un hilo aparte
                                                                                           [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
@@ -212,20 +222,24 @@
                                                                               
                                                                               [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                   
-                                                                                  iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                  //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                       iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                               } completion:^(BOOL finished) {
                                                                                   
                                                                                   [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                       
-                                                                                      iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                     // iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                           iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                   } completion:^(BOOL finished) {
                                                                                       [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                           
-                                                                                          iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                         // iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                               iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                       } completion:^(BOOL finished) {
                                                                                           [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                               
-                                                                                              iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                             // iv.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                                   iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                           } completion:^(BOOL finished) {
                                                                                               //Esto se ejecuta en un hilo aparte
                                                                                               [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];

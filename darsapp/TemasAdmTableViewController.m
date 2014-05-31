@@ -10,6 +10,7 @@
 #import "URLsJson.h"
 #import "LiderAmbientalViewController.h"
 #import "CeldaTemas.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface TemasAdmTableViewController ()
 
@@ -22,6 +23,7 @@
     NSMutableArray *arregloRespuesta;
     NSMutableArray *titulos;
     NSMutableArray *nombresimagenes;
+    NSMutableArray * urlImagenes;
     
 
 }
@@ -41,6 +43,7 @@
     //[self recuperaEcoTipsLider];
     titulos = [[NSMutableArray alloc] init];
     nombresimagenes= [[NSMutableArray alloc] init];
+    urlImagenes = [[NSMutableArray alloc] init];
     [self recuperoTemas];
     
     
@@ -92,7 +95,11 @@
     if(indexPath.row < titulos.count){
         cell = [tableView dequeueReusableCellWithIdentifier: @"CeldaTemas"];
         ((CeldaTemas*)cell).lblTema.text=titulos[indexPath.row];
-        ((CeldaTemas*)cell).imagen.image=[UIImage imageNamed:nombresimagenes[indexPath.row]];
+        
+        
+        
+        [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"congruent_pentagon"]];
+       // ((CeldaTemas*)cell).imagen.image=[UIImage imageNamed:nombresimagenes[indexPath.row]];
 
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier: @"celdaguardar"];
@@ -125,8 +132,13 @@
             NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
             NSString *nombreimagen = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
             
+            NSString *postFijo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"url_archivo"];
+            
+            NSString *urlImagen = [NSString stringWithFormat:@"%@%@",@"http://200.16.7.111/dp2/rc/",[postFijo stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            
             [titulos addObject:titulo];
             [nombresimagenes addObject:nombreimagen];
+            [urlImagenes addObject:urlImagen];
             
         }
         
@@ -145,7 +157,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.row<8)
+    if(indexPath.row<titulos.count)
     [self performSegueWithIdentifier:@"idsegue" sender:self];
     
     

@@ -69,6 +69,11 @@
     self.btnRespuesta3.enabled = juego.disponibilidadRespuesta3;
     self.btnRespuesta4.enabled = juego.disponibilidadRespuesta4;
     
+    self.btnReloj.userInteractionEnabled=YES;
+    self.btnBomba.userInteractionEnabled=YES;
+    self.btnOtroOpcion.userInteractionEnabled=YES;
+    self.btnNuevaPregunta.userInteractionEnabled=YES;
+    
     
 }
 
@@ -161,11 +166,13 @@
         
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              if(!alertView.visible){
               alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor" message:[error localizedDescription]
                                                                  delegate:nil
                                                         cancelButtonTitle:@"Ok"
                                                         otherButtonTitles:nil];
               [alertView show];
+              }
           }];
 
     
@@ -198,8 +205,12 @@
         juego.disponibilidadRespuesta2 = YES;
         juego.disponibilidadRespuesta3 = YES;
         juego.disponibilidadRespuesta4 = YES;
+        //self.btnReloj.userInteractionEnabled=YES;
+        //self.btnBomba.userInteractionEnabled=YES;
+        //self.btnOtroOpcion.userInteractionEnabled=YES;
+        //self.btnNuevaPregunta.userInteractionEnabled=YES;
         [timer invalidate];
-        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:4];
+        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:3];
         
     }else{
         //Mandar puntaje a back END
@@ -367,6 +378,10 @@
             self.btnRespuesta2.enabled = NO;
             self.btnRespuesta3.enabled = NO;
             self.btnRespuesta4.enabled = NO;
+            self.btnReloj.userInteractionEnabled=NO;
+            self.btnBomba.userInteractionEnabled=NO;
+            self.btnOtroOpcion.userInteractionEnabled=NO;
+            self.btnNuevaPregunta.userInteractionEnabled=NO;
             [self terminarJuego:TRUE];
             
         }else if (opcion==1) {
@@ -375,6 +390,10 @@
             self.btnRespuesta2.userInteractionEnabled = NO;
             self.btnRespuesta3.enabled = NO;
             self.btnRespuesta4.enabled = NO;
+            self.btnReloj.userInteractionEnabled=NO;
+            self.btnBomba.userInteractionEnabled=NO;
+            self.btnOtroOpcion.userInteractionEnabled=NO;
+            self.btnNuevaPregunta.userInteractionEnabled=NO;
             [self terminarJuego:TRUE];
         }else if (opcion==2) {
             [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
@@ -382,6 +401,10 @@
             self.btnRespuesta2.enabled = NO;
             self.btnRespuesta3.userInteractionEnabled = NO;
             self.btnRespuesta4.enabled = NO;
+            self.btnReloj.userInteractionEnabled=NO;
+            self.btnBomba.userInteractionEnabled=NO;
+            self.btnOtroOpcion.userInteractionEnabled=NO;
+            self.btnNuevaPregunta.userInteractionEnabled=NO;
             [self terminarJuego:TRUE];
         }else if (opcion==3) {
             [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
@@ -389,6 +412,10 @@
             self.btnRespuesta2.enabled = NO;
             self.btnRespuesta3.enabled = NO;
             self.btnRespuesta4.userInteractionEnabled = NO;
+            self.btnReloj.userInteractionEnabled=NO;
+            self.btnBomba.userInteractionEnabled=NO;
+            self.btnOtroOpcion.userInteractionEnabled=NO;
+            self.btnNuevaPregunta.userInteractionEnabled=NO;
             [self terminarJuego:TRUE];
         }
 
@@ -413,17 +440,10 @@
             NSInteger value= [preguntaActual.RespuestaCorrecta integerValue];
             if(opcion==0){
                 [self.btnRespuesta1 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
-                self.btnRespuesta1.enabled = NO;
-                self.btnRespuesta2.enabled = NO;
-                self.btnRespuesta3.enabled = NO;
-                self.btnRespuesta4.enabled = NO;
                 
             }else if (opcion==1) {
                 [self.btnRespuesta2 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
-                self.btnRespuesta1.enabled = NO;
-                self.btnRespuesta2.enabled = NO;
-                self.btnRespuesta3.enabled = NO;
-                self.btnRespuesta4.enabled = NO;
+                
             }else if (opcion==2) {
                 [self.btnRespuesta3 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
             }else if (opcion==3) {
@@ -436,6 +456,10 @@
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.enabled = NO;
                 self.btnRespuesta4.enabled = NO;
+                self.btnReloj.userInteractionEnabled=NO;
+                self.btnBomba.userInteractionEnabled=NO;
+                self.btnOtroOpcion.userInteractionEnabled=NO;
+                self.btnNuevaPregunta.userInteractionEnabled=NO;
                 [self terminarJuego:FALSE];
             }else if (value==1) {
                 [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
@@ -443,6 +467,10 @@
                 self.btnRespuesta2.userInteractionEnabled = NO;
                 self.btnRespuesta3.enabled = NO;
                 self.btnRespuesta4.enabled = NO;
+                self.btnReloj.userInteractionEnabled=NO;
+                self.btnBomba.userInteractionEnabled=NO;
+                self.btnOtroOpcion.userInteractionEnabled=NO;
+                self.btnNuevaPregunta.userInteractionEnabled=NO;
                 [self terminarJuego:FALSE];
             }else if (value==2) {
                 [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
@@ -450,6 +478,10 @@
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.userInteractionEnabled = NO;
                 self.btnRespuesta4.enabled = NO;
+                self.btnReloj.userInteractionEnabled=NO;
+                self.btnBomba.userInteractionEnabled=NO;
+                self.btnOtroOpcion.userInteractionEnabled=NO;
+                self.btnNuevaPregunta.userInteractionEnabled=NO;
                 [self terminarJuego:FALSE];
             }else if (value==3) {
                 [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
@@ -457,6 +489,10 @@
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.enabled = NO;
                 self.btnRespuesta4.userInteractionEnabled = NO;
+                self.btnReloj.userInteractionEnabled=NO;
+                self.btnBomba.userInteractionEnabled=NO;
+                self.btnOtroOpcion.userInteractionEnabled=NO;
+                self.btnNuevaPregunta.userInteractionEnabled=NO;
                 [self terminarJuego:FALSE];
             }
         }

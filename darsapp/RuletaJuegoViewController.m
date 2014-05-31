@@ -55,6 +55,7 @@
     self.ptjMaximo.text = [NSString stringWithFormat:@"%0.2f",puntajeMaximo];
     
     self.ruleta.transform=CGAffineTransformMakeRotation(0);
+    self.btnGiraRuleta.userInteractionEnabled=YES;
 
 }
 
@@ -65,9 +66,10 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)SeapretoBoton:(id)sender {
+    
     self.btnGiraRuleta.userInteractionEnabled=NO;
     [self rotateImageView:self.ruleta ];
-    self.btnGiraRuleta.userInteractionEnabled=YES;
+
     
 }
 

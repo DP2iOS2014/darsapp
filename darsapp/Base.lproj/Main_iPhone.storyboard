@@ -2012,7 +2012,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circulote.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyv-be-fzm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circunferencia 300ppp.png" translatesAutoresizingMaskIntoConstraints="NO" id="zyv-be-fzm">
                                 <rect key="frame" x="36" y="166" width="264" height="263"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2047,7 +2047,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-cT-6Lk">
                                 <rect key="frame" x="138" y="268" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="center.png">
+                                <state key="normal" backgroundImage="botón girar 72ppp.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2078,7 +2078,7 @@
                         <viewControllerLayoutGuide type="top" id="sc2-un-aZg"/>
                         <viewControllerLayoutGuide type="bottom" id="lp0-W7-C1k"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ccX-vl-OI0">
+                    <view key="view" contentMode="scaleToFill" id="ccX-vl-OI0" customClass="SFSConfettiScreen">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -2210,7 +2210,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="GCd-Rw-ylz"/>
                     <connections>
@@ -2250,12 +2250,12 @@
         <image name="backButtonDerecha.png" width="25" height="25"/>
         <image name="blue.png" width="220" height="220"/>
         <image name="bombaFinal.png" width="54" height="45"/>
+        <image name="botón girar 72ppp.png" width="215" height="245"/>
         <image name="buenas_practicas.png" width="100" height="121"/>
         <image name="categorias_tittle.png" width="320" height="81"/>
-        <image name="center.png" width="112" height="118"/>
         <image name="checkButton.png" width="43" height="43"/>
         <image name="ciclo_de_vida.png" width="100" height="101"/>
-        <image name="circulote.png" width="250" height="250"/>
+        <image name="circunferencia 300ppp.png" width="1571" height="1571"/>
         <image name="cliconGirar.png" width="69" height="93"/>
         <image name="comodines_tittle.png" width="320" height="81"/>
         <image name="comojugar_tittle.png" width="320" height="81"/>

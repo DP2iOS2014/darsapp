@@ -12,6 +12,7 @@
 #import "SingletonJuego.h"
 #import "URLsJson.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "SFSConfettiScreen.h"
 @interface PreguntasViewController ()
 
 @end
@@ -43,6 +44,8 @@
 {
     
     [super viewDidLoad];
+    
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     [self recuperaEcoTipsLider];
     juego= [SingletonJuego sharedManager];
@@ -193,6 +196,8 @@
     
     
     if(Correcta){
+        SFSConfettiScreen * confetti = [[SFSConfettiScreen alloc] initWithFrame:CGRectMake(0, 0, 400, 400)];
+        [self.view addSubview:confetti];
         
         puntajeActual = puntajeActual + [preguntaActual.PuntajePregunta integerValue];
         

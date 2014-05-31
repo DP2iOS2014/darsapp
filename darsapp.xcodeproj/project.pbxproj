@@ -151,6 +151,7 @@
 		12A1F709190AD496001ED3BE /* ricepaper_v3.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F707190AD496001ED3BE /* ricepaper_v3.png */; };
 		12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC0191C46AC0095179D /* TimerPreguntas.m */; };
 		12A1FAC4191C56290095179D /* SingletonJuego.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1FAC3191C56290095179D /* SingletonJuego.m */; };
+		12A2023F193A64C100942747 /* SFSConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A2023E193A64C100942747 /* SFSConfettiScreen.m */; };
 		12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67140192FDF8400E03C72 /* Roboto-Black.ttf */; };
 		12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67141192FDF8400E03C72 /* Roboto-BlackItalic.ttf */; };
 		12A6714E192FDF8400E03C72 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67142192FDF8400E03C72 /* Roboto-Bold.ttf */; };
@@ -505,6 +506,8 @@
 		12A1FAC0191C46AC0095179D /* TimerPreguntas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerPreguntas.m; sourceTree = "<group>"; };
 		12A1FAC2191C56290095179D /* SingletonJuego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonJuego.h; sourceTree = "<group>"; };
 		12A1FAC3191C56290095179D /* SingletonJuego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonJuego.m; sourceTree = "<group>"; };
+		12A2023D193A64C100942747 /* SFSConfettiScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSConfettiScreen.h; sourceTree = "<group>"; };
+		12A2023E193A64C100942747 /* SFSConfettiScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSConfettiScreen.m; sourceTree = "<group>"; };
 		12A67140192FDF8400E03C72 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "FONTS/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		12A67141192FDF8400E03C72 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "FONTS/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		12A67142192FDF8400E03C72 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "FONTS/Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -1012,6 +1015,15 @@
 			name = "Login Images";
 			sourceTree = "<group>";
 		};
+		12A2023C193A647C00942747 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				12A2023D193A64C100942747 /* SFSConfettiScreen.h */,
+				12A2023E193A64C100942747 /* SFSConfettiScreen.m */,
+			);
+			name = Emitter;
+			sourceTree = "<group>";
+		};
 		12A6713F192FDF5B00E03C72 /* Fuentes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1241,6 +1253,7 @@
 		12F4CFCE18FF147500C8BFF5 /* darsapp */ = {
 			isa = PBXGroup;
 			children = (
+				12A2023C193A647C00942747 /* Emitter */,
 				12D1DD6519393CDA00BF81A5 /* Sonido */,
 				12A6713F192FDF5B00E03C72 /* Fuentes */,
 				12A128CB191EAE3000397B90 /* Ambientalizate */,
@@ -1639,6 +1652,7 @@
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
 				129EDB5C1938DE6F0088735B /* AyudaJuegoTableViewController.m in Sources */,
 				128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */,
+				12A2023F193A64C100942747 /* SFSConfettiScreen.m in Sources */,
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
 				12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */,

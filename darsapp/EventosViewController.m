@@ -10,6 +10,8 @@
 #import "URLsJson.h"
 #import "CeldaTemas.h"
 #import "UIImageView+AFNetworking.h"
+#import "GrillaEventoViewController.h"
+
 @interface EventosViewController ()
 
 @end
@@ -19,6 +21,13 @@
     NSDictionary * respuestajson;
     NSMutableArray * titulos;
     NSMutableArray * urlImagenes;
+    
+    NSMutableArray * descripcion;
+    NSMutableArray * enlace;
+    NSMutableArray * fecha;
+    NSMutableArray * lugar;
+    NSMutableArray * organizador;
+    NSMutableArray * estado;
     
 }
 
@@ -37,6 +46,12 @@
     
     titulos = [[NSMutableArray alloc]init];
     urlImagenes =[[NSMutableArray alloc]init];
+    descripcion =[[NSMutableArray alloc]init];
+    enlace =[[NSMutableArray alloc]init];
+    fecha =[[NSMutableArray alloc]init];
+    lugar =[[NSMutableArray alloc]init];
+    organizador =[[NSMutableArray alloc]init];
+    estado =[[NSMutableArray alloc]init];
     [self recuperoEventos];
     // Do any additional setup after loading the view.
 }
@@ -60,7 +75,7 @@
 
 -(void) recuperoEventos{
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"evento",@"tipo", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"evento",@"tipo",@"config",@"usuario", nil];
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
@@ -84,6 +99,24 @@
             
             NSString *urlImagen = [NSString stringWithFormat:@"%@%@",@"http://200.16.7.111/dp2/rc/",[postFijo stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
             
+            NSString * desc_evento = [[eventos objectAtIndex:i]objectForKey:@"field_descripcion_evento_value"];
+            
+            NSString * enlace_evento = [[eventos objectAtIndex:i]objectForKey:@"field_enlace_evento_value"];
+            
+            NSString * fecha_evento = [[eventos objectAtIndex:i]objectForKey:@"field_fecha_evento_value"];
+            
+            NSString * lugar_evento = [[eventos objectAtIndex:i]objectForKey:@"field_lugar_evento_value"];
+            
+            NSString * organizador_evento = [[eventos objectAtIndex:i]objectForKey:@"field_organizador_evento_value"];
+            
+            NSNumber * estado_evento = [[eventos objectAtIndex:i]objectForKey:@"estado"];
+            
+            [descripcion addObject:desc_evento];
+            [enlace addObject:enlace_evento];
+            [fecha addObject:fecha_evento];
+            [lugar addObject:lugar_evento];
+            [organizador addObject:organizador_evento];
+            [estado addObject:estado_evento];
             [titulos addObject:tituloEvento];
             [urlImagenes addObject:urlImagen];
             
@@ -138,6 +171,32 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(indexPath.row<titulos.count)
+        [self performSegueWithIdentifier:@"idsegue" sender:self];
+}
 
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier  isEqual: @"idsegue"]){
+        GrillaEventoViewController *escenadestino = segue.destinationViewController;
+        //escenadestino.respuestajson= respuesta;
+        
+        escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos];
+        escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes];
+        escenadestino.descripcion = [[NSMutableArray alloc] initWithArray: descripcion];
+        escenadestino.enlace = [[NSMutableArray alloc] initWithArray: enlace];
+        escenadestino.fecha = [[NSMutableArray alloc] initWithArray: fecha];
+        escenadestino.lugar = [[NSMutableArray alloc] initWithArray: lugar];
+        escenadestino.organizador = [[NSMutableArray alloc] initWithArray: organizador];
+        escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado];
+        NSIndexPath *selectedIndexPath = [self.tablaeventos indexPathForSelectedRow];
+        escenadestino.celda_seleccionada = selectedIndexPath.row;
+        
+    }
+    
+};
 
 @end

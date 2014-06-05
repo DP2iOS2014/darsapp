@@ -197,6 +197,8 @@
 		12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75833191AF36E00E03C5E /* 8_Separatas.png */; };
 		12AFACC9190B017F0007F5C0 /* flechitaDARS.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACC8190B017F0007F5C0 /* flechitaDARS.png */; };
 		12AFACCD190B14260007F5C0 /* dars1.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AFACCC190B14260007F5C0 /* dars1.png */; };
+		12C2E044193FF12F009F8549 /* TableViewControllerGrillaEventosInicial.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C2E043193FF12F009F8549 /* TableViewControllerGrillaEventosInicial.m */; };
+		12C2E047194006E5009F8549 /* EventosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C2E046194006E5009F8549 /* EventosViewController.m */; };
 		12C3650619393790002B2197 /* circulote.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650519393790002B2197 /* circulote.png */; };
 		12C3650819393C05002B2197 /* y9izE5EcE.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650719393C05002B2197 /* y9izE5EcE.png */; };
 		12C3650A19393C82002B2197 /* 4c9p68pcE.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3650919393C82002B2197 /* 4c9p68pcE.png */; };
@@ -562,6 +564,10 @@
 		12A75833191AF36E00E03C5E /* 8_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_Separatas.png; sourceTree = "<group>"; };
 		12AFACC8190B017F0007F5C0 /* flechitaDARS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flechitaDARS.png; sourceTree = "<group>"; };
 		12AFACCC190B14260007F5C0 /* dars1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dars1.png; sourceTree = "<group>"; };
+		12C2E042193FF12F009F8549 /* TableViewControllerGrillaEventosInicial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerGrillaEventosInicial.h; sourceTree = "<group>"; };
+		12C2E043193FF12F009F8549 /* TableViewControllerGrillaEventosInicial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerGrillaEventosInicial.m; sourceTree = "<group>"; };
+		12C2E045194006E5009F8549 /* EventosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventosViewController.h; sourceTree = "<group>"; };
+		12C2E046194006E5009F8549 /* EventosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventosViewController.m; sourceTree = "<group>"; };
 		12C3650519393790002B2197 /* circulote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circulote.png; sourceTree = "<group>"; };
 		12C3650719393C05002B2197 /* y9izE5EcE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y9izE5EcE.png; sourceTree = "<group>"; };
 		12C3650919393C82002B2197 /* 4c9p68pcE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4c9p68pcE.png; sourceTree = "<group>"; };
@@ -1288,6 +1294,10 @@
 				12F4D00918FF24C500C8BFF5 /* ContactanosTableViewController.h */,
 				12F4D00A18FF24C500C8BFF5 /* ContactanosTableViewController.m */,
 				12F4CFDA18FF147500C8BFF5 /* Main_iPhone.storyboard */,
+				12C2E045194006E5009F8549 /* EventosViewController.h */,
+				12C2E046194006E5009F8549 /* EventosViewController.m */,
+				12C2E042193FF12F009F8549 /* TableViewControllerGrillaEventosInicial.h */,
+				12C2E043193FF12F009F8549 /* TableViewControllerGrillaEventosInicial.m */,
 				1279F4CB19379AD500A32A7B /* CeldaTemas.h */,
 				1279F4CC19379AD500A32A7B /* CeldaTemas.m */,
 				12E53C60191D86F100911B7C /* RutasTableViewController.h */,
@@ -1676,9 +1686,11 @@
 				129D4D991919A86400D12423 /* BotellasViewController.m in Sources */,
 				12A20243193A778000942747 /* YLProgressBar.m in Sources */,
 				120FF22E1913F39400A697D6 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				12C2E044193FF12F009F8549 /* TableViewControllerGrillaEventosInicial.m in Sources */,
 				12E53C57191D7CAA00911B7C /* InformacionTableViewController.m in Sources */,
 				1224BB5B192E9161006ED075 /* MyFlowLayout.m in Sources */,
 				129D4D961919A70400D12423 /* iCarousel.m in Sources */,
+				12C2E047194006E5009F8549 /* EventosViewController.m in Sources */,
 				12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */,
 				120FF2321913F39400A697D6 /* UIImageView+AFNetworking.m in Sources */,
 				1276EA08192D4FB000B49816 /* LiderAmbientalCell.m in Sources */,

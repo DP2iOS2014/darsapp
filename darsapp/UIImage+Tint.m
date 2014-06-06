@@ -8,13 +8,15 @@
 
 #import "UIImage+Tint.h"
 
-@implementation UIImage (ImageTint)
+//@implementation UIImage (ImageTint)
+@implementation UIImage (Overlay)
 
-- (UIImage *)imageTintedWithColor:(UIColor *)color
+//- (UIImage *)imageTintedWithColor:(UIColor *)color
+- (UIImage *)imageWithColor:(UIColor *)color
 {
     if (color) {
         // Construct new image the same size as this one.
-        UIImage *image;
+        /*UIImage *image;
         UIGraphicsBeginImageContextWithOptions([self size], NO, 0.0); // 0.0 for scale means "scale for device's main screen".
         CGRect rect = CGRectZero;
         rect.size = [self size];
@@ -30,7 +32,20 @@
         image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
         
-        return image;
+        return image;*/
+        
+        UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGContextTranslateCTM(context, 0, self.size.height);
+        CGContextScaleCTM(context, 1.0, -1.0);
+        CGContextSetBlendMode(context, kCGBlendModeNormal);
+        CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+        CGContextClipToMask(context, rect, self.CGImage);
+        [color setFill];
+        CGContextFillRect(context, rect);
+        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return newImage;
     }
     
     return self;

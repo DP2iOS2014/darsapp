@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UIImage (ImageTint)
-
-- (UIImage *)imageTintedWithColor:(UIColor *)color;
+//@interface UIImage (ImageTint)
+@interface UIImage(Overlay)
+- (UIImage *)imageWithColor:(UIColor *)color;
 @end

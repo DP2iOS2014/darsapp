@@ -291,7 +291,9 @@ const NSTimeInterval YLProgressBarProgressTime         = 0.25f;        // s
     _progress       = 0.0f;
     _hideStripes    =  NO;
     _behavior       = YLProgressBarBehaviorDefault;
-    _stripesColor   = [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.28f];
+    _stripesColor   =[UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:0.28f];
+    
+     //[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1];
     
     _indicatorTextLabel                             = [[UILabel alloc] initWithFrame:self.frame];
     _indicatorTextLabel.adjustsFontSizeToFitWidth   = YES;

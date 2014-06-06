@@ -14,6 +14,7 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "SFSConfettiScreen.h"
 #import "YLProgressBar.h"
+#import "UIImage+Tint.h"
 
 @interface PreguntasViewController ()
 
@@ -94,6 +95,11 @@
     self.btnBomba.userInteractionEnabled=YES;
     self.btnOtroOpcion.userInteractionEnabled=YES;
     self.btnNuevaPregunta.userInteractionEnabled=YES;
+    
+     self.btnReloj.imageView.image = [self.btnReloj.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+    self.btnBomba.imageView.image = [self.btnBomba.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+    self.btnOtroOpcion.imageView.image = [self.btnOtroOpcion.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+    self.btnNuevaPregunta.imageView.image = [self.btnNuevaPregunta.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
     
     
 }

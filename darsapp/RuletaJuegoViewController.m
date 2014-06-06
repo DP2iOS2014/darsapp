@@ -8,6 +8,7 @@
 
 #import "RuletaJuegoViewController.h"
 #import "PreguntasViewController.h"
+#import "UIImage+Tint.h"
 
 
 @interface RuletaJuegoViewController ()
@@ -37,7 +38,10 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
-    [self.vidasCorazon setTintColor:[UIColor colorWithRed:85.0/255 green:201.0/255 blue:210.0/255 alpha:1]];
+    
+    self.vidasCorazon.image = [self.vidasCorazon.image imageWithColor:[UIColor colorWithRed:213.0/255 green:89.0/255 blue:91.0/255 alpha:1]];
+    
+    //self.vidasCorazon.image = [self.vidasCorazon.image imageTintedWithColor:[UIColor redColor]]; //Colorful imag
 
 
 }

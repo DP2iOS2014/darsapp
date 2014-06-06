@@ -12,7 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *ruleta;
 @property (strong, nonatomic) IBOutlet UIButton *btnGiraRuleta;
-@property (weak, nonatomic) IBOutlet UILabel *ptjMaximo;
 @property (weak, nonatomic) IBOutlet UILabel *ptjActual;
 
 

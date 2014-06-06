@@ -101,8 +101,18 @@
     
     [self.btnInstrucciones.layer insertSublayer:degradado4 atIndex:0];*/
     
+
+        
+        NSUserDefaults * datosDeUsuario = [NSUserDefaults standardUserDefaults];
+        
+    
+        double puntajeMaximo = [datosDeUsuario doubleForKey:@"puntajeMaximoRuleta"];
+        
+        self.ptjMaximo.text = [NSString stringWithFormat:@"%0.2f",puntajeMaximo];
     
 }
+
+
 - (IBAction)btnEmpezarJuego:(id)sender {
     
      juego = [SingletonJuego sharedManager];

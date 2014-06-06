@@ -155,6 +155,7 @@
 		12A20243193A778000942747 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A20242193A778000942747 /* YLProgressBar.m */; };
 		12A20245193A7DB100942747 /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A20244193A7DB100942747 /* noise.png */; };
 		12A46CF31940DC9900E11964 /* GrillaEventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */; };
+		12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CFA19414FA700E11964 /* SWRevealViewController.m */; };
 		12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67140192FDF8400E03C72 /* Roboto-Black.ttf */; };
 		12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67141192FDF8400E03C72 /* Roboto-BlackItalic.ttf */; };
 		12A6714E192FDF8400E03C72 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67142192FDF8400E03C72 /* Roboto-Bold.ttf */; };
@@ -518,6 +519,8 @@
 		12A20244193A7DB100942747 /* noise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noise.png; sourceTree = "<group>"; };
 		12A46CF11940DC9900E11964 /* GrillaEventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaEventoViewController.h; sourceTree = "<group>"; };
 		12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrillaEventoViewController.m; sourceTree = "<group>"; };
+		12A46CF919414F9200E11964 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		12A46CFA19414FA700E11964 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		12A67140192FDF8400E03C72 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "FONTS/Roboto-Black.ttf"; sourceTree = "<group>"; };
 		12A67141192FDF8400E03C72 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-BlackItalic.ttf"; path = "FONTS/Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		12A67142192FDF8400E03C72 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "FONTS/Roboto-Bold.ttf"; sourceTree = "<group>"; };
@@ -874,6 +877,7 @@
 		129D4DA01919B75300D12423 /* Juego */ = {
 			isa = PBXGroup;
 			children = (
+				12A46CF819414F1B00E11964 /* Libreria */,
 				12A20240193A771C00942747 /* ProgressBar */,
 				12C3651319394056002B2197 /* CategoriasViewController.h */,
 				12C3651419394056002B2197 /* CategoriasViewController.m */,
@@ -1047,6 +1051,15 @@
 				12A20242193A778000942747 /* YLProgressBar.m */,
 			);
 			name = ProgressBar;
+			sourceTree = "<group>";
+		};
+		12A46CF819414F1B00E11964 /* Libreria */ = {
+			isa = PBXGroup;
+			children = (
+				12A46CF919414F9200E11964 /* SWRevealViewController.h */,
+				12A46CFA19414FA700E11964 /* SWRevealViewController.m */,
+			);
+			name = Libreria;
 			sourceTree = "<group>";
 		};
 		12A6713F192FDF5B00E03C72 /* Fuentes */ = {
@@ -1686,6 +1699,7 @@
 				128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */,
 				12A2023F193A64C100942747 /* SFSConfettiScreen.m in Sources */,
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
+				12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
 				12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */,
 				129D4D991919A86400D12423 /* BotellasViewController.m in Sources */,

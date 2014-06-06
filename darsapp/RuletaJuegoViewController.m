@@ -49,11 +49,6 @@
     
     self.ptjActual.text = [NSString stringWithFormat:@"%0.2f",puntajeActual];
     
-    
-    double puntajeMaximo = [datosDeUsuario doubleForKey:@"puntajeMaximoRuleta"];
-    
-    self.ptjMaximo.text = [NSString stringWithFormat:@"%0.2f",puntajeMaximo];
-    
     self.ruleta.transform=CGAffineTransformMakeRotation(0);
     self.btnGiraRuleta.userInteractionEnabled=YES;
 

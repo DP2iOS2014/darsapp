@@ -13,11 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnContinuar;
 @property (strong, nonatomic) IBOutlet UIButton *btnRanking;
 @property (strong, nonatomic) IBOutlet UIButton *btnInstrucciones;
-
-
-
-
-
+@property (weak, nonatomic) IBOutlet UILabel *ptjMaximo;
 
 
 @property (strong, nonatomic) IBOutlet UIButton *pruebaBackButton;

@@ -1804,30 +1804,17 @@
                                     <outlet property="delegate" destination="6B6-mT-wRj" id="7Cg-dh-zYl"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K8T-ry-Ok2">
-                                <rect key="frame" x="16" y="8" width="305" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ng0-v1-J61">
+                                <rect key="frame" x="8" y="452" width="305" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Proximamente"/>
                                     <segment title="Asistiré"/>
                                     <segment title="Asistidos"/>
                                 </segments>
-                                <color key="tintColor" red="0.24705883860588074" green="0.75294125080108643" blue="0.66274511814117432" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="0.2470588386" green="0.75294125079999996" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
-                                    <action selector="cambiodeEvento:" destination="6B6-mT-wRj" eventType="valueChanged" id="TmN-oT-lFZ"/>
-                                </connections>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3hR-Ms-Vlj">
-                                <rect key="frame" x="8" y="469" width="304" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Proximamente"/>
-                                    <segment title="Asistiré"/>
-                                    <segment title="Asistidos"/>
-                                </segments>
-                                <color key="tintColor" white="0.72857862903225812" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="cambioEvento2:" destination="6B6-mT-wRj" eventType="valueChanged" id="w8C-gK-mqw"/>
+                                    <action selector="cambiodeEvento:" destination="6B6-mT-wRj" eventType="valueChanged" id="M9S-8n-lnP"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -1836,14 +1823,13 @@
                     <navigationItem key="navigationItem" id="7gI-45-yWj"/>
                     <connections>
                         <outlet property="tablaeventos" destination="hx7-i6-g4F" id="aSX-wa-4KP"/>
-                        <outlet property="tipoSegmentedControl" destination="K8T-ry-Ok2" id="0oY-Bh-U5n"/>
-                        <outlet property="tipoSegmentedControl2" destination="3hR-Ms-Vlj" id="aif-5P-f2D"/>
+                        <outlet property="tipoSegmentedControl" destination="ng0-v1-J61" id="5yL-KI-dDd"/>
                         <segue destination="bMS-YV-ICp" kind="push" identifier="idsegue" id="fZ8-Og-tQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRe-Dk-3cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="-6044"/>
+            <point key="canvasLocation" x="1002" y="-6043"/>
         </scene>
         <!--Grilla Evento View Controller-->
         <scene sceneID="LWH-SD-pu9">
@@ -2308,6 +2294,13 @@
                                     <action selector="SeapretoBoton:" destination="XrB-wS-iVQ" eventType="touchUpInside" id="cxd-DH-hlS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDR-6l-Av4">
+                                <rect key="frame" x="85" y="91" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -2316,6 +2309,7 @@
                         <outlet property="btnGiraRuleta" destination="nP9-cT-6Lk" id="Bxp-Qu-4AU"/>
                         <outlet property="ptjActual" destination="f2s-No-HmZ" id="hOu-mC-3hS"/>
                         <outlet property="ruleta" destination="zyv-be-fzm" id="37y-qQ-P4g"/>
+                        <outlet property="vidasRuleta" destination="BDR-6l-Av4" id="WdY-lK-mRA"/>
                         <segue destination="mQJ-Vt-z41" kind="modal" identifier="ViewPreguntas" modalTransitionStyle="flipHorizontal" id="JAq-Fb-1S1"/>
                     </connections>
                 </viewController>
@@ -2461,7 +2455,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UhS-wz-quG" customClass="YLProgressBar">
                                 <rect key="frame" x="20" y="52" width="244" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

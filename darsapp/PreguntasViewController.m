@@ -27,6 +27,7 @@
     NSDictionary * respuestajson;
     SystemSoundID audioEffect;
     NSInteger puntajeActual;
+    NSInteger vidasActual;
     UIAlertView *alertView;
 
 }
@@ -70,6 +71,7 @@
     
     NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
     puntajeActual = [datosUsuario doubleForKey:@"puntajeActualJuegoRuleta"];
+    vidasActual = [datosUsuario doubleForKey:@"vidasJuegoRuleta"];
     
     tieneOtraOpcion=NO;
     self.Tiempo.text= [[NSString alloc] initWithFormat:@"%ld",(long)juego.Tiempo] ;
@@ -389,7 +391,7 @@
             self.btnBomba.userInteractionEnabled=NO;
             self.btnOtroOpcion.userInteractionEnabled=NO;
             self.btnNuevaPregunta.userInteractionEnabled=NO;
-            [self terminarJuego:TRUE];
+            [self terminarJuego:0];
             
         }else if (opcion==1) {
             [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
@@ -401,7 +403,7 @@
             self.btnBomba.userInteractionEnabled=NO;
             self.btnOtroOpcion.userInteractionEnabled=NO;
             self.btnNuevaPregunta.userInteractionEnabled=NO;
-            [self terminarJuego:TRUE];
+            [self terminarJuego:0];
         }else if (opcion==2) {
             [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
             self.btnRespuesta1.enabled = NO;
@@ -412,7 +414,7 @@
             self.btnBomba.userInteractionEnabled=NO;
             self.btnOtroOpcion.userInteractionEnabled=NO;
             self.btnNuevaPregunta.userInteractionEnabled=NO;
-            [self terminarJuego:TRUE];
+            [self terminarJuego:0];
         }else if (opcion==3) {
             [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
             self.btnRespuesta1.enabled = NO;
@@ -423,7 +425,7 @@
             self.btnBomba.userInteractionEnabled=NO;
             self.btnOtroOpcion.userInteractionEnabled=NO;
             self.btnNuevaPregunta.userInteractionEnabled=NO;
-            [self terminarJuego:TRUE];
+            [self terminarJuego:0];
         }
 
     }else{
@@ -445,6 +447,7 @@
             
         }else{
             NSInteger value= [preguntaActual.RespuestaCorrecta integerValue];
+            vidasActual=vidasActual-1;
             if(opcion==0){
                 [self.btnRespuesta1 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
                 
@@ -457,50 +460,61 @@
                 [self.btnRespuesta4 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
             }
         
+            self.btnReloj.userInteractionEnabled=NO;
+            self.btnBomba.userInteractionEnabled=NO;
+            self.btnOtroOpcion.userInteractionEnabled=NO;
+            self.btnNuevaPregunta.userInteractionEnabled=NO;
+            
+            
             if(value==0){
                 [self.btnRespuesta1 setTitle:@"Correcto" forState:(UIControlStateNormal)];
                 self.btnRespuesta1.userInteractionEnabled = NO;
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.enabled = NO;
                 self.btnRespuesta4.enabled = NO;
-                self.btnReloj.userInteractionEnabled=NO;
-                self.btnBomba.userInteractionEnabled=NO;
-                self.btnOtroOpcion.userInteractionEnabled=NO;
-                self.btnNuevaPregunta.userInteractionEnabled=NO;
-                [self terminarJuego:FALSE];
+                if(vidasActual==0){
+                    [self terminarJuego:1];
+                }else {
+                    [self terminarJuego:2];
+                    
+                }
             }else if (value==1) {
                 [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
                 self.btnRespuesta1.enabled = NO;
                 self.btnRespuesta2.userInteractionEnabled = NO;
                 self.btnRespuesta3.enabled = NO;
                 self.btnRespuesta4.enabled = NO;
-                self.btnReloj.userInteractionEnabled=NO;
-                self.btnBomba.userInteractionEnabled=NO;
-                self.btnOtroOpcion.userInteractionEnabled=NO;
-                self.btnNuevaPregunta.userInteractionEnabled=NO;
-                [self terminarJuego:FALSE];
+                if(vidasActual==0){
+                    [self terminarJuego:1];
+                }else {
+                    [self terminarJuego:2];
+                    
+                }
             }else if (value==2) {
                 [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
                 self.btnRespuesta1.enabled = NO;
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.userInteractionEnabled = NO;
                 self.btnRespuesta4.enabled = NO;
-                self.btnReloj.userInteractionEnabled=NO;
-                self.btnBomba.userInteractionEnabled=NO;
-                self.btnOtroOpcion.userInteractionEnabled=NO;
-                self.btnNuevaPregunta.userInteractionEnabled=NO;
-                [self terminarJuego:FALSE];
+                if(vidasActual==0){
+                    [self terminarJuego:1];
+                }else {
+                    [self terminarJuego:2];
+                    
+                }
             }else if (value==3) {
                 [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
                 self.btnRespuesta1.enabled = NO;
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.enabled = NO;
                 self.btnRespuesta4.userInteractionEnabled = NO;
-                self.btnReloj.userInteractionEnabled=NO;
-                self.btnBomba.userInteractionEnabled=NO;
-                self.btnOtroOpcion.userInteractionEnabled=NO;
-                self.btnNuevaPregunta.userInteractionEnabled=NO;
-                [self terminarJuego:FALSE];
+                if(vidasActual==0){
+                    [self terminarJuego:1];
+                }else {
+                    [self terminarJuego:2];
+                    
+                }
+                
             }
         }
     
@@ -512,18 +526,15 @@
 /* termino seleccionar respuesta*/
 
 
-
 /*Terminar Juego*/
--(void) terminarJuego: (BOOL) Correcta
+-(void) terminarJuego: (int) Correcta
 {
-    
-    
-    if(Correcta){
+    // 0: Acerto a la pregunta , 1: Perdio todo el juego , 2:Fallo pregunta pero aun tiene vidas
+    if(Correcta==0){
         SFSConfettiScreen * confetti = [[SFSConfettiScreen alloc] initWithFrame:CGRectMake(0, 0, 400, 400)];
         [self.view addSubview:confetti];
         
         puntajeActual = puntajeActual + [preguntaActual.PuntajePregunta integerValue];
-        
         [[NSUserDefaults standardUserDefaults] setInteger:puntajeActual forKey:@"puntajeActualJuegoRuleta"];
         
         juego.Tiempo = 30;
@@ -536,7 +547,7 @@
         [timer invalidate];
         [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:3];
         
-    }else{
+    }else if (Correcta==1){
         //Mandar puntaje a back END
         NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
         int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
@@ -546,6 +557,17 @@
         }
         [self performSelector:@selector(irAHacerHora) withObject:nil afterDelay:2];
         
+    }else if (Correcta==2){
+        [[NSUserDefaults standardUserDefaults] setInteger:vidasActual forKey:@"vidasJuegoRuleta"];
+        juego.Tiempo = 30;
+        juego.tieneOtraOpcion = NO;
+        juego.disponibilidadBoton=YES;
+        juego.disponibilidadRespuesta1 = YES;
+        juego.disponibilidadRespuesta2 = YES;
+        juego.disponibilidadRespuesta3 = YES;
+        juego.disponibilidadRespuesta4 = YES;
+        [timer invalidate];
+        [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:3];
     }
     
     
@@ -591,7 +613,7 @@
     [self.progressBarRoundedFat setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
     if([self.Tiempo.text intValue] == 0){
         [timer invalidate];
-        [self terminarJuego:FALSE];
+        [self terminarJuego:1];
         
         
     }

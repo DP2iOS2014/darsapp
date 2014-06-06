@@ -49,6 +49,9 @@
     
     self.ptjActual.text = [NSString stringWithFormat:@"%0.2f",puntajeActual];
     
+    NSInteger vidas = [datosDeUsuario doubleForKey:@"vidasJuegoRuleta"];
+
+    self.vidasRuleta.text=[NSString stringWithFormat:@"%i",vidas];;
     self.ruleta.transform=CGAffineTransformMakeRotation(0);
     self.btnGiraRuleta.userInteractionEnabled=YES;
 

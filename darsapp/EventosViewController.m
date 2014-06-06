@@ -52,8 +52,10 @@
     lugar =[[NSMutableArray alloc]init];
     organizador =[[NSMutableArray alloc]init];
     estado =[[NSMutableArray alloc]init];
-    [self recuperoEventos];
-    // Do any additional setup after loading the view.
+    [self recuperoEventos:@1];
+    
+    self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,7 +75,7 @@
 }
 */
 
--(void) recuperoEventos{
+-(void) recuperoEventos: (NSNumber*)estadoevento{
     
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"evento",@"tipo",@"config",@"usuario", nil];
     
@@ -109,16 +111,20 @@
             
             NSString * organizador_evento = [[eventos objectAtIndex:i]objectForKey:@"field_organizador_evento_value"];
             
-            NSNumber * estado_evento = [[eventos objectAtIndex:i]objectForKey:@"estado"];
+            NSNumber * estado_evento = (NSNumber*)[[eventos objectAtIndex:i]objectForKey:@"estado"];
             
-            [descripcion addObject:desc_evento];
-            [enlace addObject:enlace_evento];
-            [fecha addObject:fecha_evento];
-            [lugar addObject:lugar_evento];
-            [organizador addObject:organizador_evento];
-            [estado addObject:estado_evento];
-            [titulos addObject:tituloEvento];
-            [urlImagenes addObject:urlImagen];
+            
+            if(estadoevento.intValue == estado_evento.intValue){
+                [descripcion addObject:desc_evento];
+                [enlace addObject:enlace_evento];
+                [fecha addObject:fecha_evento];
+                [lugar addObject:lugar_evento];
+                [organizador addObject:organizador_evento];
+                [estado addObject:estado_evento];
+                [titulos addObject:tituloEvento];
+                [urlImagenes addObject:urlImagen];
+            }
+            
             
         }
         
@@ -137,6 +143,19 @@
           }];
 }
 
+
+- (IBAction)cambiodeEvento:(UISegmentedControl *)sender {
+    if([sender selectedSegmentIndex]==0){
+        [ titulos removeAllObjects];
+        [self recuperoEventos:@1];
+    }else if([sender selectedSegmentIndex]==1){
+        [ titulos removeAllObjects];
+        [self recuperoEventos:@2];
+    }else if([sender selectedSegmentIndex]==2){
+        [ titulos removeAllObjects];
+         [self recuperoEventos:@3];
+    }
+}
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -165,7 +184,7 @@
     
     
     
-    [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"congruent_pentagon"]];
+    [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
     
     
     return cell;

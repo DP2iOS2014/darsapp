@@ -47,6 +47,13 @@
     
     self.lblLugar.text = self.lugar[self.celda_seleccionada];
     
+    if (((NSNumber*)(self.estado[self.celda_seleccionada])).intValue == 2) {
+        [self.btnAsistir setTitle:@"Asistiré" forState:UIControlStateNormal];
+    }
+    else{
+        [self.btnAsistir setTitle:@"No Asistiré" forState:UIControlStateNormal];
+    }
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     
     

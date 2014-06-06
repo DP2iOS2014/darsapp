@@ -55,7 +55,9 @@
     nids =[[NSMutableArray alloc]init];
     [self recuperoEventos:@1];
     
-    self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
+    
+    self.tablaeventos.backgroundColor = [UIColor clearColor];
    
 }
 
@@ -170,12 +172,15 @@
 - (IBAction)cambiodeEvento:(UISegmentedControl *)sender {
     if([sender selectedSegmentIndex]==0){
         [ titulos removeAllObjects];
+        [ urlImagenes removeAllObjects];
         [self recuperoEventos:@1];
     }else if([sender selectedSegmentIndex]==1){
         [ titulos removeAllObjects];
+        [ urlImagenes removeAllObjects];
         [self recuperoEventos:@2];
     }else if([sender selectedSegmentIndex]==2){
         [ titulos removeAllObjects];
+        [ urlImagenes removeAllObjects];
          [self recuperoEventos:@3];
     }
 }
@@ -183,14 +188,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     if(titulos.count>0)
     return titulos.count;
@@ -207,13 +210,12 @@
     
     cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
     ((CeldaTemas*)cell).lblTema.text=titulos[indexPath.row];
-    
-    
-    
     [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
+    [((CeldaTemas*)cell).imagen setHidden:NO];
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
         ((CeldaTemas*)cell).lblTema.text=@"No hay eventos";
+        [((CeldaTemas*)cell).imagen setHidden:YES];
         
     }
     

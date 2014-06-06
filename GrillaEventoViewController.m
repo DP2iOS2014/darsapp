@@ -8,6 +8,8 @@
 
 #import "GrillaEventoViewController.h"
 #import "URLsJson.h"
+#import "UIImageView+AFNetworking.h"
+
 @interface GrillaEventoViewController ()
 
 @end
@@ -30,18 +32,14 @@
     
     self.lblFecha.text = self.fecha[self.celda_seleccionada];
     
+    [self.imagenEvento setImageWithURL:[NSURL URLWithString:self.urlImagenes[self.celda_seleccionada]] placeholderImage:[UIImage imageNamed:@"process.png"]];
+    
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy/dd/MM"];
     NSDate *date = [dateFormat dateFromString:self.fecha[self.celda_seleccionada]];
     NSString *dateToday = [dateFormat stringFromDate:[NSDate date]];
     
     self.lblFecha.text = dateToday;
-    
-    NSString *postFijo = self.urlImagenes[self.celda_seleccionada];
-    
-    NSString *urlImagen = [NSString stringWithFormat:@"%@%@",@"http://200.16.7.111/dp2/rc/",[postFijo stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    
-    self.imagenEvento.image = [UIImage imageNamed:urlImagen];
     
     self.lblDescripcion.text = self.descripcion[self.celda_seleccionada];
     

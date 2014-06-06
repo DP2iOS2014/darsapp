@@ -48,7 +48,7 @@
 - (void)initRoundedFatProgressBar
 {
     
-    _progressBarRoundedFat.progressTintColor        = [UIColor colorWithRed:239/255.0f green:225/255.0f blue:13/255.0f alpha:1.0f];
+    _progressBarRoundedFat.progressTintColor        = [UIColor colorWithRed:68/255.0f green:195/255.0f blue:172/255.0f alpha:1.0f];
     _progressBarRoundedFat.stripesColor             = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.36f];
     
 }

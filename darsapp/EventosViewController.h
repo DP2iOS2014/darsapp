@@ -11,5 +11,6 @@
 @interface EventosViewController : ViewController<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tablaeventos;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipoSegmentedControl;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *tipoSegmentedControl2;
 
 @end

@@ -143,6 +143,20 @@
           }];
 }
 
+- (IBAction)cambioEvento2:(id)sender {
+    if([sender selectedSegmentIndex]==0){
+        [ titulos removeAllObjects];
+        [self recuperoEventos:@1];
+    }else if([sender selectedSegmentIndex]==1){
+        [ titulos removeAllObjects];
+        [self recuperoEventos:@2];
+    }else if([sender selectedSegmentIndex]==2){
+        [ titulos removeAllObjects];
+        [self recuperoEventos:@3];
+    }
+
+    
+}
 
 - (IBAction)cambiodeEvento:(UISegmentedControl *)sender {
     if([sender selectedSegmentIndex]==0){
@@ -169,15 +183,18 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
+    if(titulos.count>0)
     return titulos.count;
+    else return 1;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell * cell;
     
+    if(titulos.count>0){
     
-    UITableViewCell *cell;
     
     cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
     ((CeldaTemas*)cell).lblTema.text=titulos[indexPath.row];
@@ -185,14 +202,18 @@
     
     
     [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
-    
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
+        ((CeldaTemas*)cell).lblTema.text=@"No hay eventos";
+        
+    }
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.row<titulos.count)
+    if(indexPath.row<titulos.count && titulos.count>0)
         [self performSegueWithIdentifier:@"idsegue" sender:self];
 }
 

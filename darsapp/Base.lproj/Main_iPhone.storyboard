@@ -421,7 +421,6 @@
         <!--Ayuda Juego Table View Controller - Ayuda-->
         <scene sceneID="3D6-k3-w1R">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7OW-iB-J8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="HcH-GF-7Rh" customClass="AyudaJuegoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="0xn-05-Weu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -496,6 +495,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Ayuda" id="Upm-qX-b6C"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OW-iB-J8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1199" y="-3994"/>
         </scene>
@@ -1805,7 +1805,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K8T-ry-Ok2">
-                                <rect key="frame" x="8" y="452" width="305" height="29"/>
+                                <rect key="frame" x="16" y="8" width="305" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Proximamente"/>
@@ -1817,6 +1817,19 @@
                                     <action selector="cambiodeEvento:" destination="6B6-mT-wRj" eventType="valueChanged" id="TmN-oT-lFZ"/>
                                 </connections>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3hR-Ms-Vlj">
+                                <rect key="frame" x="8" y="469" width="304" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Proximamente"/>
+                                    <segment title="Asistiré"/>
+                                    <segment title="Asistidos"/>
+                                </segments>
+                                <color key="tintColor" white="0.72857862903225812" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="cambioEvento2:" destination="6B6-mT-wRj" eventType="valueChanged" id="w8C-gK-mqw"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1824,12 +1837,13 @@
                     <connections>
                         <outlet property="tablaeventos" destination="hx7-i6-g4F" id="aSX-wa-4KP"/>
                         <outlet property="tipoSegmentedControl" destination="K8T-ry-Ok2" id="0oY-Bh-U5n"/>
+                        <outlet property="tipoSegmentedControl2" destination="3hR-Ms-Vlj" id="aif-5P-f2D"/>
                         <segue destination="bMS-YV-ICp" kind="push" identifier="idsegue" id="fZ8-Og-tQm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRe-Dk-3cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="-6075"/>
+            <point key="canvasLocation" x="1002" y="-6044"/>
         </scene>
         <!--Grilla Evento View Controller-->
         <scene sceneID="LWH-SD-pu9">

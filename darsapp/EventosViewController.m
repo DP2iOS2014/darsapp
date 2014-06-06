@@ -55,6 +55,7 @@
     nids =[[NSMutableArray alloc]init];
     [self recuperoEventos:@1];
     
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     
     self.tablaeventos.backgroundColor = [UIColor clearColor];
@@ -123,7 +124,9 @@
             NSNumber * estado_evento = (NSNumber*)[[eventos objectAtIndex:i]objectForKey:@"estado"];
             NSNumber * nid = (NSNumber *)[[eventos objectAtIndex:i] objectForKey:@"nid"];
             
-            if(estadoevento.intValue == estado_evento.intValue){
+            //NSNull * null;
+               
+               if(estadoevento.intValue == estado_evento.intValue){
                 [descripcion addObject:desc_evento];
                 [enlace addObject:enlace_evento];
                 [fecha addObject:fecha_evento];

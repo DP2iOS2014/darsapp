@@ -156,6 +156,7 @@
 		12A20245193A7DB100942747 /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A20244193A7DB100942747 /* noise.png */; };
 		12A3A6D41942152100BEEC00 /* hearts-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D31942152100BEEC00 /* hearts-50.png */; };
 		12A3A6D6194215B200BEEC00 /* hearts-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D5194215B200BEEC00 /* hearts-75.png */; };
+		12A3A6D91942245000BEEC00 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A3A6D81942245000BEEC00 /* UIImage+Tint.m */; };
 		12A46CF31940DC9900E11964 /* GrillaEventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */; };
 		12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CFA19414FA700E11964 /* SWRevealViewController.m */; };
 		12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67140192FDF8400E03C72 /* Roboto-Black.ttf */; };
@@ -521,6 +522,8 @@
 		12A20244193A7DB100942747 /* noise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noise.png; sourceTree = "<group>"; };
 		12A3A6D31942152100BEEC00 /* hearts-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hearts-50.png"; sourceTree = "<group>"; };
 		12A3A6D5194215B200BEEC00 /* hearts-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hearts-75.png"; sourceTree = "<group>"; };
+		12A3A6D71942245000BEEC00 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		12A3A6D81942245000BEEC00 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 		12A46CF11940DC9900E11964 /* GrillaEventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaEventoViewController.h; sourceTree = "<group>"; };
 		12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrillaEventoViewController.m; sourceTree = "<group>"; };
 		12A46CF919414F9200E11964 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -907,6 +910,8 @@
 				12A1FAC0191C46AC0095179D /* TimerPreguntas.m */,
 				12A1FAC2191C56290095179D /* SingletonJuego.h */,
 				12A1FAC3191C56290095179D /* SingletonJuego.m */,
+				12A3A6D71942245000BEEC00 /* UIImage+Tint.h */,
+				12A3A6D81942245000BEEC00 /* UIImage+Tint.m */,
 			);
 			name = Juego;
 			sourceTree = "<group>";
@@ -1729,6 +1734,7 @@
 				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
 				12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */,
 				129EDB831938F38A0088735B /* Instrucciones3ViewController.m in Sources */,
+				12A3A6D91942245000BEEC00 /* UIImage+Tint.m in Sources */,
 				12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */,
 				124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */,
 				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,

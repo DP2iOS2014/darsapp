@@ -2294,13 +2294,18 @@
                                     <action selector="SeapretoBoton:" destination="XrB-wS-iVQ" eventType="touchUpInside" id="cxd-DH-hlS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDR-6l-Av4">
-                                <rect key="frame" x="85" y="91" width="42" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDR-6l-Av4">
+                                <rect key="frame" x="246" y="100" width="14" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hearts-75.png" translatesAutoresizingMaskIntoConstraints="NO" id="6sh-nX-XTy">
+                                <rect key="frame" x="216" y="75" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -2309,6 +2314,7 @@
                         <outlet property="btnGiraRuleta" destination="nP9-cT-6Lk" id="Bxp-Qu-4AU"/>
                         <outlet property="ptjActual" destination="f2s-No-HmZ" id="hOu-mC-3hS"/>
                         <outlet property="ruleta" destination="zyv-be-fzm" id="37y-qQ-P4g"/>
+                        <outlet property="vidasCorazon" destination="6sh-nX-XTy" id="geQ-WO-Abp"/>
                         <outlet property="vidasRuleta" destination="BDR-6l-Av4" id="WdY-lK-mRA"/>
                         <segue destination="mQJ-Vt-z41" kind="modal" identifier="ViewPreguntas" modalTransitionStyle="flipHorizontal" id="JAq-Fb-1S1"/>
                     </connections>
@@ -2515,6 +2521,7 @@
         <image name="floppy.png" width="256" height="256"/>
         <image name="flower-pot.png" width="30" height="30"/>
         <image name="green.png" width="220" height="220"/>
+        <image name="hearts-75.png" width="75" height="75"/>
         <image name="iphone_maps_icon_ios6.png" width="542" height="543"/>
         <image name="logo.png" width="420" height="449"/>
         <image name="manito.png" width="52" height="54"/>

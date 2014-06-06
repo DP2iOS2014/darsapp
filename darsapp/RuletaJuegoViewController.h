@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnGiraRuleta;
 @property (weak, nonatomic) IBOutlet UILabel *ptjActual;
 @property (weak, nonatomic) IBOutlet UILabel *vidasRuleta;
+@property (weak, nonatomic) IBOutlet UIImageView *vidasCorazon;
 
 
 @end

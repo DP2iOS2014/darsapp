@@ -37,6 +37,7 @@
     UIImage *original = self.pruebaBackButton.imageView.image;
     
     [self.pruebaBackButton setImage:[original imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    
 }
 - (IBAction)apreteBoniBackButton:(UIButton *)sender {
     

@@ -154,6 +154,8 @@
 		12A2023F193A64C100942747 /* SFSConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A2023E193A64C100942747 /* SFSConfettiScreen.m */; };
 		12A20243193A778000942747 /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A20242193A778000942747 /* YLProgressBar.m */; };
 		12A20245193A7DB100942747 /* noise.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A20244193A7DB100942747 /* noise.png */; };
+		12A3A6D41942152100BEEC00 /* hearts-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D31942152100BEEC00 /* hearts-50.png */; };
+		12A3A6D6194215B200BEEC00 /* hearts-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D5194215B200BEEC00 /* hearts-75.png */; };
 		12A46CF31940DC9900E11964 /* GrillaEventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */; };
 		12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CFA19414FA700E11964 /* SWRevealViewController.m */; };
 		12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67140192FDF8400E03C72 /* Roboto-Black.ttf */; };
@@ -517,6 +519,8 @@
 		12A20241193A776C00942747 /* YLProgressBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YLProgressBar.h; sourceTree = "<group>"; };
 		12A20242193A778000942747 /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressBar.m; sourceTree = "<group>"; };
 		12A20244193A7DB100942747 /* noise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noise.png; sourceTree = "<group>"; };
+		12A3A6D31942152100BEEC00 /* hearts-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hearts-50.png"; sourceTree = "<group>"; };
+		12A3A6D5194215B200BEEC00 /* hearts-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hearts-75.png"; sourceTree = "<group>"; };
 		12A46CF11940DC9900E11964 /* GrillaEventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaEventoViewController.h; sourceTree = "<group>"; };
 		12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrillaEventoViewController.m; sourceTree = "<group>"; };
 		12A46CF919414F9200E11964 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -910,6 +914,8 @@
 		129D4DA11919BE0D00D12423 /* Imagenes Juego */ = {
 			isa = PBXGroup;
 			children = (
+				12A3A6D5194215B200BEEC00 /* hearts-75.png */,
+				12A3A6D31942152100BEEC00 /* hearts-50.png */,
 				12A20244193A7DB100942747 /* noise.png */,
 				12C365161939430C002B2197 /* center.png */,
 				12C3650B19393E50002B2197 /* blue.png */,
@@ -1523,6 +1529,7 @@
 				129EDB791938EB3E0088735B /* floppy.png in Resources */,
 				12F4D00F18FF2FEF00C8BFF5 /* iphone_maps_icon_ios6.png in Resources */,
 				12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */,
+				12A3A6D6194215B200BEEC00 /* hearts-75.png in Resources */,
 				12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */,
 				1276EA1A192D62C400B49816 /* Compras1.png in Resources */,
 				12DDC9821930051A005E820A /* LiderAmbiental.png in Resources */,
@@ -1604,6 +1611,7 @@
 				12E53C69191D8C2F00911B7C /* 1_Verde.png in Resources */,
 				12FDC15A193A421900C99957 /* backBonito.png in Resources */,
 				12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */,
+				12A3A6D41942152100BEEC00 /* hearts-50.png in Resources */,
 				12A67155192FDF8400E03C72 /* Roboto-Regular.ttf in Resources */,
 				12A20245193A7DB100942747 /* noise.png in Resources */,
 				12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */,

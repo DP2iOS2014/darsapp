@@ -28,7 +28,7 @@
     NSMutableArray * lugar;
     NSMutableArray * organizador;
     NSMutableArray * estado;
-    
+    NSMutableArray  * nids;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -52,6 +52,7 @@
     lugar =[[NSMutableArray alloc]init];
     organizador =[[NSMutableArray alloc]init];
     estado =[[NSMutableArray alloc]init];
+    nids =[[NSMutableArray alloc]init];
     [self recuperoEventos:@1];
     
     self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
@@ -77,7 +78,13 @@
 
 -(void) recuperoEventos: (NSNumber*)estadoevento{
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"evento",@"tipo",@"config",@"usuario", nil];
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    
+    NSString * usuario = [datosUsuario stringForKey:@"NombreUsuario"];
+    NSString * contraseña = [datosUsuario stringForKey:@"ContraseñaUsuario"];
+    
+    if(!([usuario isEqualToString:@""] || usuario == nil) ){
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"evento",@"tipo",usuario,@"usuario", nil];
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
@@ -112,7 +119,7 @@
             NSString * organizador_evento = [[eventos objectAtIndex:i]objectForKey:@"field_organizador_evento_value"];
             
             NSNumber * estado_evento = (NSNumber*)[[eventos objectAtIndex:i]objectForKey:@"estado"];
-            
+            NSNumber * nid = (NSNumber *)[[eventos objectAtIndex:i] objectForKey:@"nid"];
             
             if(estadoevento.intValue == estado_evento.intValue){
                 [descripcion addObject:desc_evento];
@@ -123,6 +130,7 @@
                 [estado addObject:estado_evento];
                 [titulos addObject:tituloEvento];
                 [urlImagenes addObject:urlImagen];
+                [nids addObject:nid];
             }
             
             
@@ -141,6 +149,7 @@
                                                         otherButtonTitles:nil];
               [alertView show];
           }];
+    }
 }
 
 - (IBAction)cambioEvento2:(id)sender {
@@ -234,7 +243,7 @@
         escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado];
         NSIndexPath *selectedIndexPath = [self.tablaeventos indexPathForSelectedRow];
         escenadestino.celda_seleccionada = selectedIndexPath.row;
-        
+        escenadestino.nidseleccionado = [nids objectAtIndex:selectedIndexPath.row];
     }
     
 };

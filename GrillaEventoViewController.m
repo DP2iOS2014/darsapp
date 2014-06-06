@@ -7,7 +7,7 @@
 //
 
 #import "GrillaEventoViewController.h"
-
+#import "URLsJson.h"
 @interface GrillaEventoViewController ()
 
 @end
@@ -67,6 +67,30 @@
 }
 - (IBAction)RegistrarEvento:(id)sender {
     
+    
+    
+    NSNumber * nid =self.nidseleccionado;
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config",@"usuario",nid,@"evento_nid",@"5555555",@"telefono", nil];
+    
+    NSDictionary * accion = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",cuerpo,@"cuerpo" , nil];
+
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    
+    [manager POST:RecuperoTemas parameters:accion success:^(AFHTTPRequestOperation *task, id responseObject) {
+       
+        NSLog(@"JSON: %@", responseObject);
+
+    } failure:^(AFHTTPRequestOperation *task, NSError *error) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                            message:[error localizedDescription]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }];
     
     
 }

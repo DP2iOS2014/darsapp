@@ -28,5 +28,5 @@
 @property NSMutableArray * organizador;
 @property NSMutableArray * estado;
 @property NSInteger celda_seleccionada;
-
+@property NSNumber* nidseleccionado;
 @end

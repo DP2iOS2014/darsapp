@@ -39,7 +39,7 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     [self.vidasCorazon setTintColor:[UIColor colorWithRed:85.0/255 green:201.0/255 blue:210.0/255 alpha:1]];
 
-    
+
 }
 
 - (void) viewWillAppear:(BOOL)animated{
@@ -54,7 +54,9 @@
 
     self.vidasRuleta.text=[NSString stringWithFormat:@"%i",vidas];;
     self.ruleta.transform=CGAffineTransformMakeRotation(0);
+
     self.btnGiraRuleta.userInteractionEnabled=YES;
+    self.navigationItem.hidesBackButton = NO;
 
 }
 
@@ -66,7 +68,11 @@
 }
 - (IBAction)SeapretoBoton:(id)sender {
     
+    self.navigationItem.backBarButtonItem.enabled=NO;
+    self.navigationItem.hidesBackButton = YES;
+    
     self.btnGiraRuleta.userInteractionEnabled=NO;
+    
     [self rotateImageView:self.ruleta ];
 
     

@@ -65,6 +65,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)RegistrarEvento:(id)sender {
+    
+    
+    
+}
 
 /*
 #pragma mark - Navigation

@@ -38,6 +38,21 @@
     
     [self.pruebaBackButton setImage:[original imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    int vidas= [datosUsuario integerForKey:@"vidasJuegoRuleta"];
+    
+    if(vidas==0){
+        
+        self.btnContinuar.enabled = NO;
+        
+    }
+    else{
+        
+        self.btnContinuar.enabled = YES;
+    }
+
+    
+    
 }
 - (IBAction)apreteBoniBackButton:(UIButton *)sender {
     
@@ -110,6 +125,20 @@
         double puntajeMaximo = [datosDeUsuario doubleForKey:@"puntajeMaximoRuleta"];
         
         self.ptjMaximo.text = [NSString stringWithFormat:@"%0.2f",puntajeMaximo];
+    
+   
+    
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    int vidas= [datosUsuario integerForKey:@"vidasJuegoRuleta"];
+    if(vidas<=0){
+        
+        self.btnContinuar.enabled = NO;
+        
+    }
+    else{
+        
+        self.btnContinuar.enabled = YES;
+    }
     
 }
 

@@ -1897,6 +1897,9 @@
                                     <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="RegistrarEvento:" destination="bMS-YV-ICp" eventType="touchUpInside" id="N6d-bC-Hr9"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="iuk-0U-c8R">
                                 <rect key="frame" x="94" y="471" width="30" height="29"/>

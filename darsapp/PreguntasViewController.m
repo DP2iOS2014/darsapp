@@ -549,6 +549,7 @@
         
     }else if (Correcta==1){
         //Mandar puntaje a back END
+        [[NSUserDefaults standardUserDefaults] setInteger:vidasActual forKey:@"vidasJuegoRuleta"];
         NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
         int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
         if(puntajeActual>puntajeMaximo){

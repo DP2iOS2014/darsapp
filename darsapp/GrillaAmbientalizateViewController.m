@@ -75,10 +75,7 @@
          NSString *nombre_archivo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
          NSString *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
          NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
-         NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-             
-         double punt=[puntaje doubleValue];
-         double  est=[estado doubleValue];
+   
              
          [ecotips addObject:nombre_archivo];
          [puntajes   addObject:puntaje];

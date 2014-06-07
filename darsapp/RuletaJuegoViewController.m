@@ -9,6 +9,7 @@
 #import "RuletaJuegoViewController.h"
 #import "PreguntasViewController.h"
 #import "UIImage+Tint.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 
 @interface RuletaJuegoViewController ()
@@ -20,6 +21,7 @@
 
     int numerotema;
     CGFloat rotacion;
+    SystemSoundID audioEffect;
 }
 
 
@@ -74,11 +76,16 @@
     
     self.navigationItem.backBarButtonItem.enabled=NO;
     self.navigationItem.hidesBackButton = YES;
+    NSString *path  = [[NSBundle mainBundle] pathForResource:@"gira_gira_sin_modif" ofType:@"wav"];
+    NSURL *pathURL = [NSURL fileURLWithPath : path];
+    
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+    AudioServicesPlaySystemSound(audioEffect);
     
     self.btnGiraRuleta.userInteractionEnabled=NO;
     
     [self rotateImageView:self.ruleta ];
-
     
 }
 
@@ -157,7 +164,7 @@
                                                                   
                                                                   CGFloat angulo=72.0f*(M_PI/180.0f);
                                                                   //CGFloat angulo=-(M_PI/2.0f);
-                                                                  
+                                                                  AudioServicesDisposeSystemSoundID(audioEffect);
                                                                       if(finished){
                                                                           numerotema =  arc4random()%4;
                                                                           //numerotema =  arc4random()%3;
@@ -251,6 +258,7 @@
                                                                                                    iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                           } completion:^(BOOL finished) {
                                                                                               //Esto se ejecuta en un hilo aparte
+                                                                                              
                                                                                               [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
                                                                                               
                                                                                           }];
@@ -318,5 +326,14 @@
     }
 
 };
+
+-(void)viewWillDisappear:(BOOL)animated{
+    
+}
+
+-(void)dealloc{
+    AudioServicesDisposeSystemSoundID(audioEffect);
+}
+
 
 @end

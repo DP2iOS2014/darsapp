@@ -8,6 +8,7 @@
 
 #import "InicioJuegoViewController.h"
 #import "SingletonJuego.h"
+#import "UIImage+Tint.h"
 @interface InicioJuegoViewController ()
 
 @end
@@ -32,6 +33,8 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
+    
+   //self.btnEmpezar.imageView.image = [self.btnEmpezar.imageView.image imageWithColor:[UIColor colorWithRed:213.0/255 green:89.0/255 blue:91.0/255 alpha:1]];
     
     
     UIImage *original = self.pruebaBackButton.imageView.image;
@@ -73,9 +76,19 @@
     [super viewWillAppear:animated];
     
     //Diseño para el boton Empezar
-    //self.btnEmpezar.layer.cornerRadius = 4;
-    //self.btnEmpezar.layer.borderWidth = 3;
-    //self.btnEmpezar.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.btnEmpezar.layer.cornerRadius = 10;
+    self.btnEmpezar.layer.borderWidth = 3;
+    self.btnEmpezar.layer.borderColor = [UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1].CGColor;
+    
+    self.btnEmpezar.imageView.image = [self.btnEmpezar.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+    
+    //Diseño para el boton Comenzar
+    self.btnContinuar.layer.cornerRadius = 10;
+    self.btnContinuar.layer.borderWidth = 3;
+    self.btnContinuar.layer.borderColor = [UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1].CGColor;
+    
+    self.btnContinuar.imageView.image = [self.btnContinuar.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+    
     
     /*CAGradientLayer *degradado = [CAGradientLayer layer];
     degradado.colors = @[(id)[UIColor whiteColor].CGColor,(id)[UIColor colorWithRed:0.0f/255.0f green:68.0f/255.0f blue:0.0f/255.0f alpha:0.8f].CGColor];

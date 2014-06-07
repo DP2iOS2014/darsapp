@@ -275,6 +275,13 @@
 
 - (IBAction)SeApretoReloj:(id)sender {
     if( juego.VidasReloj  >0) {
+        NSString *path  = [[NSBundle mainBundle] pathForResource:@"clock" ofType:@"wav"];
+        NSURL *pathURL = [NSURL fileURLWithPath : path];
+        
+        
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+        
         juego.Tiempo= juego.Tiempo;
         self.Tiempo.text= [[NSString alloc] initWithFormat:@"%ld",(long)juego.Tiempo] ;
         juego.VidasReloj=juego.VidasReloj-1;
@@ -341,6 +348,13 @@
 
 - (IBAction)SeApretoOtraOpcion:(id)sender {
     if( [self.VidasOtraOpcion.text intValue]  >0) {
+       // NSString *path  = [[NSBundle mainBundle] pathForResource:@"Bomb" ofType:@"wav"];
+       // NSURL *pathURL = [NSURL fileURLWithPath : path];
+        
+        
+        //AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        //AudioServicesPlaySystemSound(audioEffect);
+        
         self.VidasOtraOpcion.text=[[NSString alloc] initWithFormat:@"%d", [ self.VidasOtraOpcion.text intValue]-1];
         juego.VidasOtraOpcion=juego.VidasOtraOpcion-1;
         tieneOtraOpcion=YES;
@@ -353,6 +367,13 @@
 }
 - (IBAction)SeApretoNuevaPregunta:(id)sender {
     if( [self.VidasNuevaPregunta.text intValue]  >0) {
+        NSString *path  = [[NSBundle mainBundle] pathForResource:@"repregunta" ofType:@"wav"];
+        NSURL *pathURL = [NSURL fileURLWithPath : path];
+        
+        
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef) pathURL, &audioEffect);
+        AudioServicesPlaySystemSound(audioEffect);
+        
         self.VidasNuevaPregunta.text=[[NSString alloc] initWithFormat:@"%d", [ self.VidasNuevaPregunta.text intValue]-1];
         juego.VidasNPregunta=juego.VidasNPregunta-1;
         self.btnReloj.enabled=NO;

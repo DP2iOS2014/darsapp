@@ -47,9 +47,17 @@
     
     if (((NSNumber*)(self.estado[self.celda_seleccionada])).intValue == 2) {
         [self.btnAsistir setTitle:@"Asistiré" forState:UIControlStateNormal];
+        [self.btnAsistir setHidden:NO];
+        [self.checkAsistir setHidden:NO];
     }
-    else{
+    else if (((NSNumber*)(self.estado[self.celda_seleccionada])).intValue == 3){
+
+        [self.btnAsistir setHidden:YES];
+        [self.checkAsistir setHidden:YES];
+    } else {
         [self.btnAsistir setTitle:@"No Asistiré" forState:UIControlStateNormal];
+        [self.btnAsistir setHidden:NO];
+        [self.checkAsistir setHidden:NO];
     }
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];

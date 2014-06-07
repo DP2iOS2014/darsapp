@@ -329,24 +329,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXS-CP-bh2">
-                                <rect key="frame" x="9" y="143" width="302" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXS-CP-bh2">
+                                <rect key="frame" x="63" y="156" width="210" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
-                                <state key="normal" image="nuevapartida.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Nueva Partida" image="nuevapartida2.png">
+                                    <color key="titleColor" red="0.26666668059999998" green="0.76470595600000002" blue="0.67450982329999998" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="btnEmpezarJuego:" destination="tu2-8m-JJQ" eventType="touchUpInside" id="30F-PR-D8k"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-ZR-13o">
-                                <rect key="frame" x="-5" y="228" width="330" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNy-ZR-13o">
+                                <rect key="frame" x="63" y="233" width="210" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
-                                <state key="normal" image="continuarpartida.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Continuar" image="continuar2.png">
+                                    <color key="titleColor" red="0.26666668059999998" green="0.76470595600000002" blue="0.67450982329999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="btnContinuarJuego:" destination="tu2-8m-JJQ" eventType="touchUpInside" id="Vxd-1F-AYG"/>
@@ -373,7 +373,7 @@
                                     <segue destination="HcH-GF-7Rh" kind="push" id="Fc5-Nt-bmT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-E3-eWJ">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-E3-eWJ">
                                 <rect key="frame" x="160" y="96" width="24" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.71881916244012567" green="0.72462660074234009" blue="0.69248159491762051" alpha="1" colorSpace="calibratedRGB"/>
@@ -386,15 +386,15 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puntaje Maximo:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ke7-Vk-Y3Q">
-                                <rect key="frame" x="40" y="360" width="134" height="29"/>
+                                <rect key="frame" x="70" y="360" width="134" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-ir-8iB">
-                                <rect key="frame" x="200" y="352" width="61" height="45"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-ir-8iB">
+                                <rect key="frame" x="212" y="352" width="61" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1691,7 +1691,7 @@
             </objects>
             <point key="canvasLocation" x="1002" y="-8540"/>
         </scene>
-        <!--Grilla Inicial Ambientalizate-->
+        <!--Grilla Inicial Ambientalizate - Proyectos-->
         <scene sceneID="Xhk-mB-eS5">
             <objects>
                 <tableViewController id="rcG-cH-Uoy" customClass="GrillaInicialAmbientalizate" sceneMemberID="viewController">
@@ -1750,7 +1750,7 @@
                             <outlet property="delegate" destination="rcG-cH-Uoy" id="dnH-KH-zJd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nIF-v5-VgW"/>
+                    <navigationItem key="navigationItem" title="Proyectos" id="nIF-v5-VgW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCw-1T-d8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1915,6 +1915,7 @@
                     <navigationItem key="navigationItem" id="Gob-Ff-ktq"/>
                     <connections>
                         <outlet property="btnAsistir" destination="8Hp-MM-WFH" id="2Vx-LQ-tcZ"/>
+                        <outlet property="checkAsistir" destination="iuk-0U-c8R" id="nUM-8D-BEx"/>
                         <outlet property="imagenEvento" destination="t18-pa-kci" id="KlZ-3i-2kI"/>
                         <outlet property="lblDescripcion" destination="vIE-v4-CHi" id="act-wo-hEa"/>
                         <outlet property="lblFecha" destination="MeF-Ig-qww" id="GhK-hU-4lK"/>
@@ -2342,19 +2343,20 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfx-6V-9Gs">
-                                <rect key="frame" x="39" y="447" width="50" height="40"/>
+                                <rect key="frame" x="39" y="453" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="reloj.png">
+                                <state key="normal" image="relojcito.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="SeApretoReloj:" destination="mQJ-Vt-z41" eventType="touchUpInside" id="59K-xx-Y8a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ju-aF-WAZ">
-                                <rect key="frame" x="106" y="447" width="50" height="40"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ju-aF-WAZ">
+                                <rect key="frame" x="104" y="443" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="bombaFinal.png">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="canon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2362,9 +2364,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1K-l2-aer">
-                                <rect key="frame" x="176" y="447" width="50" height="40"/>
+                                <rect key="frame" x="176" y="453" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="tijeras.png">
+                                <state key="normal" title="Button" image="salvavidas.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2372,9 +2374,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0v-Ah-Ul9">
-                                <rect key="frame" x="234" y="447" width="50" height="40"/>
+                                <rect key="frame" x="243" y="451" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="pregunta.png">
+                                <state key="normal" image="nuevapregunta2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2428,26 +2430,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lev-Bm-Lwk">
-                                <rect key="frame" x="77" y="448" width="20" height="20"/>
+                                <rect key="frame" x="54" y="496" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIU-In-FKs">
-                                <rect key="frame" x="146" y="447" width="20" height="20"/>
+                                <rect key="frame" x="116" y="496" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEr-Xa-L2K">
-                                <rect key="frame" x="214" y="446" width="20" height="20"/>
+                                <rect key="frame" x="191" y="496" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYe-rY-r1N">
-                                <rect key="frame" x="272" y="447" width="20" height="20"/>
+                                <rect key="frame" x="256" y="496" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2509,9 +2511,9 @@
         <image name="backButton2.png" width="25" height="25"/>
         <image name="backButtonDerecha.png" width="25" height="25"/>
         <image name="blue.png" width="220" height="220"/>
-        <image name="bombaFinal.png" width="54" height="45"/>
         <image name="botón girar 72ppp.png" width="215" height="245"/>
         <image name="buenas_practicas.png" width="100" height="121"/>
+        <image name="canon.png" width="50" height="50"/>
         <image name="categorias_tittle.png" width="320" height="81"/>
         <image name="checkButton.png" width="43" height="43"/>
         <image name="ciclo_de_vida.png" width="100" height="101"/>
@@ -2521,6 +2523,7 @@
         <image name="comojugar_tittle.png" width="320" height="81"/>
         <image name="contact.png" width="305" height="100"/>
         <image name="contactar-tfno.png" width="1520" height="1569"/>
+        <image name="continuar2.png" width="50" height="50"/>
         <image name="continuarpartida.png" width="180" height="60"/>
         <image name="email.png" width="512" height="512"/>
         <image name="facebookButton.png" width="52" height="52"/>
@@ -2532,13 +2535,17 @@
         <image name="logo.png" width="420" height="449"/>
         <image name="manito.png" width="52" height="54"/>
         <image name="nuevapartida.png" width="180" height="60"/>
+        <image name="nuevapartida2.png" width="50" height="50"/>
+        <image name="nuevapregunta2.png" width="50" height="50"/>
         <image name="phone-book.png" width="30" height="30"/>
         <image name="porcentaje15.png" width="200" height="28"/>
         <image name="pregunta.png" width="80" height="80"/>
         <image name="recycle.png" width="30" height="30"/>
         <image name="red.png" width="220" height="220"/>
         <image name="reloj.png" width="80" height="80"/>
+        <image name="relojcito.png" width="50" height="50"/>
         <image name="ruletita.png" width="378" height="378"/>
+        <image name="salvavidas.png" width="50" height="50"/>
         <image name="skull.png" width="512" height="512"/>
         <image name="tijeras.png" width="80" height="80"/>
         <image name="titulo_Pilas.png" width="300" height="300"/>

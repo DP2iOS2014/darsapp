@@ -118,6 +118,15 @@
 		129F0DCA19368FEE007922F8 /* backButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 129F0DC919368FEE007922F8 /* backButton2.png */; };
 		129F4918192E9C0100DF8793 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 129F4917192E9C0100DF8793 /* images.jpeg */; };
 		12A083FE19099DE000D010E6 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A083FD19099DE000D010E6 /* ic_launcher.png */; };
+		12A09F7C1942927900BC4192 /* canon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F7B1942927900BC4192 /* canon.png */; };
+		12A09F861942961A00BC4192 /* relojcito.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F851942961A00BC4192 /* relojcito.png */; };
+		12A09F881942974000BC4192 /* nuevapartida2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F871942974000BC4192 /* nuevapartida2.png */; };
+		12A09F8A1942992E00BC4192 /* continuar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F891942992E00BC4192 /* continuar2.png */; };
+		12A09F8C19429ABD00BC4192 /* repregunta.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F8B19429ABD00BC4192 /* repregunta.wav */; };
+		12A09F8E19429AC300BC4192 /* clock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F8D19429AC300BC4192 /* clock.wav */; };
+		12A09F9019429ACB00BC4192 /* gira_gira_sin_modif.wav in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F8F19429ACB00BC4192 /* gira_gira_sin_modif.wav */; };
+		12A09F9219429EEB00BC4192 /* nuevapregunta2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F9119429EEB00BC4192 /* nuevapregunta2.png */; };
+		12A09F9419429FC200BC4192 /* salvavidas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A09F9319429FC200BC4192 /* salvavidas.png */; };
 		12A128CE191EAE4D00397B90 /* GrillaAmbientalizateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128CD191EAE4D00397B90 /* GrillaAmbientalizateViewController.m */; };
 		12A128D1191EB74200397B90 /* GrillaAmbientalizateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128D0191EB74200397B90 /* GrillaAmbientalizateCell.m */; };
 		12A128D5191ED3D000397B90 /* administrativo.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A128D3191ED3D000397B90 /* administrativo.png */; };
@@ -474,6 +483,15 @@
 		129F0DC919368FEE007922F8 /* backButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton2.png; sourceTree = "<group>"; };
 		129F4917192E9C0100DF8793 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
 		12A083FD19099DE000D010E6 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
+		12A09F7B1942927900BC4192 /* canon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = canon.png; sourceTree = "<group>"; };
+		12A09F851942961A00BC4192 /* relojcito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = relojcito.png; sourceTree = "<group>"; };
+		12A09F871942974000BC4192 /* nuevapartida2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuevapartida2.png; sourceTree = "<group>"; };
+		12A09F891942992E00BC4192 /* continuar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = continuar2.png; sourceTree = "<group>"; };
+		12A09F8B19429ABD00BC4192 /* repregunta.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = repregunta.wav; sourceTree = "<group>"; };
+		12A09F8D19429AC300BC4192 /* clock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clock.wav; sourceTree = "<group>"; };
+		12A09F8F19429ACB00BC4192 /* gira_gira_sin_modif.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gira_gira_sin_modif.wav; sourceTree = "<group>"; };
+		12A09F9119429EEB00BC4192 /* nuevapregunta2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuevapregunta2.png; sourceTree = "<group>"; };
+		12A09F9319429FC200BC4192 /* salvavidas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salvavidas.png; sourceTree = "<group>"; };
 		12A128CC191EAE4D00397B90 /* GrillaAmbientalizateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaAmbientalizateViewController.h; sourceTree = "<group>"; };
 		12A128CD191EAE4D00397B90 /* GrillaAmbientalizateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrillaAmbientalizateViewController.m; sourceTree = "<group>"; };
 		12A128CF191EB74200397B90 /* GrillaAmbientalizateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaAmbientalizateCell.h; sourceTree = "<group>"; };
@@ -919,6 +937,12 @@
 		129D4DA11919BE0D00D12423 /* Imagenes Juego */ = {
 			isa = PBXGroup;
 			children = (
+				12A09F9319429FC200BC4192 /* salvavidas.png */,
+				12A09F9119429EEB00BC4192 /* nuevapregunta2.png */,
+				12A09F891942992E00BC4192 /* continuar2.png */,
+				12A09F871942974000BC4192 /* nuevapartida2.png */,
+				12A09F851942961A00BC4192 /* relojcito.png */,
+				12A09F7B1942927900BC4192 /* canon.png */,
 				12A3A6D5194215B200BEEC00 /* hearts-75.png */,
 				12A3A6D31942152100BEEC00 /* hearts-50.png */,
 				12A20244193A7DB100942747 /* noise.png */,
@@ -1176,6 +1200,9 @@
 		12D1DD6519393CDA00BF81A5 /* Sonido */ = {
 			isa = PBXGroup;
 			children = (
+				12A09F8F19429ACB00BC4192 /* gira_gira_sin_modif.wav */,
+				12A09F8D19429AC300BC4192 /* clock.wav */,
+				12A09F8B19429ABD00BC4192 /* repregunta.wav */,
 				12D1DD6619393CEB00BF81A5 /* Bomb.wav */,
 			);
 			name = Sonido;
@@ -1526,6 +1553,7 @@
 				12FDC15E193A4D0F00C99957 /* spark.png in Resources */,
 				12A128E5191ED74C00397B90 /* ventana.jpg in Resources */,
 				1276EA1B192D62C400B49816 /* Compras2.png in Resources */,
+				12A09F7C1942927900BC4192 /* canon.png in Resources */,
 				12EEAB17191D4431002F0D6E /* 4_Electricidad.png in Resources */,
 				12A67159192FE3D700E03C72 /* fondo.png in Resources */,
 				12EEAB05191D4416002F0D6E /* 4-1_SegregacionPilas.png in Resources */,
@@ -1543,6 +1571,7 @@
 				12A128E7191ED74C00397B90 /* ropa.jpg in Resources */,
 				129EDB731938E5460088735B /* tijeras.png in Resources */,
 				12D8719B19364C950035F0E0 /* Liderazgo Ambiental y Capacidad Organizativa.png in Resources */,
+				12A09F881942974000BC4192 /* nuevapartida2.png in Resources */,
 				12702B6F19300D13002CC216 /* buenas_practicas.png in Resources */,
 				12D8719519364B7D0035F0E0 /* Agua.png in Resources */,
 				12A75839191AF36E00E03C5E /* 6_Separatas.png in Resources */,
@@ -1574,6 +1603,7 @@
 				12DDC98619300526005E820A /* SeniorAmbiental.png in Resources */,
 				12D871A319364D480035F0E0 /* Aire y Ruido.png in Resources */,
 				12A75806191AD23900E03C5E /* Titulo_Plastico.png in Resources */,
+				12A09F8C19429ABD00BC4192 /* repregunta.wav in Resources */,
 				129EDB691938E4E70088735B /* porcentaje15.png in Resources */,
 				12EFB94C192D46D000AAAAB2 /* tachito2.png in Resources */,
 				12C3650819393C05002B2197 /* y9izE5EcE.png in Resources */,
@@ -1588,6 +1618,7 @@
 				129F0DCA19368FEE007922F8 /* backButton2.png in Resources */,
 				12F4CFD318FF147500C8BFF5 /* InfoPlist.strings in Resources */,
 				12A75838191AF36E00E03C5E /* 5_Separatas.png in Resources */,
+				12A09F9019429ACB00BC4192 /* gira_gira_sin_modif.wav in Resources */,
 				12A75835191AF36E00E03C5E /* 2_Separatas.png in Resources */,
 				12D1DD641938D9A200BF81A5 /* botón girar 72ppp.png in Resources */,
 				12A1F6FA190AC9A4001ED3BE /* recycle.png in Resources */,
@@ -1604,6 +1635,7 @@
 				129EDB551938DDBE0088735B /* categorias_tittle.png in Resources */,
 				12A67157192FDF8400E03C72 /* Roboto-ThinItalic.ttf in Resources */,
 				12A6714F192FDF8400E03C72 /* Roboto-BoldItalic.ttf in Resources */,
+				12A09F8E19429AC300BC4192 /* clock.wav in Resources */,
 				12EEAB2E191D4E68002F0D6E /* atras.png in Resources */,
 				12A6714E192FDF8400E03C72 /* Roboto-Bold.ttf in Resources */,
 				12F4D00618FF20C100C8BFF5 /* ios_homescreen_icon.png in Resources */,
@@ -1614,11 +1646,13 @@
 				12C3651119393E50002B2197 /* red.png in Resources */,
 				12A67150192FDF8400E03C72 /* Roboto-Italic.ttf in Resources */,
 				12E53C69191D8C2F00911B7C /* 1_Verde.png in Resources */,
+				12A09F9419429FC200BC4192 /* salvavidas.png in Resources */,
 				12FDC15A193A421900C99957 /* backBonito.png in Resources */,
 				12D1DD6719393CEB00BF81A5 /* Bomb.wav in Resources */,
 				12A3A6D41942152100BEEC00 /* hearts-50.png in Resources */,
 				12A67155192FDF8400E03C72 /* Roboto-Regular.ttf in Resources */,
 				12A20245193A7DB100942747 /* noise.png in Resources */,
+				12A09F8A1942992E00BC4192 /* continuar2.png in Resources */,
 				12A6714D192FDF8400E03C72 /* Roboto-BlackItalic.ttf in Resources */,
 				12A67161192FEAEF00E03C72 /* twitterButton.png in Resources */,
 				12DDC98019300511005E820A /* EspecialistaAmbiental.png in Resources */,
@@ -1630,7 +1664,9 @@
 				12EEAB01191D4416002F0D6E /* 2-4_ProduccionDistribucion.png in Resources */,
 				12EFB94F192D46D000AAAAB2 /* tachito5.png in Resources */,
 				129F4918192E9C0100DF8793 /* images.jpeg in Resources */,
+				12A09F9219429EEB00BC4192 /* nuevapregunta2.png in Resources */,
 				12EEAB26191D4485002F0D6E /* 2_DaleVidaATusResiduos.png in Resources */,
+				12A09F861942961A00BC4192 /* relojcito.png in Resources */,
 				12A67163192FF15A00E03C72 /* checkButton.png in Resources */,
 				129EDB881938F6170088735B /* skull.png in Resources */,
 				12A128EA191ED74C00397B90 /* papel.jpg in Resources */,

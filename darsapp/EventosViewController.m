@@ -125,7 +125,7 @@
             NSNumber * nid = (NSNumber *)[[eventos objectAtIndex:i] objectForKey:@"nid"];
             
             //NSNull * null;
-               
+            
                if(estadoevento.intValue == estado_evento.intValue){
                 [descripcion addObject:desc_evento];
                 [enlace addObject:enlace_evento];
@@ -136,9 +136,9 @@
                 [titulos addObject:tituloEvento];
                 [urlImagenes addObject:urlImagen];
                 [nids addObject:nid];
+            
+            
             }
-            
-            
         }
         
         [self.tablaeventos reloadData];

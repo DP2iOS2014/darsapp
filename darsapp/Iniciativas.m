@@ -68,6 +68,13 @@ NSMutableArray *puntajestotal;
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell;
+    
+    if(indexPath.row == 0){
+        cell = [tableView dequeueReusableCellWithIdentifier:@"celdanuevainiciativa"];
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaIniciativas"];
+        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row];
+    }
 
     return cell;
 }

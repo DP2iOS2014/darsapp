@@ -166,6 +166,8 @@
 		12A3A6D41942152100BEEC00 /* hearts-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D31942152100BEEC00 /* hearts-50.png */; };
 		12A3A6D6194215B200BEEC00 /* hearts-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D5194215B200BEEC00 /* hearts-75.png */; };
 		12A3A6D91942245000BEEC00 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A3A6D81942245000BEEC00 /* UIImage+Tint.m */; };
+		12A428F51947978C001C18BF /* TemasIniciativasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A428F41947978C001C18BF /* TemasIniciativasTableViewController.m */; };
+		12A428F819479880001C18BF /* CeldaTemasIniciativas.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A428F719479880001C18BF /* CeldaTemasIniciativas.m */; };
 		12A46CF31940DC9900E11964 /* GrillaEventoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */; };
 		12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A46CFA19414FA700E11964 /* SWRevealViewController.m */; };
 		12A6714C192FDF8400E03C72 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12A67140192FDF8400E03C72 /* Roboto-Black.ttf */; };
@@ -542,6 +544,10 @@
 		12A3A6D5194215B200BEEC00 /* hearts-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hearts-75.png"; sourceTree = "<group>"; };
 		12A3A6D71942245000BEEC00 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
 		12A3A6D81942245000BEEC00 /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
+		12A428F31947978C001C18BF /* TemasIniciativasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemasIniciativasTableViewController.h; sourceTree = "<group>"; };
+		12A428F41947978C001C18BF /* TemasIniciativasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemasIniciativasTableViewController.m; sourceTree = "<group>"; };
+		12A428F619479880001C18BF /* CeldaTemasIniciativas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaTemasIniciativas.h; sourceTree = "<group>"; };
+		12A428F719479880001C18BF /* CeldaTemasIniciativas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaTemasIniciativas.m; sourceTree = "<group>"; };
 		12A46CF11940DC9900E11964 /* GrillaEventoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrillaEventoViewController.h; sourceTree = "<group>"; };
 		12A46CF21940DC9900E11964 /* GrillaEventoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrillaEventoViewController.m; sourceTree = "<group>"; };
 		12A46CF919414F9200E11964 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -990,6 +996,7 @@
 		12A128CB191EAE3000397B90 /* Ambientalizate */ = {
 			isa = PBXGroup;
 			children = (
+				12A428F21947976F001C18BF /* Iniciativas */,
 				124DAE781938F31000736A7C /* SeleccionAmbientalizateAdm */,
 				128AC03E192D3E800015AEF4 /* Imagenes lider Ambiental */,
 				12A128D2191ED3BA00397B90 /* imagenes Ambientalizate */,
@@ -1086,6 +1093,17 @@
 				12A20242193A778000942747 /* YLProgressBar.m */,
 			);
 			name = ProgressBar;
+			sourceTree = "<group>";
+		};
+		12A428F21947976F001C18BF /* Iniciativas */ = {
+			isa = PBXGroup;
+			children = (
+				12A428F31947978C001C18BF /* TemasIniciativasTableViewController.h */,
+				12A428F41947978C001C18BF /* TemasIniciativasTableViewController.m */,
+				12A428F619479880001C18BF /* CeldaTemasIniciativas.h */,
+				12A428F719479880001C18BF /* CeldaTemasIniciativas.m */,
+			);
+			name = Iniciativas;
 			sourceTree = "<group>";
 		};
 		12A46CF819414F1B00E11964 /* Libreria */ = {
@@ -1749,6 +1767,7 @@
 				12A2023F193A64C100942747 /* SFSConfettiScreen.m in Sources */,
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
 				12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */,
+				12A428F51947978C001C18BF /* TemasIniciativasTableViewController.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
 				12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */,
 				129D4D991919A86400D12423 /* BotellasViewController.m in Sources */,
@@ -1786,6 +1805,7 @@
 				12A671661930090300E03C72 /* SingletonEcoTips.m in Sources */,
 				1279F4CD19379AD500A32A7B /* CeldaTemas.m in Sources */,
 				129EDB801938F36D0088735B /* Instrucciones2ViewController.m in Sources */,
+				12A428F819479880001C18BF /* CeldaTemasIniciativas.m in Sources */,
 				12F4CFD918FF147500C8BFF5 /* AppDelegate.m in Sources */,
 				120FF2261913F39400A697D6 /* AFHTTPRequestOperationManager.m in Sources */,
 				124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */,

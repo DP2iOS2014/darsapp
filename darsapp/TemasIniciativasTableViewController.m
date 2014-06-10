@@ -9,6 +9,8 @@
 #import "TemasIniciativasTableViewController.h"
 #import "URLsJson.h"
 #import "UIImageView+AFNetworking.h"
+#import "CeldaTemasIniciativas.h"
+#import "Iniciativas.h"
 
 @interface TemasIniciativasTableViewController ()
 
@@ -54,21 +56,33 @@ NSMutableArray * urlImagenes;
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return titulos.count;
 }
+
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaTemasIniciativas"];
+    ((CeldaTemasIniciativas*)cell).lblTema.text=titulos[indexPath.row];
+    [((CeldaTemasIniciativas*)cell).imagenTema setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"logo"]];
+
+    return cell;
+}
+
+
 
 //METODO PARA LISTA LOS TEMAS DE LAS INICIATIVAS
 
@@ -116,6 +130,16 @@ NSMutableArray * urlImagenes;
                                                         otherButtonTitles:nil];
               [alertView show];
           }];
+
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    Iniciativas *escenadestino = segue.destinationViewController;
+    NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
+    escenadestino.indice=filaseleccionada.row;
+    escenadestino.temainiciativas= [titulos objectAtIndex:filaseleccionada.row];
+    escenadestino.cantidadFilas = titulos.count;
+
 
 }
 

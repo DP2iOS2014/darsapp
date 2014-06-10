@@ -44,6 +44,9 @@
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
 		124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */; };
 		124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */; };
+		1252AEC91947A70F001CCBD3 /* Iniciativas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252AEC81947A70F001CCBD3 /* Iniciativas.m */; };
+		1252AECB1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1252AECA1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png */; };
+		1252AECE1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252AECD1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m */; };
 		1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */; };
 		12615579191D76A500374E68 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 12615578191D76A500374E68 /* forest.png */; };
 		1261557E191D915500374E68 /* tachito.png in Resources */ = {isa = PBXBuildFile; fileRef = 1261557D191D915500374E68 /* tachito.png */; };
@@ -391,6 +394,11 @@
 		124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeleccionAdmNoAdmTableViewCell.m; sourceTree = "<group>"; };
 		124DAE7C1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeleccionAdmNoAdmTableViewController.h; sourceTree = "<group>"; };
 		124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeleccionAdmNoAdmTableViewController.m; sourceTree = "<group>"; };
+		1252AEC71947A70F001CCBD3 /* Iniciativas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iniciativas.h; sourceTree = "<group>"; };
+		1252AEC81947A70F001CCBD3 /* Iniciativas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Iniciativas.m; sourceTree = "<group>"; };
+		1252AECA1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plants-Trees-Leaf-icon.png"; sourceTree = "<group>"; };
+		1252AECC1947ACA7001CCBD3 /* CeldaIniciativasTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaIniciativasTableViewCell.h; sourceTree = "<group>"; };
+		1252AECD1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaIniciativasTableViewCell.m; sourceTree = "<group>"; };
 		1260E96E192FA3FF00D915D7 /* SingletonAmbientalizate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonAmbientalizate.h; sourceTree = "<group>"; };
 		1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonAmbientalizate.m; sourceTree = "<group>"; };
 		12615578191D76A500374E68 /* forest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forest.png; sourceTree = "<group>"; };
@@ -1098,10 +1106,15 @@
 		12A428F21947976F001C18BF /* Iniciativas */ = {
 			isa = PBXGroup;
 			children = (
+				1252AECA1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png */,
 				12A428F31947978C001C18BF /* TemasIniciativasTableViewController.h */,
 				12A428F41947978C001C18BF /* TemasIniciativasTableViewController.m */,
 				12A428F619479880001C18BF /* CeldaTemasIniciativas.h */,
 				12A428F719479880001C18BF /* CeldaTemasIniciativas.m */,
+				1252AEC71947A70F001CCBD3 /* Iniciativas.h */,
+				1252AEC81947A70F001CCBD3 /* Iniciativas.m */,
+				1252AECC1947ACA7001CCBD3 /* CeldaIniciativasTableViewCell.h */,
+				1252AECD1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m */,
 			);
 			name = Iniciativas;
 			sourceTree = "<group>";
@@ -1525,6 +1538,7 @@
 			files = (
 				129EDB6F1938E5340088735B /* reloj.png in Resources */,
 				12DDC97E19300508005E820A /* AsistenteAmbiental.png in Resources */,
+				1252AECB1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png in Resources */,
 				129EDB611938E4BD0088735B /* leftarrow.png in Resources */,
 				129D4DB11919C27200D12423 /* otraFinal.png in Resources */,
 				12EEAB0A191D4416002F0D6E /* titulo_Pilas.png in Resources */,
@@ -1788,7 +1802,9 @@
 				128AC03D192D3B110015AEF4 /* TemasAdmTableViewController.m in Sources */,
 				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
 				12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */,
+				1252AEC91947A70F001CCBD3 /* Iniciativas.m in Sources */,
 				129EDB831938F38A0088735B /* Instrucciones3ViewController.m in Sources */,
+				1252AECE1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m in Sources */,
 				12A3A6D91942245000BEEC00 /* UIImage+Tint.m in Sources */,
 				12A757E3191AC41800E03C5E /* PilasViewController.m in Sources */,
 				124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */,

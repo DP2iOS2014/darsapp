@@ -1785,11 +1785,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="57" id="dVS-Uy-s1U" customClass="CeldaTemasIniciativas">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="57" id="dVS-Uy-s1U" customClass="CeldaTemasIniciativas">
                                 <rect key="frame" x="0.0" y="86" width="320" height="57"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dVS-Uy-s1U" id="Lcf-KR-GD6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="56"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jis-3b-7Ar">
@@ -1808,6 +1808,7 @@
                                 <connections>
                                     <outlet property="imagenTema" destination="VgF-3S-ree" id="5Ca-gf-uVQ"/>
                                     <outlet property="lblTema" destination="jis-3b-7Ar" id="IEQ-hH-ash"/>
+                                    <segue destination="Kvn-hh-ynd" kind="push" id="qbf-WC-8rw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1821,6 +1822,103 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX7-O6-uoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1154" y="-6097"/>
+        </scene>
+        <!--Iniciativas-->
+        <scene sceneID="Yh7-xt-9TY">
+            <objects>
+                <tableViewController id="Kvn-hh-ynd" customClass="Iniciativas" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="Umm-c6-aVO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="57" id="EJG-0L-HC4" customClass="CeldaTemasIniciativas">
+                                <rect key="frame" x="0.0" y="86" width="320" height="57"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EJG-0L-HC4" id="FJ6-nv-2mo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRv-uM-dhs">
+                                            <rect key="frame" x="96" y="13" width="128" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                            <state key="normal" title="Proponer Iniciativa">
+                                                <color key="titleColor" red="0.2470588386" green="0.75294125079999996" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="88" id="k9f-j9-49H" customClass="CeldaIniciativasTableViewCell">
+                                <rect key="frame" x="0.0" y="143" width="320" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k9f-j9-49H" id="EC7-Tu-TeL">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="265" translatesAutoresizingMaskIntoConstraints="NO" id="Guj-p0-yjP">
+                                            <rect key="frame" x="28" y="8" width="265" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-lx-PHm">
+                                            <rect key="frame" x="28" y="57" width="25" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="o0u-ZC-OYe">
+                                            <rect key="frame" x="56" y="57" width="25" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="tCt-0r-0yA">
+                                            <rect key="frame" x="84" y="57" width="25" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="La8-E0-NA8">
+                                            <rect key="frame" x="111" y="57" width="25" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="SGN-uw-Qwb">
+                                            <rect key="frame" x="137" y="57" width="25" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblIniciativa" destination="Guj-p0-yjP" id="oGq-mu-EUb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Kvn-hh-ynd" id="REQ-m9-B4g"/>
+                            <outlet property="delegate" destination="Kvn-hh-ynd" id="8bY-GP-oYW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="mX9-y6-3wX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XN2-Zj-scg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="-6097"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iR4-0B-Aak">
+            <objects>
+                <viewController id="0oc-su-kJv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="82W-zj-5Yp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Twg-9f-bQB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5aa-iF-YEZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkQ-ok-vN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="-6097"/>
         </scene>
         <!--Eventos View Controller-->
         <scene sceneID="M0Z-PG-AtZ">
@@ -2570,6 +2668,7 @@
         <image name="1_Electricidad.png" width="300" height="300"/>
         <image name="1_Separatas.png" width="300" height="300"/>
         <image name="NavigatorBar.png" width="640" height="130"/>
+        <image name="Plants-Trees-Leaf-icon.png" width="512" height="512"/>
         <image name="Titulo_Plastico.png" width="300" height="300"/>
         <image name="atras.png" width="512" height="508"/>
         <image name="backBonito.png" width="24" height="21"/>

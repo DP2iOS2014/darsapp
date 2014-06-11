@@ -72,33 +72,31 @@ NSMutableArray *puntajestotal;
 {
 
 
-    return (iniciativas.count +1);
+    //return (iniciativas.count +1);
+    return 2;
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell;
-    
     if(indexPath.row == 0){
         cell = [tableView dequeueReusableCellWithIdentifier:@"celdanuevainiciativa"];
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaIniciativas"];
-        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row];
+        //((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row];
+        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= @"Iniciativa1";
         
-        
-         ((CeldaIniciativasTableViewCell*)cell).starRating.backgroundColor  = [UIColor whiteColor];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.backgroundColor  = [UIColor clearColor];
          ((CeldaIniciativasTableViewCell*)cell).starRating.starImage = [[UIImage imageNamed:@"star-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
          ((CeldaIniciativasTableViewCell*)cell).starRating.starHighlightedImage = [[UIImage imageNamed:@"star-highlighted-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
          ((CeldaIniciativasTableViewCell*)cell).starRating.maxRating = 5.0;
          ((CeldaIniciativasTableViewCell*)cell).starRating.delegate = self;
          ((CeldaIniciativasTableViewCell*)cell).starRating.horizontalMargin = 15.0;
-         ((CeldaIniciativasTableViewCell*)cell).starRating.editable=YES;
+         ((CeldaIniciativasTableViewCell*)cell).starRating.editable=NO;
          ((CeldaIniciativasTableViewCell*)cell).starRating.rating= 2.5;
          ((CeldaIniciativasTableViewCell*)cell).starRating.displayMode=EDStarRatingDisplayHalf;
          [((CeldaIniciativasTableViewCell*)cell).starRating  setNeedsDisplay];
-         ((CeldaIniciativasTableViewCell*)cell).starRating.tintColor = [[UIColor alloc] initWithRed:63/255.0 green:192/255.0 blue:169/255.0 alpha:0];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.tintColor = [[UIColor alloc] initWithRed:63.0/255.0 green:192.0/255.0 blue:169.0/255.0 alpha:1];
          [self starsSelectionChanged:((CeldaIniciativasTableViewCell*)cell).starRating rating:2.5];
-
-        
     }
 
     
@@ -168,6 +166,8 @@ NSMutableArray *puntajestotal;
 }
 
 
+
+
 -(void)starsSelectionChanged:(EDStarRating *)control rating:(float)rating{
     
 }
@@ -180,5 +180,7 @@ NSMutableArray *puntajestotal;
 
     
 }
+
+
 
 @end

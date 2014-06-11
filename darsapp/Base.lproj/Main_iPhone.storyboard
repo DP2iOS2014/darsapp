@@ -1869,30 +1869,10 @@
                                             <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="U0r-lx-PHm">
-                                            <rect key="frame" x="28" y="57" width="25" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="o0u-ZC-OYe">
-                                            <rect key="frame" x="56" y="57" width="25" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="tCt-0r-0yA">
-                                            <rect key="frame" x="84" y="57" width="25" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="La8-E0-NA8">
-                                            <rect key="frame" x="111" y="57" width="25" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="SGN-uw-Qwb">
-                                            <rect key="frame" x="137" y="57" width="25" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yuf-qM-ktj" customClass="EDStarRating">
-                                            <rect key="frame" x="84" y="10" width="230" height="38"/>
+                                            <rect key="frame" x="28" y="48" width="135" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -1900,7 +1880,6 @@
                                 <connections>
                                     <outlet property="lblIniciativa" destination="Guj-p0-yjP" id="oGq-mu-EUb"/>
                                     <outlet property="starRating" destination="Yuf-qM-ktj" id="AEQ-xf-DfJ"/>
-                                    <segue destination="Xpv-TT-eIw" kind="push" identifier="idsegue" id="76Q-tQ-g8m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1910,15 +1889,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="mX9-y6-3wX"/>
+                    <connections>
+                        <segue destination="Xpv-TT-eIw" kind="push" identifier="idsegue" id="Scv-vx-UYr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XN2-Zj-scg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1611" y="-6097"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalle Iniciativa View Controller-->
         <scene sceneID="AQc-TW-qH8">
             <objects>
-                <viewController id="Xpv-TT-eIw" sceneMemberID="viewController">
+                <viewController id="Xpv-TT-eIw" customClass="DetalleIniciativaViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xDS-l5-LQ5"/>
                         <viewControllerLayoutGuide type="bottom" id="xE7-iD-0Cy"/>
@@ -1958,30 +1940,18 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="zRg-Nb-bkL">
-                                <rect key="frame" x="46" y="345" width="32" height="28"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wli-xy-j8z" customClass="EDStarRating">
+                                <rect key="frame" x="46" y="337" width="192" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="1zO-fO-8lD">
-                                <rect key="frame" x="86" y="345" width="32" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="MBE-o3-QyP">
-                                <rect key="frame" x="126" y="345" width="32" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="D9k-ga-pTF">
-                                <rect key="frame" x="166" y="345" width="32" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Plants-Trees-Leaf-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="BA4-q5-3Sx">
-                                <rect key="frame" x="206" y="345" width="32" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="e8H-xb-UB1"/>
+                    <connections>
+                        <outlet property="starRating" destination="wli-xy-j8z" id="lgn-sc-B66"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gi7-Da-C3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2790,7 +2760,6 @@
         <image name="1_Electricidad.png" width="300" height="300"/>
         <image name="1_Separatas.png" width="300" height="300"/>
         <image name="NavigatorBar.png" width="640" height="130"/>
-        <image name="Plants-Trees-Leaf-icon.png" width="512" height="512"/>
         <image name="Titulo_Plastico.png" width="300" height="300"/>
         <image name="atras.png" width="512" height="508"/>
         <image name="backBonito.png" width="24" height="21"/>

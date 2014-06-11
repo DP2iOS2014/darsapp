@@ -114,6 +114,8 @@
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*) self.collectionView.collectionViewLayout;
     
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 8, 20, 8);
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
 }
 

@@ -35,6 +35,8 @@
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     //CLLocationCoordinate2D coordinate;
     coordinate.latitude = -12.069919;
     coordinate.longitude = -77.079801;

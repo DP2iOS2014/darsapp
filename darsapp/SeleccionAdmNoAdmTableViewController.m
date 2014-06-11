@@ -35,6 +35,8 @@
     self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
     esAlumno = [datosDeMemoria stringForKey:@"netalu"];
     esAdm = [datosDeMemoria stringForKey:@"netin"];

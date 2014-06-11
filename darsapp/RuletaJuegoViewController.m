@@ -43,6 +43,8 @@
     
     self.vidasCorazon.image = [self.vidasCorazon.image imageWithColor:[UIColor colorWithRed:213.0/255 green:89.0/255 blue:91.0/255 alpha:1]];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     //self.vidasCorazon.image = [self.vidasCorazon.image imageTintedWithColor:[UIColor redColor]]; //Colorful imag
 
 

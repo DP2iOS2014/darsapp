@@ -34,6 +34,8 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
    //self.btnEmpezar.imageView.image = [self.btnEmpezar.imageView.image imageWithColor:[UIColor colorWithRed:213.0/255 green:89.0/255 blue:91.0/255 alpha:1]];
     
     

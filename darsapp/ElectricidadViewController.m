@@ -59,6 +59,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     // Do any additional setup after loading the view.
     carruselelectricidad.type=iCarouselTypeCoverFlow;
 }

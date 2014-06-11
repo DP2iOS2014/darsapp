@@ -89,6 +89,7 @@
 		129D4DB21919C27200D12423 /* bombaFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAE1919C27200D12423 /* bombaFinal.png */; };
 		129D4DB31919C27200D12423 /* againFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAF1919C27200D12423 /* againFinal.png */; };
 		129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DB81919C3DF00D12423 /* ClasePregunta.m */; };
+		129E07681948EBD0009B7A21 /* NuevaIniciativaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E07671948EBD0009B7A21 /* NuevaIniciativaViewController.m */; };
 		129EDB551938DDBE0088735B /* categorias_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB541938DDBE0088735B /* categorias_tittle.png */; };
 		129EDB571938DDC90088735B /* comodines_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB561938DDC90088735B /* comodines_tittle.png */; };
 		129EDB591938DDD10088735B /* comojugar_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB581938DDD10088735B /* comojugar_tittle.png */; };
@@ -453,6 +454,8 @@
 		129D4DAF1919C27200D12423 /* againFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = againFinal.png; sourceTree = "<group>"; };
 		129D4DB71919C3DF00D12423 /* ClasePregunta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClasePregunta.h; sourceTree = "<group>"; };
 		129D4DB81919C3DF00D12423 /* ClasePregunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClasePregunta.m; sourceTree = "<group>"; };
+		129E07661948EBD0009B7A21 /* NuevaIniciativaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuevaIniciativaViewController.h; sourceTree = "<group>"; };
+		129E07671948EBD0009B7A21 /* NuevaIniciativaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuevaIniciativaViewController.m; sourceTree = "<group>"; };
 		129EDB541938DDBE0088735B /* categorias_tittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = categorias_tittle.png; sourceTree = "<group>"; };
 		129EDB561938DDC90088735B /* comodines_tittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comodines_tittle.png; sourceTree = "<group>"; };
 		129EDB581938DDD10088735B /* comojugar_tittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comojugar_tittle.png; sourceTree = "<group>"; };
@@ -1115,6 +1118,8 @@
 				1252AEC81947A70F001CCBD3 /* Iniciativas.m */,
 				1252AECC1947ACA7001CCBD3 /* CeldaIniciativasTableViewCell.h */,
 				1252AECD1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m */,
+				129E07661948EBD0009B7A21 /* NuevaIniciativaViewController.h */,
+				129E07671948EBD0009B7A21 /* NuevaIniciativaViewController.m */,
 			);
 			name = Iniciativas;
 			sourceTree = "<group>";
@@ -1780,6 +1785,7 @@
 				128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */,
 				12A2023F193A64C100942747 /* SFSConfettiScreen.m in Sources */,
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
+				129E07681948EBD0009B7A21 /* NuevaIniciativaViewController.m in Sources */,
 				12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */,
 				12A428F51947978C001C18BF /* TemasIniciativasTableViewController.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,

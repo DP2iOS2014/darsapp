@@ -69,7 +69,7 @@ NSMutableArray * urlImagenes;
 {
 
     // Return the number of rows in the section.
-    return titulos.count;
+    return (titulos.count);
 }
 
 
@@ -88,7 +88,7 @@ NSMutableArray * urlImagenes;
 
 -(void) recuperoTemasIniciativas{
 
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"tema_iniciativas", @"tipo", @[], @"filtro", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"tema_iniciativa", @"tipo", nil];
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     

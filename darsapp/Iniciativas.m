@@ -36,7 +36,9 @@ NSMutableArray *puntajestotal;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self recuperoIniciativas];
     
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -55,6 +57,11 @@ NSMutableArray *puntajestotal;
     [self.starRating  setNeedsDisplay];
     self.starRating.tintColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0];
     [self starsSelectionChanged:self.starRating rating:2.5];*/
+
+    self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -81,12 +88,21 @@ NSMutableArray *puntajestotal;
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell;
+    
+    if(indexPath.row == 0){
+        cell = [tableView dequeueReusableCellWithIdentifier:@"celdanuevainiciativa"];
+    }else{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaIniciativas"];
+        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row];
+    }
 
     
     
     
     return cell;
 }
+
+
 
 
 //PARA CARGAR LAS INICIATIVAS POR TEMA
@@ -146,8 +162,17 @@ NSMutableArray *puntajestotal;
 
 }
 
--(void)starsSelectionChanged:(EDStarRating *)control rating:(float)rating
-{
+
+-(void)starsSelectionChanged:(EDStarRating *)control rating:(float)rating{
+    
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(indexPath.row>0)
+        [self performSegueWithIdentifier:@"idsegue" sender:self];
+    
+
     
 }
 

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EDStarRating.h"
 
 @interface CeldaIniciativasTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblIniciativa;
+@property (weak, nonatomic) IBOutlet EDStarRating *starRating;
 
 @end

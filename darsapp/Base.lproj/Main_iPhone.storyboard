@@ -1884,10 +1884,16 @@
                                             <rect key="frame" x="137" y="57" width="25" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yuf-qM-ktj" customClass="EDStarRating">
+                                            <rect key="frame" x="84" y="10" width="230" height="38"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="lblIniciativa" destination="Guj-p0-yjP" id="oGq-mu-EUb"/>
+                                    <outlet property="starRating" destination="Yuf-qM-ktj" id="AEQ-xf-DfJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -42,6 +42,19 @@ NSMutableArray *puntajestotal;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    /*
+    self.starRating.backgroundColor  = [UIColor whiteColor];
+    self.starRating.starImage = [[UIImage imageNamed:@"star-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.starRating.starHighlightedImage = [[UIImage imageNamed:@"star-highlighted-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.starRating.maxRating = 5.0;
+    self.starRating.delegate = self;
+    self.starRating.horizontalMargin = 15.0;
+    self.starRating.editable=YES;
+    self.starRating.rating= 2.5;
+    self.starRating.displayMode=EDStarRatingDisplayHalf;
+    [self.starRating  setNeedsDisplay];
+    self.starRating.tintColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0];
+    [self starsSelectionChanged:self.starRating rating:2.5];*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +82,9 @@ NSMutableArray *puntajestotal;
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell;
 
+    
+    
+    
     return cell;
 }
 
@@ -128,6 +144,11 @@ NSMutableArray *puntajestotal;
           }];
 
 
+}
+
+-(void)starsSelectionChanged:(EDStarRating *)control rating:(float)rating
+{
+    
 }
 
 @end

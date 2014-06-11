@@ -44,20 +44,7 @@ NSMutableArray *puntajestotal;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    /*
-    self.starRating.backgroundColor  = [UIColor whiteColor];
-    self.starRating.starImage = [[UIImage imageNamed:@"star-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.starRating.starHighlightedImage = [[UIImage imageNamed:@"star-highlighted-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.starRating.maxRating = 5.0;
-    self.starRating.delegate = self;
-    self.starRating.horizontalMargin = 15.0;
-    self.starRating.editable=YES;
-    self.starRating.rating= 2.5;
-    self.starRating.displayMode=EDStarRatingDisplayHalf;
-    [self.starRating  setNeedsDisplay];
-    self.starRating.tintColor = [[UIColor alloc] initWithRed:0 green:0 blue:0 alpha:0];
-    [self starsSelectionChanged:self.starRating rating:2.5];*/
-
+    
     self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
     self.tableView.backgroundColor = [UIColor clearColor];
 
@@ -94,6 +81,22 @@ NSMutableArray *puntajestotal;
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaIniciativas"];
         ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row];
+        
+        
+         ((CeldaIniciativasTableViewCell*)cell).starRating.backgroundColor  = [UIColor whiteColor];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.starImage = [[UIImage imageNamed:@"star-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.starHighlightedImage = [[UIImage imageNamed:@"star-highlighted-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.maxRating = 5.0;
+         ((CeldaIniciativasTableViewCell*)cell).starRating.delegate = self;
+         ((CeldaIniciativasTableViewCell*)cell).starRating.horizontalMargin = 15.0;
+         ((CeldaIniciativasTableViewCell*)cell).starRating.editable=YES;
+         ((CeldaIniciativasTableViewCell*)cell).starRating.rating= 2.5;
+         ((CeldaIniciativasTableViewCell*)cell).starRating.displayMode=EDStarRatingDisplayHalf;
+         [((CeldaIniciativasTableViewCell*)cell).starRating  setNeedsDisplay];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.tintColor = [[UIColor alloc] initWithRed:63/255.0 green:192/255.0 blue:169/255.0 alpha:0];
+         [self starsSelectionChanged:((CeldaIniciativasTableViewCell*)cell).starRating rating:2.5];
+
+        
     }
 
     

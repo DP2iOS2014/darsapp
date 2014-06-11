@@ -1612,7 +1612,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sl6-en-QIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="88" y="-4003"/>
+            <point key="canvasLocation" x="70" y="-4017"/>
         </scene>
         <!--Navigation Controller - Proyectos-->
         <scene sceneID="uLL-zJ-pAm">

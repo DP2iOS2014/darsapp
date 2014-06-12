@@ -620,11 +620,13 @@
     
     if(juego.apretoCorona){
         juego.apretoCorona=NO;
-        [self.delegate DesapareceModalCuandoTocoCorona];
+       
 
     }
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{
+         [self.delegate DesapareceModalCuandoTocoCorona];
+    }];
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

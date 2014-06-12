@@ -7,12 +7,15 @@
 //
 
 #import "puntajeAdministradorViewController.h"
+#import "SingletonAmbientalizate.h"
 
 @interface puntajeAdministradorViewController ()
 
 @end
 
-@implementation puntajeAdministradorViewController
+@implementation puntajeAdministradorViewController{
+    SingletonAmbientalizate *Ambientalizate;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+     Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
+    
+    
      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
     

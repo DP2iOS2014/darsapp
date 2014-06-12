@@ -2303,7 +2303,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="xmK-WS-ww9" kind="push" id="hwU-go-lgu"/>
+                                                <segue destination="xmK-WS-ww9" kind="push" identifier="verpuntaje" id="hwU-go-lgu"/>
                                             </connections>
                                         </button>
                                     </subviews>

@@ -22,6 +22,7 @@
     NSMutableArray *buenaspracticas;
     NSMutableArray *puntajes;
     NSMutableArray *estados;
+    NSMutableArray * nids;
     double puntajeUsuario;
     SingletonAmbientalizate *Ambientalizate;
     
@@ -42,7 +43,10 @@
 -(void) recuperaBuenasPracticas{
     
     //lectura de datos
-    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:@"field_tipotema",@"campo",self.tema,@"valor",nil];
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
+    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:nombre, @"usuario", @"field_tipotema",@"campo",self.tema,@"valor",nil];
     
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"buenaspracticas", @"tipo", @[filtro2], @"filtro", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
@@ -52,6 +56,7 @@
     buenaspracticas = [[NSMutableArray alloc] init];
     puntajes = [[NSMutableArray alloc]init];
     estados = [[NSMutableArray alloc]init];
+    nids = [[NSMutableArray alloc] init];
     //PARA SACAR LOS DATOS
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -72,15 +77,20 @@
             NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
             //NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_tema"];
             NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
-            
+            NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];
             [estados addObject:estado];
+            [nids addObject:nid];
             
             
         }
         if([[Ambientalizate.ArregloEstados objectAtIndex:self.indice] count]==0){
             [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indice];
+            
+        }
+        if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
+            [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
             
         }
         [self.collectionView reloadData];

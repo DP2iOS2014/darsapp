@@ -10,6 +10,7 @@
 
 @interface SingletonAmbientalizate : NSObject
 @property (nonatomic,strong) NSMutableArray * ArregloEstados;
+@property(nonatomic,strong) NSMutableArray * ArregloNids;
 + (id)sharedManager:(NSInteger) cantidadFilas;
 + (void) setEstado:(NSMutableArray*)arregloEstado yIndice:(NSInteger) indiceArreglo;
 + (NSMutableArray*) getEstado: (NSInteger) IndiceArreglo;

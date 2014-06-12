@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *puntajeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenResultado;
 @property (weak, nonatomic) IBOutlet UILabel *textoResultado;
-
+@property NSInteger cantidadFilas;
 
 
 

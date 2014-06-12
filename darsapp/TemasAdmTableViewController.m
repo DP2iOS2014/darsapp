@@ -11,6 +11,7 @@
 #import "LiderAmbientalViewController.h"
 #import "CeldaTemas.h"
 #import "UIImageView+AFNetworking.h"
+#import "puntajeAdministradorViewController.h"
 
 @interface TemasAdmTableViewController ()
 
@@ -164,6 +165,10 @@
     
     
 }
+- (IBAction)SeApretoGuardar:(id)sender {
+    
+    [self performSegueWithIdentifier:@"verpuntaje" sender:self];
+}
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier  isEqual: @"idsegue"]){
@@ -174,6 +179,10 @@
     escenadestino.tema= [titulos objectAtIndex:selectedIndexPath.row];
         escenadestino.cantidadFilas = titulos.count;
     }
+    else if([segue.identifier isEqual:@"verpuntaje"]){
+        puntajeAdministradorViewController * escenadestino = segue.destinationViewController;
+       escenadestino.cantidadFilas = titulos.count;
+   }
     
 };
 

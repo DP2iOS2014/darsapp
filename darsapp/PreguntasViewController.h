@@ -12,7 +12,7 @@
 @protocol preguntasDelegate <NSObject>
 @optional
 -(void)apretoOkAlFallaPregunta;
-
+-(void)DesapareceModalCuandoTocoCorona;
 @end
 
 @interface PreguntasViewController : UIViewController<UIAlertViewDelegate>

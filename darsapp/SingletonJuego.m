@@ -29,6 +29,7 @@
         sharedMyManager.disponibilidadRespuesta2 = YES;
         sharedMyManager.disponibilidadRespuesta3 = YES;
         sharedMyManager.disponibilidadRespuesta4 = YES;
+        sharedMyManager.apretoCorona=NO;
         
         
     });
@@ -49,6 +50,7 @@
     temporal.disponibilidadRespuesta2 = YES;
     temporal.disponibilidadRespuesta3 = YES;
     temporal.disponibilidadRespuesta4 = YES;
+    temporal.apretoCorona=NO;
     
 
     

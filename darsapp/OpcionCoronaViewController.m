@@ -32,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
 }
 
@@ -42,30 +43,32 @@
 }
 - (IBAction)ApretoTema1:(id)sender {
     numerotema=0;
-    //[self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
 }
 - (IBAction)ApretoTema2:(id)sender {
     numerotema=1;
-    //[self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
 }
 - (IBAction)ApretoTema3:(id)sender {
     numerotema=2;
-    //[self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
 }
 - (IBAction)ApretoTema4:(id)sender {
     numerotema=3;
-    //[self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
 }
 
 
 -(void)irASeleccionado
 {
-    //[self performSegueWithIdentifier:@"ViewPreguntas" sender:self];
+    [self performSegueWithIdentifier:@"viewPreguntasSegundo" sender:self];
+    
+    
 }
 
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqual:@"ViewPreguntas"]) {
+    if ([segue.identifier isEqual:@"viewPreguntasSegundo"]) {
         PreguntasViewController *escenadestino = segue.destinationViewController;
         escenadestino.delegate = self;
         //ACA SE PONE EL ID DEL TEMA QUE SALIO EN LA RULETA
@@ -73,6 +76,10 @@
     }
     
 };
+
+-(void)DesapareceModalCuandoTocoCorona{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

@@ -10,6 +10,7 @@
 #import "PreguntasViewController.h"
 #import "UIImage+Tint.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "SingletonJuego.h"
 
 
 @interface RuletaJuegoViewController ()
@@ -18,7 +19,7 @@
 
 @implementation RuletaJuegoViewController
 {
-
+    SingletonJuego *juego;
     int numerotema;
     CGFloat rotacion;
     SystemSoundID audioEffect;
@@ -40,6 +41,7 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
+    juego= [SingletonJuego sharedManager];
     
     self.vidasCorazon.image = [self.vidasCorazon.image imageWithColor:[UIColor colorWithRed:213.0/255 green:89.0/255 blue:91.0/255 alpha:1]];
     
@@ -172,6 +174,7 @@
                                                                           numerotema =  arc4random()%4;
                                                                           
                                                                           if(numerotema==0){
+                                                                              juego.apretoCorona=YES;
                                                                               AudioServicesDisposeSystemSoundID(audioEffect);
                                                                                [self performSelector:@selector(irASeleccionado2) withObject:nil afterDelay:1];
                                             

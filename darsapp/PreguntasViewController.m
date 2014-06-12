@@ -616,6 +616,14 @@
 -(void)irASeleccionado
 {
     
+    
+    
+    if(juego.apretoCorona){
+        juego.apretoCorona=NO;
+        [self.delegate DesapareceModalCuandoTocoCorona];
+
+    }
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -623,6 +631,10 @@
     [timer invalidate];
     [self.delegate apretoOkAlFallaPregunta];
     [self dismissViewControllerAnimated:YES completion:nil];
+    if(juego.apretoCorona){
+        [self.delegate DesapareceModalCuandoTocoCorona];
+        juego.apretoCorona=NO;
+    }
     
 }
 

@@ -21,6 +21,7 @@
 @property BOOL disponibilidadRespuesta2;
 @property BOOL disponibilidadRespuesta3;
 @property BOOL disponibilidadRespuesta4;
+@property BOOL apretoCorona;
 
 + (id)sharedManager;
 + (void)ResetearValores;

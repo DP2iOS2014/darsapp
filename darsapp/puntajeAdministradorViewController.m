@@ -32,6 +32,18 @@
     
      Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
     
+    NSMutableArray *NidsArregloJson = [ [NSMutableArray alloc] init];
+    
+    for (int i=0; self.cantidadFilas; i++){
+        Ambientalizate = [SingletonAmbientalizate sharedManager:i];
+        for (int j=0; Ambientalizate.ArregloEstados.count; j++){
+            if ( ((NSNumber*)Ambientalizate.ArregloEstados[i][j]).intValue == 1 ){
+                [NidsArregloJson addObject:Ambientalizate.ArregloNids[j]];
+            }
+        }
+    }
+    
+    
     
      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.

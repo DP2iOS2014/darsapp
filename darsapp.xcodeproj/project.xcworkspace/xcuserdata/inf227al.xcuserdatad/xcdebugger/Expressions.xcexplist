@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[Iniciativas tableView:cellForRowAtIndexPath:]:Iniciativas.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[puntajeAdministradorViewController viewDidLoad]:puntajeAdministradorViewController.m">
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

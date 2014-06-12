@@ -28,9 +28,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+       [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
+    
     self.starRating.backgroundColor  = [UIColor clearColor];
-    self.starRating.starImage = [[UIImage imageNamed:@"star-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    self.starRating.starHighlightedImage = [[UIImage imageNamed:@"star-highlighted-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.starRating.starImage = [[UIImage imageNamed:@"leaf2"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.starRating.starHighlightedImage = [[UIImage imageNamed:@"leaf"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.starRating.maxRating = 5.0;
     self.starRating.delegate = self;
     self.starRating.horizontalMargin = 15.0;
@@ -40,6 +42,10 @@
     [self.starRating  setNeedsDisplay];
     self.starRating.tintColor = [[UIColor alloc] initWithRed:63.0/255.0 green:192.0/255.0 blue:169.0/255.0 alpha:1];
     [self starsSelectionChanged:self.starRating rating:2.5];
+    
+    self.lblIniciativa.text= self.titulos[self.celdaseleccionada-1];
+    self.lblDescripcion.text=self.descripciones[self.celdaseleccionada-1];
+    
 }
 
 - (void)didReceiveMemoryWarning

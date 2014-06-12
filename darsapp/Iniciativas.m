@@ -10,6 +10,7 @@
 #import "URLsJson.h"
 #import "UIImage+Tint.h"
 #import "CeldaIniciativasTableViewCell.h"
+#import "DetalleIniciativaViewController.h"
 
 @interface Iniciativas ()
 
@@ -72,8 +73,8 @@ NSMutableArray *puntajestotal;
 {
 
 
-    //return (iniciativas.count +1);
-    return 2;
+    return (iniciativas.count +1);
+    //return 2;
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -82,12 +83,12 @@ NSMutableArray *puntajestotal;
         cell = [tableView dequeueReusableCellWithIdentifier:@"celdanuevainiciativa"];
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaIniciativas"];
-        //((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row];
-        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= @"Iniciativa1";
+        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row-1];
+        //((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= @"Iniciativa1";
         
          ((CeldaIniciativasTableViewCell*)cell).starRating.backgroundColor  = [UIColor clearColor];
-         ((CeldaIniciativasTableViewCell*)cell).starRating.starImage = [[UIImage imageNamed:@"star-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-         ((CeldaIniciativasTableViewCell*)cell).starRating.starHighlightedImage = [[UIImage imageNamed:@"star-highlighted-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.starImage = [[UIImage imageNamed:@"leaf2"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+         ((CeldaIniciativasTableViewCell*)cell).starRating.starHighlightedImage = [[UIImage imageNamed:@"leaf"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
          ((CeldaIniciativasTableViewCell*)cell).starRating.maxRating = 5.0;
          ((CeldaIniciativasTableViewCell*)cell).starRating.delegate = self;
          ((CeldaIniciativasTableViewCell*)cell).starRating.horizontalMargin = 15.0;
@@ -112,9 +113,9 @@ NSMutableArray *puntajestotal;
 
 -(void) recuperoIniciativas{
 
-    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:@"field_tipotema",@"campo",self.temainiciativas,@"valor",nil];
+    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:self.temainiciativas,@"valor",nil];
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"iniciativas", @"tipo", @[filtro2], @"filtro", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"iniciativa", @"tipo", @[filtro2], @"filtro", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
     NSLog(@"%@", consulta);
@@ -139,16 +140,16 @@ NSMutableArray *puntajestotal;
         for(int i=0; i<[arregloPosiciones count];i++){
             NSString *descripcion = [[arregloPosiciones objectAtIndex:i] objectForKey:@"descripcion"];
             NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-            NSString *puntajeusuario = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
-            NSString *puntajetotal = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje_total"];
+            //NSString *puntajeusuario = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+            //NSString *puntajetotal = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje_total"];
             NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
             
             [iniciativas addObject:titulo];
             [descripciones   addObject:descripcion];
-            [puntajesusuario   addObject:puntajeusuario];
-            [puntajestotal addObject:puntajetotal];
+            //[puntajesusuario   addObject:puntajeusuario];
+            //[puntajestotal addObject:puntajetotal];
            
-            
+            [self.tableView reloadData ];
             
         }
 
@@ -181,6 +182,20 @@ NSMutableArray *puntajestotal;
     
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([segue.identifier  isEqual: @"idsegue"]){
+        DetalleIniciativaViewController *escenadestino = segue.destinationViewController;
+        //escenadestino.respuestajson= respuesta;
+        
+        escenadestino.titulos = [[NSMutableArray alloc] initWithArray: iniciativas];
+        escenadestino.descripciones = [[NSMutableArray alloc] initWithArray: descripciones];
+
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        escenadestino.celdaseleccionada = selectedIndexPath.row;
+
+    }
+    
+};
 
 
 @end

@@ -98,92 +98,92 @@
     [UIView animateWithDuration:.1 delay:0 options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          
-                         iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                         //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                         iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
                          
                      }
                      completion:^(BOOL finished) {
                          
                       [UIView animateWithDuration:.08 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                          iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                          //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                          iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
                       } completion:^(BOOL finished) {
                           
                           [UIView animateWithDuration:.09 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                              
-                              iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                              iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                              //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                           } completion:^(BOOL finished) {
                               
                               
                               [UIView animateWithDuration:.1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                  
-                                  iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                  iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                  //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                               } completion:^(BOOL finished) {
                                   
                                   
                                   [UIView animateWithDuration:.11 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                      
-                                      iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                      iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                      //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                   } completion:^(BOOL finished) {
                                       
                                       [UIView animateWithDuration:.12 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                          
-                                          iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                          iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                          //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                       } completion:^(BOOL finished) {
                                           
                                           [UIView animateWithDuration:.13 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                              
-                                              iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                            iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                            //  iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                           } completion:^(BOOL finished) {
                                               
                                               [UIView animateWithDuration:.14 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                                  
-                                                  iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                                  iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                                  //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                               } completion:^(BOOL finished) {
                                                   
                                                   [UIView animateWithDuration:.15 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                                      
-                                                      iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                                     iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                                      //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                                   } completion:^(BOOL finished) {
                                                       
                                                       [UIView animateWithDuration:.19 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                                          
-                                                          iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                                        iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                                          //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                                       } completion:^(BOOL finished) {
                                                           
                                                           [UIView animateWithDuration:.21 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                                              
-                                                              iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
+                                                              iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
+                                                              //iv.transform = CGAffineTransformRotate(iv.transform, rotacion);
                                                           } completion:^(BOOL finished) {
                                                               
                                                               [UIView animateWithDuration:.23 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+                                                                 iv.layer.transform = CATransform3DRotate(iv.layer.transform, rotacion, 0, 0, 1);
                                                                   
                                                                   
-                                                                  
-                                                                  CGAffineTransformRotate(iv.transform, rotacion);
+                                                                  //CGAffineTransformRotate(iv.transform, rotacion);
                                                               } completion:^(BOOL finished) {
                                                                 
                                                                   
                                                                  
                                                                   
                                                                   CGFloat angulo=72.0f*(M_PI/180.0f);
-                                                                  //CGFloat angulo=-(M_PI/2.0f);
-                                                                  AudioServicesDisposeSystemSoundID(audioEffect);
+                                                                  
                                                                       if(finished){
                                                                           numerotema =  arc4random()%4;
-                                                                          //numerotema =  arc4random()%3;
                                                                           
                                                                           if(numerotema==0){
-                                                                               [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+                                                                              AudioServicesDisposeSystemSoundID(audioEffect);
+                                                                               [self performSelector:@selector(irASeleccionado2) withObject:nil afterDelay:1];
                                             
                                                                           }else if (numerotema==1){
                                                                               [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                                                                                  
-                                                                                
                                                                                   //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
-                                                                                         iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
+                                                                                  iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                               } completion:^(BOOL finished) {
-                                                                                  //Esto se ejecuta en un hilo aparte
-                                                                                  if(finished)
-                                                                                  [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+                                                                                  if(finished){
+                                                                                    AudioServicesDisposeSystemSoundID(audioEffect);
+                                                                                      [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+                                                                                  }
                                                                                   
                                                                               }];
                                                                                
@@ -191,20 +191,21 @@
                                                                               [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                   
                                                                                   //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
-                                                                                       iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
+                                                                                  iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
+                                                                                  
                                                                               } completion:^(BOOL finished) {
                                                                                   
                                                                                   if(finished){
                                                                                       [UIView animateWithDuration:.24 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
                                                                                       
-                                                                                          //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
-                                                                                               iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
+                                                                                          //iv.layer.transform = CGAffineTransformRotate(iv.transform, angulo);
+                                                                                          iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                       }  completion:^(BOOL finished) {
-                                                                                      //Esto se ejecuta en un hilo aparte
-                                                                                          if(finished)
-                                                                                      [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+                                                                                          if(finished){
+                                                                                              AudioServicesDisposeSystemSoundID(audioEffect);
+                                                                                              [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+                                                                                          }
                                                                                       
-                                                                                      //  [self rotateImageView:iv];
                                                                                       
                                                                                   }];
                                                                                   }
@@ -227,7 +228,7 @@
                                                                                           //iv.transform = CGAffineTransformRotate(iv.transform, angulo);
                                                                                                iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                       } completion:^(BOOL finished) {
-                                                                                          //Esto se ejecuta en un hilo aparte
+                                                                                          AudioServicesDisposeSystemSoundID(audioEffect);
                                                                                           [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
                                                                                           
                                                                                       }];
@@ -260,7 +261,7 @@
                                                                                                    iv.layer.transform = CATransform3DRotate(iv.layer.transform, angulo, 0, 0, 1);
                                                                                           } completion:^(BOOL finished) {
                                                                                               //Esto se ejecuta en un hilo aparte
-                                                                                              
+                                                                                              AudioServicesDisposeSystemSoundID(audioEffect);
                                                                                               [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
                                                                                               
                                                                                           }];
@@ -328,6 +329,11 @@
     }
 
 };
+
+-(void)irASeleccionado2
+{
+    [self performSegueWithIdentifier:@"ViewCorona" sender:self];
+}
 
 -(void)viewWillDisappear:(BOOL)animated{
     

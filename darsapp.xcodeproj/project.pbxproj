@@ -173,6 +173,7 @@
 		12A2A3571948F06D0044F990 /* star-template.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A2A3531948F06D0044F990 /* star-template.png */; };
 		12A2A3581948F06D0044F990 /* star-template@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A2A3541948F06D0044F990 /* star-template@2x.png */; };
 		12A2A35B19491B7A0044F990 /* DetalleIniciativaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A2A35A19491B7A0044F990 /* DetalleIniciativaViewController.m */; };
+		12A2A36119493C520044F990 /* OpcionCoronaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A2A36019493C520044F990 /* OpcionCoronaViewController.m */; };
 		12A3A6D41942152100BEEC00 /* hearts-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D31942152100BEEC00 /* hearts-50.png */; };
 		12A3A6D6194215B200BEEC00 /* hearts-75.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A3A6D5194215B200BEEC00 /* hearts-75.png */; };
 		12A3A6D91942245000BEEC00 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A3A6D81942245000BEEC00 /* UIImage+Tint.m */; };
@@ -565,6 +566,8 @@
 		12A2A3541948F06D0044F990 /* star-template@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-template@2x.png"; sourceTree = "<group>"; };
 		12A2A35919491B7A0044F990 /* DetalleIniciativaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleIniciativaViewController.h; sourceTree = "<group>"; };
 		12A2A35A19491B7A0044F990 /* DetalleIniciativaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleIniciativaViewController.m; sourceTree = "<group>"; };
+		12A2A35F19493C520044F990 /* OpcionCoronaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpcionCoronaViewController.h; sourceTree = "<group>"; };
+		12A2A36019493C520044F990 /* OpcionCoronaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpcionCoronaViewController.m; sourceTree = "<group>"; };
 		12A3A6D31942152100BEEC00 /* hearts-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hearts-50.png"; sourceTree = "<group>"; };
 		12A3A6D5194215B200BEEC00 /* hearts-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hearts-75.png"; sourceTree = "<group>"; };
 		12A3A6D71942245000BEEC00 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
@@ -961,6 +964,8 @@
 				12A1FAC3191C56290095179D /* SingletonJuego.m */,
 				12A3A6D71942245000BEEC00 /* UIImage+Tint.h */,
 				12A3A6D81942245000BEEC00 /* UIImage+Tint.m */,
+				12A2A35F19493C520044F990 /* OpcionCoronaViewController.h */,
+				12A2A36019493C520044F990 /* OpcionCoronaViewController.m */,
 			);
 			name = Juego;
 			sourceTree = "<group>";
@@ -1813,6 +1818,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A2A36119493C520044F990 /* OpcionCoronaViewController.m in Sources */,
 				12E53C62191D86F100911B7C /* RutasTableViewController.m in Sources */,
 				129EDB861938F3A30088735B /* Instrucciones4ViewController.m in Sources */,
 				129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */,

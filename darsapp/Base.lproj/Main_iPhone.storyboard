@@ -783,7 +783,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gQ-4F-fiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2280" y="-4548"/>
+            <point key="canvasLocation" x="2322" y="-4448"/>
         </scene>
         <!--Instrucciones View Controller - Instrucciones-->
         <scene sceneID="V6S-uO-FAw">
@@ -848,7 +848,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiq-rb-NYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2292" y="-3855"/>
+            <point key="canvasLocation" x="2288" y="-3821"/>
         </scene>
         <!--Instrucciones2 View Controller - Instrucciones-->
         <scene sceneID="zwf-L5-tbp">
@@ -1897,6 +1897,77 @@
             </objects>
             <point key="canvasLocation" x="1611" y="-6097"/>
         </scene>
+        <!--Opcion Corona View Controller-->
+        <scene sceneID="bG2-Y0-xUS">
+            <objects>
+                <viewController id="Azs-fH-kNl" customClass="OpcionCoronaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="brv-s8-hL5"/>
+                        <viewControllerLayoutGuide type="bottom" id="37P-lr-oVt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wxt-sJ-Q6C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Que tipo de pregunta deseas elegir?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="Bim-1j-0Gx">
+                                <rect key="frame" x="46" y="73" width="229" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdp-I8-dsx">
+                                <rect key="frame" x="66" y="225" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="tema1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ApretoTema1:" destination="Azs-fH-kNl" eventType="touchUpInside" id="air-bB-Ya7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5I5-eu-0FS">
+                                <rect key="frame" x="200" y="225" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="tema2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ApretoTema2:" destination="Azs-fH-kNl" eventType="touchUpInside" id="cia-ae-ATg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-HI-6aa">
+                                <rect key="frame" x="66" y="338" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="tema3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ApretoTema3:" destination="Azs-fH-kNl" eventType="touchUpInside" id="Jdg-7o-i0j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRz-QB-2tU">
+                                <rect key="frame" x="200" y="338" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="tema4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ApretoTema4:" destination="Azs-fH-kNl" eventType="touchUpInside" id="YZh-vs-mtM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w3N-V8-8pr"/>
+                    <connections>
+                        <segue destination="mQJ-Vt-z41" kind="modal" identifier="viewPreguntasSegundo" modalTransitionStyle="flipHorizontal" id="DoC-WH-Ll0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFu-gp-IDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="-5383"/>
+        </scene>
         <!--Detalle Iniciativa View Controller-->
         <scene sceneID="AQc-TW-qH8">
             <objects>
@@ -1955,7 +2026,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gi7-Da-C3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="-5751"/>
+            <point key="canvasLocation" x="2160" y="-5893"/>
         </scene>
         <!--Nueva Iniciativa View Controller - Nueva Iniciativa-->
         <scene sceneID="iR4-0B-Aak">
@@ -2009,7 +2080,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkQ-ok-vN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2154" y="-6481"/>
+            <point key="canvasLocation" x="2160" y="-6553"/>
         </scene>
         <!--Eventos View Controller-->
         <scene sceneID="M0Z-PG-AtZ">
@@ -2580,11 +2651,12 @@
                         <outlet property="vidasCorazon" destination="6sh-nX-XTy" id="geQ-WO-Abp"/>
                         <outlet property="vidasRuleta" destination="BDR-6l-Av4" id="WdY-lK-mRA"/>
                         <segue destination="mQJ-Vt-z41" kind="modal" identifier="ViewPreguntas" modalTransitionStyle="flipHorizontal" id="JAq-Fb-1S1"/>
+                        <segue destination="Azs-fH-kNl" kind="modal" identifier="ViewCorona" modalTransitionStyle="flipHorizontal" id="vU8-8l-640"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFs-7T-C74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1199" y="-4759"/>
+            <point key="canvasLocation" x="1163" y="-4773"/>
         </scene>
         <!--Preguntas View Controller-->
         <scene sceneID="Rhe-ss-9Cl">
@@ -2751,7 +2823,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bAJ-w0-GQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="-4751"/>
+            <point key="canvasLocation" x="1908" y="-4779"/>
         </scene>
     </scenes>
     <resources>
@@ -2813,4 +2885,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="DoC-WH-Ll0"/>
+    </inferredMetricsTieBreakers>
 </document>

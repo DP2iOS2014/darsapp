@@ -138,6 +138,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Contáctanos" id="ByM-h4-bJt">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="q0k-xv-dKG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="seApretoCompartir:" destination="FEI-9z-Nhg" id="C9R-bS-hs2"/>
                             </connections>
@@ -1170,7 +1171,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ruta de la Botella" id="eON-Vw-ZcI"/>
+                    <navigationItem key="navigationItem" title="Ruta de la Botella" id="eON-Vw-ZcI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="wv5-Ph-E4w">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="compartirFotos:" destination="pz7-kR-bNB" id="77F-3N-wKV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carruselbotellas" destination="lNk-fO-O68" id="aFJ-p2-k29"/>
                     </connections>
@@ -1212,7 +1220,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ruta de las Pilas" id="PAt-ar-0Nr"/>
+                    <navigationItem key="navigationItem" title="Ruta de las Pilas" id="PAt-ar-0Nr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="a3C-DH-HjC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="compartirFotos:" destination="iOZ-bn-BO7" id="8kK-HR-3tJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carruselpilas" destination="eFP-uR-8d9" id="cgE-la-h88"/>
                     </connections>
@@ -1298,14 +1313,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ruta de la Electricidad" id="4RO-Qv-3mj"/>
+                    <navigationItem key="navigationItem" title="Ruta de la Electricidad" id="4RO-Qv-3mj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Pxu-Lk-qEe">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="compartirFotos:" destination="CrW-IH-69j" id="ivl-y6-5qq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carruselelectricidad" destination="9Vu-QO-HiP" id="Vtx-eO-Ibp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KA-5B-6I9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2148" y="-332"/>
+            <point key="canvasLocation" x="2093" y="-300"/>
         </scene>
         <!--Separatas View Controller - Ruta de las Separatas-->
         <scene sceneID="qA0-Iw-DEw">
@@ -1340,7 +1362,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Ruta de las Separatas" id="9GL-jF-PsM"/>
+                    <navigationItem key="navigationItem" title="Ruta de las Separatas" id="9GL-jF-PsM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Q5t-QA-ohm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="compartirFotos:" destination="QQc-AE-eo2" id="eke-VG-K7Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="carruselseparatas" destination="VeD-CH-yNv" id="IAo-e2-ivo"/>
                     </connections>
@@ -1377,7 +1406,7 @@
                                     <segment title="Vidrio"/>
                                     <segment title="Todos"/>
                                 </segments>
-                                <color key="tintColor" red="0.333059828" green="0.78993796859999998" blue="0.82281759509999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.25490197539999998" green="0.72156864399999998" blue="0.61176472900000001" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <action selector="cambioDeTacho:" destination="9cJ-BL-oAH" eventType="valueChanged" id="go0-oZ-mTn"/>
                                 </connections>

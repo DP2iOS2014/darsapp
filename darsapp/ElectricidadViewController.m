@@ -122,5 +122,13 @@
 {
     
 }
+- (IBAction)compartirFotos:(UIBarButtonItem*)sender {
+    
+    UIActivityViewController *miActivity = [[UIActivityViewController alloc] initWithActivityItems:@[@"Esta es la Ruta que sigue la Electricidad en la PUCP!", items] applicationActivities:nil];
+    
+    miActivity.excludedActivityTypes = @[UIActivityTypeMail];
+    
+    [self presentViewController:miActivity animated:YES completion:nil];
+}
 
 @end

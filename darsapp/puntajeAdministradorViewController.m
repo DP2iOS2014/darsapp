@@ -8,6 +8,7 @@
 
 #import "puntajeAdministradorViewController.h"
 #import "SingletonAmbientalizate.h"
+#import "URLsJson.h"
 
 @interface puntajeAdministradorViewController ()
 
@@ -15,6 +16,7 @@
 
 @implementation puntajeAdministradorViewController{
     SingletonAmbientalizate *Ambientalizate;
+    NSMutableArray *NidsArregloJson;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,7 +34,7 @@
     
      Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
     
-    NSMutableArray *NidsArregloJson = [ [NSMutableArray alloc] init];
+    NidsArregloJson = [ [NSMutableArray alloc] init];
     
     for (int i=0; i< self.cantidadFilas; i++){
         for (int j=0; j<[[Ambientalizate.ArregloEstados objectAtIndex:i] count]; j++){
@@ -44,12 +46,64 @@
     
     
     
-    
      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
+    //[self enviaPuntaje];
+    
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
+
+
+
+-(void) enviaPuntaje{
+
+    NSDictionary *listanodos = [[NSDictionary alloc] init];
+    NSMutableArray *cuerpo2;
+    
+    for(int i=0;i<NidsArregloJson.count;i++){
+        listanodos = [ listanodos initWithObjectsAndKeys:@"100","puntaje",NidsArregloJson[i],@"nid",nil];
+        [cuerpo2 addObject:listanodos];
+    
+    }
+
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"username", cuerpo2, @"listaNodos", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registro_votosxusuario",@"desc",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        //respuestatemas = responseObject;
+        //NSLog(@"JSON: %@", respuestatemas);
+        
+        //NSDictionary * diccionarioPosiciones = [respuestatemas objectForKey:@"cuerpo"];
+        //NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+        
+        //PARA SACAR LOS DATOS
+        
+
+        
+        //[self.tableView reloadData];
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+    
+
+}
+
+
 - (void) viewWillAppear:(BOOL)animated{
     
     NSUserDefaults * datosDeUsuario = [NSUserDefaults standardUserDefaults];

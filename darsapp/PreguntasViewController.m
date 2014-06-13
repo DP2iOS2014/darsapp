@@ -96,7 +96,7 @@
     self.btnOtroOpcion.userInteractionEnabled=YES;
     self.btnNuevaPregunta.userInteractionEnabled=YES;
     
-     self.btnReloj.imageView.image = [self.btnReloj.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+    self.btnReloj.imageView.image = [self.btnReloj.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
     self.btnBomba.imageView.image = [self.btnBomba.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
     self.btnOtroOpcion.imageView.image = [self.btnOtroOpcion.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
     self.btnNuevaPregunta.imageView.image = [self.btnNuevaPregunta.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
@@ -186,6 +186,7 @@
     //PARA ENVIAR PRIMI
     
     if(self.idtema==0){
+        tipotema= @"Segregación";
         tipotema=@"Proyectos DARS" ;
     }
     
@@ -202,7 +203,7 @@
     }
     
     if(self.idtema==4){
-        tipotema= @"Segregación";
+         tipotema=@"Proyectos DARS" ;
     }
     
  
@@ -274,6 +275,7 @@
 /*Seleccion de Poderes*/
 
 - (IBAction)SeApretoReloj:(id)sender {
+    
     if( juego.VidasReloj  >0) {
         NSString *path  = [[NSBundle mainBundle] pathForResource:@"clock" ofType:@"wav"];
         NSURL *pathURL = [NSURL fileURLWithPath : path];
@@ -615,18 +617,17 @@
 
 -(void)irASeleccionado
 {
-    
-    
-    
     if(juego.apretoCorona){
         juego.apretoCorona=NO;
-       
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:^{
+            [self.delegate DesapareceModalCuandoTocoCorona];
+        }];
 
     }
     
-    [self dismissViewControllerAnimated:YES completion:^{
-         [self.delegate DesapareceModalCuandoTocoCorona];
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{

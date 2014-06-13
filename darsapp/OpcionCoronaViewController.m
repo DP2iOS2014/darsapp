@@ -42,25 +42,26 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)ApretoTema1:(id)sender {
-    numerotema=0;
-    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
-}
-- (IBAction)ApretoTema2:(id)sender {
     numerotema=1;
     [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
 }
-- (IBAction)ApretoTema3:(id)sender {
+- (IBAction)ApretoTema2:(id)sender {
     numerotema=2;
     [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
 }
-- (IBAction)ApretoTema4:(id)sender {
+- (IBAction)ApretoTema3:(id)sender {
     numerotema=3;
+    [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
+}
+- (IBAction)ApretoTema4:(id)sender {
+    numerotema=4;
     [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:1];
 }
 
 
 -(void)irASeleccionado
 {
+
     [self performSegueWithIdentifier:@"viewPreguntasSegundo" sender:self];
     
     
@@ -78,8 +79,11 @@
 };
 
 -(void)DesapareceModalCuandoTocoCorona{
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:NO completion:nil];    
+        [self.navigationController popViewControllerAnimated:NO];
+    
 }
+
 /*
 #pragma mark - Navigation
 

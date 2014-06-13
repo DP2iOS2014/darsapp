@@ -26,6 +26,7 @@
 }
 
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 
@@ -43,8 +44,8 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     juego= [SingletonJuego sharedManager];
     
-    self.vidasCorazon.image = [self.vidasCorazon.image imageWithColor:[UIColor colorWithRed:213.0/255 green:89.0/255 blue:91.0/255 alpha:1]];
-    
+    self.vidasCorazon.image = [self.vidasCorazon.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
     //self.vidasCorazon.image = [self.vidasCorazon.image imageTintedWithColor:[UIColor redColor]]; //Colorful imag
@@ -315,6 +316,7 @@
 -(void)apretoOkAlFallaPregunta{
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
 
 
 -(void)irASeleccionado

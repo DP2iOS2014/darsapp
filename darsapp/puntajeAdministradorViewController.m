@@ -34,14 +34,14 @@
     
     NSMutableArray *NidsArregloJson = [ [NSMutableArray alloc] init];
     
-    for (int i=0; self.cantidadFilas; i++){
-        Ambientalizate = [SingletonAmbientalizate sharedManager:i];
-        for (int j=0; Ambientalizate.ArregloEstados.count; j++){
+    for (int i=0; i< self.cantidadFilas; i++){
+        for (int j=0; j<[[Ambientalizate.ArregloEstados objectAtIndex:i] count]; j++){
             if ( ((NSNumber*)Ambientalizate.ArregloEstados[i][j]).intValue == 1 ){
-                [NidsArregloJson addObject:Ambientalizate.ArregloNids[j]];
+                [NidsArregloJson addObject:Ambientalizate.ArregloNids[i][j]];
             }
         }
     }
+    
     
     
     

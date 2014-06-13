@@ -20,6 +20,8 @@
 
 @end
 
+typedef void (^myCompletion)(BOOL);
+
 @implementation PreguntasViewController
 
 {
@@ -186,24 +188,25 @@
     //PARA ENVIAR PRIMI
     
     if(self.idtema==0){
-        tipotema= @"Segregación";
-        tipotema=@"Proyectos DARS" ;
+
     }
     
     if(self.idtema==1){
-        tipotema= @"Segregación";
+        tipotema=@"Proyectos DARS" ;
+        
     }
     
     if(self.idtema==2){
-        tipotema= @"Cultura Ambiental";
+         tipotema= @"Datos Curiosos";
+        
     }
     
     if(self.idtema==3){
-        tipotema= @"Datos Curiosos";
+       tipotema= @"Cultura Ambiental";
     }
     
     if(self.idtema==4){
-         tipotema=@"Proyectos DARS" ;
+        tipotema= @"Segregación";
     }
     
  
@@ -620,13 +623,24 @@
     if(juego.apretoCorona){
         juego.apretoCorona=NO;
         //[self dismissViewControllerAnimated:YES completion:nil];
-        [self dismissViewControllerAnimated:YES completion:^{
-            [self.delegate DesapareceModalCuandoTocoCorona];
+        [self myMethod:^(BOOL finished) {
+            if(finished){
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
         }];
+        
+        
+        
 
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+-(void) myMethod:(myCompletion) compblock {
+    [self.delegate DesapareceModalCuandoTocoCorona];
+    compblock (YES);
 
 }
 

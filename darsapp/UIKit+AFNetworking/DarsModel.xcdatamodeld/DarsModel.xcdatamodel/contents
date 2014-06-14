@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BuenaPractica" representedClassName="BuenaPractica" syncable="YES">
+        <attribute name="codigoPractica" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="codigoTema" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="estado" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="personas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Persona" inverseName="buenasPracticas" inverseEntity="Persona" syncable="YES"/>
+    </entity>
+    <entity name="Persona" representedClassName="Persona" syncable="YES">
+        <attribute name="edad" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sexo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="buenasPracticas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuenaPractica" inverseName="personas" inverseEntity="BuenaPractica" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BuenaPractica" positionX="-3726" positionY="-3094" width="153" height="103"/>
+        <element name="Persona" positionX="-3719" positionY="-3310" width="128" height="103"/>
+    </elements>
+</model>

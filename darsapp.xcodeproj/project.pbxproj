@@ -89,6 +89,7 @@
 		129D4DB21919C27200D12423 /* bombaFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAE1919C27200D12423 /* bombaFinal.png */; };
 		129D4DB31919C27200D12423 /* againFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 129D4DAF1919C27200D12423 /* againFinal.png */; };
 		129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D4DB81919C3DF00D12423 /* ClasePregunta.m */; };
+		129D8B65195227A0008160F3 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 129D8B64195227A0008160F3 /* Login.m */; };
 		129E07681948EBD0009B7A21 /* NuevaIniciativaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 129E07671948EBD0009B7A21 /* NuevaIniciativaViewController.m */; };
 		129EDB551938DDBE0088735B /* categorias_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB541938DDBE0088735B /* categorias_tittle.png */; };
 		129EDB571938DDC90088735B /* comodines_tittle.png in Resources */ = {isa = PBXBuildFile; fileRef = 129EDB561938DDC90088735B /* comodines_tittle.png */; };
@@ -465,6 +466,8 @@
 		129D4DAF1919C27200D12423 /* againFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = againFinal.png; sourceTree = "<group>"; };
 		129D4DB71919C3DF00D12423 /* ClasePregunta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClasePregunta.h; sourceTree = "<group>"; };
 		129D4DB81919C3DF00D12423 /* ClasePregunta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClasePregunta.m; sourceTree = "<group>"; };
+		129D8B63195227A0008160F3 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		129D8B64195227A0008160F3 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		129E07661948EBD0009B7A21 /* NuevaIniciativaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NuevaIniciativaViewController.h; sourceTree = "<group>"; };
 		129E07671948EBD0009B7A21 /* NuevaIniciativaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NuevaIniciativaViewController.m; sourceTree = "<group>"; };
 		129EDB541938DDBE0088735B /* categorias_tittle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = categorias_tittle.png; sourceTree = "<group>"; };
@@ -1031,6 +1034,18 @@
 			name = "Imagenes Juego";
 			sourceTree = "<group>";
 		};
+		129D8B6219522122008160F3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				12A1F705190AD47B001ED3BE /* Login Images */,
+				12A1F6EE190ABC6C001ED3BE /* LoginViewController.h */,
+				12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */,
+				129D8B63195227A0008160F3 /* Login.h */,
+				129D8B64195227A0008160F3 /* Login.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		12A128CB191EAE3000397B90 /* Ambientalizate */ = {
 			isa = PBXGroup;
 			children = (
@@ -1421,6 +1436,7 @@
 		12F4CFCE18FF147500C8BFF5 /* darsapp */ = {
 			isa = PBXGroup;
 			children = (
+				129D8B6219522122008160F3 /* Login */,
 				12A2A34C1948E8F50044F990 /* EDStarRating */,
 				12A2023C193A647C00942747 /* Emitter */,
 				12D1DD6519393CDA00BF81A5 /* Sonido */,
@@ -1460,13 +1476,10 @@
 				12F4CFDD18FF147500C8BFF5 /* Main_iPad.storyboard */,
 				12F4CFE018FF147500C8BFF5 /* ViewController.h */,
 				12F4CFE118FF147500C8BFF5 /* ViewController.m */,
-				12A1F6EE190ABC6C001ED3BE /* LoginViewController.h */,
-				12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */,
 				12F91D3A1911852D009655B2 /* DarsLocalizacionAnnotation.h */,
 				12F91D3B1911852D009655B2 /* DarsLocalizacionAnnotation.m */,
 				120FF2861914061800A697D6 /* URLsJson.h */,
 				120FF2871914061800A697D6 /* URLsJson.m */,
-				12A1F705190AD47B001ED3BE /* Login Images */,
 				12A1F6F4190AC8FC001ED3BE /* Tabbar Images */,
 				12F4D00018FF203600C8BFF5 /* Logos Contactanos */,
 				12F4CFE318FF147500C8BFF5 /* Images.xcassets */,
@@ -1864,6 +1877,7 @@
 				12C2E047194006E5009F8549 /* EventosViewController.m in Sources */,
 				12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */,
 				120FF2321913F39400A697D6 /* UIImageView+AFNetworking.m in Sources */,
+				129D8B65195227A0008160F3 /* Login.m in Sources */,
 				1276EA08192D4FB000B49816 /* LiderAmbientalCell.m in Sources */,
 				120FF22A1913F39400A697D6 /* AFURLConnectionOperation.m in Sources */,
 				120FF22F1913F39400A697D6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,

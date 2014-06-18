@@ -73,7 +73,7 @@ NSMutableArray *puntajestotal;
 {
 
 
-    return (iniciativas.count +1);
+    return (descripciones.count +1);
     //return 2;
 }
 
@@ -83,7 +83,7 @@ NSMutableArray *puntajestotal;
         cell = [tableView dequeueReusableCellWithIdentifier:@"celdanuevainiciativa"];
     }else{
         cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaIniciativas"];
-        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= iniciativas[indexPath.row-1];
+        ((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= descripciones[indexPath.row-1];
         //((CeldaIniciativasTableViewCell*)cell).lblIniciativa.text= @"Iniciativa1";
         
          ((CeldaIniciativasTableViewCell*)cell).starRating.backgroundColor  = [UIColor clearColor];
@@ -93,11 +93,17 @@ NSMutableArray *puntajestotal;
          ((CeldaIniciativasTableViewCell*)cell).starRating.delegate = self;
          ((CeldaIniciativasTableViewCell*)cell).starRating.horizontalMargin = 15.0;
          ((CeldaIniciativasTableViewCell*)cell).starRating.editable=NO;
-         ((CeldaIniciativasTableViewCell*)cell).starRating.rating= 2.5;
+
+        ((CeldaIniciativasTableViewCell*)cell).starRating.rating= ((NSNumber*)puntajestotal[indexPath.row-1]).intValue / 20;
+        
+
+        
          ((CeldaIniciativasTableViewCell*)cell).starRating.displayMode=EDStarRatingDisplayHalf;
          [((CeldaIniciativasTableViewCell*)cell).starRating  setNeedsDisplay];
          ((CeldaIniciativasTableViewCell*)cell).starRating.tintColor = [[UIColor alloc] initWithRed:63.0/255.0 green:192.0/255.0 blue:169.0/255.0 alpha:1];
-         [self starsSelectionChanged:((CeldaIniciativasTableViewCell*)cell).starRating rating:2.5];
+        
+        [self starsSelectionChanged:((CeldaIniciativasTableViewCell*)cell).starRating rating:((NSNumber*)puntajestotal[indexPath.row-1]).intValue / 20];
+        
     }
 
     
@@ -113,10 +119,9 @@ NSMutableArray *puntajestotal;
 
 -(void) recuperoIniciativas{
 
-    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:self.temainiciativas,@"valor",nil];
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"iniciativa", @"tipo", @[filtro2], @"filtro", nil];
-    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"username", self.nidtema, @"tema", nil];
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"consulta_iniciativaxusuario",@"desc",cuerpo,@"cuerpo" , nil];
     
     NSLog(@"%@", consulta);
     
@@ -133,21 +138,21 @@ NSMutableArray *puntajestotal;
         NSLog(@"JSON: %@", respuesta);
         
         NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
-        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaDatos"];
         
         //PARA SACAR LOS DATOS
         
         for(int i=0; i<[arregloPosiciones count];i++){
             NSString *descripcion = [[arregloPosiciones objectAtIndex:i] objectForKey:@"descripcion"];
-            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-            //NSString *puntajeusuario = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
-            //NSString *puntajetotal = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje_total"];
-            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+            //NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+            NSNumber *puntajeusuario = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+            NSNumber *puntajetotal = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntajetotal"];
+            //NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
             
-            [iniciativas addObject:titulo];
+            //[iniciativas addObject:titulo];
             [descripciones   addObject:descripcion];
-            //[puntajesusuario   addObject:puntajeusuario];
-            //[puntajestotal addObject:puntajetotal];
+            [puntajesusuario   addObject:puntajeusuario];
+            [puntajestotal addObject:puntajetotal];
            
             [self.tableView reloadData ];
             
@@ -189,6 +194,7 @@ NSMutableArray *puntajestotal;
         
         escenadestino.titulos = [[NSMutableArray alloc] initWithArray: iniciativas];
         escenadestino.descripciones = [[NSMutableArray alloc] initWithArray: descripciones];
+        escenadestino.puntuacion = [[NSMutableArray alloc] initWithArray: puntajesusuario];
 
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         escenadestino.celdaseleccionada = selectedIndexPath.row;

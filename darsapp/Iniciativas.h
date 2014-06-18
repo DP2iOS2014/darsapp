@@ -14,5 +14,6 @@
 @property (nonatomic,strong) NSDictionary *respuestajson;
 @property NSInteger indice;
 @property NSString *temainiciativas;
+@property NSNumber *nidtema;
 @property NSInteger cantidadFilas;
 @end

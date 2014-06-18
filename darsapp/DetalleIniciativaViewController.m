@@ -37,13 +37,14 @@
     self.starRating.delegate = self;
     self.starRating.horizontalMargin = 15.0;
     self.starRating.editable=YES;
-    self.starRating.rating= 2.5;
+    self.starRating.rating= ((NSNumber*)self.puntuacion[self.celdaseleccionada-1]).intValue /20;
     self.starRating.displayMode=EDStarRatingDisplayHalf;
     [self.starRating  setNeedsDisplay];
     self.starRating.tintColor = [[UIColor alloc] initWithRed:63.0/255.0 green:192.0/255.0 blue:169.0/255.0 alpha:1];
-    [self starsSelectionChanged:self.starRating rating:2.5];
+    [self starsSelectionChanged:self.starRating rating:((NSNumber*)self.puntuacion[self.celdaseleccionada-1]).intValue /20];
     
-    self.lblIniciativa.text= self.titulos[self.celdaseleccionada-1];
+    //SETEAR AQUI EL ARREGLO TITULOS CUANDO SE LES OCURRA ARREGLAR EL JSON U.U
+    self.lblIniciativa.text= self.descripciones[self.celdaseleccionada-1];
     self.lblDescripcion.text=self.descripciones[self.celdaseleccionada-1];
     
 }

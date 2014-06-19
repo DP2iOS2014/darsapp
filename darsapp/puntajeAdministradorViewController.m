@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     
-     Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
+    Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
     
     NidsArregloJson = [ [NSMutableArray alloc] init];
     

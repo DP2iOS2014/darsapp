@@ -33,7 +33,7 @@
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
-    SingletonAmbientalizate *singleton = [SingletonAmbientalizate sharedManager:3];
+    //SingletonAmbientalizate *singleton = [SingletonAmbientalizate sharedManager:3];
 }
 
 - (void)didReceiveMemoryWarning

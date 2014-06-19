@@ -74,9 +74,9 @@
         for(int i=0; i<[arregloPosiciones count];i++){
             //NSString *descripcion = [[arregloPosiciones objectAtIndex:i] objectForKey:@"descripcion"];
             NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"value"];
             //NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_tema"];
-            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"value"];
             NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];

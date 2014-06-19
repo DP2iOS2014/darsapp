@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ja-Kw-sP6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3Ja-Kw-sP6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -401,8 +401,11 @@
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" title="Juego" id="mfe-p8-b70">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="DtY-T8-tSC">
-                            <color key="tintColor" red="0.42486733180000003" green="0.72044181139999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="DtY-T8-tSC">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cerrarSesion:" destination="tu2-8m-JJQ" id="wcI-kN-hnS"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1418,7 +1421,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Mapa " id="JNF-i5-I4O"/>
+                    <navigationItem key="navigationItem" title="Mapa " id="JNF-i5-I4O">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="g3R-El-DAq">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cerrarSesion:" destination="9cJ-BL-oAH" id="nxe-qy-a38"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cargando" destination="HcY-pC-3zp" id="QHr-Nh-b9V"/>
                         <outlet property="mapView" destination="Tdp-HO-pGz" id="rkm-VW-cfi"/>
@@ -1614,7 +1624,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Informacion" id="ox5-UT-PLe">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="8t2-wx-X0J">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="8t2-wx-X0J">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cerrarSesion:" destination="CAF-ml-XeR" id="Vjl-7F-lgm"/>
                             </connections>
@@ -1805,7 +1816,14 @@
                             <outlet property="delegate" destination="rcG-cH-Uoy" id="dnH-KH-zJd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Proyectos" id="nIF-v5-VgW"/>
+                    <navigationItem key="navigationItem" title="Proyectos" id="nIF-v5-VgW">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="hbL-FQ-MXa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cerrarSesion:" destination="rcG-cH-Uoy" id="hr7-36-SDx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCw-1T-d8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2907,6 +2925,7 @@
         <image name="116-controller.png" width="30" height="20"/>
         <image name="1_Electricidad.png" width="300" height="300"/>
         <image name="1_Separatas.png" width="300" height="300"/>
+        <image name="LOGOUT.png" width="32" height="32"/>
         <image name="NavigatorBar.png" width="640" height="130"/>
         <image name="Titulo_Plastico.png" width="300" height="300"/>
         <image name="atras.png" width="512" height="508"/>
@@ -2962,6 +2981,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DoC-WH-Ll0"/>
+        <segue reference="JAq-Fb-1S1"/>
     </inferredMetricsTieBreakers>
 </document>

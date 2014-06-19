@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MapaTachosView.h"
 
-@interface MapaTachosViewController : UIViewController
+@interface MapaTachosViewController : UIViewController <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet MapaTachosView *mapView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipoSegmentControl;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *cargando;

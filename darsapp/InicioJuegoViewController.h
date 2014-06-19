@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InicioJuegoViewController : UIViewController
+@interface InicioJuegoViewController : UIViewController <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *btnEmpezar;
 @property (weak, nonatomic) IBOutlet UIButton *btnContinuar;
 @property (strong, nonatomic) IBOutlet UIButton *btnRanking;

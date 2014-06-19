@@ -7,6 +7,7 @@
 //
 
 #import "ResultadoCalificateViewController.h"
+#import "SingletonAmbientalizate.h"
 
 @interface ResultadoCalificateViewController ()
 
@@ -31,6 +32,8 @@
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    SingletonAmbientalizate *singleton = [SingletonAmbientalizate sharedManager:3];
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +43,10 @@
 }
 - (IBAction)RegresarPrincipal:(id)sender {
     
+}
+
+-(void) EnviaPuntaje{
+
 }
 
 -(void) viewWillAppear:(BOOL)animated{

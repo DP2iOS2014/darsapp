@@ -234,12 +234,12 @@
         <!--Login View Controller-->
         <scene sceneID="sdl-6o-Ohd">
             <objects>
-                <viewController id="3Ja-Kw-sP6" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="3Ja-Kw-sP6" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YUs-ty-Tyy"/>
                         <viewControllerLayoutGuide type="bottom" id="VhA-tR-E9G"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TpB-Br-YNp">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="login" id="TpB-Br-YNp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1613,7 +1613,13 @@
                             <outlet property="delegate" destination="CAF-ml-XeR" id="bjf-Lc-6Kx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Informacion" id="ox5-UT-PLe"/>
+                    <navigationItem key="navigationItem" title="Informacion" id="ox5-UT-PLe">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="8t2-wx-X0J">
+                            <connections>
+                                <action selector="cerrarSesion:" destination="CAF-ml-XeR" id="Vjl-7F-lgm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7s-Nc-LGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1878,7 +1884,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="0oc-su-kJv" kind="push" id="vmd-7O-apC"/>
+                                                <segue destination="0oc-su-kJv" kind="push" identifier="proponer" id="vmd-7O-apC"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -2135,11 +2141,18 @@
                                     <color key="titleColor" red="0.2470588386" green="0.75294125079999996" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="grabarIniciativas:" destination="0oc-su-kJv" eventType="touchUpInside" id="yZv-w8-qqW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nueva Iniciativa" id="PJb-Iw-JAd"/>
+                    <connections>
+                        <outlet property="descripcion" destination="h4F-9E-MnX" id="gKA-eV-7de"/>
+                        <outlet property="nombre" destination="gUb-mu-T4e" id="87d-hj-q9F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkQ-ok-vN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 //
 
 #import "InformacionTableViewController.h"
+#import "LoginViewController.h"
 
 @interface InformacionTableViewController ()
 
@@ -46,6 +47,27 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)cerrarSesion:(id)sender {
+    UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone"
+                                                  bundle:nil];
+    UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"login"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"netin"];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"netalu"];
+     
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"Visitante"];
+     
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"NombreUsuario"];
+      
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"ContraseñaUsuario"];
+    
+    [self presentViewController:vc animated:YES completion:nil];
+    
+
 }
 
 

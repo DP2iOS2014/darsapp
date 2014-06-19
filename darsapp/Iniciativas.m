@@ -11,7 +11,7 @@
 #import "UIImage+Tint.h"
 #import "CeldaIniciativasTableViewCell.h"
 #import "DetalleIniciativaViewController.h"
-
+#import "NuevaIniciativaViewController.h"
 @interface Iniciativas ()
 
 @end
@@ -198,7 +198,11 @@ NSMutableArray *puntajestotal;
 
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         escenadestino.celdaseleccionada = selectedIndexPath.row;
+        self.nidtema;
 
+    }else if ([segue.identifier  isEqual: @"proponer"]){
+        NuevaIniciativaViewController* escenadestino = segue.destinationViewController;
+        escenadestino.nidTema = self.nidtema;
     }
     
 };

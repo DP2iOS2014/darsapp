@@ -93,6 +93,13 @@
             [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
             
         }
+        
+        if([[Ambientalizate.ArregloReset objectAtIndex:self.indice] count]==0){
+            [Ambientalizate.ArregloReset setObject:@1 atIndexedSubscript:self.indice];
+            
+        }
+        
+        
         [self.collectionView reloadData];
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {

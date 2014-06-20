@@ -11,11 +11,11 @@
 
 @implementation Tacho
 
-@dynamic lt;
-@dynamic ln;
 @dynamic descripcion;
 @dynamic fecha;
-@dynamic tipo;
+@dynamic ln;
+@dynamic lt;
 @dynamic nid;
+@dynamic tipo;
 
 @end

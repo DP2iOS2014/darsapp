@@ -12,11 +12,11 @@
 
 @interface Tacho : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * lt;
-@property (nonatomic, retain) NSNumber * ln;
 @property (nonatomic, retain) NSString * descripcion;
 @property (nonatomic, retain) NSDate * fecha;
-@property (nonatomic, retain) NSString * tipo;
+@property (nonatomic, retain) NSNumber * ln;
+@property (nonatomic, retain) NSNumber * lt;
 @property (nonatomic, retain) NSNumber * nid;
+@property (nonatomic, retain) NSString * tipo;
 
 @end

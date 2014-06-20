@@ -27,9 +27,9 @@
     
     NSArray * tacho = [Tacho all];
     
-    if(tacho.count != 0)
-    [self actualizarTachos];
-    else [self llenaTachos];
+    //if(tacho.count != 0)
+    //[self actualizarTachos];
+    //else [self llenaTachos];
     
     //BuenaPractica * buenaPractica = [BuenaPractica create];
     //buenaPractica.codigoPractica = @12;
@@ -138,12 +138,14 @@
         NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
         
         NSArray * tachos = [Tacho all];
-        
+        BOOL esta;
         for(int i = 0; i < tachos.count; i++){
-            
+            esta = NO;
             NSNumber * nid = [[listaNodos objectAtIndex:i]objectForKey:@"field_nombre_evento_value"];
             //Compara los nids que ya se tienen con los pedidos para borrar los que sobran
-            
+            for(int j=0;j<listaNodos.count;j++){
+                //if( ((Tacho*)tachos[i]).)
+            }
             
         }
         

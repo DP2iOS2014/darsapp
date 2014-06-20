@@ -26,9 +26,8 @@
 		120FF2351913F39400A697D6 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2241913F39400A697D6 /* UIWebView+AFNetworking.m */; };
 		120FF2881914061800A697D6 /* URLsJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2871914061800A697D6 /* URLsJson.m */; };
 		121A72801954A19200A18852 /* BuenaPractica.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A727F1954A19200A18852 /* BuenaPractica.m */; };
-		121A72831954A19300A18852 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72821954A19300A18852 /* Tacho.m */; };
 		121A72861954A19300A18852 /* Persona.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72851954A19300A18852 /* Persona.m */; };
-		121A72921954B2BC00A18852 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72911954B2BC00A18852 /* Tacho.m */; };
+		121A72981954BC6F00A18852 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72971954BC6F00A18852 /* Tacho.m */; };
 		1224BB5B192E9161006ED075 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB5A192E9161006ED075 /* MyFlowLayout.m */; };
 		12330CAF191AC11500E85590 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CAE191AC11500E85590 /* GoogleMaps.framework */; };
 		12330CB1191AC24100E85590 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 12330CB0191AC24100E85590 /* GoogleMaps.bundle */; };
@@ -424,12 +423,10 @@
 		120FF2871914061800A697D6 /* URLsJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLsJson.m; sourceTree = "<group>"; };
 		121A727E1954A19200A18852 /* BuenaPractica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuenaPractica.h; sourceTree = "<group>"; };
 		121A727F1954A19200A18852 /* BuenaPractica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuenaPractica.m; sourceTree = "<group>"; };
-		121A72811954A19300A18852 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tacho.h; sourceTree = "<group>"; };
-		121A72821954A19300A18852 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tacho.m; sourceTree = "<group>"; };
 		121A72841954A19300A18852 /* Persona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persona.h; sourceTree = "<group>"; };
 		121A72851954A19300A18852 /* Persona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persona.m; sourceTree = "<group>"; };
-		121A72901954B2BC00A18852 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tacho.h; sourceTree = "<group>"; };
-		121A72911954B2BC00A18852 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tacho.m; sourceTree = "<group>"; };
+		121A72961954BC6F00A18852 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tacho.h; path = ../Tacho.h; sourceTree = "<group>"; };
+		121A72971954BC6F00A18852 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tacho.m; path = ../Tacho.m; sourceTree = "<group>"; };
 		1224BB59192E9161006ED075 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
 		1224BB5A192E9161006ED075 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
 		12330CAE191AC11500E85590 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -1117,10 +1114,10 @@
 		125F78D1194CD8E5000956EB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				121A72961954BC6F00A18852 /* Tacho.h */,
+				121A72971954BC6F00A18852 /* Tacho.m */,
 				121A72841954A19300A18852 /* Persona.h */,
 				121A72851954A19300A18852 /* Persona.m */,
-				121A72811954A19300A18852 /* Tacho.h */,
-				121A72821954A19300A18852 /* Tacho.m */,
 				121A727E1954A19200A18852 /* BuenaPractica.h */,
 				121A727F1954A19200A18852 /* BuenaPractica.m */,
 			);
@@ -1723,8 +1720,6 @@
 				12F4D00918FF24C500C8BFF5 /* ContactanosTableViewController.h */,
 				12F4D00A18FF24C500C8BFF5 /* ContactanosTableViewController.m */,
 				12F4CFDA18FF147500C8BFF5 /* Main_iPhone.storyboard */,
-				121A72901954B2BC00A18852 /* Tacho.h */,
-				121A72911954B2BC00A18852 /* Tacho.m */,
 				125F78CD194CD4BD000956EB /* DarsModel.xcdatamodeld */,
 				12C2E045194006E5009F8549 /* EventosViewController.h */,
 				12C2E046194006E5009F8549 /* EventosViewController.m */,
@@ -2128,8 +2123,6 @@
 				12A2A36119493C520044F990 /* OpcionCoronaViewController.m in Sources */,
 				12E53C62191D86F100911B7C /* RutasTableViewController.m in Sources */,
 				125F78BC194CD419000956EB /* NSObject+InnerBand.m in Sources */,
-				121A72921954B2BC00A18852 /* Tacho.m in Sources */,
-				121A72831954A19300A18852 /* Tacho.m in Sources */,
 				125F78C8194CD419000956EB /* IBSequencedMessage.m in Sources */,
 				129EDB861938F3A30088735B /* Instrucciones4ViewController.m in Sources */,
 				129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */,
@@ -2141,6 +2134,7 @@
 				125F78C6194CD419000956EB /* IBHTTPGetRequestMessage.m in Sources */,
 				12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */,
 				129EDB8B1938FF980088735B /* ComodinesViewController.m in Sources */,
+				121A72981954BC6F00A18852 /* Tacho.m in Sources */,
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
 				129EDB5C1938DE6F0088735B /* AyudaJuegoTableViewController.m in Sources */,
 				125F78BE194CD419000956EB /* NSString+InnerBand.m in Sources */,

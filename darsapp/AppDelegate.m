@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "BuenaPractica.h"
 #import "Persona.h"
+#import "URLsJson.h"
+#import "Tacho.h"
 
 @implementation AppDelegate
 
@@ -22,15 +24,141 @@
     UIImage *backOriginal =[UIImage imageNamed:@"backButton2"];
     
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[backOriginal imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-
     
-    BuenaPractica * buenaPractica = [BuenaPractica create];
-    buenaPractica.codigoPractica = @12;
+    NSArray * tacho = [Tacho all];
     
-    [[IBCoreDataStore mainStore] save];
+    if(tacho.count != 0)
+    [self actualizarTachos];
+    else [self llenaTachos];
+    
+    //BuenaPractica * buenaPractica = [BuenaPractica create];
+    //buenaPractica.codigoPractica = @12;
+    
+    
+    
+    //[[IBCoreDataStore mainStore] save];
     
     
     return YES;
+}
+
+-(void)llenaTachos{
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setYear:1990];
+    [components setMonth:9];
+    [components setDay:28];
+    NSDate *fecha = [calendar dateFromComponents:components];
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateString = [format stringFromDate:fecha];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"contenedor",@"tipo", @"incremental",@"forma",dateString ,@"fecha", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        NSDictionary * respuestajson = responseObject;
+        NSLog(@"JSON: %@", respuestajson);
+        
+        NSDictionary * cuerpo = [respuestajson objectForKey:@"cuerpo"];
+        NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
+        
+        for(int i = 0; i < listaNodos.count; i++){
+            
+            NSString *lat = [[listaNodos objectAtIndex:i] objectForKey:@"field_mm_latitud"];
+            NSString *lon = [[listaNodos objectAtIndex:i] objectForKey:@"field_mm_longitud"];
+            NSString *tipo = [[listaNodos objectAtIndex:i] objectForKey:@"tipo_contenedor"];
+            double lt=[lat doubleValue];
+            double ln=[lon doubleValue];
+            NSString *name = [[listaNodos objectAtIndex:i] objectForKey:@"title"];
+            NSString *fecha = [[listaNodos objectAtIndex:i] objectForKey:@"fecha_modificacion"];
+            NSNumber *nid = [[listaNodos objectAtIndex:i] objectForKey:@"nid"];
+            
+            Tacho * tacho = [BuenaPractica create];
+            tacho.nid= nid;
+            NSDateFormatter *format = [[NSDateFormatter alloc] init];
+            [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate * dateNotFormatted = [format dateFromString:fecha];
+            tacho.fecha = dateNotFormatted;
+            
+            tacho.descripcion = name;
+            tacho.ln = [[NSNumber alloc] initWithDouble: lt];
+            tacho.ln = [[NSNumber alloc] initWithDouble: ln];
+            tacho.tipo = tipo;
+            
+            
+            //Agregar los tachos a coredata
+            
+        }
+        
+        [[IBCoreDataStore mainStore] save];
+        
+        
+    }
+     
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+
+}
+
+
+-(void) actualizarTachos{
+    NSDate *now = [NSDate date];
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSString *dateString = [format stringFromDate:now];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"contenedor",@"tipo", @"nid",@"forma",dateString ,@"fecha", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        NSDictionary * respuestajson = responseObject;
+        NSLog(@"JSON: %@", respuestajson);
+        
+        NSDictionary * cuerpo = [respuestajson objectForKey:@"cuerpo"];
+        NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
+        
+        NSArray * tachos = [Tacho all];
+        
+        for(int i = 0; i < tachos.count; i++){
+            
+            NSNumber * nid = [[listaNodos objectAtIndex:i]objectForKey:@"field_nombre_evento_value"];
+            //Compara los nids que ya se tienen con los pedidos para borrar los que sobran
+            
+            
+        }
+        
+        
+    }
+     
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+
 }
 
 /*

@@ -25,6 +25,10 @@
 		120FF2341913F39400A697D6 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2221913F39400A697D6 /* UIRefreshControl+AFNetworking.m */; };
 		120FF2351913F39400A697D6 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2241913F39400A697D6 /* UIWebView+AFNetworking.m */; };
 		120FF2881914061800A697D6 /* URLsJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2871914061800A697D6 /* URLsJson.m */; };
+		121A72801954A19200A18852 /* BuenaPractica.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A727F1954A19200A18852 /* BuenaPractica.m */; };
+		121A72831954A19300A18852 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72821954A19300A18852 /* Tacho.m */; };
+		121A72861954A19300A18852 /* Persona.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72851954A19300A18852 /* Persona.m */; };
+		121A72921954B2BC00A18852 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72911954B2BC00A18852 /* Tacho.m */; };
 		1224BB5B192E9161006ED075 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB5A192E9161006ED075 /* MyFlowLayout.m */; };
 		12330CAF191AC11500E85590 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CAE191AC11500E85590 /* GoogleMaps.framework */; };
 		12330CB1191AC24100E85590 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 12330CB0191AC24100E85590 /* GoogleMaps.bundle */; };
@@ -79,8 +83,6 @@
 		125F78CB194CD419000956EB /* IBMessageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 125F78AE194CD419000956EB /* IBMessageProcessor.m */; };
 		125F78CC194CD419000956EB /* IBTargetAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 125F78B0194CD419000956EB /* IBTargetAction.m */; };
 		125F78CF194CD4BD000956EB /* DarsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 125F78CD194CD4BD000956EB /* DarsModel.xcdatamodeld */; };
-		125F78D7194CE4BF000956EB /* Persona.m in Sources */ = {isa = PBXBuildFile; fileRef = 125F78D6194CE4BF000956EB /* Persona.m */; };
-		125F78DA194CE4BF000956EB /* BuenaPractica.m in Sources */ = {isa = PBXBuildFile; fileRef = 125F78D9194CE4BF000956EB /* BuenaPractica.m */; };
 		125F7921194D0059000956EB /* slideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 125F7920194D0058000956EB /* slideBarViewController.m */; };
 		1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1260E96F192FA3FF00D915D7 /* SingletonAmbientalizate.m */; };
 		12615579191D76A500374E68 /* forest.png in Resources */ = {isa = PBXBuildFile; fileRef = 12615578191D76A500374E68 /* forest.png */; };
@@ -420,6 +422,14 @@
 		120FF2241913F39400A697D6 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		120FF2861914061800A697D6 /* URLsJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLsJson.h; sourceTree = "<group>"; };
 		120FF2871914061800A697D6 /* URLsJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLsJson.m; sourceTree = "<group>"; };
+		121A727E1954A19200A18852 /* BuenaPractica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuenaPractica.h; sourceTree = "<group>"; };
+		121A727F1954A19200A18852 /* BuenaPractica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuenaPractica.m; sourceTree = "<group>"; };
+		121A72811954A19300A18852 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tacho.h; sourceTree = "<group>"; };
+		121A72821954A19300A18852 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tacho.m; sourceTree = "<group>"; };
+		121A72841954A19300A18852 /* Persona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persona.h; sourceTree = "<group>"; };
+		121A72851954A19300A18852 /* Persona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persona.m; sourceTree = "<group>"; };
+		121A72901954B2BC00A18852 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tacho.h; sourceTree = "<group>"; };
+		121A72911954B2BC00A18852 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tacho.m; sourceTree = "<group>"; };
 		1224BB59192E9161006ED075 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
 		1224BB5A192E9161006ED075 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
 		12330CAE191AC11500E85590 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -512,10 +522,6 @@
 		125F78AF194CD419000956EB /* IBTargetAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBTargetAction.h; sourceTree = "<group>"; };
 		125F78B0194CD419000956EB /* IBTargetAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBTargetAction.m; sourceTree = "<group>"; };
 		125F78CE194CD4BD000956EB /* DarsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DarsModel.xcdatamodel; sourceTree = "<group>"; };
-		125F78D5194CE4BF000956EB /* Persona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Persona.h; path = ../Persona.h; sourceTree = "<group>"; };
-		125F78D6194CE4BF000956EB /* Persona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Persona.m; path = ../Persona.m; sourceTree = "<group>"; };
-		125F78D8194CE4BF000956EB /* BuenaPractica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuenaPractica.h; path = ../BuenaPractica.h; sourceTree = "<group>"; };
-		125F78D9194CE4BF000956EB /* BuenaPractica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuenaPractica.m; path = ../BuenaPractica.m; sourceTree = "<group>"; };
 		125F791F194D0058000956EB /* slideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slideBarViewController.h; sourceTree = "<group>"; };
 		125F7920194D0058000956EB /* slideBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slideBarViewController.m; sourceTree = "<group>"; };
 		1260E96E192FA3FF00D915D7 /* SingletonAmbientalizate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingletonAmbientalizate.h; sourceTree = "<group>"; };
@@ -1111,10 +1117,12 @@
 		125F78D1194CD8E5000956EB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				125F78D8194CE4BF000956EB /* BuenaPractica.h */,
-				125F78D9194CE4BF000956EB /* BuenaPractica.m */,
-				125F78D5194CE4BF000956EB /* Persona.h */,
-				125F78D6194CE4BF000956EB /* Persona.m */,
+				121A72841954A19300A18852 /* Persona.h */,
+				121A72851954A19300A18852 /* Persona.m */,
+				121A72811954A19300A18852 /* Tacho.h */,
+				121A72821954A19300A18852 /* Tacho.m */,
+				121A727E1954A19200A18852 /* BuenaPractica.h */,
+				121A727F1954A19200A18852 /* BuenaPractica.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -1692,12 +1700,9 @@
 		12F4CFCE18FF147500C8BFF5 /* darsapp */ = {
 			isa = PBXGroup;
 			children = (
-
 				125F78D1194CD8E5000956EB /* CoreData */,
 				125F786D194CD419000956EB /* InnerBand */,
-
 				129D8B6219522122008160F3 /* Login */,
-
 				12A2A34C1948E8F50044F990 /* EDStarRating */,
 				12A2023C193A647C00942747 /* Emitter */,
 				12D1DD6519393CDA00BF81A5 /* Sonido */,
@@ -1718,6 +1723,8 @@
 				12F4D00918FF24C500C8BFF5 /* ContactanosTableViewController.h */,
 				12F4D00A18FF24C500C8BFF5 /* ContactanosTableViewController.m */,
 				12F4CFDA18FF147500C8BFF5 /* Main_iPhone.storyboard */,
+				121A72901954B2BC00A18852 /* Tacho.h */,
+				121A72911954B2BC00A18852 /* Tacho.m */,
 				125F78CD194CD4BD000956EB /* DarsModel.xcdatamodeld */,
 				12C2E045194006E5009F8549 /* EventosViewController.h */,
 				12C2E046194006E5009F8549 /* EventosViewController.m */,
@@ -1842,6 +1849,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___greensoft___";
 				TargetAttributes = {
+					12F4CFC418FF147500C8BFF5 = {
+						DevelopmentTeam = WC65ARB526;
+					};
 					12F4CFE818FF147600C8BFF5 = {
 						TestTargetID = 12F4CFC418FF147500C8BFF5;
 					};
@@ -2118,12 +2128,13 @@
 				12A2A36119493C520044F990 /* OpcionCoronaViewController.m in Sources */,
 				12E53C62191D86F100911B7C /* RutasTableViewController.m in Sources */,
 				125F78BC194CD419000956EB /* NSObject+InnerBand.m in Sources */,
+				121A72921954B2BC00A18852 /* Tacho.m in Sources */,
+				121A72831954A19300A18852 /* Tacho.m in Sources */,
 				125F78C8194CD419000956EB /* IBSequencedMessage.m in Sources */,
 				129EDB861938F3A30088735B /* Instrucciones4ViewController.m in Sources */,
 				129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */,
 				120FF2291913F39400A697D6 /* AFSecurityPolicy.m in Sources */,
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
-				125F78DA194CE4BF000956EB /* BuenaPractica.m in Sources */,
 				12A75811191AD75E00E03C5E /* ElectricidadViewController.m in Sources */,
 				1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */,
 				125F78B2194CD419000956EB /* IBAlertView.m in Sources */,
@@ -2138,6 +2149,7 @@
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
 				125F78C5194CD419000956EB /* IBBlockBasedDispatchMessage.m in Sources */,
 				129E07681948EBD0009B7A21 /* NuevaIniciativaViewController.m in Sources */,
+				121A72801954A19200A18852 /* BuenaPractica.m in Sources */,
 				125F78C7194CD419000956EB /* IBHTTPPostRequestMessage.m in Sources */,
 				12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */,
 				12A428F51947978C001C18BF /* TemasIniciativasTableViewController.m in Sources */,
@@ -2157,14 +2169,10 @@
 				125F7921194D0059000956EB /* slideBarViewController.m in Sources */,
 				12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */,
 				120FF2321913F39400A697D6 /* UIImageView+AFNetworking.m in Sources */,
-
 				125F78B9194CD419000956EB /* NSMutableArray+InnerBand.m in Sources */,
-
 				129D8B65195227A0008160F3 /* Login.m in Sources */,
-
 				1276EA08192D4FB000B49816 /* LiderAmbientalCell.m in Sources */,
 				125F78B3194CD419000956EB /* IBCoreTextLabel.m in Sources */,
-				125F78D7194CE4BF000956EB /* Persona.m in Sources */,
 				125F78C1194CD419000956EB /* UIView+InnerBand.m in Sources */,
 				120FF22A1913F39400A697D6 /* AFURLConnectionOperation.m in Sources */,
 				120FF22F1913F39400A697D6 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -2227,6 +2235,7 @@
 				129D4D9F1919B74500D12423 /* InicioJuegoViewController.m in Sources */,
 				120FF2341913F39400A697D6 /* UIRefreshControl+AFNetworking.m in Sources */,
 				12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */,
+				121A72861954A19300A18852 /* Persona.m in Sources */,
 				125F78B7194CD419000956EB /* NSDate+InnerBand.m in Sources */,
 				12F4CFD518FF147500C8BFF5 /* main.m in Sources */,
 				12C3651519394056002B2197 /* CategoriasViewController.m in Sources */,

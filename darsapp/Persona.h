@@ -2,10 +2,10 @@
 //  Persona.h
 //  darsapp
 //
-//  Created by inf227al on 14/06/14.
+//  Created by inf227al on 20-06-14.
 //  Copyright (c) 2014 ___greensoft___. All rights reserved.
 //
-/*
+
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
@@ -13,9 +13,9 @@
 
 @interface Persona : NSManagedObject
 
+@property (nonatomic, retain) NSNumber * edad;
 @property (nonatomic, retain) NSString * nombre;
 @property (nonatomic, retain) NSNumber * sexo;
-@property (nonatomic, retain) UNKNOWN_TYPE edad;
 @property (nonatomic, retain) NSSet *buenasPracticas;
 @end
 
@@ -27,4 +27,3 @@
 - (void)removeBuenasPracticas:(NSSet *)values;
 
 @end
-*/

@@ -9,5 +9,7 @@
 #import "ViewController.h"
 
 @interface NuevaIniciativaViewController : ViewController
-
+@property (weak, nonatomic) IBOutlet UITextField *nombre;
+@property (weak, nonatomic) IBOutlet UITextField *descripcion;
+@property (weak, nonatomic) NSNumber * nidTema;
 @end

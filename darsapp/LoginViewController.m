@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "URLsJson.h"
+#import "Login.h"
 
 @interface LoginViewController ()
 
@@ -16,6 +17,7 @@
 @implementation LoginViewController
 {
     NSDictionary * respuesta;
+    Login *objetoLogin;
 }
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +33,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    objetoLogin = [Login sharedManager];
+    objetoLogin.delegate = self;
     
     self.cargando.alpha = 0 ;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
@@ -65,61 +68,8 @@
     if(![NombreUsuario  isEqual: @""] && ![ContraseñaUsuario  isEqual: @""] && NombreUsuario != nil && ContraseñaUsuario != nil) {
     self.cargando.alpha = 1 ;
     // Arreglo de los indices(indices son Strings)
-    NSArray *keys = [NSArray arrayWithObjects:@"hacer", @"username",@"password", nil];
-    // Arreglo de los objeto que se tendran dentro del diccionario
-    NSArray *objects = [NSArray arrayWithObjects:@"login",NombreUsuario, ContraseñaUsuario, nil];
-    //Primera forma de inicializar un diccionario pasandole un arreglo de indices y de objetos
-    NSDictionary *dictionaryUsuario = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    
-    //Segunda forma de inicializar un diccionario pasandole primero un indice y luego un objeto y asi consecutivamente
-    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys: dictionaryUsuario, @"cuerpo",@"Autenticacion", @"operacion", nil];
-    
-    //NSArray *keys = [NSArray arrayWithObjects:@"ApiToken", @"IdUsuarioLog", nil];
-    //NSArray *objects = [NSArray arrayWithObjects:@"6aa83532910737795239f1d30cb9c0f6493c60bc" ,@106,  nil];
-    //NSDictionary *consulta = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    //{"ApiToken":"6aa83532910737795239f1d30cb9c0f6493c60bc","IdUsuarioLog":106}
-    NSLog(@"JSON: %@", consulta);
-    
-    //NSURL *URL = [NSURL URLWithString:login];
-    
-    
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [manager POST:login parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuesta = responseObject;
-        NSLog(@"JSON: %@", respuesta);
-        int netin = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netin"]).intValue;
-        int netalu = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netalu"]).intValue;
-        if ( netin == 1 || netalu == 1) {
-            if(netin ==1){
-                [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netin"];
-                [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netalu"];
-            }else if(netalu == 1){
-                [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netalu"];
-                [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netin"];
-            }
-            [self performSegueWithIdentifier:@"exito_login" sender:self];
-        }
-        else {
-            UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Debe volver a iniciar sesión" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [miAlert show];
-            self.cargando.alpha = 0 ;
-        }
+        [Login jsonLoginConUsuarioPersistente:NombreUsuario yPassword:ContraseñaUsuario];
         
-    } failure:^(AFHTTPRequestOperation *task, NSError *error) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-        self.cargando.alpha = 0 ;
-    }];
-    
-    //////////
-    NSLog(@"%@",respuesta);
     }
     
     
@@ -140,94 +90,30 @@
 - (IBAction)ApretoIngresar:(id)sender {
     self.cargando.alpha = 1 ;
     // Arreglo de los indices(indices son Strings)
-    NSArray *keys = [NSArray arrayWithObjects:@"hacer", @"username",@"password", nil];
-    // Arreglo de los objeto que se tendran dentro del diccionario
-    NSArray *objects = [NSArray arrayWithObjects:@"login" ,self.tFusuario.text, self.tFContrasenha.text, nil];
-    //Primera forma de inicializar un diccionario pasandole un arreglo de indices y de objetos
-    NSDictionary *dictionaryUsuario = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
     
-    //Segunda forma de inicializar un diccionario pasandole primero un indice y luego un objeto y asi consecutivamente
-    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys: dictionaryUsuario, @"cuerpo",@"Autenticacion", @"operacion", nil];
-    
-    //NSArray *keys = [NSArray arrayWithObjects:@"ApiToken", @"IdUsuarioLog", nil];
-    //NSArray *objects = [NSArray arrayWithObjects:@"6aa83532910737795239f1d30cb9c0f6493c60bc" ,@106,  nil];
-    //NSDictionary *consulta = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    //{"ApiToken":"6aa83532910737795239f1d30cb9c0f6493c60bc","IdUsuarioLog":106}
-    NSLog(@"JSON: %@", consulta);
-    
-    //NSURL *URL = [NSURL URLWithString:login];
-    
-    
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [manager POST:login parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuesta = responseObject;
-        NSLog(@"JSON: %@", respuesta);
-        
-        if (((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netin"]).intValue == 1) {
-            NSString *NombreUsuario = self.tFusuario.text;
-            
-            NSString *ContraseñaUsuario = self.tFContrasenha.text;
-            
-            [[NSUserDefaults standardUserDefaults] setObject:NombreUsuario forKey:@"NombreUsuario"];
-            [[NSUserDefaults standardUserDefaults] setObject:ContraseñaUsuario forKey:@"ContraseñaUsuario"];
-            [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"Visitante"];
-            
-            int netin = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netin"]).intValue;
-            int netalu = ((NSString*)[[respuesta objectForKey:@"cuerpo"] objectForKey:@"netalu"]).intValue;
-            if ( netin == 1 || netalu == 1) {
-                if(netin ==1){
-                    [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netin"];
-                    [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netalu"];
-                }else if(netalu == 1){
-                    [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"netalu"];
-                    [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netin"];
-                }
-                [self performSegueWithIdentifier:@"exito_login" sender:self];
-            }
-            
-            [self performSegueWithIdentifier:@"exito_login" sender:self];
-        }else if([self.tFusuario.text isEqualToString:@""] && [self.tFContrasenha.text isEqualToString:@""]){
-            //Falta colocar usuario y contrasena
-            
-            UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Debe ingresar Usuario y/o Contraseña" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [miAlert show];
-            self.cargando.alpha = 0 ;
-            
-        }else if([self.tFusuario.text isEqualToString:@""] && ![self.tFContrasenha.text isEqualToString:@""]){
-            //Falta colocar usuario
-            
-            UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Debe ingresar Usuario" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [miAlert show];
-            self.cargando.alpha = 0 ;
-            
-        }else if(![self.tFusuario.text isEqualToString:@""] && [self.tFContrasenha.text isEqualToString:@""]){
-            //Falta colocar contrasenha
-            UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Debe ingresar Contraseña" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [miAlert show];
-            self.cargando.alpha = 0 ;
-        }
-        else {
-            UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Usuario o contraseña incorrecta" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [miAlert show];
-            self.cargando.alpha = 0 ;
-        }
+    [Login jsonLoginConUsuario:self.tFusuario.text yPassword:self.tFContrasenha.text];
 
-    } failure:^(AFHTTPRequestOperation *task, NSError *error) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-        self.cargando.alpha = 0 ;
-    }];
     
-    //////////
-    NSLog(@"%@",respuesta);
+}
+
+-(void)loginExito{
+    [self performSegueWithIdentifier:@"exito_login" sender:self];
+}
+
+-(void)loginFallo:(NSString *)mensaje{
+    UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:mensaje delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+     [miAlert show];
     
+    self.cargando.alpha = 0 ;
+}
+
+-(void)falloServidor{
+     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Fallo en el servicio" message:nil
+     delegate:nil
+     cancelButtonTitle:@"Ok"
+     otherButtonTitles:nil];
+    [alertView show];
+    self.cargando.alpha = 0 ;
 }
 
 /*

@@ -7,6 +7,7 @@
 //
 
 #import "InformacionTableViewController.h"
+#import "LoginViewController.h"
 
 @interface InformacionTableViewController ()
 
@@ -47,6 +48,45 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (IBAction)cerrarSesion:(id)sender {
+    
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Cerrar Sesión"
+                                           message:@"Está seguro que desea cerrar sesión?"
+                                          delegate:self
+                                 cancelButtonTitle:@"No"
+                                 otherButtonTitles:@"Si",nil];
+    [alertView show];
+    
+  
+
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+
+    if (buttonIndex==1){
+    
+        UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone"
+                                                      bundle:nil];
+        UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"login"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"netin"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"netalu"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"Visitante"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"NombreUsuario"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"ContraseñaUsuario"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    
+    }
+
+}
+
 
 
 /*

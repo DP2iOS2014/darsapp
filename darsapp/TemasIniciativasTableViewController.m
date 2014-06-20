@@ -24,6 +24,7 @@ NSMutableArray *arregloRespuesta;
 NSMutableArray *titulos;
 NSMutableArray *nombresimagenes;
 NSMutableArray * urlImagenes;
+NSMutableArray *nidtemas;
 
 
 
@@ -42,6 +43,7 @@ NSMutableArray * urlImagenes;
     titulos = [[NSMutableArray alloc] init];
     nombresimagenes= [[NSMutableArray alloc] init];
     urlImagenes = [[NSMutableArray alloc] init];
+    nidtemas = [[NSMutableArray alloc] init];
     [self recuperoTemasIniciativas];
     
     
@@ -112,6 +114,8 @@ NSMutableArray * urlImagenes;
             NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
             NSString *nombreimagen = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
             
+            NSNumber *nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
+            
             NSString *postFijo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"url_archivo"];
             
             NSString *urlImagen = [NSString stringWithFormat:@"%@%@",@"http://200.16.7.111/dp2/rc/",[postFijo stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
@@ -119,6 +123,7 @@ NSMutableArray * urlImagenes;
             [titulos addObject:titulo];
             [nombresimagenes addObject:nombreimagen];
             [urlImagenes addObject:urlImagen];
+            [nidtemas addObject:nid];
             
         }
         
@@ -140,6 +145,7 @@ NSMutableArray * urlImagenes;
     NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
     escenadestino.indice=filaseleccionada.row;
     escenadestino.temainiciativas= [titulos objectAtIndex:filaseleccionada.row];
+    escenadestino.nidtema= [nidtemas objectAtIndex:filaseleccionada.row];
     escenadestino.cantidadFilas = titulos.count;
 
 

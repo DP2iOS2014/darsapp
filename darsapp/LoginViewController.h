@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoginViewController : UIViewController
+#import "Login.h"
+@interface LoginViewController : UIViewController<loginDelegate>
 @property (strong, nonatomic) UITapGestureRecognizer *tap;
 
 @property (weak, nonatomic) IBOutlet UITextField *tFusuario;

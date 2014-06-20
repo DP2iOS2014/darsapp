@@ -27,13 +27,15 @@
     
     NSArray * tacho = [Tacho all];
     
-    //if(tacho.count != 0)
-    //[self actualizarTachos];
-    //else [self llenaTachos];
     
-    //BuenaPractica * buenaPractica = [BuenaPractica create];
-    //buenaPractica.codigoPractica = @12;
     
+    
+    
+    if(tacho.count != 0)
+    [self actualizarTachos];
+    else [self llenaTachos];
+    
+
     
     
     //[[IBCoreDataStore mainStore] save];
@@ -80,7 +82,7 @@
             NSString *fecha = [[listaNodos objectAtIndex:i] objectForKey:@"fecha_modificacion"];
             NSString *nid = [[listaNodos objectAtIndex:i] objectForKey:@"nid"];
             
-            Tacho * tacho = [BuenaPractica create];
+            Tacho * tacho = [Tacho create];
             
             NSDateFormatter *format = [[NSDateFormatter alloc] init];
             [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -98,7 +100,13 @@
             //Agregar los tachos a coredata
             
         }
+        NSDate *now = [NSDate date];
+        NSDateFormatter *format = [[NSDateFormatter alloc] init];
+        [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         
+        NSString *dateString = [format stringFromDate:now];
+
+        [[NSUserDefaults standardUserDefaults] setObject:dateString forKey:@"ultActualizacionTachos"];
         [[IBCoreDataStore mainStore] save];
         
         
@@ -146,11 +154,14 @@
             NSNumber * nid = [[listaNodos objectAtIndex:i]objectForKey:@"nid"];
             //Compara los nids que ya se tienen con los pedidos para borrar los que sobran
             for(int j=0;j<listaNodos.count;j++){
-                //if( ((Tacho*)tachos[i]).)
+                if( ((Tacho*)tachos[i]).nid.intValue == nid.intValue){
+                    esta = YES;
+                }
             }
+            if(!esta) [tachos[i] destroy];
             
         }
-        
+        [[IBCoreDataStore mainStore] save];
         
     }
      

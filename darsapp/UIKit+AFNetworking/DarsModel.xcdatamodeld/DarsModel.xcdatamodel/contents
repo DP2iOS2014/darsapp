@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="BuenaPractica" representedClassName="BuenaPractica" syncable="YES">
         <attribute name="codigoPractica" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="codigoTema" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -23,6 +23,6 @@
     <elements>
         <element name="BuenaPractica" positionX="-3726" positionY="-3094" width="153" height="103"/>
         <element name="Persona" positionX="-3719" positionY="-3310" width="128" height="103"/>
-        <element name="Tacho" positionX="-3708" positionY="-3177" width="128" height="133"/>
+        <element name="Tacho" positionX="-3708" positionY="-3177" width="128" height="135"/>
     </elements>
 </model>

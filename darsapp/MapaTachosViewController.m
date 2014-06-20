@@ -9,6 +9,7 @@
 #import "MapaTachosViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "URLsJson.h"
+#import "Tacho.h"
 
 @interface MapaTachosViewController ()
 
@@ -35,6 +36,8 @@
     [super viewDidLoad];
     
     
+    
+    
      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     
     
@@ -46,6 +49,9 @@
     mapView_ = [GMSMapView mapWithFrame:self.mapView.bounds camera:camera];
     mapView_.myLocationEnabled = YES;
     [self.mapView addSubview: mapView_];
+    
+    [self muestraListaDeTachosDeTipo:@"Contenedor general"];
+    
     /*GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = CLLocationCoordinate2DMake(-12.068938, -77.080190);
     marker.title = @"CAPU";
@@ -61,51 +67,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) recuperaListaDeTachosDeTipo:(NSString*)tipoTacho{
-    ////////
-    //Hacer diccionario que paso llamado "consulta"
-    self.cargando.alpha = 1;
-    NSDictionary * cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"contenedor",@"tipo" , nil];
-    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+-(void) muestraListaDeTachosDeTipo:(NSString*)tipoTacho{
     
-    NSLog(@"%@",consulta);
+        NSArray * arrTachos = [Tacho all];
     
-    //{"operacion":"Consulta","cuerpo" : { "tipo":"contenedor"}
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [manager POST:UbicacionTachos parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuesta = responseObject;
-        NSLog(@"JSON: %@", respuesta);
-        self.cargando.alpha = 0; 
-        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
-        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
-        
-        /*GMSMarker *marker = [[GMSMarker alloc] init];
-        marker.position = CLLocationCoordinate2DMake(, -77.080190);
-        marker.title = @"CAPU";
-        marker.snippet = @"Capilla";
-        marker.map = mapView_; */
-        
-        ////////////
-
-        for (int i=0; i<[arregloPosiciones count]; i++){
+        for (int i=0; i<[arrTachos count]; i++){
             
-            NSString *lat = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_mm_latitud"];
-            NSString *lon = [[arregloPosiciones objectAtIndex:i] objectForKey:@"field_mm_longitud"];
-            NSString *tipo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_contenedor"];
-            double lt=[lat doubleValue];
-            double ln=[lon doubleValue];
-            NSString *name = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-            
-            if([tipo isEqualToString:tipoTacho]){
-                // Instantiate and set the GMSMarker properties
+            if([((Tacho*)arrTachos[i]).tipo isEqualToString:tipoTacho]){
+                
                 GMSMarker *marker = [[GMSMarker alloc] init];
                 marker.appearAnimation=YES;
-                marker.position = CLLocationCoordinate2DMake(lt,ln);
-                marker.title = name;
-                //marker.snippet = @"prueba";
+                marker.position = CLLocationCoordinate2DMake(((Tacho*)arrTachos[i]).lt.doubleValue,((Tacho*)arrTachos[i]).ln.doubleValue);
+                marker.title = ((Tacho*)arrTachos[i]).descripcion;
                 if([tipoTacho isEqualToString:@"Contenedor general"]){
                     marker.icon = [UIImage imageNamed:@"tachito.png"];
                 }else if ([tipoTacho isEqualToString:@"Contenedor de papel"]){
@@ -125,18 +98,18 @@
                 // Instantiate and set the GMSMarker properties
                 GMSMarker *marker = [[GMSMarker alloc] init];
                 marker.appearAnimation=YES;
-                marker.position = CLLocationCoordinate2DMake(lt,ln);
-                marker.title = name;
+                marker.position = CLLocationCoordinate2DMake(((Tacho*)arrTachos[i]).lt.doubleValue,((Tacho*)arrTachos[i]).ln.doubleValue);
+                marker.title = ((Tacho*)arrTachos[i]).descripcion;
                 //marker.snippet = @"prueba";
-                if([tipo isEqualToString:@"Contenedor general"]){
+                if([((Tacho*)arrTachos[i]).tipo isEqualToString:@"Contenedor general"]){
                     marker.icon = [UIImage imageNamed:@"tachito.png"];
-                }else if ([tipo isEqualToString:@"Contenedor de papel"]){
+                }else if ([((Tacho*)arrTachos[i]).tipo isEqualToString:@"Contenedor de papel"]){
                     marker.icon = [UIImage imageNamed:@"tachito5.png"];
-                }else if ([tipo isEqualToString:@"Contenedor de pilas"]){
+                }else if ([((Tacho*)arrTachos[i]).tipo isEqualToString:@"Contenedor de pilas"]){
                     marker.icon = [UIImage imageNamed:@"tachito4.png"];
-                }else if ([tipo isEqualToString:@"Contenedor de plastico"]){
+                }else if ([((Tacho*)arrTachos[i]).tipo isEqualToString:@"Contenedor de plastico"]){
                     marker.icon = [UIImage imageNamed:@"tachito3.png"];
-                }else if ([tipo isEqualToString:@"Contenedor de vidrio"]){
+                }else if ([((Tacho*)arrTachos[i]).tipo isEqualToString:@"Contenedor de vidrio"]){
                     marker.icon = [UIImage imageNamed:@"tachito2.png"];
                 }
                 marker.map = mapView_;
@@ -144,51 +117,114 @@
             }
             
         }
-        //////////
+    
         
-    } failure:^(AFHTTPRequestOperation *task, NSError *error) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                            message:[error localizedDescription]
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"Ok"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-    }];
+}
+    
+
+
+
+-(void)actualizaTachos{
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    NSString * fechaUltimaActualizacion = [datosDeMemoria stringForKey:@"ultActualizacionTachos"];
+    
+
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"contenedor",@"tipo", @"incremental",@"forma",fechaUltimaActualizacion ,@"fecha", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        NSDictionary * respuestajson = responseObject;
+        NSLog(@"JSON: %@", respuestajson);
+        
+        NSDictionary * cuerpo = [respuestajson objectForKey:@"cuerpo"];
+        NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
+        
+        for(int i = 0; i < listaNodos.count; i++){
+            
+            NSString *lat = [[listaNodos objectAtIndex:i] objectForKey:@"latitud"];
+            NSString *lon = [[listaNodos objectAtIndex:i] objectForKey:@"longitud"];
+            NSString *tipo = [[listaNodos objectAtIndex:i] objectForKey:@"tipo_tacho"];
+            double lt=[lat doubleValue];
+            double ln=[lon doubleValue];
+            NSString *name = [[listaNodos objectAtIndex:i] objectForKey:@"title"];
+            NSString *fecha = [[listaNodos objectAtIndex:i] objectForKey:@"fecha_modificacion"];
+            NSString *nid = [[listaNodos objectAtIndex:i] objectForKey:@"nid"];
+            
+            Tacho * tacho = [Tacho create];
+            
+            NSDateFormatter *format = [[NSDateFormatter alloc] init];
+            [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            NSDate * dateNotFormatted = [format dateFromString:fecha];
+            
+            tacho.descripcion = name;
+            tacho.fecha = dateNotFormatted;
+            
+            
+            tacho.ln = [[NSNumber alloc] initWithDouble: lt];
+            tacho.ln = [[NSNumber alloc] initWithDouble: ln];
+            tacho.tipo = tipo;
+            tacho.nid= [[NSNumber alloc] initWithInt: nid.intValue];
+            
+            //Agregar los tachos a coredata
+            
+        }
+        
+        [[IBCoreDataStore mainStore] save];
+
+}
+     
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
     
 }
 
+
+
 -(void)viewWillAppear:(BOOL)animated{
-    [arregloMarkers removeAllObjects];
-    [mapView_ clear];
-    [self.tipoSegmentControl setSelectedSegmentIndex:0];
-    [self recuperaListaDeTachosDeTipo:@"Contenedor general"];
+    //[arregloMarkers removeAllObjects];
+    //[mapView_ clear];
+    //[self.tipoSegmentControl setSelectedSegmentIndex:0];
+    //[self recuperaListaDeTachosDeTipo:@"Contenedor general"];
 }
 
 - (IBAction)cambioDeTacho:(UISegmentedControl *)sender {
     if([sender selectedSegmentIndex]==0){
         [arregloMarkers removeAllObjects];
         [mapView_ clear];
-        [self recuperaListaDeTachosDeTipo:@"Contenedor general"];
+        [self muestraListaDeTachosDeTipo:@"Contenedor general"];
     }else if([sender selectedSegmentIndex]==1){
         [arregloMarkers removeAllObjects];
         [mapView_ clear];
-        [self recuperaListaDeTachosDeTipo:@"Contenedor de papel"];
+        [self muestraListaDeTachosDeTipo:@"Contenedor de papel"];
     }else if([sender selectedSegmentIndex]==2){
         [arregloMarkers removeAllObjects];
         [mapView_ clear];
-        [self recuperaListaDeTachosDeTipo:@"Contenedor de pilas"];
+        [self muestraListaDeTachosDeTipo:@"Contenedor de pilas"];
     }else if([sender selectedSegmentIndex]==3){
         [arregloMarkers removeAllObjects];
         [mapView_ clear];
-        [self recuperaListaDeTachosDeTipo:@"Contenedor de plastico"];
+        [self muestraListaDeTachosDeTipo:@"Contenedor de plastico"];
     }else if([sender selectedSegmentIndex]==4){
         [arregloMarkers removeAllObjects];
         [mapView_ clear];
-        [self recuperaListaDeTachosDeTipo:@"Contenedor de vidrio"];
+        [self muestraListaDeTachosDeTipo:@"Contenedor de vidrio"];
     }else if([sender selectedSegmentIndex]==5){
         [arregloMarkers removeAllObjects];
         [mapView_ clear];
-        [self recuperaListaDeTachosDeTipo:@"Todos"];
+        [self muestraListaDeTachosDeTipo:@"Todos"];
     }
 }
 

@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InicioJuegoViewController : UIViewController <UIAlertViewDelegate>
+
+@protocol PrincipalDelegado <NSObject>
+
+-(void)principalApretoBotonDerecho;
+
+@end
+
+@interface InicioJuegoViewController : UIViewController
+@property (strong,nonatomic) id<PrincipalDelegado> miDelegado;
+
+
 @property (weak, nonatomic) IBOutlet UIButton *btnEmpezar;
 @property (weak, nonatomic) IBOutlet UIButton *btnContinuar;
 @property (strong, nonatomic) IBOutlet UIButton *btnRanking;

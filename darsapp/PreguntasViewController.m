@@ -670,7 +670,18 @@ typedef void (^myCompletion)(BOOL);
     [self.progressBarRoundedFat setProgress:(1-[self.Tiempo.text floatValue]/30) animated:YES];
     if([self.Tiempo.text intValue] == 0){
         [timer invalidate];
-        [self terminarJuego:1];
+        NSUserDefaults * datosDeUsuario = [NSUserDefaults standardUserDefaults];
+        NSInteger vidas = [datosDeUsuario doubleForKey:@"vidasJuegoRuleta"];
+        vidasActual=vidasActual-1;
+        self.btnRespuesta1.enabled = NO;
+        self.btnRespuesta2.enabled = NO;
+        self.btnRespuesta3.enabled = NO;
+        self.btnRespuesta4.enabled = NO;
+        if(vidas>0){
+            [self terminarJuego:2];
+        }else{
+            [self terminarJuego:1];
+        }
         
         
     }

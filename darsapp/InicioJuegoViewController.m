@@ -59,6 +59,9 @@
     
     
 }
+- (IBAction)seApretoBotonDerecho:(id)sender {
+    [self.miDelegado principalApretoBotonDerecho];
+}
 - (IBAction)apreteBoniBackButton:(UIButton *)sender {
     
     UIActionSheet *a = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"OK" destructiveButtonTitle:nil otherButtonTitles:nil];
@@ -90,6 +93,10 @@
     self.btnContinuar.layer.borderColor = [UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1].CGColor;
     
     self.btnContinuar.imageView.image = [self.btnContinuar.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
+    
+    //Diseño para el boton Instrucciones
+    
+    self.btnInstrucciones.imageView.image = [self.btnInstrucciones.imageView.image imageWithColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1]];
     
     
     /*CAGradientLayer *degradado = [CAGradientLayer layer];

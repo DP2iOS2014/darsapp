@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "BuenaPractica.h"
+#import "Persona.h"
 
 @implementation AppDelegate
 
@@ -22,8 +24,56 @@
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[backOriginal imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 
     
+    BuenaPractica * buenaPractica = [BuenaPractica create];
+    buenaPractica.codigoPractica = @12;
+    
+    [[IBCoreDataStore mainStore] save];
+    
+    
     return YES;
 }
+
+/*
+-(void)cargarBuenasPracticas
+{
+    
+    NSArray *todas = [BuenaPractica allOrderedBy:@"codigoPractica" ascending:YES];
+    
+    BuenaPractica *unica = [BuenaPractica all][0];
+    unica.codigoTema = nil;
+    
+    Persona *nuevaPersona = [Persona create];
+    nuevaPersona.nombre = @"Israelito";
+    
+    //1
+    [nuevaPersona addBuenasPracticasObject:unica];
+    //2
+    [unica addPersonasObject:nuevaPersona];
+    
+    
+     NSSortDescriptor *miDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"codigoPractica" ascending:YES];
+    
+    
+    [nuevaPersona.buenasPracticas allObjects];
+    [nuevaPersona.buenasPracticas sortedArrayUsingDescriptors:@[miDescriptor]];
+    
+    
+    
+    unica = nil;
+    [unica destroy];
+    [BuenaPractica destroyAll];
+    
+    
+    [BuenaPractica allForPredicate:[NSPredicate predicateWithFormat:@"c.codigoPractica == 12"]];
+    
+    
+    
+    
+    
+    [[IBCoreDataStore mainStore] save];
+}
+ 
+ */
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -49,7 +99,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 @end

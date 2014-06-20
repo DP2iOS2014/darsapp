@@ -76,11 +76,12 @@
             NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
             NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
             NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"activo"];
-            //NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
+            NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
+            
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];
             [estados addObject:estado];
-           // [nids addObject:nid];
+            [nids addObject:nid];
             
             
         }
@@ -88,10 +89,10 @@
             [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indice];
             
         }
-        //if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
-          //  [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
+        if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
+            [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
             
-        //}
+        }
         
         //if([[Ambientalizate.ArregloReset objectAtIndex:self.indice] count]==0){
           //  [Ambientalizate.ArregloReset setObject:@1 atIndexedSubscript:self.indice];

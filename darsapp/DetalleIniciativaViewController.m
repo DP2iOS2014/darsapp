@@ -14,6 +14,8 @@
 
 @implementation DetalleIniciativaViewController
 
+int puntajexusuario;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,7 +46,7 @@
     [self starsSelectionChanged:self.starRating rating:((NSNumber*)self.puntuacion[self.celdaseleccionada-1]).intValue /20];
     
     //SETEAR AQUI EL ARREGLO TITULOS CUANDO SE LES OCURRA ARREGLAR EL JSON U.U
-    self.lblIniciativa.text= self.descripciones[self.celdaseleccionada-1];
+    self.lblIniciativa.text= self.titulos[self.celdaseleccionada-1];
     self.lblDescripcion.text=self.descripciones[self.celdaseleccionada-1];
     
 }
@@ -57,18 +59,18 @@
 
 
 -(void)starsSelectionChanged:(EDStarRating *)control rating:(float)rating{
+    puntajexusuario = rating*20;
+}
+
+- (IBAction)seMandoPuntuacion:(id)sender {
     
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Mandar Puntuación"
+                                                        message:@"La Puntuación se envió con éxito"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

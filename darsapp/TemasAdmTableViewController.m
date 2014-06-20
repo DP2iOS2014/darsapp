@@ -12,6 +12,7 @@
 #import "CeldaTemas.h"
 #import "UIImageView+AFNetworking.h"
 #import "puntajeAdministradorViewController.h"
+#import "SingletonAmbientalizate.h"
 
 @interface TemasAdmTableViewController ()
 
@@ -183,6 +184,26 @@
 - (IBAction)SeApretoGuardar:(id)sender {
     
     [self performSegueWithIdentifier:@"verpuntaje" sender:self];
+    
+    //AQUI SE ENVIA EL JSON CON LOS PUNTAJES Y LOS NIDS
+    
+    NSMutableArray *nidsjson = [[NSMutableArray alloc] init];
+    NSMutableArray *activosjson = [[NSMutableArray alloc] init];
+    
+    SingletonAmbientalizate *singleton;
+    
+    
+    //[nidsjson setObject:singleton.ArregloNids atIndexedSubscript:<#(NSUInteger)#>]
+    
+    //NSDictionary *lista = [NSDictionary dictionaryWithObjectsAndKeys:nids, @"nid", activos, @"activo", nil];
+    
+   // NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"admin", lista, @"listaNodos", nil];
+    
+    //NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registro_votoxusuario",@"desc",cuerpo,@"cuerpo" , nil];
+    
+    //NSLog(@"%@", consulta);
+    
+    
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{

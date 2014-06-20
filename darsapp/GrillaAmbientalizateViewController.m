@@ -9,7 +9,7 @@
 #import "GrillaAmbientalizateViewController.h"
 #import "GrillaAmbientalizateCell.h"
 #import "SingletonEcoTips.h"
-//////
+#import "UIImageView+AFNetworking.h"
 #import "MyFlowLayout.h"
 //////
 //#import "RecipeCollectionHeaderView.h"
@@ -78,12 +78,17 @@
                 for(int i=0; i<[arregloPosiciones count];i++){
                     NSString *nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
                     NSString *nombre_archivo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
+                    
+                    NSString *postFijo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"url_archivo"];
+                    
+                    //NSString *urlImagen = [NSString stringWithFormat:@"%@%@",@"http://200.16.7.111/dp2/rc/",[postFijo stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                    
                     //NSString *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
                     NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
                     
                     
                     
-                    [ecotips addObject:nombre_archivo];
+                    [ecotips addObject:postFijo];
                     [nids addObject:nid];
                     [puntajes   addObject:puntaje];
                     [estados addObject:puntaje];
@@ -169,7 +174,8 @@
     
     GrillaAmbientalizateCell *cell= [collectionView dequeueReusableCellWithReuseIdentifier:@"miItem" forIndexPath:indexPath];
     NSLog(@"blablabla @%",ecotips);
-    cell.imagen.image = [UIImage imageNamed:[ecotips objectAtIndex:indexPath.row]];
+    
+    [((GrillaAmbientalizateCell*)cell).imagen setImageWithURL:[NSURL URLWithString:ecotips[indexPath.row]] placeholderImage:[UIImage imageNamed:@"congruent_pentagon"]];
     
     NSArray * indexItems = [self.collectionView indexPathsForSelectedItems];
     if ([ecoTips.ArregloEstados count]!=0) {

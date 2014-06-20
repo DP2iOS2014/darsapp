@@ -30,6 +30,7 @@
     NSArray * arregloprueba;
     NSMutableArray *ecotips;
     NSMutableArray *puntajes;
+    NSMutableArray *nids;
     double puntajeUsuario;
     double puntajeActual;
     SingletonEcoTips * ecoTips;
@@ -53,46 +54,66 @@
     ecotips = [[NSMutableArray alloc] init];
     puntajes = [[NSMutableArray alloc]init];
     estados = [[NSMutableArray alloc]init];
+    nids = [[NSMutableArray alloc]init];
+    
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ecotips", @"tipo", @[], @"filtro", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
     NSLog(@"%@", consulta);
     
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuesta = responseObject;
-        NSLog(@"JSON: %@", respuesta);
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
         
-        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
-        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
-        
-        //PARA SACAR LOS DATOS
-        
-         for(int i=0; i<[arregloPosiciones count];i++){
-         NSString *nombre_archivo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
-         NSString *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
-         NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
-   
-             
-         [ecotips addObject:nombre_archivo];
-         [puntajes   addObject:puntaje];
-         [estados addObject:estado];
-             
-         }
-        [self.collectionView reloadData];
+        [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+            respuesta = responseObject;
+            NSLog(@"JSON: %@", respuesta);
+            
+            NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+            NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+            
+            //PARA SACAR LOS DATOS
+            
+            @try {
+                for(int i=0; i<[arregloPosiciones count];i++){
+                    NSString *nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
+                    NSString *nombre_archivo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
+                    //NSString *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+                    NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+                    
+                    
+                    
+                    [ecotips addObject:nombre_archivo];
+                    [nids addObject:nid];
+                    [puntajes   addObject:puntaje];
+                    [estados addObject:puntaje];
+                    
+                }
+                [self.collectionView reloadData];
+            }
+            @catch (NSException *exception) {
+                NSLog( @"NSException caught" );
+                NSLog( @"Name: %@", exception.name);
+                NSLog( @"Reason: %@", exception.reason );
+                return;
+            }
+            @finally {
+                NSLog( @"In finally block");
+            }
+            
+            
+        }
+              failure:^(AFHTTPRequestOperation *task, NSError *error) {
+                  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                      message:[error localizedDescription]
+                                                                     delegate:nil
+                                                            cancelButtonTitle:@"Ok"
+                                                            otherButtonTitles:nil];
+                  [alertView show];
+              }];
+
     }
-          failure:^(AFHTTPRequestOperation *task, NSError *error) {
-              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                                  message:[error localizedDescription]
-                                                                 delegate:nil
-                                                        cancelButtonTitle:@"Ok"
-                                                        otherButtonTitles:nil];
-              [alertView show];
-          }];
-}
+
 
 
 - (void)viewDidLoad
@@ -152,7 +173,7 @@
     
     NSArray * indexItems = [self.collectionView indexPathsForSelectedItems];
     if ([ecoTips.ArregloEstados count]!=0) {
-        if([[ecoTips.ArregloEstados objectAtIndex:indexPath.row] isEqual:@1]){
+        if([[ecoTips.ArregloEstados objectAtIndex:indexPath.row] isEqual:@100]){
             cell.imagen.alpha=0.3;
             cell.imagenCheck.alpha = 1;
             [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:nil];
@@ -237,11 +258,11 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 
     
-    
-    if (mistado.intValue == 0) {
+    //ESTA DESACTIVADO
+    if (mistado.intValue == 20) {
         
         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
-         estados[indexPath.row] = @1;
+         estados[indexPath.row] = @100;
         
         [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             
@@ -270,7 +291,7 @@
             self.navigationItem.backBarButtonItem.enabled = YES;
         }];
         
-        estados[indexPath.row] = @0;
+        estados[indexPath.row] = @20;
         [ecoTips setArregloEstados:estados];
         
     }

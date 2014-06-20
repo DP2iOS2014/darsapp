@@ -47,14 +47,14 @@
 }
 
 - (IBAction)grabarIniciativas:(id)sender {
-    [self grabaIniciativas:self.descripcion.text];
+    [self grabaIniciativas:self.nombre.text conDescripcion:self.descripcion.text];
 }
 
--(void) grabaIniciativas:(NSString*)descripcion{
+-(void) grabaIniciativas:(NSString*)titulo conDescripcion:(NSString*)descripcion{
     NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
     
     NSString * NombreUsuario = [datosDeMemoria stringForKey:@"NombreUsuario"];
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"guardariniciativa",@"tipo",NombreUsuario,@"username",descripcion,@"descripcion",self.nidTema,@"tema", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"guardariniciativa",@"tipo",NombreUsuario,@"username", titulo ,@"titulo",descripcion,@"descripcion",self.nidTema,@"tema", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Almacenamiento",@"operacion",cuerpo,@"cuerpo", nil];
     
     NSLog(@"%@", consulta);

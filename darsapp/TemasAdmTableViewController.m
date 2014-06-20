@@ -119,42 +119,57 @@
 
     NSLog(@"%@", consulta);
     
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
-    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuestatemas = responseObject;
-        NSLog(@"JSON: %@", respuestatemas);
+    @try {
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
         
-        NSDictionary * diccionarioPosiciones = [respuestatemas objectForKey:@"cuerpo"];
-        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
-        
-        //PARA SACAR LOS DATOS
-        
-        for(int i=0; i<[arregloPosiciones count];i++){
-            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-            NSString *nombreimagen = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
+        [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+            respuestatemas = responseObject;
+            NSLog(@"JSON: %@", respuestatemas);
             
-            NSString *postFijo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"url_archivo"];
+            NSDictionary * diccionarioPosiciones = [respuestatemas objectForKey:@"cuerpo"];
+            NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
             
-            NSString *urlImagen = [NSString stringWithFormat:@"%@%@",@"http://200.16.7.111/dp2/rc/",[postFijo stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+            //PARA SACAR LOS DATOS
             
-            [titulos addObject:titulo];
-            [nombresimagenes addObject:nombreimagen];
-            [urlImagenes addObject:urlImagen];
+            for(int i=0; i<[arregloPosiciones count];i++){
+                NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+                NSString *nombreimagen = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
+                
+                NSString *postFijo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"url_archivo"];
+                
+                NSString *urlImagen = [NSString stringWithFormat:@"%@%@",@"http://200.16.7.111/dp2/rc/",[postFijo stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                
+                [titulos addObject:titulo];
+                [nombresimagenes addObject:nombreimagen];
+                [urlImagenes addObject:urlImagen];
+                
+            }
+            
+            [self.tableView reloadData];
             
         }
-        
-        [self.tableView reloadData];
+              failure:^(AFHTTPRequestOperation *task, NSError *error) {
+                  UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                      message:[error localizedDescription]
+                                                                     delegate:nil
+                                                            cancelButtonTitle:@"Ok"
+                                                            otherButtonTitles:nil];
+                  [alertView show];
+              }];
     }
-          failure:^(AFHTTPRequestOperation *task, NSError *error) {
-              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                                  message:[error localizedDescription]
-                                                                 delegate:nil
-                                                        cancelButtonTitle:@"Ok"
-                                                        otherButtonTitles:nil];
-              [alertView show];
-          }];
+    @catch (NSException *exception) {
+        NSLog( @"NSException caught" );
+        NSLog( @"Name: %@", exception.name);
+        NSLog( @"Reason: %@", exception.reason );
+        return;
+    }
+    @finally {
+        NSLog( @"In finally block");
+    }
+      
+    
 }
 
 

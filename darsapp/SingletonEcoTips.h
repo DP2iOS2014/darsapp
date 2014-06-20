@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface SingletonEcoTips : NSObject
-@property NSMutableArray * ArregloEstados;
+@property (nonatomic, strong)NSMutableArray * ArregloEstados;
+@property(nonatomic,strong) NSMutableArray * ArregloNids;
+@property (nonatomic,strong) NSMutableArray * ArregloReset;
 + (id)sharedManager;
 + (void) setEstado:(NSMutableArray*)arregloEstado;
 + (NSMutableArray*) getEstado;

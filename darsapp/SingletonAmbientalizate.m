@@ -20,11 +20,14 @@ static SingletonAmbientalizate *sharedMyManager;
         sharedMyManager = [[self alloc] init];
         sharedMyManager.ArregloEstados = [[NSMutableArray alloc] init];
         sharedMyManager.ArregloNids = [[NSMutableArray alloc] init];
+        sharedMyManager.ArregloReset = [[NSMutableArray alloc] init];
         
         for(int i=0;i<cantidadFilas;i++){
             
             [sharedMyManager.ArregloEstados addObject:[[NSMutableArray alloc] init]];
             [sharedMyManager.ArregloNids addObject:[[NSMutableArray alloc] init]];
+            [sharedMyManager.ArregloReset addObject:[[NSMutableArray alloc] init]];
+            
         }
     });
     

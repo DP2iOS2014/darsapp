@@ -187,6 +187,8 @@
 		12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */; };
 		12A15B09193673450062D5AF /* Adquisiscion de Productos y Servicios.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A15B08193673450062D5AF /* Adquisiscion de Productos y Servicios.png */; };
 		12A1ADCE1954D2EE00FFCE52 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1ADCD1954D2EE00FFCE52 /* Tacho.m */; };
+		12A1ADD41954F79C00FFCE52 /* RankingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1ADD31954F79C00FFCE52 /* RankingTableViewController.m */; };
+		12A1ADD71954FC5000FFCE52 /* RankingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1ADD61954FC5000FFCE52 /* RankingTableViewCell.m */; };
 		12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */; };
 		12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6F2190AC57F001ED3BE /* UbicanosViewController.m */; };
 		12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F6F5190AC927001ED3BE /* newspaper.png */; };
@@ -651,6 +653,10 @@
 		12A15B08193673450062D5AF /* Adquisiscion de Productos y Servicios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Adquisiscion de Productos y Servicios.png"; sourceTree = "<group>"; };
 		12A1ADCC1954D2EE00FFCE52 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tacho.h; sourceTree = "<group>"; };
 		12A1ADCD1954D2EE00FFCE52 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tacho.m; sourceTree = "<group>"; };
+		12A1ADD21954F79C00FFCE52 /* RankingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingTableViewController.h; sourceTree = "<group>"; };
+		12A1ADD31954F79C00FFCE52 /* RankingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingTableViewController.m; sourceTree = "<group>"; };
+		12A1ADD51954FC5000FFCE52 /* RankingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingTableViewCell.h; sourceTree = "<group>"; };
+		12A1ADD61954FC5000FFCE52 /* RankingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingTableViewCell.m; sourceTree = "<group>"; };
 		12A1F6EE190ABC6C001ED3BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		12A1F6F1190AC57F001ED3BE /* UbicanosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UbicanosViewController.h; sourceTree = "<group>"; };
@@ -1233,6 +1239,10 @@
 				12A2A36019493C520044F990 /* OpcionCoronaViewController.m */,
 				125F791F194D0058000956EB /* slideBarViewController.h */,
 				125F7920194D0058000956EB /* slideBarViewController.m */,
+				12A1ADD21954F79C00FFCE52 /* RankingTableViewController.h */,
+				12A1ADD31954F79C00FFCE52 /* RankingTableViewController.m */,
+				12A1ADD51954FC5000FFCE52 /* RankingTableViewCell.h */,
+				12A1ADD61954FC5000FFCE52 /* RankingTableViewCell.m */,
 			);
 			name = Juego;
 			sourceTree = "<group>";
@@ -2122,6 +2132,7 @@
 				125F78BC194CD419000956EB /* NSObject+InnerBand.m in Sources */,
 				125F78C8194CD419000956EB /* IBSequencedMessage.m in Sources */,
 				129EDB861938F3A30088735B /* Instrucciones4ViewController.m in Sources */,
+				12A1ADD71954FC5000FFCE52 /* RankingTableViewCell.m in Sources */,
 				129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */,
 				120FF2291913F39400A697D6 /* AFSecurityPolicy.m in Sources */,
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
@@ -2174,6 +2185,7 @@
 				125F78C3194CD419000956EB /* IBViewUtil.m in Sources */,
 				129D4DB91919C3DF00D12423 /* ClasePregunta.m in Sources */,
 				12A7582A191AEDD500E03C5E /* RutaBasuraViewController.m in Sources */,
+				12A1ADD41954F79C00FFCE52 /* RankingTableViewController.m in Sources */,
 				1252AEC91947A70F001CCBD3 /* Iniciativas.m in Sources */,
 				129EDB831938F38A0088735B /* Instrucciones3ViewController.m in Sources */,
 				1252AECE1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m in Sources */,

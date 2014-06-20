@@ -187,21 +187,39 @@
     
     //AQUI SE ENVIA EL JSON CON LOS PUNTAJES Y LOS NIDS
     
-    NSMutableArray *nidsjson = [[NSMutableArray alloc] init];
-    NSMutableArray *activosjson = [[NSMutableArray alloc] init];
+    SingletonAmbientalizate *singleton = [SingletonAmbientalizate sharedManager:1];
     
-    SingletonAmbientalizate *singleton;
+    NSMutableArray *nidsjson;
+    NSMutableArray *activosjson;
+    
+    activosjson = [[NSMutableArray alloc] init];
+    nidsjson = [[NSMutableArray alloc] init];
     
     
-    //[nidsjson setObject:singleton.ArregloNids atIndexedSubscript:<#(NSUInteger)#>]
+    for(int i=0;i<singleton.ArregloEstados.count;i++){
+        if ( [singleton.ArregloEstados[i] count] != 0 ) {
+            [activosjson addObject:singleton.ArregloEstados[i][0]];
+            [nidsjson addObject:singleton.ArregloNids[i][0]];
+        }
     
-    //NSDictionary *lista = [NSDictionary dictionaryWithObjectsAndKeys:nids, @"nid", activos, @"activo", nil];
+    }
     
-   // NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"admin", lista, @"listaNodos", nil];
     
-    //NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registro_votoxusuario",@"desc",cuerpo,@"cuerpo" , nil];
+    NSMutableArray *arreglo = [[NSMutableArray alloc] init];
+    NSDictionary *lista;
     
-    //NSLog(@"%@", consulta);
+    
+    for(int i=0; i<nidsjson.count ; i++){
+        lista = [NSDictionary dictionaryWithObjectsAndKeys:nidsjson[i], @"nid", activosjson[i], @"activo", nil];
+        [arreglo addObject:lista];
+    }
+  
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"admin", lista, @"listaNodos", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registro_votoxusuario",@"desc",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
     
     
 }

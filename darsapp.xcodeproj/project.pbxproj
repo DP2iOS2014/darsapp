@@ -1844,9 +1844,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___greensoft___";
 				TargetAttributes = {
-					12F4CFC418FF147500C8BFF5 = {
-						DevelopmentTeam = WC65ARB526;
-					};
 					12F4CFE818FF147600C8BFF5 = {
 						TestTargetID = 12F4CFC418FF147500C8BFF5;
 					};

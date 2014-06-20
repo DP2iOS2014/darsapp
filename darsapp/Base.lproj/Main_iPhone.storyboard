@@ -2310,6 +2310,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
+                                                <action selector="SeApretoGuardar:" destination="hwf-mZ-eWD" eventType="touchUpInside" id="eSA-NZ-USP"/>
                                                 <segue destination="xmK-WS-ww9" kind="push" identifier="verpuntaje" id="hwU-go-lgu"/>
                                             </connections>
                                         </button>

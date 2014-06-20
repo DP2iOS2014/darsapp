@@ -46,10 +46,10 @@
     
     NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
     NSString * nombre = [datos stringForKey:@"NombreUsuario"];
-    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:nombre, @"usuario", @"field_tipotema",@"campo",self.tema,@"valor",nil];
+    NSDictionary *filtro2 = [NSDictionary dictionaryWithObjectsAndKeys:nombre, @"username",self.tema,@"tema",nil];
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"buenaspracticas", @"tipo", @[filtro2], @"filtro", nil];
-    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    NSDictionary *consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"consulta_buenaspracticasxusuario",@"desc",filtro2, @"cuerpo", nil];
+    
     
     NSLog(@"%@", consulta);
     
@@ -67,21 +67,20 @@
         NSLog(@"JSON: %@", respuesta);
         
         NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
-        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaBuenasPracticas"];
         
         //PARA SACAR LOS DATOS
         
         for(int i=0; i<[arregloPosiciones count];i++){
             //NSString *descripcion = [[arregloPosiciones objectAtIndex:i] objectForKey:@"descripcion"];
             NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
-            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"value"];
-            //NSString *tema = [[arregloPosiciones objectAtIndex:i] objectForKey:@"tipo_tema"];
-            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"value"];
-            NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
+            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"activo"];
+            //NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
             [buenaspracticas addObject:titulo];
             [puntajes   addObject:puntaje];
             [estados addObject:estado];
-            [nids addObject:nid];
+           // [nids addObject:nid];
             
             
         }
@@ -89,16 +88,15 @@
             [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indice];
             
         }
-        if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
-            [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
+        //if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
+          //  [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
             
-        }
+        //}
         
-        if([[Ambientalizate.ArregloReset objectAtIndex:self.indice] count]==0){
-            [Ambientalizate.ArregloReset setObject:@1 atIndexedSubscript:self.indice];
+        //if([[Ambientalizate.ArregloReset objectAtIndex:self.indice] count]==0){
+          //  [Ambientalizate.ArregloReset setObject:@1 atIndexedSubscript:self.indice];
             
-        }
-        
+        //}
         
         [self.collectionView reloadData];
     }

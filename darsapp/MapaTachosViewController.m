@@ -71,13 +71,15 @@
     
         NSArray * arrTachos = [Tacho all];
     
+    
         for (int i=0; i<[arrTachos count]; i++){
-            
+            NSLog(@"%@",((Tacho*)arrTachos[i]).descripcion);
             if([((Tacho*)arrTachos[i]).tipo isEqualToString:tipoTacho]){
                 
                 GMSMarker *marker = [[GMSMarker alloc] init];
                 marker.appearAnimation=YES;
                 marker.position = CLLocationCoordinate2DMake(((Tacho*)arrTachos[i]).lt.doubleValue,((Tacho*)arrTachos[i]).ln.doubleValue);
+                
                 marker.title = ((Tacho*)arrTachos[i]).descripcion;
                 if([tipoTacho isEqualToString:@"Contenedor general"]){
                     marker.icon = [UIImage imageNamed:@"tachito.png"];
@@ -92,6 +94,7 @@
                 }
                 marker.map = mapView_;
                 [arregloMarkers addObject:marker];
+                
             }
             
             if([tipoTacho isEqualToString:@"Todos"]){
@@ -114,6 +117,7 @@
                 }
                 marker.map = mapView_;
                 [arregloMarkers addObject:marker];
+                
             }
             
         }
@@ -166,16 +170,54 @@
             tacho.fecha = dateNotFormatted;
             
             
-            tacho.ln = [[NSNumber alloc] initWithDouble: lt];
+            tacho.lt = [[NSNumber alloc] initWithDouble: lt];
             tacho.ln = [[NSNumber alloc] initWithDouble: ln];
             tacho.tipo = tipo;
             tacho.nid= [[NSNumber alloc] initWithInt: nid.intValue];
             
+            NSDate *now = [NSDate date];
+            NSDateFormatter *formato = [[NSDateFormatter alloc] init];
+            [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+            
+            NSString *dateString = [formato stringFromDate:now];
+            
+            [[NSUserDefaults standardUserDefaults] setObject:dateString forKey:@"ultActualizacionTachos"];
+
             //Agregar los tachos a coredata
             
         }
         
         [[IBCoreDataStore mainStore] save];
+        
+        NSInteger indice = [self.tipoSegmentControl selectedSegmentIndex];
+        if(indice==0){
+            [arregloMarkers removeAllObjects];
+            [mapView_ clear];
+            [self muestraListaDeTachosDeTipo:@"Contenedor general"];
+        }else if(indice==1){
+            [arregloMarkers removeAllObjects];
+            [mapView_ clear];
+            [self muestraListaDeTachosDeTipo:@"Contenedor de papel"];
+        }else if(indice==2){
+            [arregloMarkers removeAllObjects];
+            [mapView_ clear];
+            [self muestraListaDeTachosDeTipo:@"Contenedor de pilas"];
+            
+        }else if(indice==3){
+            [arregloMarkers removeAllObjects];
+            [mapView_ clear];
+            [self muestraListaDeTachosDeTipo:@"Contenedor de plastico"];
+            
+        }else if(indice==4){
+            [arregloMarkers removeAllObjects];
+            [mapView_ clear];
+            [self muestraListaDeTachosDeTipo:@"Contenedor de vidrio"];
+        }else if (indice==5){
+            [arregloMarkers removeAllObjects];
+            [mapView_ clear];
+            [self muestraListaDeTachosDeTipo:@"Todos"];
+            
+        }
 
 }
      
@@ -188,6 +230,12 @@
               [alertView show];
           }];
     
+    
+}
+
+
+- (IBAction)actualizarMapa:(id)sender {
+    [self actualizaTachos];
     
 }
 

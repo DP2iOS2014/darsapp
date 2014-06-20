@@ -92,7 +92,7 @@
             tacho.fecha = dateNotFormatted;
             
             
-            tacho.ln = [[NSNumber alloc] initWithDouble: lt];
+            tacho.lt = [[NSNumber alloc] initWithDouble: lt];
             tacho.ln = [[NSNumber alloc] initWithDouble: ln];
             tacho.tipo = tipo;
             tacho.nid= [[NSNumber alloc] initWithInt: nid.intValue];
@@ -151,9 +151,10 @@
         BOOL esta;
         for(int i = 0; i < tachos.count; i++){
             esta = NO;
-            NSNumber * nid = [[listaNodos objectAtIndex:i]objectForKey:@"nid"];
+            
             //Compara los nids que ya se tienen con los pedidos para borrar los que sobran
             for(int j=0;j<listaNodos.count;j++){
+                NSNumber * nid = [[listaNodos objectAtIndex:j]objectForKey:@"nid"];
                 if( ((Tacho*)tachos[i]).nid.intValue == nid.intValue){
                     esta = YES;
                 }

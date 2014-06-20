@@ -71,27 +71,29 @@
         
         for(int i = 0; i < listaNodos.count; i++){
             
-            NSString *lat = [[listaNodos objectAtIndex:i] objectForKey:@"field_mm_latitud"];
-            NSString *lon = [[listaNodos objectAtIndex:i] objectForKey:@"field_mm_longitud"];
-            NSString *tipo = [[listaNodos objectAtIndex:i] objectForKey:@"tipo_contenedor"];
+            NSString *lat = [[listaNodos objectAtIndex:i] objectForKey:@"latitud"];
+            NSString *lon = [[listaNodos objectAtIndex:i] objectForKey:@"longitud"];
+            NSString *tipo = [[listaNodos objectAtIndex:i] objectForKey:@"tipo_tacho"];
             double lt=[lat doubleValue];
             double ln=[lon doubleValue];
             NSString *name = [[listaNodos objectAtIndex:i] objectForKey:@"title"];
             NSString *fecha = [[listaNodos objectAtIndex:i] objectForKey:@"fecha_modificacion"];
-            NSNumber *nid = [[listaNodos objectAtIndex:i] objectForKey:@"nid"];
+            NSString *nid = [[listaNodos objectAtIndex:i] objectForKey:@"nid"];
             
             Tacho * tacho = [BuenaPractica create];
-            tacho.nid= nid;
+            
             NSDateFormatter *format = [[NSDateFormatter alloc] init];
             [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
             NSDate * dateNotFormatted = [format dateFromString:fecha];
-            tacho.fecha = dateNotFormatted;
             
             tacho.descripcion = name;
+            tacho.fecha = dateNotFormatted;
+            
+            
             tacho.ln = [[NSNumber alloc] initWithDouble: lt];
             tacho.ln = [[NSNumber alloc] initWithDouble: ln];
             tacho.tipo = tipo;
-            
+            tacho.nid= [[NSNumber alloc] initWithInt: nid.intValue];
             
             //Agregar los tachos a coredata
             
@@ -141,7 +143,7 @@
         BOOL esta;
         for(int i = 0; i < tachos.count; i++){
             esta = NO;
-            NSNumber * nid = [[listaNodos objectAtIndex:i]objectForKey:@"field_nombre_evento_value"];
+            NSNumber * nid = [[listaNodos objectAtIndex:i]objectForKey:@"nid"];
             //Compara los nids que ya se tienen con los pedidos para borrar los que sobran
             for(int j=0;j<listaNodos.count;j++){
                 //if( ((Tacho*)tachos[i]).)

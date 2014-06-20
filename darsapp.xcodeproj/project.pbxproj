@@ -27,7 +27,6 @@
 		120FF2881914061800A697D6 /* URLsJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 120FF2871914061800A697D6 /* URLsJson.m */; };
 		121A72801954A19200A18852 /* BuenaPractica.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A727F1954A19200A18852 /* BuenaPractica.m */; };
 		121A72861954A19300A18852 /* Persona.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72851954A19300A18852 /* Persona.m */; };
-		121A72981954BC6F00A18852 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 121A72971954BC6F00A18852 /* Tacho.m */; };
 		1224BB5B192E9161006ED075 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB5A192E9161006ED075 /* MyFlowLayout.m */; };
 		12330CAF191AC11500E85590 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CAE191AC11500E85590 /* GoogleMaps.framework */; };
 		12330CB1191AC24100E85590 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 12330CB0191AC24100E85590 /* GoogleMaps.bundle */; };
@@ -187,6 +186,7 @@
 		12A128F1191EDC9300397B90 /* ResultadoCalificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A128F0191EDC9300397B90 /* ResultadoCalificateViewController.m */; };
 		12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */; };
 		12A15B09193673450062D5AF /* Adquisiscion de Productos y Servicios.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A15B08193673450062D5AF /* Adquisiscion de Productos y Servicios.png */; };
+		12A1ADCB1954C9B600FFCE52 /* Tacho.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1ADCA1954C9B600FFCE52 /* Tacho.m */; };
 		12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */; };
 		12A1F6F3190AC57F001ED3BE /* UbicanosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A1F6F2190AC57F001ED3BE /* UbicanosViewController.m */; };
 		12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A1F6F5190AC927001ED3BE /* newspaper.png */; };
@@ -425,8 +425,6 @@
 		121A727F1954A19200A18852 /* BuenaPractica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuenaPractica.m; sourceTree = "<group>"; };
 		121A72841954A19300A18852 /* Persona.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persona.h; sourceTree = "<group>"; };
 		121A72851954A19300A18852 /* Persona.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persona.m; sourceTree = "<group>"; };
-		121A72961954BC6F00A18852 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tacho.h; path = ../Tacho.h; sourceTree = "<group>"; };
-		121A72971954BC6F00A18852 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tacho.m; path = ../Tacho.m; sourceTree = "<group>"; };
 		1224BB59192E9161006ED075 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
 		1224BB5A192E9161006ED075 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
 		12330CAE191AC11500E85590 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -651,6 +649,8 @@
 		12A14459192FB1D10035F214 /* puntajeAdministradorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = puntajeAdministradorViewController.h; sourceTree = "<group>"; };
 		12A1445A192FB1D10035F214 /* puntajeAdministradorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = puntajeAdministradorViewController.m; sourceTree = "<group>"; };
 		12A15B08193673450062D5AF /* Adquisiscion de Productos y Servicios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Adquisiscion de Productos y Servicios.png"; sourceTree = "<group>"; };
+		12A1ADC91954C9B600FFCE52 /* Tacho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tacho.h; path = ../Tacho.h; sourceTree = "<group>"; };
+		12A1ADCA1954C9B600FFCE52 /* Tacho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tacho.m; path = ../Tacho.m; sourceTree = "<group>"; };
 		12A1F6EE190ABC6C001ED3BE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		12A1F6EF190ABC6C001ED3BE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		12A1F6F1190AC57F001ED3BE /* UbicanosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UbicanosViewController.h; sourceTree = "<group>"; };
@@ -1114,8 +1114,8 @@
 		125F78D1194CD8E5000956EB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				121A72961954BC6F00A18852 /* Tacho.h */,
-				121A72971954BC6F00A18852 /* Tacho.m */,
+				12A1ADC91954C9B600FFCE52 /* Tacho.h */,
+				12A1ADCA1954C9B600FFCE52 /* Tacho.m */,
 				121A72841954A19300A18852 /* Persona.h */,
 				121A72851954A19300A18852 /* Persona.m */,
 				121A727E1954A19200A18852 /* BuenaPractica.h */,
@@ -2134,7 +2134,7 @@
 				125F78C6194CD419000956EB /* IBHTTPGetRequestMessage.m in Sources */,
 				12A757E8191AD04D00E03C5E /* SeparatasViewController.m in Sources */,
 				129EDB8B1938FF980088735B /* ComodinesViewController.m in Sources */,
-				121A72981954BC6F00A18852 /* Tacho.m in Sources */,
+				12A1ADCB1954C9B600FFCE52 /* Tacho.m in Sources */,
 				120FF2281913F39400A697D6 /* AFNetworkReachabilityManager.m in Sources */,
 				129EDB5C1938DE6F0088735B /* AyudaJuegoTableViewController.m in Sources */,
 				125F78BE194CD419000956EB /* NSString+InnerBand.m in Sources */,

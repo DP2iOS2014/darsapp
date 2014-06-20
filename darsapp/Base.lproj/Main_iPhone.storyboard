@@ -353,15 +353,6 @@
                                     <action selector="btnContinuarJuego:" destination="tu2-8m-JJQ" eventType="touchUpInside" id="Vxd-1F-AYG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sy9-dQ-PzX">
-                                <rect key="frame" x="5" y="466" width="140" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
-                                <state key="normal" title="Ranking">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChS-X5-iix">
                                 <rect key="frame" x="243" y="451" width="45" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -403,17 +394,10 @@
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" title="Juego" id="mfe-p8-b70">
-
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="DtY-T8-tSC">
-                            <color key="tintColor" red="0.42486733180000003" green="0.72044181139999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="seApretoBotonDerecho:" destination="tu2-8m-JJQ" id="2va-Mc-sUI"/>
-
                         <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="DtY-T8-tSC">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="cerrarSesion:" destination="tu2-8m-JJQ" id="wcI-kN-hnS"/>
-
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -421,7 +405,6 @@
                         <outlet property="btnContinuar" destination="UNy-ZR-13o" id="fCU-Pk-Sj3"/>
                         <outlet property="btnEmpezar" destination="HXS-CP-bh2" id="RVy-3l-XJQ"/>
                         <outlet property="btnInstrucciones" destination="ChS-X5-iix" id="MLz-9f-Ffc"/>
-                        <outlet property="btnRanking" destination="Sy9-dQ-PzX" id="beu-QI-fDu"/>
                         <outlet property="pruebaBackButton" destination="Atg-E3-eWJ" id="92K-Zl-87D"/>
                         <outlet property="ptjMaximo" destination="wQb-ir-8iB" id="hWx-xq-cWG"/>
                         <segue destination="XrB-wS-iVQ" kind="push" identifier="escena_juego" id="sWe-2s-ee4"/>
@@ -1572,30 +1555,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7s-Nc-LGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="-1454"/>
-        </scene>
-        <!--Navigation Controller - Juego-->
-        <scene sceneID="3Qr-ER-NIP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dKN-a7-uSK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Juego" image="116-controller.png" id="8r9-CP-Qlw"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" backIndicatorImage="backButton2.png" backIndicatorTransitionMaskImage="backButton2.png" id="Yus-W0-B25">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1215686351" green="0.76862752440000004" blue="0.68235296010000002" alpha="1" colorSpace="deviceRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="22"/>
-                            <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tu2-8m-JJQ" kind="relationship" relationship="rootViewController" id="jZg-Rs-N1A"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sl6-en-QIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1058" y="-3521"/>
         </scene>
         <!--Navigation Controller - Proyectos-->
         <scene sceneID="uLL-zJ-pAm">
@@ -3028,10 +2987,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-
-        <segue reference="yGJ-Xj-HSt"/>
-
-
         <segue reference="JAq-Fb-1S1"/>
     </inferredMetricsTieBreakers>
 </document>

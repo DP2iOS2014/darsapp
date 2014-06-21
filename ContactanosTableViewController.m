@@ -56,16 +56,16 @@
         if(indexPath.row==0){
             //fb
             if([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:@"fb://"]]){
-                miURLString = @"fb://pucpdars";
+                miURLString = @"fb://profile/106346966142394";
             }else{
                 miURLString = @"https://www.facebook.com/pucpdars";
             }
         }else{
             //twitter
             if([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:@"twitter://"]]){
-                miURLString = @"twitter://dars_pucp";
+                miURLString = @"twitter://user?screen_name=dars_pucp";
             }else{
-                miURLString = @"https://twitter.com/dars_pucp";
+                miURLString = @"https://twitter.com/user/dars_pucp";
             }
         }
     }else{

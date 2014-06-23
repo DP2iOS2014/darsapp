@@ -10,6 +10,7 @@
 
 #import "UbicanosViewController.h"
 #import "DarsLocalizacionAnnotation.h"
+#import "DatosPersonales.h"
 @interface UbicanosViewController ()
 
 @end
@@ -32,15 +33,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+     NSArray * dps = [DatosPersonales all];
+    DatosPersonales *dp= [dps objectAtIndex:0];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    
+    self.descripcion.text=dp.direccion;
     //CLLocationCoordinate2D coordinate;
-    coordinate.latitude = -12.069919;
-    coordinate.longitude = -77.079801;
-    DarsLocalizacionAnnotation *annotation = [[DarsLocalizacionAnnotation alloc] initWithName:@"DARS" address:@"Detrás de la oficina Dinthilac" coordinate:coordinate] ;
+    //coordinate.latitude = -12.069919;
+    coordinate.latitude = [dp.latitud doubleValue];
+    coordinate.longitude = [dp.longitud doubleValue];
+    //coordinate.longitude = -77.079801;
+    DarsLocalizacionAnnotation *annotation = [[DarsLocalizacionAnnotation alloc] initWithName:@"DARS"/*dp.titulo*/ address:@"Detrás de la oficina Dinthilac" coordinate:coordinate] ;
     [_mapa addAnnotation:annotation];
 }
 

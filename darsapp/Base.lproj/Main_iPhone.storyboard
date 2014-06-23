@@ -177,6 +177,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ubicanos" id="TM4-xe-JVw"/>
                     <connections>
+                        <outlet property="descripcion" destination="BSj-i6-FAg" id="3nc-ZY-WpE"/>
                         <outlet property="mapa" destination="f5C-ey-HEP" id="OQf-qX-whS"/>
                     </connections>
                 </viewController>

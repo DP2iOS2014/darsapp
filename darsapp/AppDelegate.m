@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BuenaPractica.h"
 #import "Persona.h"
+#import "DatosPersonales.h"
 #import "URLsJson.h"
 #import "Tacho.h"
 
@@ -27,22 +28,77 @@
     
     NSArray * tacho = [Tacho all];
     
-    
-    
-    
+    NSArray* dp=[DatosPersonales all];
     
     if(tacho.count != 0)
     [self actualizarTachos];
     else [self llenaTachos];
     
 
-    
+    if(dp.count ==0 )
+        [self llenaDp];
     
     //[[IBCoreDataStore mainStore] save];
     
     
     return YES;
 }
+
+-(void) llenaDp{
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ubicacion_dars",@"tipo", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
+    
+    NSLog(@"%@", consulta);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        NSDictionary * respuestajson = responseObject;
+        NSLog(@"JSON: %@", respuestajson);
+        
+        NSDictionary * cuerpo = [respuestajson objectForKey:@"cuerpo"];
+        NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
+        
+        NSString *descripcion = [[listaNodos objectAtIndex:0] objectForKey:@"descripcion"];
+        NSString *lat = [[listaNodos objectAtIndex:0] objectForKey:@"latitud"];
+        NSString *lon = [[listaNodos objectAtIndex:0] objectForKey:@"longitud"];
+        double lt=[lat doubleValue];
+        double ln=[lon doubleValue];
+        NSString *nid = [[listaNodos objectAtIndex:0] objectForKey:@"nid"];
+        NSString *ti = [[listaNodos objectAtIndex:0] objectForKey:@"titulo"];
+        NSString *vid = [[listaNodos objectAtIndex:0] objectForKey:@"vid"];
+        
+        DatosPersonales * dp = [DatosPersonales create];
+    
+        dp.direccion= descripcion;
+        dp.latitud= [[NSNumber alloc] initWithDouble: lt];
+        dp.longitud = [[NSNumber alloc] initWithDouble: ln];
+        dp.nid=[[NSNumber alloc] initWithInt: nid.intValue];
+        dp.titulo=ti;
+        dp.vid=[[NSNumber alloc] initWithInt: vid.intValue];
+        
+        
+        [[IBCoreDataStore mainStore] save];
+        
+        
+    }
+     
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+
+
+}
+
 
 -(void)llenaTachos{
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];

@@ -261,6 +261,7 @@
 		12A75839191AF36E00E03C5E /* 6_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75831191AF36E00E03C5E /* 6_Separatas.png */; };
 		12A7583A191AF36E00E03C5E /* 7_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75832191AF36E00E03C5E /* 7_Separatas.png */; };
 		12A7583B191AF36E00E03C5E /* 8_Separatas.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A75833191AF36E00E03C5E /* 8_Separatas.png */; };
+		12ABCBF31958DC6F005BA5D0 /* DatosPersonales.m in Sources */ = {isa = PBXBuildFile; fileRef = 12ABCBF21958DC6F005BA5D0 /* DatosPersonales.m */; };
 		12AE93FD19534A800052C888 /* 1403214140_Login_out.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AE93FC19534A800052C888 /* 1403214140_Login_out.png */; };
 		12AE93FF19534AE80052C888 /* LOGOUT.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AE93FE19534AE80052C888 /* LOGOUT.png */; };
 		12AF77D5194A4B1700512B81 /* selectleaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 12AF77D4194A4B1700512B81 /* selectleaf.png */; };
@@ -749,6 +750,8 @@
 		12A75831191AF36E00E03C5E /* 6_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6_Separatas.png; sourceTree = "<group>"; };
 		12A75832191AF36E00E03C5E /* 7_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7_Separatas.png; sourceTree = "<group>"; };
 		12A75833191AF36E00E03C5E /* 8_Separatas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_Separatas.png; sourceTree = "<group>"; };
+		12ABCBF11958DC6F005BA5D0 /* DatosPersonales.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatosPersonales.h; sourceTree = "<group>"; };
+		12ABCBF21958DC6F005BA5D0 /* DatosPersonales.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatosPersonales.m; sourceTree = "<group>"; };
 		12AE93FC19534A800052C888 /* 1403214140_Login_out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1403214140_Login_out.png; sourceTree = "<group>"; };
 		12AE93FE19534AE80052C888 /* LOGOUT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGOUT.png; sourceTree = "<group>"; };
 		12AF77D4194A4B1700512B81 /* selectleaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectleaf.png; sourceTree = "<group>"; };
@@ -1120,6 +1123,8 @@
 		125F78D1194CD8E5000956EB /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				12ABCBF11958DC6F005BA5D0 /* DatosPersonales.h */,
+				12ABCBF21958DC6F005BA5D0 /* DatosPersonales.m */,
 				12A1ADCC1954D2EE00FFCE52 /* Tacho.h */,
 				12A1ADCD1954D2EE00FFCE52 /* Tacho.m */,
 				121A72841954A19300A18852 /* Persona.h */,
@@ -2137,6 +2142,7 @@
 				120FF2291913F39400A697D6 /* AFSecurityPolicy.m in Sources */,
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
 				12A75811191AD75E00E03C5E /* ElectricidadViewController.m in Sources */,
+				12ABCBF31958DC6F005BA5D0 /* DatosPersonales.m in Sources */,
 				1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */,
 				125F78B2194CD419000956EB /* IBAlertView.m in Sources */,
 				125F78C6194CD419000956EB /* IBHTTPGetRequestMessage.m in Sources */,

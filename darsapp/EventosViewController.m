@@ -38,6 +38,8 @@ typedef void (^myCompletion)(BOOL);
     NSMutableArray *urlImagenes2;
     NSMutableArray * fecha2;
     NSMutableArray  * nids2;
+    
+    NSInteger  segindice;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -71,6 +73,25 @@ typedef void (^myCompletion)(BOOL);
     //[self recuperoEventos:@1];
     //[self recuperoEventosProximos];
     
+    /*[self myMethod:^(BOOL finished) {
+        if (finished) {
+            //[self recuperoEventosProximos];
+        }
+        
+    }];*/
+    
+    [self recuperoEventos:@2];
+    
+    for(int i=0;i<nids.count;i++){
+        for(int j=0;j<nids2.count;j++){
+            if([nids2[j] isEqualToString:nids[i]]) {
+                [nids2 removeObjectAtIndex:j];
+                [titulos2 removeObjectAtIndex:j];
+                [urlImagenes2 removeObjectAtIndex:j];
+                [fecha2 removeObjectAtIndex:j];
+            };
+        }
+    }
     
     [self cambiodeEvento:0];
     
@@ -138,7 +159,7 @@ typedef void (^myCompletion)(BOOL);
         
         }
         
-        [self.tablaeventos reloadData];
+        //[self.tablaeventos reloadData];
         
         
     }
@@ -218,7 +239,7 @@ typedef void (^myCompletion)(BOOL);
             }
         }
         [self recuperoEventosProximos];
-        [self.tablaeventos reloadData];
+        //[self.tablaeventos reloadData];
         
         
     }
@@ -234,21 +255,6 @@ typedef void (^myCompletion)(BOOL);
     }
 }
 
-- (IBAction)cambioEvento2:(id)sender {
-    if([sender selectedSegmentIndex]==0){
-        [ titulos removeAllObjects];
-        [self recuperoEventos:@1];
-    }else if([sender selectedSegmentIndex]==1){
-        [ titulos removeAllObjects];
-        [self recuperoEventos:@2];
-    }else if([sender selectedSegmentIndex]==2){
-        [ titulos removeAllObjects];
-        [self recuperoEventos:@3];
-    }
-
-    
-}
-
 -(void) myMethod:(myCompletion) compblock {
     [self recuperoEventos:@2];
     compblock (YES);
@@ -258,53 +264,17 @@ typedef void (^myCompletion)(BOOL);
 
 - (IBAction)cambiodeEvento:(UISegmentedControl *)sender {
     if([sender selectedSegmentIndex]==0){
-    
-        //Proximamente, primero comparo con los que me bota el usuario
-        //[self recuperoEventos:@2];
-        
-        
-        [self myMethod:^(BOOL finished) {
-            if (finished) {
-                //[self recuperoEventosProximos];
-            }
-            
-        }];
-
-        
-        //[self recuperoEventosProximos];
-        
-        for(int i=0;i<nids.count;i++){
-            for(int j=0;j<nids2.count;j++){
-                if([nids2[j] isEqualToString:nids[i]]) {
-                    [nids2 removeObjectAtIndex:j];
-                    [titulos2 removeObjectAtIndex:j];
-                    [urlImagenes2 removeObjectAtIndex:j];
-                    [fecha2 removeObjectAtIndex:j];
-                };
-            }
-        }
-        
-        [ titulos removeAllObjects];
-        [ urlImagenes removeAllObjects];
-        [ fecha removeAllObjects];
-        [ nids removeAllObjects];
-        
-        [titulos addObjectsFromArray:titulos2];
-        [ urlImagenes addObjectsFromArray:urlImagenes2];
-        [fecha addObjectsFromArray:fecha2];
-        [nids addObjectsFromArray:nids2];
-        
+        segindice=0;
         [self.tablaeventos reloadData];
-        
 
     }else if([sender selectedSegmentIndex]==1){
-        [ titulos removeAllObjects];
-        [ urlImagenes removeAllObjects];
-        [self recuperoEventos:@2];
+        segindice=1;
+        [self.tablaeventos reloadData];
+ 
     }else if([sender selectedSegmentIndex]==2){
-        [ titulos removeAllObjects];
-        [ urlImagenes removeAllObjects];
-         [self recuperoEventos:@3];
+        segindice=2;
+        [self.tablaeventos reloadData];
+
     }
 }
 
@@ -318,8 +288,19 @@ typedef void (^myCompletion)(BOOL);
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if(titulos.count>0)
-    return titulos.count;
+    
+    if(segindice==0) {
+        if(titulos2.count>0)
+            return titulos2.count;
+        else return 1;
+    }
+    
+    else if(segindice==1){
+        if(titulos.count>0)
+            return titulos.count;
+        else return 1;
+    }
+    
     else return 1;
 }
 
@@ -328,19 +309,39 @@ typedef void (^myCompletion)(BOOL);
 {
     UITableViewCell * cell;
     
-    if(titulos.count>0){
-    
-    
     cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
-    ((CeldaTemas*)cell).lblTema.text=titulos[indexPath.row];
-    [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
-    [((CeldaTemas*)cell).imagen setHidden:NO];
-    }else{
-        cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
-        ((CeldaTemas*)cell).lblTema.text=@"No hay eventos";
-        [((CeldaTemas*)cell).imagen setHidden:YES];
+    
+    if(segindice==0){
         
+        if(titulos2.count>0){
+            
+            ((CeldaTemas*)cell).lblTema.text=titulos2[indexPath.row];
+            [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes2[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
+            [((CeldaTemas*)cell).imagen setHidden:NO];
+        }else{
+            cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
+            ((CeldaTemas*)cell).lblTema.text=@"No hay eventos";
+            [((CeldaTemas*)cell).imagen setHidden:YES];
+            
+        }
+    
+    }else if (segindice==1){
+        
+        if(titulos.count>0){
+            
+            ((CeldaTemas*)cell).lblTema.text=titulos[indexPath.row];
+            [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
+            [((CeldaTemas*)cell).imagen setHidden:NO];
+        }else{
+            cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
+            ((CeldaTemas*)cell).lblTema.text=@"No hay eventos";
+            [((CeldaTemas*)cell).imagen setHidden:YES];
+            
+        }
+    
     }
+    
+
     
     return cell;
 }

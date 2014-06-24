@@ -63,6 +63,7 @@
 		124DD15919591F2B002DC44F /* UIImage+MPAverageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14619591F2B002DC44F /* UIImage+MPAverageColor.m */; };
 		124DD15A19591F2B002DC44F /* UIImage+MPImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14819591F2B002DC44F /* UIImage+MPImageEffects.m */; };
 		124DD15B19591F2B002DC44F /* UIView+MPSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14A19591F2B002DC44F /* UIView+MPSnapshotImage.m */; };
+		124DD15D19591FAE002DC44F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124DD15C19591FAE002DC44F /* CoreTelephony.framework */; };
 		1252AEC91947A70F001CCBD3 /* Iniciativas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252AEC81947A70F001CCBD3 /* Iniciativas.m */; };
 		1252AECB1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1252AECA1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png */; };
 		1252AECE1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252AECD1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m */; };
@@ -498,6 +499,7 @@
 		124DD14819591F2B002DC44F /* UIImage+MPImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MPImageEffects.m"; sourceTree = "<group>"; };
 		124DD14919591F2B002DC44F /* UIView+MPSnapshotImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MPSnapshotImage.h"; sourceTree = "<group>"; };
 		124DD14A19591F2B002DC44F /* UIView+MPSnapshotImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MPSnapshotImage.m"; sourceTree = "<group>"; };
+		124DD15C19591FAE002DC44F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		1252AEC71947A70F001CCBD3 /* Iniciativas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iniciativas.h; sourceTree = "<group>"; };
 		1252AEC81947A70F001CCBD3 /* Iniciativas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Iniciativas.m; sourceTree = "<group>"; };
 		1252AECA1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plants-Trees-Leaf-icon.png"; sourceTree = "<group>"; };
@@ -928,8 +930,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D1DD6919393DA800BF81A5 /* AudioToolbox.framework in Frameworks */,
 				12330CC9191AC35A00E85590 /* SystemConfiguration.framework in Frameworks */,
+				124DD15D19591FAE002DC44F /* CoreTelephony.framework in Frameworks */,
+				12D1DD6919393DA800BF81A5 /* AudioToolbox.framework in Frameworks */,
 				12330CC7191AC34D00E85590 /* QuartzCore.framework in Frameworks */,
 				12330CC5191AC33B00E85590 /* OpenGLES.framework in Frameworks */,
 				12330CC3191AC33100E85590 /* libz.dylib in Frameworks */,
@@ -1767,6 +1770,7 @@
 		12F4CFC718FF147500C8BFF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				124DD15C19591FAE002DC44F /* CoreTelephony.framework */,
 				12D1DD6819393DA800BF81A5 /* AudioToolbox.framework */,
 				12330CC8191AC35A00E85590 /* SystemConfiguration.framework */,
 				12330CC6191AC34D00E85590 /* QuartzCore.framework */,

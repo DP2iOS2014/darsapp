@@ -46,6 +46,23 @@
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
 		124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */; };
 		124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */; };
+		124DD14B19591F2B002DC44F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124DD12E19591F2B002DC44F /* Media.xcassets */; };
+		124DD14C19591F2B002DC44F /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13019591F2B002DC44F /* Mixpanel.m */; };
+		124DD14D19591F2B002DC44F /* MPCloseBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 124DD13119591F2B002DC44F /* MPCloseBtn.png */; };
+		124DD14E19591F2B002DC44F /* MPCloseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 124DD13219591F2B002DC44F /* MPCloseBtn@2x.png */; };
+		124DD14F19591F2B002DC44F /* MPNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13419591F2B002DC44F /* MPNotification.m */; };
+		124DD15019591F2B002DC44F /* MPNotification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DD13519591F2B002DC44F /* MPNotification.storyboard */; };
+		124DD15119591F2B002DC44F /* MPNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13719591F2B002DC44F /* MPNotificationViewController.m */; };
+		124DD15219591F2B002DC44F /* MPSurvey.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13919591F2B002DC44F /* MPSurvey.m */; };
+		124DD15319591F2B002DC44F /* MPSurvey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124DD13A19591F2B002DC44F /* MPSurvey.storyboard */; };
+		124DD15419591F2B002DC44F /* MPSurveyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13C19591F2B002DC44F /* MPSurveyNavigationController.m */; };
+		124DD15519591F2B002DC44F /* MPSurveyQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13E19591F2B002DC44F /* MPSurveyQuestion.m */; };
+		124DD15619591F2B002DC44F /* MPSurveyQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14019591F2B002DC44F /* MPSurveyQuestionViewController.m */; };
+		124DD15719591F2B002DC44F /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14219591F2B002DC44F /* NSData+MPBase64.m */; };
+		124DD15819591F2B002DC44F /* UIColor+MPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14419591F2B002DC44F /* UIColor+MPColor.m */; };
+		124DD15919591F2B002DC44F /* UIImage+MPAverageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14619591F2B002DC44F /* UIImage+MPAverageColor.m */; };
+		124DD15A19591F2B002DC44F /* UIImage+MPImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14819591F2B002DC44F /* UIImage+MPImageEffects.m */; };
+		124DD15B19591F2B002DC44F /* UIView+MPSnapshotImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14A19591F2B002DC44F /* UIView+MPSnapshotImage.m */; };
 		1252AEC91947A70F001CCBD3 /* Iniciativas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252AEC81947A70F001CCBD3 /* Iniciativas.m */; };
 		1252AECB1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1252AECA1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png */; };
 		1252AECE1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252AECD1947ACA8001CCBD3 /* CeldaIniciativasTableViewCell.m */; };
@@ -452,6 +469,35 @@
 		124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeleccionAdmNoAdmTableViewCell.m; sourceTree = "<group>"; };
 		124DAE7C1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeleccionAdmNoAdmTableViewController.h; sourceTree = "<group>"; };
 		124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeleccionAdmNoAdmTableViewController.m; sourceTree = "<group>"; };
+		124DD12E19591F2B002DC44F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		124DD12F19591F2B002DC44F /* Mixpanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mixpanel.h; sourceTree = "<group>"; };
+		124DD13019591F2B002DC44F /* Mixpanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mixpanel.m; sourceTree = "<group>"; };
+		124DD13119591F2B002DC44F /* MPCloseBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MPCloseBtn.png; sourceTree = "<group>"; };
+		124DD13219591F2B002DC44F /* MPCloseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MPCloseBtn@2x.png"; sourceTree = "<group>"; };
+		124DD13319591F2B002DC44F /* MPNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNotification.h; sourceTree = "<group>"; };
+		124DD13419591F2B002DC44F /* MPNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNotification.m; sourceTree = "<group>"; };
+		124DD13519591F2B002DC44F /* MPNotification.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MPNotification.storyboard; sourceTree = "<group>"; };
+		124DD13619591F2B002DC44F /* MPNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPNotificationViewController.h; sourceTree = "<group>"; };
+		124DD13719591F2B002DC44F /* MPNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPNotificationViewController.m; sourceTree = "<group>"; };
+		124DD13819591F2B002DC44F /* MPSurvey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSurvey.h; sourceTree = "<group>"; };
+		124DD13919591F2B002DC44F /* MPSurvey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSurvey.m; sourceTree = "<group>"; };
+		124DD13A19591F2B002DC44F /* MPSurvey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MPSurvey.storyboard; sourceTree = "<group>"; };
+		124DD13B19591F2B002DC44F /* MPSurveyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSurveyNavigationController.h; sourceTree = "<group>"; };
+		124DD13C19591F2B002DC44F /* MPSurveyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSurveyNavigationController.m; sourceTree = "<group>"; };
+		124DD13D19591F2B002DC44F /* MPSurveyQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSurveyQuestion.h; sourceTree = "<group>"; };
+		124DD13E19591F2B002DC44F /* MPSurveyQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSurveyQuestion.m; sourceTree = "<group>"; };
+		124DD13F19591F2B002DC44F /* MPSurveyQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPSurveyQuestionViewController.h; sourceTree = "<group>"; };
+		124DD14019591F2B002DC44F /* MPSurveyQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPSurveyQuestionViewController.m; sourceTree = "<group>"; };
+		124DD14119591F2B002DC44F /* NSData+MPBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MPBase64.h"; sourceTree = "<group>"; };
+		124DD14219591F2B002DC44F /* NSData+MPBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MPBase64.m"; sourceTree = "<group>"; };
+		124DD14319591F2B002DC44F /* UIColor+MPColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MPColor.h"; sourceTree = "<group>"; };
+		124DD14419591F2B002DC44F /* UIColor+MPColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MPColor.m"; sourceTree = "<group>"; };
+		124DD14519591F2B002DC44F /* UIImage+MPAverageColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MPAverageColor.h"; sourceTree = "<group>"; };
+		124DD14619591F2B002DC44F /* UIImage+MPAverageColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MPAverageColor.m"; sourceTree = "<group>"; };
+		124DD14719591F2B002DC44F /* UIImage+MPImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MPImageEffects.h"; sourceTree = "<group>"; };
+		124DD14819591F2B002DC44F /* UIImage+MPImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MPImageEffects.m"; sourceTree = "<group>"; };
+		124DD14919591F2B002DC44F /* UIView+MPSnapshotImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MPSnapshotImage.h"; sourceTree = "<group>"; };
+		124DD14A19591F2B002DC44F /* UIView+MPSnapshotImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MPSnapshotImage.m"; sourceTree = "<group>"; };
 		1252AEC71947A70F001CCBD3 /* Iniciativas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Iniciativas.h; sourceTree = "<group>"; };
 		1252AEC81947A70F001CCBD3 /* Iniciativas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Iniciativas.m; sourceTree = "<group>"; };
 		1252AECA1947AA20001CCBD3 /* Plants-Trees-Leaf-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plants-Trees-Leaf-icon.png"; sourceTree = "<group>"; };
@@ -988,6 +1034,42 @@
 				124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */,
 			);
 			name = SeleccionAmbientalizateAdm;
+			sourceTree = "<group>";
+		};
+		124DD12D19591F2B002DC44F /* Mixpanel */ = {
+			isa = PBXGroup;
+			children = (
+				124DD12E19591F2B002DC44F /* Media.xcassets */,
+				124DD12F19591F2B002DC44F /* Mixpanel.h */,
+				124DD13019591F2B002DC44F /* Mixpanel.m */,
+				124DD13119591F2B002DC44F /* MPCloseBtn.png */,
+				124DD13219591F2B002DC44F /* MPCloseBtn@2x.png */,
+				124DD13319591F2B002DC44F /* MPNotification.h */,
+				124DD13419591F2B002DC44F /* MPNotification.m */,
+				124DD13519591F2B002DC44F /* MPNotification.storyboard */,
+				124DD13619591F2B002DC44F /* MPNotificationViewController.h */,
+				124DD13719591F2B002DC44F /* MPNotificationViewController.m */,
+				124DD13819591F2B002DC44F /* MPSurvey.h */,
+				124DD13919591F2B002DC44F /* MPSurvey.m */,
+				124DD13A19591F2B002DC44F /* MPSurvey.storyboard */,
+				124DD13B19591F2B002DC44F /* MPSurveyNavigationController.h */,
+				124DD13C19591F2B002DC44F /* MPSurveyNavigationController.m */,
+				124DD13D19591F2B002DC44F /* MPSurveyQuestion.h */,
+				124DD13E19591F2B002DC44F /* MPSurveyQuestion.m */,
+				124DD13F19591F2B002DC44F /* MPSurveyQuestionViewController.h */,
+				124DD14019591F2B002DC44F /* MPSurveyQuestionViewController.m */,
+				124DD14119591F2B002DC44F /* NSData+MPBase64.h */,
+				124DD14219591F2B002DC44F /* NSData+MPBase64.m */,
+				124DD14319591F2B002DC44F /* UIColor+MPColor.h */,
+				124DD14419591F2B002DC44F /* UIColor+MPColor.m */,
+				124DD14519591F2B002DC44F /* UIImage+MPAverageColor.h */,
+				124DD14619591F2B002DC44F /* UIImage+MPAverageColor.m */,
+				124DD14719591F2B002DC44F /* UIImage+MPImageEffects.h */,
+				124DD14819591F2B002DC44F /* UIImage+MPImageEffects.m */,
+				124DD14919591F2B002DC44F /* UIView+MPSnapshotImage.h */,
+				124DD14A19591F2B002DC44F /* UIView+MPSnapshotImage.m */,
+			);
+			path = Mixpanel;
 			sourceTree = "<group>";
 		};
 		125F786D194CD419000956EB /* InnerBand */ = {
@@ -1669,6 +1751,7 @@
 				12F4CFF018FF147600C8BFF5 /* darsappTests */,
 				12F4CFC718FF147500C8BFF5 /* Frameworks */,
 				12F4CFC618FF147500C8BFF5 /* Products */,
+				124DD12D19591F2B002DC44F /* Mixpanel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1896,11 +1979,13 @@
 				12EEAB0A191D4416002F0D6E /* titulo_Pilas.png in Resources */,
 				1276EA20192D62C400B49816 /* Compras7.png in Resources */,
 				12A7580A191AD23900E03C5E /* 4_ProcesoFabricacion.png in Resources */,
+				124DD14B19591F2B002DC44F /* Media.xcassets in Resources */,
 				1276EA26192D62C400B49816 /* Compras13.png in Resources */,
 				12A7580C191AD23900E03C5E /* 6_Segregación.png in Resources */,
 				12F4D00418FF206F00C8BFF5 /* Facebook-400x400.png in Resources */,
 				12A75834191AF36E00E03C5E /* 1_Separatas.png in Resources */,
 				1276EA21192D62C400B49816 /* Compras8.png in Resources */,
+				124DD14D19591F2B002DC44F /* MPCloseBtn.png in Resources */,
 				12E53C6A191D8C2F00911B7C /* 2_Plomo.png in Resources */,
 				12E53C6D191D8C2F00911B7C /* 4_Rojo.png in Resources */,
 				12EEAB2A191D4485002F0D6E /* 5_DaleVidaATusResiduos.png in Resources */,
@@ -1919,6 +2004,7 @@
 				12C365171939430C002B2197 /* center.png in Resources */,
 				12A2A3571948F06D0044F990 /* star-template.png in Resources */,
 				12A2A3551948F06D0044F990 /* star-highlighted-template.png in Resources */,
+				124DD14E19591F2B002DC44F /* MPCloseBtn@2x.png in Resources */,
 				12EEAB02191D4416002F0D6E /* 3_Pilas.png in Resources */,
 				12D1DD621938D8FB00BF81A5 /* circunferencia 300ppp.png in Resources */,
 				129D4D9C1919ADF200D12423 /* page.png in Resources */,
@@ -1953,6 +2039,7 @@
 				12A3A6D6194215B200BEEC00 /* hearts-75.png in Resources */,
 				12A1F6F6190AC927001ED3BE /* newspaper.png in Resources */,
 				1276EA1A192D62C400B49816 /* Compras1.png in Resources */,
+				124DD15019591F2B002DC44F /* MPNotification.storyboard in Resources */,
 				12DDC9821930051A005E820A /* LiderAmbiental.png in Resources */,
 				12EEAB15191D4431002F0D6E /* 2_Electricidad.png in Resources */,
 				129EDB6B1938E5170088735B /* pregunta.png in Resources */,
@@ -2053,6 +2140,7 @@
 				12E53C59191D7D2700911B7C /* fonditoverde.png in Resources */,
 				12C3651019393E50002B2197 /* green.png in Resources */,
 				12EEAB01191D4416002F0D6E /* 2-4_ProduccionDistribucion.png in Resources */,
+				124DD15319591F2B002DC44F /* MPSurvey.storyboard in Resources */,
 				12EFB94F192D46D000AAAAB2 /* tachito5.png in Resources */,
 				129F4918192E9C0100DF8793 /* images.jpeg in Resources */,
 				125F786A194CB110000956EB /* help-25.png in Resources */,
@@ -2141,6 +2229,7 @@
 				129D4DA81919BE6800D12423 /* RuletaJuegoViewController.m in Sources */,
 				120FF2291913F39400A697D6 /* AFSecurityPolicy.m in Sources */,
 				12F4CFE218FF147500C8BFF5 /* ViewController.m in Sources */,
+				124DD15619591F2B002DC44F /* MPSurveyQuestionViewController.m in Sources */,
 				12A75811191AD75E00E03C5E /* ElectricidadViewController.m in Sources */,
 				12ABCBF31958DC6F005BA5D0 /* DatosPersonales.m in Sources */,
 				1260E970192FA3FF00D915D7 /* SingletonAmbientalizate.m in Sources */,
@@ -2153,13 +2242,19 @@
 				129EDB5C1938DE6F0088735B /* AyudaJuegoTableViewController.m in Sources */,
 				125F78BE194CD419000956EB /* NSString+InnerBand.m in Sources */,
 				128AC054192D472F0015AEF4 /* LiderAmbientalViewController.m in Sources */,
+				124DD15219591F2B002DC44F /* MPSurvey.m in Sources */,
 				12A2023F193A64C100942747 /* SFSConfettiScreen.m in Sources */,
 				12A1FAC1191C46AC0095179D /* TimerPreguntas.m in Sources */,
 				125F78C5194CD419000956EB /* IBBlockBasedDispatchMessage.m in Sources */,
 				129E07681948EBD0009B7A21 /* NuevaIniciativaViewController.m in Sources */,
+				124DD15919591F2B002DC44F /* UIImage+MPAverageColor.m in Sources */,
+				124DD15819591F2B002DC44F /* UIColor+MPColor.m in Sources */,
 				121A72801954A19200A18852 /* BuenaPractica.m in Sources */,
+				124DD15A19591F2B002DC44F /* UIImage+MPImageEffects.m in Sources */,
 				125F78C7194CD419000956EB /* IBHTTPPostRequestMessage.m in Sources */,
 				12A46CFB19414FA700E11964 /* SWRevealViewController.m in Sources */,
+				124DD14F19591F2B002DC44F /* MPNotification.m in Sources */,
+				124DD14C19591F2B002DC44F /* Mixpanel.m in Sources */,
 				12A428F51947978C001C18BF /* TemasIniciativasTableViewController.m in Sources */,
 				12F91D3C1911852D009655B2 /* DarsLocalizacionAnnotation.m in Sources */,
 				12A1445B192FB1D10035F214 /* puntajeAdministradorViewController.m in Sources */,
@@ -2200,6 +2295,7 @@
 				124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */,
 				125F78BD194CD419000956EB /* NSString+Encoding.m in Sources */,
 				129D4DAB1919C14900D12423 /* PreguntasViewController.m in Sources */,
+				124DD15B19591F2B002DC44F /* UIView+MPSnapshotImage.m in Sources */,
 				120FF2251913F39400A697D6 /* AFHTTPRequestOperation.m in Sources */,
 				120FF2271913F39400A697D6 /* AFHTTPSessionManager.m in Sources */,
 				125F78CB194CD419000956EB /* IBMessageProcessor.m in Sources */,
@@ -2213,9 +2309,11 @@
 				120FF22D1913F39400A697D6 /* AFURLSessionManager.m in Sources */,
 				12A75814191ADCF500E03C5E /* SegregacionViewController.m in Sources */,
 				12A671661930090300E03C72 /* SingletonEcoTips.m in Sources */,
+				124DD15119591F2B002DC44F /* MPNotificationViewController.m in Sources */,
 				1279F4CD19379AD500A32A7B /* CeldaTemas.m in Sources */,
 				129EDB801938F36D0088735B /* Instrucciones2ViewController.m in Sources */,
 				12A428F819479880001C18BF /* CeldaTemasIniciativas.m in Sources */,
+				124DD15719591F2B002DC44F /* NSData+MPBase64.m in Sources */,
 				12F4CFD918FF147500C8BFF5 /* AppDelegate.m in Sources */,
 				120FF2261913F39400A697D6 /* AFHTTPRequestOperationManager.m in Sources */,
 				124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */,
@@ -2237,6 +2335,7 @@
 				129EDB5F1938E25E0088735B /* InstruccionesViewController.m in Sources */,
 				12A1F6F0190ABC6C001ED3BE /* LoginViewController.m in Sources */,
 				125F78B8194CD419000956EB /* NSManagedObject+InnerBand.m in Sources */,
+				124DD15519591F2B002DC44F /* MPSurveyQuestion.m in Sources */,
 				128FAF70192FB23E0065D633 /* GrillaInicialAmbientalizate.m in Sources */,
 				125F78C4194CD419000956EB /* IBCoreDataStore.m in Sources */,
 				125F78BA194CD419000956EB /* NSMutableString+InnerBand.m in Sources */,
@@ -2247,6 +2346,7 @@
 				121A72861954A19300A18852 /* Persona.m in Sources */,
 				125F78B7194CD419000956EB /* NSDate+InnerBand.m in Sources */,
 				12F4CFD518FF147500C8BFF5 /* main.m in Sources */,
+				124DD15419591F2B002DC44F /* MPSurveyNavigationController.m in Sources */,
 				12C3651519394056002B2197 /* CategoriasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

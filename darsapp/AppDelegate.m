@@ -13,6 +13,7 @@
 #import "URLsJson.h"
 #import "Tacho.h"
 
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -43,6 +44,8 @@
     
     return YES;
 }
+
+//ubicacion de la dars
 
 -(void) llenaDp{
     

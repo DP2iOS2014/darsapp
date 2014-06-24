@@ -415,6 +415,8 @@ typedef void (^myCompletion)(BOOL);
     if(correcto==YES){
         if(opcion==0){
             [self.btnRespuesta1 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            [self.btnRespuesta1  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
+            self.btnRespuesta1.titleLabel.font = [UIFont systemFontOfSize:25];
             self.btnRespuesta1.userInteractionEnabled = NO;
             self.btnRespuesta2.enabled = NO;
             self.btnRespuesta3.enabled = NO;
@@ -427,6 +429,8 @@ typedef void (^myCompletion)(BOOL);
             
         }else if (opcion==1) {
             [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            [self.btnRespuesta2  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
+            self.btnRespuesta2.titleLabel.font = [UIFont systemFontOfSize:25];
             self.btnRespuesta1.enabled = NO;
             self.btnRespuesta2.userInteractionEnabled = NO;
             self.btnRespuesta3.enabled = NO;
@@ -438,6 +442,8 @@ typedef void (^myCompletion)(BOOL);
             [self terminarJuego:0];
         }else if (opcion==2) {
             [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            [self.btnRespuesta3  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
+            self.btnRespuesta3.titleLabel.font = [UIFont systemFontOfSize:25];
             self.btnRespuesta1.enabled = NO;
             self.btnRespuesta2.enabled = NO;
             self.btnRespuesta3.userInteractionEnabled = NO;
@@ -449,6 +455,8 @@ typedef void (^myCompletion)(BOOL);
             [self terminarJuego:0];
         }else if (opcion==3) {
             [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+            [self.btnRespuesta4  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
+            self.btnRespuesta4.titleLabel.font = [UIFont systemFontOfSize:25];
             self.btnRespuesta1.enabled = NO;
             self.btnRespuesta2.enabled = NO;
             self.btnRespuesta3.enabled = NO;
@@ -482,14 +490,22 @@ typedef void (^myCompletion)(BOOL);
             vidasActual=vidasActual-1;
             if(opcion==0){
                 [self.btnRespuesta1 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                [self.btnRespuesta1  setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                self.btnRespuesta1.titleLabel.font = [UIFont systemFontOfSize:25];
                 
             }else if (opcion==1) {
                 [self.btnRespuesta2 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                [self.btnRespuesta2  setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                self.btnRespuesta2.titleLabel.font = [UIFont systemFontOfSize:25];
                 
             }else if (opcion==2) {
                 [self.btnRespuesta3 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                [self.btnRespuesta3  setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                self.btnRespuesta3.titleLabel.font = [UIFont systemFontOfSize:25];
             }else if (opcion==3) {
                 [self.btnRespuesta4 setTitle:@"InCorrecto" forState:(UIControlStateNormal)];
+                [self.btnRespuesta4  setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                self.btnRespuesta4.titleLabel.font = [UIFont systemFontOfSize:25];
             }
         
             self.btnReloj.userInteractionEnabled=NO;
@@ -501,6 +517,7 @@ typedef void (^myCompletion)(BOOL);
             if(value==0){
                 [self.btnRespuesta1 setTitle:@"Correcto" forState:(UIControlStateNormal)];
                 self.btnRespuesta1.userInteractionEnabled = NO;
+                [self.btnRespuesta1  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.enabled = NO;
                 self.btnRespuesta4.enabled = NO;
@@ -512,6 +529,7 @@ typedef void (^myCompletion)(BOOL);
                 }
             }else if (value==1) {
                 [self.btnRespuesta2 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+                [self.btnRespuesta2  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
                 self.btnRespuesta1.enabled = NO;
                 self.btnRespuesta2.userInteractionEnabled = NO;
                 self.btnRespuesta3.enabled = NO;
@@ -524,6 +542,7 @@ typedef void (^myCompletion)(BOOL);
                 }
             }else if (value==2) {
                 [self.btnRespuesta3 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+                [self.btnRespuesta3  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
                 self.btnRespuesta1.enabled = NO;
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.userInteractionEnabled = NO;
@@ -536,6 +555,7 @@ typedef void (^myCompletion)(BOOL);
                 }
             }else if (value==3) {
                 [self.btnRespuesta4 setTitle:@"Correcto" forState:(UIControlStateNormal)];
+                [self.btnRespuesta4  setTitleColor:[UIColor colorWithRed:63.0/255 green:192.0/255 blue:169.0/255 alpha:1] forState:UIControlStateNormal];
                 self.btnRespuesta1.enabled = NO;
                 self.btnRespuesta2.enabled = NO;
                 self.btnRespuesta3.enabled = NO;
@@ -646,12 +666,26 @@ typedef void (^myCompletion)(BOOL);
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     [timer invalidate];
+    
+   
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    
+    if(juego.apretoCorona){
+        juego.apretoCorona=NO;
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        [self myMethod:^(BOOL finished) {
+            if(finished){
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+        }];
+        
+        
+        
+        
+    }
     [self.delegate apretoOkAlFallaPregunta];
     [self dismissViewControllerAnimated:YES completion:nil];
-    if(juego.apretoCorona){
-        [self.delegate DesapareceModalCuandoTocoCorona];
-        juego.apretoCorona=NO;
-    }
+    
     
 }
 

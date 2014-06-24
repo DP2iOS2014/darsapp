@@ -11,4 +11,5 @@
 
 @interface UbicanosViewController : UIViewController<MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapa;
+@property (weak, nonatomic) IBOutlet UITextView *descripcion;
 @end

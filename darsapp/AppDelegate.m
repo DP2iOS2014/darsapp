@@ -1,66 +1,38 @@
 //
-
 //  AppDelegate.m
-
 //  darsapp
-
 //
-
 //  Created by inf227al on 16/04/14.
-
 //  Copyright (c) 2014 ___greensoft___. All rights reserved.
-
 //
-
 
 
 #import "AppDelegate.h"
-
 #import "BuenaPractica.h"
-
 #import "Persona.h"
-
 #import "DatosPersonales.h"
-
 #import "URLsJson.h"
-
 #import "Tacho.h"
 
 
 
 @implementation AppDelegate
 
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-
 {
-    
+   
     // Override point for customization after application launch.
-    
+   
     [GMSServices provideAPIKey:@"AIzaSyD4Yv_7isiHiXOUc7s4821tCi6tpRILy4s"];
-    
-    
     
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor colorWithRed:85.0/255 green:201.0/255 blue:210.0/255 alpha:1]];
     
-    
-    
     UIImage *backOriginal =[UIImage imageNamed:@"backButton2"];
     
-    
-    
     [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[backOriginal imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    
-    
-    
     NSArray * tacho = [Tacho all];
     
-    
-    
     NSArray* dp=[DatosPersonales all];
-    
-    
     
     if(tacho.count != 0)
         
@@ -68,49 +40,44 @@
     
     else [self llenaTachos];
     
-    
-    
-    
-    
     if(dp.count ==0 )
         
         [self llenaDp];
     
-    
-    
     //[[IBCoreDataStore mainStore] save];
     
+    // Initialize Mixpanel with your project token
+    [Mixpanel sharedInstanceWithToken:@"YOUR_TOKEN"];
     
-    
-    
+    // Tell iOS you want  your app to receive push
+    // notifications
+    [[UIApplication sharedApplication]
+     registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge |
+      UIRemoteNotificationTypeSound |
+      UIRemoteNotificationTypeAlert)];
     
     return YES;
     
 }
 
-
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    Mixpanel *mixpanel = [Mixpanel sharedInstance];
+    [mixpanel.people addPushDeviceToken:deviceToken];
+}
 
 -(void) llenaDp{
     
-    
-    
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ubicacion_dars",@"tipo", nil];
-    
-    
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
-    
-    
     NSLog(@"%@", consulta);
-    
-    
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    
     
     [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         
@@ -118,13 +85,9 @@
         
         NSLog(@"JSON: %@", respuestajson);
         
-        
-        
         NSDictionary * cuerpo = [respuestajson objectForKey:@"cuerpo"];
         
         NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
-        
-        
         
         NSString *descripcion = [[listaNodos objectAtIndex:0] objectForKey:@"descripcion"];
         
@@ -142,11 +105,7 @@
         
         NSString *vid = [[listaNodos objectAtIndex:0] objectForKey:@"vid"];
         
-        
-        
         DatosPersonales * dp = [DatosPersonales create];
-        
-        
         
         dp.direccion= descripcion;
         
@@ -160,19 +119,9 @@
         
         dp.vid=[[NSNumber alloc] initWithInt: vid.intValue];
         
-        
-        
-        
-        
         [[IBCoreDataStore mainStore] save];
         
-        
-        
-        
-        
     }
-     
-     
      
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
               
@@ -191,16 +140,7 @@
           }];
     
     
-    
-    
-    
-    
-    
 }
-
-
-
-
 
 -(void)llenaTachos{
     
@@ -216,8 +156,6 @@
     
     NSDate *fecha = [calendar dateFromComponents:components];
     
-    
-    
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     
     [format setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -225,8 +163,6 @@
     NSString *dateString = [format stringFromDate:fecha];
     
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"contenedor",@"tipo", @"incremental",@"forma",dateString ,@"fecha", nil];
-    
-    
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     

@@ -47,7 +47,7 @@
 		124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */; };
 		124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */; };
 		124DD14B19591F2B002DC44F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124DD12E19591F2B002DC44F /* Media.xcassets */; };
-		124DD14C19591F2B002DC44F /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13019591F2B002DC44F /* Mixpanel.m */; };
+		124DD14C19591F2B002DC44F /* Mixpanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13019591F2B002DC44F /* Mixpanel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		124DD14D19591F2B002DC44F /* MPCloseBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 124DD13119591F2B002DC44F /* MPCloseBtn.png */; };
 		124DD14E19591F2B002DC44F /* MPCloseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 124DD13219591F2B002DC44F /* MPCloseBtn@2x.png */; };
 		124DD14F19591F2B002DC44F /* MPNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13419591F2B002DC44F /* MPNotification.m */; };
@@ -58,7 +58,7 @@
 		124DD15419591F2B002DC44F /* MPSurveyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13C19591F2B002DC44F /* MPSurveyNavigationController.m */; };
 		124DD15519591F2B002DC44F /* MPSurveyQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD13E19591F2B002DC44F /* MPSurveyQuestion.m */; };
 		124DD15619591F2B002DC44F /* MPSurveyQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14019591F2B002DC44F /* MPSurveyQuestionViewController.m */; };
-		124DD15719591F2B002DC44F /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14219591F2B002DC44F /* NSData+MPBase64.m */; };
+		124DD15719591F2B002DC44F /* NSData+MPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14219591F2B002DC44F /* NSData+MPBase64.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		124DD15819591F2B002DC44F /* UIColor+MPColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14419591F2B002DC44F /* UIColor+MPColor.m */; };
 		124DD15919591F2B002DC44F /* UIImage+MPAverageColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14619591F2B002DC44F /* UIImage+MPAverageColor.m */; };
 		124DD15A19591F2B002DC44F /* UIImage+MPImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DD14819591F2B002DC44F /* UIImage+MPImageEffects.m */; };

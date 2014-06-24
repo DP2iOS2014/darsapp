@@ -27,7 +27,16 @@
     
     NSArray * tacho = [Tacho all];
     
+    // Initialize Mixpanel with your project token
+    [Mixpanel sharedInstanceWithToken:@"ed4c70d57f14a66161e30f1be2ca0302"];
     
+    // Tell iOS you want  your app to receive push
+    // notifications
+    [[UIApplication sharedApplication]
+     registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge |
+      UIRemoteNotificationTypeSound |
+      UIRemoteNotificationTypeAlert)];
     
     
     
@@ -42,6 +51,14 @@
     
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:
+(NSData *)deviceToken
+{
+   // Mixpanel *mixpanel = [Mixpanel sharedInstance];
+   // [mixpanel.people addPushDeviceToken:deviceToken];
 }
 
 -(void)llenaTachos{

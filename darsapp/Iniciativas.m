@@ -154,7 +154,7 @@ int puntajexusuario;
                 if(titulo==nil) {
                     titulo= @"No tiene titulo";
                 }
-                [iniciativas addObject:descripcion];
+                [iniciativas addObject:titulo];
                 [descripciones   addObject:descripcion];
                 [puntajesusuario   addObject:puntajeusuario];
                 [puntajestotal addObject:puntajetotal];

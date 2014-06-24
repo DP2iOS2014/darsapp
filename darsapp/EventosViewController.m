@@ -26,9 +26,11 @@ typedef void (^myCompletion)(BOOL);
     NSMutableArray * urlImagenes;
     
     NSMutableArray * descripcion;
+    NSMutableArray * descripcion2;
     NSMutableArray * enlace;
     NSMutableArray * fecha;
     NSMutableArray * lugar;
+    NSMutableArray * lugar2;
     NSMutableArray * organizador;
     NSMutableArray * estado;
     NSMutableArray  * nids;
@@ -62,10 +64,12 @@ typedef void (^myCompletion)(BOOL);
     urlImagenes =[[NSMutableArray alloc]init];
     urlImagenes2 =[[NSMutableArray alloc]init];
     descripcion =[[NSMutableArray alloc]init];
+    descripcion2 =[[NSMutableArray alloc]init];
     enlace =[[NSMutableArray alloc]init];
     fecha =[[NSMutableArray alloc]init];
     fecha2 =[[NSMutableArray alloc]init];
     lugar =[[NSMutableArray alloc]init];
+    lugar2 =[[NSMutableArray alloc]init];
     organizador =[[NSMutableArray alloc]init];
     estado =[[NSMutableArray alloc]init];
     nids =[[NSMutableArray alloc]init];
@@ -80,26 +84,17 @@ typedef void (^myCompletion)(BOOL);
         
     }];*/
     
-    [self recuperoEventos:@2];
-    
-    for(int i=0;i<nids.count;i++){
-        for(int j=0;j<nids2.count;j++){
-            if([nids2[j] isEqualToString:nids[i]]) {
-                [nids2 removeObjectAtIndex:j];
-                [titulos2 removeObjectAtIndex:j];
-                [urlImagenes2 removeObjectAtIndex:j];
-                [fecha2 removeObjectAtIndex:j];
-            };
-        }
-    }
-    
-    [self cambiodeEvento:0];
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     
     self.tablaeventos.backgroundColor = [UIColor clearColor];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    [self recuperoEventos:@2];
+
+    
+    
    
 }
 
@@ -150,16 +145,36 @@ typedef void (^myCompletion)(BOOL);
             
             NSString * fecha_evento = [[eventos objectAtIndex:i]objectForKey:@"field_fecha_evento_value"];
             
+            NSString * desc_evento = [[eventos objectAtIndex:i]objectForKey:@"field_descripcion_evento_value"];
+            
+            NSString * lugar_evento = [[eventos objectAtIndex:i]objectForKey:@"field_lugar_evento_value"];
+            
             NSNumber * nid = (NSNumber *)[[eventos objectAtIndex:i] objectForKey:@"nid"];
             
             [fecha2 addObject:fecha_evento];
             [titulos2 addObject:tituloEvento];
             [urlImagenes2 addObject:urlImagen];
             [nids2 addObject:nid];
+            [descripcion2 addObject:desc_evento];
+            [lugar2 addObject:lugar_evento];
         
         }
         
         //[self.tablaeventos reloadData];
+        
+        for(int i=0;i<nids.count;i++){
+            for(int j=0;j<nids2.count;j++){
+                if([nids2[j] isEqualToString:nids[i]]) {
+                    [nids2 removeObjectAtIndex:j];
+                    [titulos2 removeObjectAtIndex:j];
+                    [urlImagenes2 removeObjectAtIndex:j];
+                    [fecha2 removeObjectAtIndex:j];
+                    [descripcion2 removeObjectAtIndex:j];
+                };
+            }
+        }
+        
+        [self cambiodeEvento:0];
         
         
     }
@@ -348,8 +363,18 @@ typedef void (^myCompletion)(BOOL);
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    if(indexPath.row<titulos.count && titulos.count>0)
-        [self performSegueWithIdentifier:@"idsegue" sender:self];
+    
+    if(segindice==0){
+        if(indexPath.row<titulos2.count && titulos2.count>0)
+            [self performSegueWithIdentifier:@"idsegue" sender:self];
+    
+    } else if(segindice==1){
+        if(indexPath.row<titulos.count && titulos.count>0)
+            [self performSegueWithIdentifier:@"idsegue" sender:self];
+    
+    }
+    
+    
 }
 
 
@@ -359,17 +384,40 @@ typedef void (^myCompletion)(BOOL);
         GrillaEventoViewController *escenadestino = segue.destinationViewController;
         //escenadestino.respuestajson= respuesta;
         
-        escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos];
-        escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes];
-        escenadestino.descripcion = [[NSMutableArray alloc] initWithArray: descripcion];
-        escenadestino.enlace = [[NSMutableArray alloc] initWithArray: enlace];
-        escenadestino.fecha = [[NSMutableArray alloc] initWithArray: fecha];
-        escenadestino.lugar = [[NSMutableArray alloc] initWithArray: lugar];
-        escenadestino.organizador = [[NSMutableArray alloc] initWithArray: organizador];
-        escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado];
         NSIndexPath *selectedIndexPath = [self.tablaeventos indexPathForSelectedRow];
+        
+        if (segindice==0) {
+            
+            escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos2];
+            escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes2];
+            escenadestino.descripcion = [[NSMutableArray alloc] initWithArray: descripcion2];
+            //escenadestino.enlace = [[NSMutableArray alloc] initWithArray: enlace2];
+            escenadestino.fecha = [[NSMutableArray alloc] initWithArray: fecha2];
+            escenadestino.lugar = [[NSMutableArray alloc] initWithArray: lugar2];
+            //escenadestino.organizador = [[NSMutableArray alloc] initWithArray: organizador2];
+            //escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado2];
+            escenadestino.nidseleccionado = [nids2 objectAtIndex:selectedIndexPath.row];
+            
+        } else if (segindice==1){
+            
+            escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos];
+            escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes];
+            escenadestino.descripcion = [[NSMutableArray alloc] initWithArray: descripcion];
+            escenadestino.enlace = [[NSMutableArray alloc] initWithArray: enlace];
+            escenadestino.fecha = [[NSMutableArray alloc] initWithArray: fecha];
+            escenadestino.lugar = [[NSMutableArray alloc] initWithArray: lugar];
+            escenadestino.organizador = [[NSMutableArray alloc] initWithArray: organizador];
+            escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado];
+            escenadestino.nidseleccionado = [nids objectAtIndex:selectedIndexPath.row];
+        
+        }
+        
+        
+        
+        
+        
         escenadestino.celda_seleccionada = selectedIndexPath.row;
-        escenadestino.nidseleccionado = [nids objectAtIndex:selectedIndexPath.row];
+        
     }
     
 };

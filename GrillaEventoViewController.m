@@ -30,12 +30,12 @@
     [super viewDidLoad];
     self.lblTitulo.text = self.titulos[self.celda_seleccionada];
     
-    self.lblFecha.text = self.fecha[self.celda_seleccionada];
+    //self.lblFecha.text = self.fecha[self.celda_seleccionada];
     
     [self.imagenEvento setImageWithURL:[NSURL URLWithString:self.urlImagenes[self.celda_seleccionada]] placeholderImage:[UIImage imageNamed:@"process.png"]];
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy/dd/MM"];
+    [dateFormat setDateFormat:@"yyyy-MM-ddTHH:mm:ss"];
     NSDate *date = [dateFormat dateFromString:self.fecha[self.celda_seleccionada]];
     NSString *dateToday = [dateFormat stringFromDate:[NSDate date]];
     

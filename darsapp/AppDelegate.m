@@ -67,6 +67,23 @@
     [mixpanel.people addPushDeviceToken:deviceToken];
 }
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    // Show alert for push notifications recevied while the
+    // app is running
+    NSString *message = [[userInfo objectForKey:@"aps"]
+                         objectForKey:@"alert"];
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@""
+                          message:message
+                          delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    [alert show];
+//    [alert release];
+}
+
+
 -(void) llenaDp{
     
     NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ubicacion_dars",@"tipo", nil];

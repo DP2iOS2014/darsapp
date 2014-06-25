@@ -35,11 +35,22 @@
     [self.imagenEvento setImageWithURL:[NSURL URLWithString:self.urlImagenes[self.celda_seleccionada]] placeholderImage:[UIImage imageNamed:@"process.png"]];
     
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyy-MM-ddTHH:mm:ss"];
-    NSDate *date = [dateFormat dateFromString:self.fecha[self.celda_seleccionada]];
-    NSString *dateToday = [dateFormat stringFromDate:[NSDate date]];
+    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
     
-    self.lblFecha.text = dateToday;
+    NSDateFormatter *dateFormat2 = [[NSDateFormatter alloc] init];
+    [dateFormat2 setDateFormat:@"dd/MM/yyyy"];
+    
+    NSDateFormatter *dateFormat3 = [[NSDateFormatter alloc] init];
+    [dateFormat3 setDateFormat:@"HH:mm:ss"];
+    
+    NSDate *date = [dateFormat dateFromString:self.fecha[self.celda_seleccionada]];
+    NSString *date2 = [dateFormat2 stringFromDate:date];
+    
+    NSString *hora = [dateFormat3 stringFromDate:date];
+    
+    self.lblFecha.text = date2;
+    
+    self.lblHora.text = hora;
     
     self.lblDescripcion.text = self.descripcion[self.celda_seleccionada];
     

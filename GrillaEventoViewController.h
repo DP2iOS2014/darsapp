@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *SegmentedControl;
 @property (weak, nonatomic) IBOutlet UIButton *btnAsistir;
 @property (strong, nonatomic) IBOutlet UIImageView *checkAsistir;
+@property (weak, nonatomic) IBOutlet UILabel *lblHora;
 
 
 @property  NSMutableArray * titulos;

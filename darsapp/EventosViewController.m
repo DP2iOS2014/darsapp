@@ -22,25 +22,38 @@ typedef void (^myCompletion)(BOOL);
     
     NSDictionary * respuestajson;
     NSDictionary * respuestajson2;
+    
     NSMutableArray * titulos;
+    NSMutableArray * titulos2;
+    NSMutableArray * titulos3;
+    
     NSMutableArray * urlImagenes;
+    NSMutableArray * urlImagenes2;
+    NSMutableArray * urlImagenes3;
     
     NSMutableArray * descripcion;
     NSMutableArray * descripcion2;
+    NSMutableArray * descripcion3;
+    
     NSMutableArray * enlace;
+    
     NSMutableArray * fecha;
+    NSMutableArray * fecha2;
+    NSMutableArray * fecha3;
+    
     NSMutableArray * lugar;
     NSMutableArray * lugar2;
+    NSMutableArray * lugar3;
+    
+    
     NSMutableArray * organizador;
     NSMutableArray * estado;
+    
     NSMutableArray  * nids;
-    
-    
-    NSMutableArray *titulos2;
-    NSMutableArray *urlImagenes2;
-    NSMutableArray * fecha2;
     NSMutableArray  * nids2;
+    NSMutableArray  * nids3;
     
+
     NSInteger  segindice;
 }
 
@@ -61,19 +74,32 @@ typedef void (^myCompletion)(BOOL);
     
     titulos = [[NSMutableArray alloc]init];
     titulos2 = [[NSMutableArray alloc]init];
+    titulos3 = [[NSMutableArray alloc]init];
+    
     urlImagenes =[[NSMutableArray alloc]init];
     urlImagenes2 =[[NSMutableArray alloc]init];
+    urlImagenes3 =[[NSMutableArray alloc]init];
+    
     descripcion =[[NSMutableArray alloc]init];
     descripcion2 =[[NSMutableArray alloc]init];
+    descripcion3 =[[NSMutableArray alloc]init];
+    
     enlace =[[NSMutableArray alloc]init];
+    
     fecha =[[NSMutableArray alloc]init];
     fecha2 =[[NSMutableArray alloc]init];
+    fecha3= [[NSMutableArray alloc]init];
+    
     lugar =[[NSMutableArray alloc]init];
     lugar2 =[[NSMutableArray alloc]init];
+    lugar3 = [[NSMutableArray alloc]init];
+    
     organizador =[[NSMutableArray alloc]init];
     estado =[[NSMutableArray alloc]init];
     nids =[[NSMutableArray alloc]init];
     nids2 =[[NSMutableArray alloc]init];
+    nids3 = [[NSMutableArray alloc]init];
+    
     //[self recuperoEventos:@1];
     //[self recuperoEventosProximos];
     
@@ -116,6 +142,7 @@ typedef void (^myCompletion)(BOOL);
 */
 
 //JSON para llamar a todos los eventos
+
 
 -(void) recuperoEventosProximos {
 
@@ -170,7 +197,37 @@ typedef void (^myCompletion)(BOOL);
                     [urlImagenes2 removeObjectAtIndex:j];
                     [fecha2 removeObjectAtIndex:j];
                     [descripcion2 removeObjectAtIndex:j];
+                    [lugar2 removeObjectAtIndex:j];
                 };
+            }
+        }
+        
+        int limite= nids.count;
+        
+        for (int i=0; i<limite;i++){
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+            
+            NSDate *date = [dateFormat dateFromString:fecha[i]];
+            NSDate *today = [NSDate date];
+        
+            
+            if ([today compare:date] == NSOrderedDescending) {
+                [nids3 addObject:nids[i]];
+                [titulos3 addObject:titulos[i]];
+                [descripcion3 addObject:descripcion[i]];
+                [fecha3 addObject:fecha[i]];
+                [urlImagenes3 addObject:urlImagenes[i]];
+                [lugar3 addObject:lugar[i]];
+                
+                
+                /*[nids removeObjectAtIndex:i];
+                [titulos removeObjectAtIndex:i];
+                [descripcion removeObjectAtIndex:i];
+                [fecha removeObjectAtIndex:i];
+                [urlImagenes removeObjectAtIndex:i];
+                [lugar removeObjectAtIndex:i];*/
+                
             }
         }
         
@@ -314,6 +371,10 @@ typedef void (^myCompletion)(BOOL);
         if(titulos.count>0)
             return titulos.count;
         else return 1;
+    } else if (segindice==2){
+        if(titulos3.count>0)
+            return titulos3.count;
+        else return 1;
     }
     
     else return 1;
@@ -354,6 +415,20 @@ typedef void (^myCompletion)(BOOL);
             
         }
     
+    } else if (segindice==2){
+    
+        if(titulos.count>0){
+            
+            ((CeldaTemas*)cell).lblTema.text=titulos3[indexPath.row];
+            [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes3[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
+            [((CeldaTemas*)cell).imagen setHidden:NO];
+        }else{
+            cell = [tableView dequeueReusableCellWithIdentifier: @"celdaeventos"];
+            ((CeldaTemas*)cell).lblTema.text=@"No hay eventos";
+            [((CeldaTemas*)cell).imagen setHidden:YES];
+            
+        }
+        
     }
     
 
@@ -370,6 +445,10 @@ typedef void (^myCompletion)(BOOL);
     
     } else if(segindice==1){
         if(indexPath.row<titulos.count && titulos.count>0)
+            [self performSegueWithIdentifier:@"idsegue" sender:self];
+    
+    } else if (segindice==2){
+        if(indexPath.row<titulos3.count && titulos3.count>0)
             [self performSegueWithIdentifier:@"idsegue" sender:self];
     
     }
@@ -410,6 +489,15 @@ typedef void (^myCompletion)(BOOL);
             escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado];
             escenadestino.nidseleccionado = [nids objectAtIndex:selectedIndexPath.row];
         
+        } else if (segindice==2){
+        
+            escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos3];
+            escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes3];
+            escenadestino.descripcion = [[NSMutableArray alloc] initWithArray: descripcion3];
+            escenadestino.fecha = [[NSMutableArray alloc] initWithArray: fecha3];
+            escenadestino.lugar = [[NSMutableArray alloc] initWithArray: lugar3];
+            escenadestino.nidseleccionado = [nids3 objectAtIndex:selectedIndexPath.row];
+            
         }
         
         

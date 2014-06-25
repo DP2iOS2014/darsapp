@@ -47,7 +47,7 @@
     //[[IBCoreDataStore mainStore] save];
     
     // Initialize Mixpanel with your project token
-    [Mixpanel sharedInstanceWithToken:@"9f685795b4ac3f5d0a9e07fb28e75d92"];
+    [Mixpanel sharedInstanceWithToken:@"ed4c70d57f14a66161e30f1be2ca0302"];
     
     // Tell iOS you want  your app to receive push
     // notifications
@@ -57,8 +57,6 @@
       UIRemoteNotificationTypeSound |
       UIRemoteNotificationTypeAlert)];
     
-    
-    
     return YES;
     
 }
@@ -67,17 +65,6 @@
 {
     Mixpanel *mixpanel = [Mixpanel sharedInstance];
     [mixpanel.people addPushDeviceToken:deviceToken];
-    // Associate all future events sent from
-    // the library with the distinct_id 13793
-    [mixpanel identify:@"13793"];
-    [mixpanel.people addPushDeviceToken:deviceToken];
-    [mixpanel.people set:@{@"Plan": @"Premium"}];
-    NSLog(@"My token is: %@", deviceToken);
-}
-
-- (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
-{
-	NSLog(@"Failed to get token, error: %@", error);
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo

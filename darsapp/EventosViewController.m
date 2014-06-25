@@ -55,6 +55,11 @@ typedef void (^myCompletion)(BOOL);
     
 
     NSInteger  segindice;
+    NSMutableIndexSet *indicesaEliminar;
+    NSMutableIndexSet *indices2;
+    
+
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -99,6 +104,8 @@ typedef void (^myCompletion)(BOOL);
     nids =[[NSMutableArray alloc]init];
     nids2 =[[NSMutableArray alloc]init];
     nids3 = [[NSMutableArray alloc]init];
+    indicesaEliminar = [[NSMutableIndexSet alloc] init];
+    indices2=[[NSMutableIndexSet alloc] init];
     
     //[self recuperoEventos:@1];
     //[self recuperoEventosProximos];
@@ -117,11 +124,15 @@ typedef void (^myCompletion)(BOOL);
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
-    [self recuperoEventos:@2];
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    
+    NSString * EsVisitante = [datosDeMemoria stringForKey:@"Visitante"];
+    
+    if( [EsVisitante isEqualToString:@"S"]){
+        [self recuperoEventosProximos];
+    } else [self recuperoEventos:@2];
 
-    
-    
-   
+ 
 }
 
 - (void)didReceiveMemoryWarning
@@ -202,8 +213,33 @@ typedef void (^myCompletion)(BOOL);
             }
         }
         
-        int limite= nids.count;
+    //COMPARO Y SACO DE PROXIMANENTE LOS EVENTOS QUE YA PASARON Y QUE NO LE DI ASISTIR
         
+        for(int k=0; k<nids2.count;k++){
+        
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+            
+            NSDate *date = [dateFormat dateFromString:fecha2[k]];
+            NSDate *today = [NSDate date];
+        
+            if ([today compare:date] == NSOrderedDescending) {
+                [indices2 addIndex:(NSUInteger)k];
+            }
+            
+        }
+        
+        [nids2 removeObjectsAtIndexes:indices2];
+        [titulos2 removeObjectsAtIndexes:indices2];
+        [descripcion2 removeObjectsAtIndexes:indices2];
+        [fecha2 removeObjectsAtIndexes:indices2];
+        [urlImagenes2 removeObjectsAtIndexes:indices2];
+        [lugar2 removeObjectsAtIndexes:indices2];
+        
+
+        // COMPARO ENTRE ASISTIDOS Y ASISTIRE
+        
+        int limite= nids.count;
         for (int i=0; i<limite;i++){
             NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
             [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
@@ -220,16 +256,19 @@ typedef void (^myCompletion)(BOOL);
                 [urlImagenes3 addObject:urlImagenes[i]];
                 [lugar3 addObject:lugar[i]];
                 
-                
-                /*[nids removeObjectAtIndex:i];
-                [titulos removeObjectAtIndex:i];
-                [descripcion removeObjectAtIndex:i];
-                [fecha removeObjectAtIndex:i];
-                [urlImagenes removeObjectAtIndex:i];
-                [lugar removeObjectAtIndex:i];*/
+                [indicesaEliminar addIndex:(NSUInteger)i];
                 
             }
         }
+        
+            [nids removeObjectsAtIndexes:indicesaEliminar];
+            [titulos removeObjectsAtIndexes:indicesaEliminar];
+            [descripcion removeObjectsAtIndexes:indicesaEliminar];
+            [fecha removeObjectsAtIndexes:indicesaEliminar];
+            [urlImagenes removeObjectsAtIndexes:indicesaEliminar];
+            [lugar removeObjectsAtIndexes:indicesaEliminar];
+
+        
         
         [self cambiodeEvento:0];
         
@@ -310,7 +349,11 @@ typedef void (^myCompletion)(BOOL);
             
             }
         }
+        
+     
+        
         [self recuperoEventosProximos];
+        
         //[self.tablaeventos reloadData];
         
         

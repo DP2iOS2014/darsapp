@@ -14,5 +14,6 @@
 @property NSInteger indice;
 @property NSString *tema;
 @property NSInteger cantidadFilas;
+@property NSInteger nidTemaSeleccionado;
 
 @end

@@ -1338,7 +1338,9 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL1-LU-awM">
                                 <rect key="frame" x="120" y="470" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="Actualizar">
+                                    <color key="titleColor" red="0.333059828" green="0.78993796859999998" blue="0.82281759509999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2345,7 +2347,6 @@
                                             </state>
                                             <connections>
                                                 <action selector="SeApretoGuardar:" destination="hwf-mZ-eWD" eventType="touchUpInside" id="eSA-NZ-USP"/>
-                                                <segue destination="xmK-WS-ww9" kind="push" identifier="verpuntaje" id="hwU-go-lgu"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -2362,6 +2363,7 @@
                     <navigationItem key="navigationItem" title="Lider Ambiental" id="SMf-qV-mwg"/>
                     <connections>
                         <segue destination="J1l-bF-VPu" kind="push" identifier="idsegue" id="r0P-9Z-vqi"/>
+                        <segue destination="xmK-WS-ww9" kind="push" identifier="verpuntaje" id="t3F-D0-hl1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5EM-eO-jmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2426,7 +2428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lV-3U-GzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3689" y="-8665"/>
+            <point key="canvasLocation" x="2501" y="-8503"/>
         </scene>
         <!--Lider Ambiental View Controller - Buenas Practicas-->
         <scene sceneID="vpC-Up-lbN">

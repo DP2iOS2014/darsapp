@@ -26,7 +26,7 @@
     NSMutableArray *titulos;
     NSMutableArray *nombresimagenes;
     NSMutableArray * urlImagenes;
-    
+    NSMutableArray * nids;
 
 }
 
@@ -46,6 +46,7 @@
     titulos = [[NSMutableArray alloc] init];
     nombresimagenes= [[NSMutableArray alloc] init];
     urlImagenes = [[NSMutableArray alloc] init];
+    nids = [[NSMutableArray alloc] init];
     [self recuperoTemas];
     
     
@@ -136,6 +137,7 @@
             
             for(int i=0; i<[arregloPosiciones count];i++){
                 NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"title"];
+                NSNumber* nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
                 NSString *nombreimagen = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nombre_archivo"];
                 
                 NSString *postFijo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"url_archivo"];
@@ -145,6 +147,7 @@
                 [titulos addObject:titulo];
                 [nombresimagenes addObject:nombreimagen];
                 [urlImagenes addObject:urlImagen];
+                [nids addObject:nid];
                 
             }
             
@@ -226,12 +229,13 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier  isEqual: @"idsegue"]){
-    LiderAmbientalViewController *escenadestino = segue.destinationViewController;
-    //escenadestino.respuestajson= respuesta;
-    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-    escenadestino.indice= selectedIndexPath.row;
-    escenadestino.tema= [titulos objectAtIndex:selectedIndexPath.row];
+        LiderAmbientalViewController *escenadestino = segue.destinationViewController;
+        //escenadestino.respuestajson= respuesta;
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        escenadestino.indice= selectedIndexPath.row;
+        escenadestino.tema= [titulos objectAtIndex:selectedIndexPath.row];
         escenadestino.cantidadFilas = titulos.count;
+        escenadestino.nidTemaSeleccionado = ((NSNumber*)[nids objectAtIndex:selectedIndexPath.row]).integerValue;
     }
     else if([segue.identifier isEqual:@"verpuntaje"]){
         puntajeAdministradorViewController * escenadestino = segue.destinationViewController;

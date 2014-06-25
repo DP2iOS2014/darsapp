@@ -3,10 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[puntajeAdministradorViewController viewDidLoad]:puntajeAdministradorViewController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[PreguntasViewController CreaPregunta:]:PreguntasViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "arregloPosiciones">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__55-[LiderAmbientalViewController recuperaBuenasPracticas]_block_invoke:LiderAmbientalViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.nidTemaSeleccionado">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -17,9 +28,6 @@
                value = "indexPath.row">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[puntajeAdministradorViewController viewDidLoad]:puntajeAdministradorViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

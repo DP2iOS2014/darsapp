@@ -40,7 +40,7 @@
 }
 
 
--(void) recuperaBuenasPracticas{
+/*-(void) recuperaBuenasPracticas{
     
     //lectura de datos
     
@@ -113,8 +113,71 @@
     
     
     
-}
+}*/
 
+-(void)recuperaBuenasPracticas{
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys: nombre,@"usuario",@"consulta_buenaspracticasxusuario",@"tipo",nil];
+    
+    NSDictionary *consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo, @"cuerpo", nil];
+    
+    
+    NSLog(@"%@", consulta);
+    
+    buenaspracticas = [[NSMutableArray alloc] init];
+    puntajes = [[NSMutableArray alloc]init];
+    estados = [[NSMutableArray alloc]init];
+    nids = [[NSMutableArray alloc] init];
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"lista"];
+        
+     
+        
+        for(int i=0; i<[arregloPosiciones count];i++){
+            
+            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"titulo"];
+            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+            NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"id_temaBP"];
+            if(self.nidTemaSeleccionado == nid.integerValue){
+            [buenaspracticas addObject:titulo];
+            [puntajes   addObject:puntaje];
+            [estados addObject:estado];
+            [nids addObject:nid];
+            }
+            
+        }
+        if([[Ambientalizate.ArregloEstados objectAtIndex:self.indice] count]==0){
+            [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indice];
+            
+        }
+        if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
+            [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
+            
+        }
+        
+        [self.collectionView reloadData];
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+
+}
 
 - (void)viewDidLoad
 {

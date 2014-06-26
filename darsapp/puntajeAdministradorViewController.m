@@ -58,18 +58,18 @@
 
 
 -(void) enviaPuntaje{
-
-    NSDictionary *listanodos = [[NSDictionary alloc] init];
-    NSMutableArray *cuerpo2;
-    
+    NSMutableArray * listaNodos = [[NSMutableArray alloc] init];
     for(int i=0;i<NidsArregloJson.count;i++){
-        listanodos = [ listanodos initWithObjectsAndKeys:@"100","puntaje",NidsArregloJson[i],@"nid",nil];
-        [cuerpo2 addObject:listanodos];
-    
+        NSMutableDictionary * nodo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:((NSNumber*)NidsArregloJson[i]),@"nid",@1,@"activo",nil];
+        [listaNodos addObject:nodo];
+        
+
     }
 
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    NSString * NombreUsuario = [datosDeMemoria stringForKey:@"NombreUsuario"];
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"username", cuerpo2, @"listaNodos", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:NombreUsuario, @"username", listaNodos, @"listaNodos", nil];
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registro_votosxusuario",@"desc",cuerpo,@"cuerpo" , nil];
     
@@ -79,17 +79,10 @@
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        //respuestatemas = responseObject;
-        //NSLog(@"JSON: %@", respuestatemas);
-        
-        //NSDictionary * diccionarioPosiciones = [respuestatemas objectForKey:@"cuerpo"];
-        //NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"listaNodos"];
-        
-        //PARA SACAR LOS DATOS
+        NSDictionary * respuestatemas = responseObject;
+        NSLog(@"JSON: %@", respuestatemas);
         
 
-        
-        //[self.tableView reloadData];
     }
           failure:^(AFHTTPRequestOperation *task, NSError *error) {
               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"

@@ -115,77 +115,81 @@
     
 }*/
 
--(void)recuperaBuenasPracticas{
-    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
-    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys: nombre,@"usuario",@"consulta_buenaspracticasxusuario",@"tipo",nil];
-    
-    NSDictionary *consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo, @"cuerpo", nil];
-    
-    
-    NSLog(@"%@", consulta);
-    
-    buenaspracticas = [[NSMutableArray alloc] init];
-    puntajes = [[NSMutableArray alloc]init];
-    estados = [[NSMutableArray alloc]init];
-    nids = [[NSMutableArray alloc] init];
-    
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuesta = responseObject;
-        NSLog(@"JSON: %@", respuesta);
-        
-        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
-        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"lista"];
-        
-     
-        
-        for(int i=0; i<[arregloPosiciones count];i++){
-            
-            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"titulo"];
-            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
-            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
-            NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"id_temaBP"];
-            if(self.nidTemaSeleccionado == nid.integerValue){
-            [buenaspracticas addObject:titulo];
-            [puntajes   addObject:puntaje];
-            [estados addObject:estado];
-            [nids addObject:nid];
-            }
-            
-        }
-        if([[Ambientalizate.ArregloEstados objectAtIndex:self.indice] count]==0){
-            [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indice];
-            
-        }
-        if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
-            [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
-            
-        }
-        
-        [self.collectionView reloadData];
-    }
-          failure:^(AFHTTPRequestOperation *task, NSError *error) {
-              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                                  message:[error localizedDescription]
-                                                                 delegate:nil
-                                                        cancelButtonTitle:@"Ok"
-                                                        otherButtonTitles:nil];
-              [alertView show];
-          }];
-
-}
+//-(void)recuperaBuenasPracticas{
+//    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+//    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
+//    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys: nombre,@"usuario",@"consulta_buenaspracticasxusuario",@"tipo",nil];
+//    
+//    NSDictionary *consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo, @"cuerpo", nil];
+//    
+//    
+//    NSLog(@"%@", consulta);
+//    
+//    buenaspracticas = [[NSMutableArray alloc] init];
+//    puntajes = [[NSMutableArray alloc]init];
+//    estados = [[NSMutableArray alloc]init];
+//    nids = [[NSMutableArray alloc] init];
+//    
+//    
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//    
+//    [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+//        respuesta = responseObject;
+//        NSLog(@"JSON: %@", respuesta);
+//        
+//        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+//        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"lista"];
+//        
+//     
+//        
+//        for(int i=0; i<[arregloPosiciones count];i++){
+//            
+//            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"titulo"];
+//            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+//            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+//            NSNumber * nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"id_temaBP"];
+//            if(self.nidTemaSeleccionado == nid.integerValue){
+//            [buenaspracticas addObject:titulo];
+//            [puntajes   addObject:puntaje];
+//            [estados addObject:estado];
+//            [nids addObject:nid];
+//            }
+//            
+//        }
+//        if([[Ambientalizate.ArregloEstados objectAtIndex:self.indice] count]==0){
+//            [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indice];
+//            
+//        }
+//        if([[Ambientalizate.ArregloNids objectAtIndex:self.indice] count]==0){
+//            [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indice];
+//            
+//        }
+//        
+//        [self.collectionView reloadData];
+//    }
+//          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+//              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+//                                                                  message:[error localizedDescription]
+//                                                                 delegate:nil
+//                                                        cancelButtonTitle:@"Ok"
+//                                                        otherButtonTitles:nil];
+//              [alertView show];
+//          }];
+//
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
     
-    [self recuperaBuenasPracticas];
-    
+    //[self recuperaBuenasPracticas];
+    buenaspracticas = [[NSMutableArray alloc] init];
+    puntajes = [[NSMutableArray alloc]init];
+    estados = [[NSMutableArray alloc]init];
+    nids = [[NSMutableArray alloc] init];
+    [self imprimeBuenasPracticas];
     
     [self.collectionView setAllowsMultipleSelection:YES];
     
@@ -196,6 +200,31 @@
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
+}
+
+- (void) imprimeBuenasPracticas{
+    
+            for(int i=0; i<[self.nidsTemaUsuario count];i++){
+    
+                if(self.nidTemaSeleccionado == [[self.nidsTemaUsuario objectAtIndex:i] integerValue]){
+                
+                    [buenaspracticas addObject:[self.buenaspracticas objectAtIndex:i]];
+                    [puntajes addObject:[self.puntajesBP objectAtIndex:i]];
+                    [estados addObject:[self.estadosBP objectAtIndex:i]];
+                    [nids addObject:[self.nidsBP objectAtIndex:i]];
+                }
+                if([[Ambientalizate.ArregloEstados objectAtIndex:self.indiceTema] count]==0){
+                    [Ambientalizate.ArregloEstados setObject:estados atIndexedSubscript:self.indiceTema];
+                    
+                }
+                if([[Ambientalizate.ArregloNids objectAtIndex:self.indiceTema] count]==0){
+                    [Ambientalizate.ArregloNids setObject:nids atIndexedSubscript:self.indiceTema];
+                    
+                }
+    
+            }
+    
+            [self.collectionView reloadData];
 }
 
 
@@ -247,12 +276,12 @@
     cell.imagen.image = [UIImage imageNamed:@"images.jpeg"];
     
     
-    if ([[Ambientalizate.ArregloEstados objectAtIndex:self.indice] count]!=0) {
+    if ([[Ambientalizate.ArregloEstados objectAtIndex:self.indiceTema] count]!=0) {
 
         
         [@"perro" isEqualToString:@"perro"];
         
-        NSNumber *miEstado = [Ambientalizate.ArregloEstados objectAtIndex:self.indice][indexPath.row];
+        NSNumber *miEstado = [Ambientalizate.ArregloEstados objectAtIndex:self.indiceTema][indexPath.row];
         
         if(miEstado.intValue == 1){
             cell.imagen.alpha=0.3;
@@ -308,14 +337,14 @@
     
     
     
-    NSNumber * miestado=[[Ambientalizate.ArregloEstados objectAtIndex:self.indice] objectAtIndex:indexPath.row];
+    NSNumber * miestado=[[Ambientalizate.ArregloEstados objectAtIndex:self.indiceTema] objectAtIndex:indexPath.row];
     
     
     if(miestado.intValue==0){
         
         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
         
-        [Ambientalizate.ArregloEstados objectAtIndex:self.indice][indexPath.row] = @1;
+        [Ambientalizate.ArregloEstados objectAtIndex:self.indiceTema][indexPath.row] = @1;
         [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             
             celda.imagen.alpha=0.3;
@@ -351,7 +380,7 @@
         
         
         
-        [Ambientalizate.ArregloEstados objectAtIndex:self.indice][indexPath.row] = @0;
+        [Ambientalizate.ArregloEstados objectAtIndex:self.indiceTema][indexPath.row] = @0;
       
 
     }

@@ -37,6 +37,7 @@
     NidsArregloJson = [ [NSMutableArray alloc] init];
     
     for (int i=0; i< self.cantidadFilas; i++){
+        
         for (int j=0; j<[[Ambientalizate.ArregloEstados objectAtIndex:i] count]; j++){
             if ( ((NSNumber*)Ambientalizate.ArregloEstados[i][j]).intValue == 1 ){
                 [NidsArregloJson addObject:Ambientalizate.ArregloNids[i][j]];
@@ -48,7 +49,7 @@
     
      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
     // Do any additional setup after loading the view.
-    //[self enviaPuntaje];
+    [self enviaPuntaje];
     
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];

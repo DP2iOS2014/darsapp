@@ -26,8 +26,13 @@
     NSMutableArray *titulos;
     NSMutableArray *nombresimagenes;
     NSMutableArray * urlImagenes;
-    NSMutableArray * nids;
+    NSMutableArray * nidsTema;
 
+    NSMutableArray *buenaspracticas;
+    NSMutableArray *puntajesBP;
+    NSMutableArray *estadosBP;
+    NSMutableArray *nidsBP;
+    NSMutableArray *nidsTemaUsuario;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -46,7 +51,14 @@
     titulos = [[NSMutableArray alloc] init];
     nombresimagenes= [[NSMutableArray alloc] init];
     urlImagenes = [[NSMutableArray alloc] init];
-    nids = [[NSMutableArray alloc] init];
+    nidsTema = [[NSMutableArray alloc] init];
+    
+    buenaspracticas= [[NSMutableArray alloc] init];
+    puntajesBP= [[NSMutableArray alloc] init];
+    estadosBP= [[NSMutableArray alloc] init];
+    nidsBP= [[NSMutableArray alloc] init];
+    nidsTemaUsuario= [[NSMutableArray alloc] init];
+    
     [self recuperoTemas];
     
     
@@ -147,7 +159,7 @@
                 [titulos addObject:titulo];
                 [nombresimagenes addObject:nombreimagen];
                 [urlImagenes addObject:urlImagen];
-                [nids addObject:nid];
+                [nidsTema addObject:nid];
                 
             }
             
@@ -172,7 +184,62 @@
     @finally {
         NSLog( @"In finally block");
     }
-      
+    
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
+    NSDictionary *cuerpoBP = [NSDictionary dictionaryWithObjectsAndKeys: nombre,@"usuario",@"consulta_buenaspracticasxusuario",@"tipo",nil];
+    
+    NSDictionary *consultaBP = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpoBP, @"cuerpo", nil];
+    
+    
+    NSLog(@"%@", consultaBP);
+    
+    [[NSUserDefaults standardUserDefaults] setDouble:0.0  forKey:@"puntajeAcumulado"];
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:Buenaspracticas parameters:consultaBP success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        NSDictionary * diccionarioPosiciones = [respuesta objectForKey:@"cuerpo"];
+        NSArray * arregloPosiciones = [diccionarioPosiciones objectForKey:@"lista"];
+        
+        double puntajeMaximo = 0;
+        for(int i=0; i<[arregloPosiciones count];i++){
+            
+            NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"titulo"];
+            NSString *puntaje = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
+            NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+            NSNumber * nidBP = [[arregloPosiciones objectAtIndex:i] objectForKey:@"id_buenaPractica"];
+            NSNumber * nidTemaUsuario = [[arregloPosiciones objectAtIndex:i] objectForKey:@"id_temaBP"];
+            
+            [buenaspracticas addObject:titulo];
+            [puntajesBP   addObject:puntaje];
+            [estadosBP addObject:estado];
+            [nidsBP addObject:nidBP];
+            [nidsTemaUsuario addObject:nidTemaUsuario];
+            
+            if ([[estadosBP objectAtIndex:i] integerValue] == 1){
+                puntajeMaximo = puntajeMaximo + [puntaje doubleValue];
+                
+                [[NSUserDefaults standardUserDefaults] setDouble:puntajeMaximo  forKey:@"puntajeAcumulado"];
+
+            }
+            
+        }
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
     
 }
 
@@ -229,13 +296,20 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier  isEqual: @"idsegue"]){
+        
         LiderAmbientalViewController *escenadestino = segue.destinationViewController;
         //escenadestino.respuestajson= respuesta;
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
-        escenadestino.indice= selectedIndexPath.row;
-        escenadestino.tema= [titulos objectAtIndex:selectedIndexPath.row];
+        escenadestino.indiceTema= selectedIndexPath.row;
+        escenadestino.tituloTema= [titulos objectAtIndex:selectedIndexPath.row];
         escenadestino.cantidadFilas = titulos.count;
-        escenadestino.nidTemaSeleccionado = ((NSNumber*)[nids objectAtIndex:selectedIndexPath.row]).integerValue;
+        escenadestino.nidTemaSeleccionado = ((NSNumber*)[nidsTema objectAtIndex:selectedIndexPath.row]).integerValue;
+        
+        escenadestino.buenaspracticas = [[NSMutableArray alloc] initWithArray:buenaspracticas];
+        escenadestino.puntajesBP = [[NSMutableArray alloc] initWithArray:puntajesBP];
+        escenadestino.estadosBP = [[NSMutableArray alloc] initWithArray:estadosBP];
+        escenadestino.nidsBP = [[NSMutableArray alloc] initWithArray:nidsBP];
+        escenadestino.nidsTemaUsuario = [[NSMutableArray alloc] initWithArray:nidsTemaUsuario];
     }
     else if([segue.identifier isEqual:@"verpuntaje"]){
         puntajeAdministradorViewController * escenadestino = segue.destinationViewController;

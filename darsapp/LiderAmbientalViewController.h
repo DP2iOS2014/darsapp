@@ -11,9 +11,14 @@
 @interface LiderAmbientalViewController : UICollectionViewController
 
 @property (nonatomic,strong) NSDictionary *respuestajson;
-@property NSInteger indice;
-@property NSString *tema;
+@property NSInteger indiceTema;
+@property NSString *tituloTema;
 @property NSInteger cantidadFilas;
 @property NSInteger nidTemaSeleccionado;
 
+@property NSMutableArray *buenaspracticas;
+@property NSMutableArray *puntajesBP;
+@property NSMutableArray *estadosBP;
+@property NSMutableArray *nidsBP;
+@property NSMutableArray *nidsTemaUsuario;
 @end

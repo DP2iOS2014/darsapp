@@ -94,9 +94,9 @@
     NSString * nombre = [datos stringForKey:@"NombreUsuario"];
     
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:nombre,@"usuario",@"registrar_evento",@"tipo",self.estado[self.celda_seleccionada], @"asistir",nid,@"nid", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:nombre,@"usuario",self.estado[self.celda_seleccionada], @"asistir",nid,@"nid", nil];
     
-    NSDictionary * accion = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",cuerpo,@"cuerpo" , nil];
+    NSDictionary * accion = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registrar_evento",@"desc",cuerpo,@"cuerpo" , nil];
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -134,6 +134,7 @@
     
     
 }
+
 
 /*
 #pragma mark - Navigation

@@ -23,6 +23,7 @@ NSMutableArray *iniciativas;
 NSMutableArray *descripciones;
 NSMutableArray *puntajesusuario;
 NSMutableArray *puntajestotal;
+NSMutableArray *arrNids;
 int puntajexusuario;
 
 
@@ -95,15 +96,15 @@ int puntajexusuario;
          ((CeldaIniciativasTableViewCell*)cell).starRating.horizontalMargin = 15.0;
          ((CeldaIniciativasTableViewCell*)cell).starRating.editable=NO;
 
-        ((CeldaIniciativasTableViewCell*)cell).starRating.rating= ((NSNumber*)puntajestotal[indexPath.row-1]).intValue / 20;
-        
+        ((CeldaIniciativasTableViewCell*)cell).starRating.rating= ((NSNumber*)puntajestotal[indexPath.row-1]).floatValue / 20;
+        NSLog(@"%f",((NSNumber*)puntajestotal[indexPath.row-1]).floatValue / 20);
 
-        
+         
          ((CeldaIniciativasTableViewCell*)cell).starRating.displayMode=EDStarRatingDisplayHalf;
          [((CeldaIniciativasTableViewCell*)cell).starRating  setNeedsDisplay];
          ((CeldaIniciativasTableViewCell*)cell).starRating.tintColor = [[UIColor alloc] initWithRed:63.0/255.0 green:192.0/255.0 blue:169.0/255.0 alpha:1];
         
-        [self starsSelectionChanged:((CeldaIniciativasTableViewCell*)cell).starRating rating:((NSNumber*)puntajestotal[indexPath.row-1]).intValue / 20];
+        [self starsSelectionChanged:((CeldaIniciativasTableViewCell*)cell).starRating rating:((NSNumber*)puntajestotal[indexPath.row-1]).floatValue / 20];
         
     }
 
@@ -130,6 +131,7 @@ int puntajexusuario;
     descripciones = [[NSMutableArray alloc] init];
     puntajesusuario = [[NSMutableArray alloc]init];
     puntajestotal = [[NSMutableArray alloc]init];
+    arrNids = [[NSMutableArray alloc] init];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -149,7 +151,7 @@ int puntajexusuario;
                 NSString *titulo = [[arregloPosiciones objectAtIndex:i] objectForKey:@"titulo"];
                 NSNumber *puntajeusuario = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntaje"];
                 NSNumber *puntajetotal = [[arregloPosiciones objectAtIndex:i] objectForKey:@"puntajetotal"];
-                //NSNumber *estado = [[arregloPosiciones objectAtIndex:i] objectForKey:@"estado"];
+                NSNumber *nid = [[arregloPosiciones objectAtIndex:i] objectForKey:@"nid"];
                 
                 if(titulo==nil) {
                     titulo= @"No tiene titulo";
@@ -158,6 +160,7 @@ int puntajexusuario;
                 [descripciones   addObject:descripcion];
                 [puntajesusuario   addObject:puntajeusuario];
                 [puntajestotal addObject:puntajetotal];
+                [arrNids addObject:nid];
                 
                 [self.tableView reloadData ];
                 
@@ -216,7 +219,8 @@ int puntajexusuario;
 
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         escenadestino.celdaseleccionada = selectedIndexPath.row;
-        self.nidtema;
+        escenadestino.nidIniciativa = arrNids[selectedIndexPath.row-1];
+        
 
     }else if ([segue.identifier  isEqual: @"proponer"]){
         NuevaIniciativaViewController* escenadestino = segue.destinationViewController;

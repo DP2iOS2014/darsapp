@@ -7,7 +7,7 @@
 //
 
 #import "DetalleIniciativaViewController.h"
-
+#import "URLsJson.h"
 @interface DetalleIniciativaViewController ()
 
 @end
@@ -39,7 +39,7 @@ int puntajexusuario;
     self.starRating.delegate = self;
     self.starRating.horizontalMargin = 15.0;
     self.starRating.editable=YES;
-    self.starRating.rating= ((NSNumber*)self.puntuacion[self.celdaseleccionada-1]).intValue /20;
+    self.starRating.rating= ((NSNumber*)self.puntuacion[self.celdaseleccionada-1]).floatValue /20;
     self.starRating.displayMode=EDStarRatingDisplayHalf;
     [self.starRating  setNeedsDisplay];
     self.starRating.tintColor = [[UIColor alloc] initWithRed:63.0/255.0 green:192.0/255.0 blue:169.0/255.0 alpha:1];
@@ -50,6 +50,50 @@ int puntajexusuario;
     self.lblDescripcion.text=self.descripciones[self.celdaseleccionada-1];
     
 }
+
+
+-(void) guardoRating:(NSNumber*)rating{
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    NSString * NombreUsuario = [datosDeMemoria stringForKey:@"NombreUsuario"];
+    
+    
+    NSDictionary * nodo = [NSDictionary dictionaryWithObjectsAndKeys: self.nidIniciativa,@"nid",rating,@"puntaje", nil];
+    NSMutableArray * listaNodos = [[NSMutableArray alloc] init];
+    [listaNodos addObject:nodo];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys: listaNodos,@"listaNodos",NombreUsuario,@"username", nil];
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion", @"operacion", @"registro_votosxusuario",@"desc", cuerpo,@"cuerpo", nil];
+    
+    NSLog(@"%@", consulta);
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:Buenaspracticas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+       NSDictionary * respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Mensaje"
+                                                            message:@"Su iniciativa se guardo satisfactoriamente"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -72,5 +116,10 @@ int puntajexusuario;
     [alertView show];
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    NSInteger ratingAux = self.starRating.rating*20 ;
+    NSNumber * rating = [[NSNumber alloc] initWithInteger:ratingAux];
+    [self guardoRating:rating];
+}
 
 @end

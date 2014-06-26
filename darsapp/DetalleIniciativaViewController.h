@@ -19,5 +19,6 @@
 @property NSMutableArray * descripciones;
 
 @property NSMutableArray * puntuacion;
+@property NSNumber * nidIniciativa;
 
 @end

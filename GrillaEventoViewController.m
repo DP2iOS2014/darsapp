@@ -57,7 +57,7 @@
     self.lblLugar.text = self.lugar[self.celda_seleccionada];
     
     if (((NSNumber*)(self.estado[self.celda_seleccionada])).intValue == 2) {
-        [self.btnAsistir setTitle:@"No Asistiré" forState:UIControlStateNormal];
+        [self.btnAsistir setTitle:@"No Asistir" forState:UIControlStateNormal];
         [self.btnAsistir setHidden:NO];
         [self.checkAsistir setHidden:NO];
     }
@@ -66,7 +66,7 @@
         [self.btnAsistir setHidden:YES];
         [self.checkAsistir setHidden:YES];
     } else {
-        [self.btnAsistir setTitle:@"No Asistiré" forState:UIControlStateNormal];
+        [self.btnAsistir setTitle:@"Asistir" forState:UIControlStateNormal];
         [self.btnAsistir setHidden:NO];
         [self.checkAsistir setHidden:NO];
     }

@@ -47,6 +47,7 @@ typedef void (^myCompletion)(BOOL);
     
     
     NSMutableArray * organizador;
+    
     NSMutableArray * estado;
     
     NSMutableArray  * nids;
@@ -100,7 +101,9 @@ typedef void (^myCompletion)(BOOL);
     lugar3 = [[NSMutableArray alloc]init];
     
     organizador =[[NSMutableArray alloc]init];
-    estado =[[NSMutableArray alloc]init];
+    
+    
+    
     nids =[[NSMutableArray alloc]init];
     nids2 =[[NSMutableArray alloc]init];
     nids3 = [[NSMutableArray alloc]init];
@@ -460,7 +463,7 @@ typedef void (^myCompletion)(BOOL);
     
     } else if (segindice==2){
     
-        if(titulos.count>0){
+        if(titulos3.count>0){
             
             ((CeldaTemas*)cell).lblTema.text=titulos3[indexPath.row];
             [((CeldaTemas*)cell).imagen setImageWithURL:[NSURL URLWithString:urlImagenes3[indexPath.row]] placeholderImage:[UIImage imageNamed:@"process.png"]];
@@ -506,9 +509,15 @@ typedef void (^myCompletion)(BOOL);
         GrillaEventoViewController *escenadestino = segue.destinationViewController;
         //escenadestino.respuestajson= respuesta;
         
+        estado = [[NSMutableArray alloc] init];
+        
         NSIndexPath *selectedIndexPath = [self.tablaeventos indexPathForSelectedRow];
         
         if (segindice==0) {
+            
+            for (int i=0; i<titulos2.count; i++) {
+                [estado addObject:@1];
+            }
             
             escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos2];
             escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes2];
@@ -517,10 +526,14 @@ typedef void (^myCompletion)(BOOL);
             escenadestino.fecha = [[NSMutableArray alloc] initWithArray: fecha2];
             escenadestino.lugar = [[NSMutableArray alloc] initWithArray: lugar2];
             //escenadestino.organizador = [[NSMutableArray alloc] initWithArray: organizador2];
-            //escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado2];
+            escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado];
             escenadestino.nidseleccionado = [nids2 objectAtIndex:selectedIndexPath.row];
             
         } else if (segindice==1){
+            
+            for (int i=0; i<titulos.count; i++) {
+                [estado addObject:@2];
+            }
             
             escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos];
             escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes];
@@ -533,6 +546,10 @@ typedef void (^myCompletion)(BOOL);
             escenadestino.nidseleccionado = [nids objectAtIndex:selectedIndexPath.row];
         
         } else if (segindice==2){
+            
+            for (int i=0; i<titulos3.count; i++) {
+                [estado addObject:@3];
+            }
         
             escenadestino.titulos = [[NSMutableArray alloc] initWithArray: titulos3];
             escenadestino.urlImagenes = [[NSMutableArray alloc] initWithArray: urlImagenes3];
@@ -540,6 +557,7 @@ typedef void (^myCompletion)(BOOL);
             escenadestino.fecha = [[NSMutableArray alloc] initWithArray: fecha3];
             escenadestino.lugar = [[NSMutableArray alloc] initWithArray: lugar3];
             escenadestino.nidseleccionado = [nids3 objectAtIndex:selectedIndexPath.row];
+            escenadestino.estado = [[NSMutableArray alloc] initWithArray: estado];
             
         }
         

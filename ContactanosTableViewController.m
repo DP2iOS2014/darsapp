@@ -134,7 +134,7 @@
 
 - (IBAction)seApretoCompartir:(UIBarButtonItem *)sender {
     
-    UIActivityViewController *miActivity = [[UIActivityViewController alloc] initWithActivityItems:@[@"Oye, cheka esta app que está buenísima: http://www.youtube.com"] applicationActivities:nil];
+    UIActivityViewController *miActivity = [[UIActivityViewController alloc] initWithActivityItems:@[@"Descargate esta aplicación de la DARS en la siguente web: http://200.16.7.111/dp2/rc/"] applicationActivities:nil];
     
     miActivity.excludedActivityTypes = @[UIActivityTypeMail];
     

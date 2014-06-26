@@ -57,7 +57,7 @@
     self.lblLugar.text = self.lugar[self.celda_seleccionada];
     
     if (((NSNumber*)(self.estado[self.celda_seleccionada])).intValue == 2) {
-        [self.btnAsistir setTitle:@"Asistiré" forState:UIControlStateNormal];
+        [self.btnAsistir setTitle:@"No Asistiré" forState:UIControlStateNormal];
         [self.btnAsistir setHidden:NO];
         [self.checkAsistir setHidden:NO];
     }
@@ -90,7 +90,11 @@
     
     NSNumber * nid =self.nidseleccionado;
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config",@"usuario",nid,@"evento_nid",@"5555555",@"telefono", nil];
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
+    
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:nombre,@"usuario",@"registrar_evento",@"tipo",self.estado[self.celda_seleccionada], @"asistir",nid,@"nid", nil];
     
     NSDictionary * accion = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",cuerpo,@"cuerpo" , nil];
 
@@ -101,6 +105,23 @@
     [manager POST:RecuperoTemas parameters:accion success:^(AFHTTPRequestOperation *task, id responseObject) {
        
         NSLog(@"JSON: %@", responseObject);
+        
+        if(self.estado[self.celda_seleccionada]==1){
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"El evento se registró correctamente"
+                                                                message:nil
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        } else {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Se deseleccionó el evento correctamente"
+                                                                message:nil
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        
+        }
 
     } failure:^(AFHTTPRequestOperation *task, NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"

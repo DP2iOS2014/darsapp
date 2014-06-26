@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 
-@interface GrillaEventoViewController : ViewController
+@interface GrillaEventoViewController : ViewController<UIAlertViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *lblTitulo;
 @property (weak, nonatomic) IBOutlet UILabel *lblFecha;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenEvento;

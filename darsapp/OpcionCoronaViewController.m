@@ -9,9 +9,12 @@
 #import "OpcionCoronaViewController.h"
 #import "PreguntasViewController.h"
 
+
 @interface OpcionCoronaViewController ()
 
 @end
+
+typedef void (^myCompletion)(BOOL);
 
 @implementation OpcionCoronaViewController
 
@@ -75,8 +78,25 @@
         //ACA SE PONE EL ID DEL TEMA QUE SALIO EN LA RULETA
         escenadestino.idtema = numerotema;
     }
+
     
 };
+
+-(void) myMethod:(myCompletion) compblock {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    compblock (YES);
+    
+}
+
+-(void)apretoOkAlFallaPregunta2{
+    [self myMethod:^(BOOL finished) {
+        if(finished){
+            [self.delegate regresaRaiz];
+        }
+    }];
+
+    
+}
 
 -(void)DesapareceModalCuandoTocoCorona{
     //[self dismissViewControllerAnimated:NO completion:nil];    

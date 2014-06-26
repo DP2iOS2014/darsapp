@@ -41,7 +41,7 @@
     
     [self.view addGestureRecognizer:tap];
     
-     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondologin.jpg"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondologin.jpg"]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,6 +94,64 @@
     [Login jsonLoginConUsuario:self.tFusuario.text yPassword:self.tFContrasenha.text];
 
     
+}
+
+-(void) recuperaDatosUsuario:(NSString*)NombreUsuario{
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    NSString * nombreUsuario = [datosUsuario stringForKey:@"NombreUsuario"];
+    
+    NSDictionary *cuerpo = [[NSDictionary alloc] initWithObjectsAndKeys:@"puntaje_juego",@"tipo",nombreUsuario,@"usuario", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo", nil];
+    
+    NSLog(@"%@", consulta);
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        
+        NSDictionary * respuestajson = responseObject;
+        
+        NSLog(@"JSON: %@", respuestajson);
+        
+        NSDictionary * cuerpo = [respuestajson objectForKey:@"cuerpo"];
+        
+        NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
+        
+        //NSString *usuario = [[listaNodos objectAtIndex:0] objectForKey:@"usuario"];
+        
+        NSString *puntaje = [[listaNodos objectAtIndex:0] objectForKey:@"puntaje"];
+        
+        
+        //NSNumber *puntajeMaximo= [[NSNumber alloc] initWithInteger:[puntaje integerValue]];
+        double puntajeMaximo= [puntaje doubleValue];
+        
+        [[NSUserDefaults standardUserDefaults] setDouble:puntajeMaximo  forKey:@"puntajeMaximoRuleta"];
+        
+        
+    }
+     
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                        
+                                                                  message:[error localizedDescription]
+                                        
+                                                                 delegate:nil
+                                        
+                                                        cancelButtonTitle:@"Ok"
+                                        
+                                                        otherButtonTitles:nil];
+              
+              [alertView show];
+              
+          }];
+    
+
+
+
 }
 
 -(void)loginExito{

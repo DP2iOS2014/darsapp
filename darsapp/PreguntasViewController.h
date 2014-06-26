@@ -12,6 +12,7 @@
 @protocol preguntasDelegate <NSObject>
 @optional
 -(void)apretoOkAlFallaPregunta;
+-(void)apretoOkAlFallaPregunta2;
 -(void)DesapareceModalCuandoTocoCorona;
 @end
 

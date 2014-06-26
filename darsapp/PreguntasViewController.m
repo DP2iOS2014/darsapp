@@ -596,6 +596,7 @@ typedef void (^myCompletion)(BOOL);
         juego.disponibilidadRespuesta2 = YES;
         juego.disponibilidadRespuesta3 = YES;
         juego.disponibilidadRespuesta4 = YES;
+    
         [timer invalidate];
         [self performSelector:@selector(irASeleccionado) withObject:nil afterDelay:3];
         
@@ -606,6 +607,7 @@ typedef void (^myCompletion)(BOOL);
         int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
         if(puntajeActual>puntajeMaximo){
             [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
+            [self GuardarPuntajeJuego];
             
         }
         [self performSelector:@selector(irAHacerHora) withObject:nil afterDelay:2];
@@ -625,6 +627,19 @@ typedef void (^myCompletion)(BOOL);
     
     
     
+}
+
+-(void)GuardarPuntajeJuego{
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
+    NSString * nombreUsuario = [datosUsuario stringForKey:@"NombreUsuario"];
+
+    NSDictionary *cuerpo = [[NSDictionary alloc] initWithObjectsAndKeys:@"guardarPuntaje",@"tipo",nombreUsuario,@"usuario", [NSString stringWithFormat:@"%d",puntajeActual],@"puntaje", nil];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Almacenamiento",@"operacion",cuerpo,@"cuerpo", nil];
+    
+    NSLog(@"%@", consulta);
+
+
 }
 
 -(void)irAHacerHora{
@@ -675,6 +690,7 @@ typedef void (^myCompletion)(BOOL);
         //[self dismissViewControllerAnimated:YES completion:nil];
         [self myMethod:^(BOOL finished) {
             if(finished){
+                [self.delegate apretoOkAlFallaPregunta2];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
         }];
@@ -682,10 +698,10 @@ typedef void (^myCompletion)(BOOL);
         
         
         
-    }
+    }else{
     [self.delegate apretoOkAlFallaPregunta];
     [self dismissViewControllerAnimated:YES completion:nil];
-    
+    }
     
 }
 

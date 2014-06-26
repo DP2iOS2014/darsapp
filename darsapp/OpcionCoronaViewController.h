@@ -8,8 +8,11 @@
 
 #import "ViewController.h"
 #import "PreguntasViewController.h"
-
+@protocol coronaDelagate <NSObject>
+@optional
+-(void)regresaRaiz;
+@end
 
 @interface OpcionCoronaViewController : ViewController <preguntasDelegate>
-
+@property (nonatomic, weak) id <coronaDelagate> delegate;
 @end

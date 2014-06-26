@@ -316,7 +316,9 @@
 -(void)apretoOkAlFallaPregunta{
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
-
+-(void)regresaRaiz{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 
 -(void)irASeleccionado
@@ -331,6 +333,11 @@
         escenadestino.delegate = self;
         //ACA SE PONE EL ID DEL TEMA QUE SALIO EN LA RULETA
         escenadestino.idtema = numerotema;
+    }
+    if ([segue.identifier isEqual:@"ViewCorona"]) {
+        PreguntasViewController *escenadestino = segue.destinationViewController;
+        escenadestino.delegate = self;
+        
     }
 
 };

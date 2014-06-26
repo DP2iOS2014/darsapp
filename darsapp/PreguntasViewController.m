@@ -300,7 +300,7 @@ typedef void (^myCompletion)(BOOL);
     }
 }
 - (IBAction)SeApretoBomba:(id)sender {
-    
+   UIColor * color = [UIColor colorWithRed:210/255.0f green:9/255.0f blue:0/255.0f alpha:1.0f];
     if( [self.VidasBomba.text intValue]  >0) {
         NSString *path  = [[NSBundle mainBundle] pathForResource:@"Bomb" ofType:@"wav"];
         NSURL *pathURL = [NSURL fileURLWithPath : path];
@@ -311,32 +311,40 @@ typedef void (^myCompletion)(BOOL);
         
         int value=[preguntaActual.RespuestaCorrecta intValue];
         
-        int valor1 = arc4random()%3;
-        int valor2 = arc4random()%3;
+        int valor1 = arc4random()%4;
+        int valor2 = arc4random()%4;
         
         while (valor1 == value) {
             
-            valor1 = arc4random()%3;
+            valor1 = arc4random()%4;
         }
         
         while(valor2 == valor1 || valor2 == value){
             
-            valor2 = arc4random()%3;
+            valor2 = arc4random()%4;
             
         }
 
         
         if (valor1 == 0 || valor2 == 0) {
             self.btnRespuesta1.enabled=NO;
+            [self.btnRespuesta1 setTitleColor:color forState:UIControlStateNormal];
+            
         }
         if (valor1 == 1 || valor2 == 1) {
             self.btnRespuesta2.enabled=NO;
+             [self.btnRespuesta2 setTitleColor:color forState:UIControlStateNormal];
+            
         }
         if (valor1 == 2 || valor2 == 2) {
             self.btnRespuesta3.enabled=NO;
+             [self.btnRespuesta3 setTitleColor:color forState:UIControlStateNormal];
+            
         }
         if (valor1 == 3 || valor2 == 3) {
             self.btnRespuesta4.enabled=NO;
+             [self.btnRespuesta4 setTitleColor:color forState:UIControlStateNormal];
+            
         }
         
         juego.VidasBomba=juego.VidasBomba-1;

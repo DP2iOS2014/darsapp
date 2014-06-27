@@ -271,7 +271,10 @@
         if ( [singleton.ArregloEstados[i] count] != 0 ) {
             [activosjson addObject:singleton.ArregloEstados[i][0]];
             [nidsjson addObject:singleton.ArregloNids[i][0]];
-        }
+        }/*else{
+            [activosjson addObject:estadosBP[i]];
+            [nidsjson addObject:nidsBP[i]];
+        }*/
     
     }
     
@@ -293,7 +296,6 @@
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registro_votoxusuario",@"desc",cuerpo,@"cuerpo" , nil];
     
     NSLog(@"%@", consulta);
-    
     
 }
 

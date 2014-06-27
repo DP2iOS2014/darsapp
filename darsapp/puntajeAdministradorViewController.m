@@ -62,7 +62,7 @@
     NSMutableArray * listaNodos = [[NSMutableArray alloc] init];
     
     for (int i=0; i< self.cantidadFilas; i++){
-        if ([[Ambientalizate.ArregloEstados objectAtIndex:i] count]==0){break;}
+        if (![[Ambientalizate.ArregloEstados objectAtIndex:i] count]==0){
         for (int j=0; j<[[Ambientalizate.ArregloEstados objectAtIndex:i] count]; j++){
             if ( ((NSNumber*)Ambientalizate.ArregloEstados[i][j]).intValue == 1 ){
                 NSMutableDictionary * nodo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:((NSNumber*)Ambientalizate.ArregloNids[i][j]),@"nid",@1,@"activo",nil];
@@ -72,6 +72,7 @@
                 NSMutableDictionary * nodo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:((NSNumber*)Ambientalizate.ArregloNids[i][j]),@"nid",@0,@"activo",nil];
                 [listaNodos addObject:nodo];
             }
+        }
         }
     }
     

@@ -34,17 +34,17 @@
     
     Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
     
-    NidsArregloJson = [ [NSMutableArray alloc] init];
+   /* NidsArregloJson = [ [NSMutableArray alloc] init];
     
     for (int i=0; i< self.cantidadFilas; i++){
-        
+        if ([[Ambientalizate.ArregloEstados objectAtIndex:i] count]==0){break;}
         for (int j=0; j<[[Ambientalizate.ArregloEstados objectAtIndex:i] count]; j++){
             if ( ((NSNumber*)Ambientalizate.ArregloEstados[i][j]).intValue == 1 ){
                 [NidsArregloJson addObject:Ambientalizate.ArregloNids[i][j]];
             }
         }
     }
-    
+    */
     
     
      [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
@@ -58,14 +58,30 @@
 
 
 -(void) enviaPuntaje{
+    Ambientalizate= [SingletonAmbientalizate sharedManager:(NSInteger)self.cantidadFilas];
     NSMutableArray * listaNodos = [[NSMutableArray alloc] init];
-    for(int i=0;i<NidsArregloJson.count;i++){
-        NSMutableDictionary * nodo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:((NSNumber*)NidsArregloJson[i]),@"nid",@1,@"activo",nil];
-        [listaNodos addObject:nodo];
-        
-
+    
+    for (int i=0; i< self.cantidadFilas; i++){
+        if ([[Ambientalizate.ArregloEstados objectAtIndex:i] count]==0){break;}
+        for (int j=0; j<[[Ambientalizate.ArregloEstados objectAtIndex:i] count]; j++){
+            if ( ((NSNumber*)Ambientalizate.ArregloEstados[i][j]).intValue == 1 ){
+                NSMutableDictionary * nodo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:((NSNumber*)Ambientalizate.ArregloNids[i][j]),@"nid",@1,@"activo",nil];
+                [listaNodos addObject:nodo];
+            }
+            else{
+                NSMutableDictionary * nodo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:((NSNumber*)Ambientalizate.ArregloNids[i][j]),@"nid",@0,@"activo",nil];
+                [listaNodos addObject:nodo];
+            }
+        }
     }
-
+    
+   /* for(int i=0;i< Ambientalizate.ArregloNids.count;i++){
+        NSMutableDictionary * nodo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:((NSNumber*)Ambientalizate.ArregloNids[i]),@"nid",@1,@"activo",nil];
+        [listaNodos addObject:nodo];
+    
+    }
+    */
+    
     NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
     NSString * NombreUsuario = [datosDeMemoria stringForKey:@"NombreUsuario"];
     

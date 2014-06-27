@@ -78,6 +78,32 @@ typedef void (^myCompletion)(BOOL);
 {
     [super viewDidLoad];
     
+
+    
+    //[self recuperoEventos:@1];
+    //[self recuperoEventosProximos];
+    
+    /*[self myMethod:^(BOOL finished) {
+        if (finished) {
+            //[self recuperoEventosProximos];
+        }
+        
+    }];*/
+    
+    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
+    
+    self.tablaeventos.backgroundColor = [UIColor clearColor];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+
+
+ 
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
     titulos = [[NSMutableArray alloc]init];
     titulos2 = [[NSMutableArray alloc]init];
     titulos3 = [[NSMutableArray alloc]init];
@@ -110,23 +136,6 @@ typedef void (^myCompletion)(BOOL);
     indicesaEliminar = [[NSMutableIndexSet alloc] init];
     indices2=[[NSMutableIndexSet alloc] init];
     
-    //[self recuperoEventos:@1];
-    //[self recuperoEventosProximos];
-    
-    /*[self myMethod:^(BOOL finished) {
-        if (finished) {
-            //[self recuperoEventosProximos];
-        }
-        
-    }];*/
-    
-    
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]]];
-    
-    self.tablaeventos.backgroundColor = [UIColor clearColor];
-    
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    
     NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
     
     NSString * EsVisitante = [datosDeMemoria stringForKey:@"Visitante"];
@@ -135,7 +144,6 @@ typedef void (^myCompletion)(BOOL);
         [self recuperoEventosProximos];
     } else [self recuperoEventos:@2];
 
- 
 }
 
 - (void)didReceiveMemoryWarning

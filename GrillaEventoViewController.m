@@ -93,10 +93,20 @@
     NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
     NSString * nombre = [datos stringForKey:@"NombreUsuario"];
     
+    NSNumber* estado2;
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:nombre,@"usuario",self.estado[self.celda_seleccionada], @"asistir",nid,@"nid", nil];
+    if(((NSNumber*)(self.estado[self.celda_seleccionada])).intValue==1){
+        estado2=@2;
+    }else if (((NSNumber*)(self.estado[self.celda_seleccionada])).intValue==2){
+        estado2=@1;
+    }
+    
+    
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:nombre,@"usuario",estado2, @"asistir",nid,@"nid", nil];
     
     NSDictionary * accion = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registrar_evento",@"desc",cuerpo,@"cuerpo" , nil];
+    
+     NSLog(@"JSON: %@", accion);
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -106,7 +116,7 @@
        
         NSLog(@"JSON: %@", responseObject);
         
-        if(self.estado[self.celda_seleccionada]==1){
+        if(estado2.intValue==2){
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"El evento se registró correctamente"
                                                                 message:nil
                                                                delegate:self
@@ -133,6 +143,10 @@
     }];
     
     
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

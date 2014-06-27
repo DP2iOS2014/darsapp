@@ -1657,7 +1657,7 @@
                         <sections>
                             <tableViewSection id="Zfp-lq-1Uc">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0l3-h5-OL6" rowHeight="51" style="IBUITableViewCellStyleDefault" id="3g1-US-cHP">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0l3-h5-OL6" imageView="8v1-QM-yUx" rowHeight="51" style="IBUITableViewCellStyleDefault" id="3g1-US-cHP">
                                         <rect key="frame" x="0.0" y="64" width="320" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3g1-US-cHP" id="FFa-qz-QcK">
@@ -1665,11 +1665,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Ambientalizate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0l3-h5-OL6">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="50"/>
+                                                    <rect key="frame" x="82" y="0.0" width="203" height="50"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="ambientalizate.png" id="8v1-QM-yUx">
+                                                    <rect key="frame" x="15" y="0.0" width="52" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1677,7 +1681,7 @@
                                             <segue destination="Ctp-81-5NW" kind="push" id="deV-gd-Gzo"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MSw-4H-lY5" rowHeight="50" style="IBUITableViewCellStyleDefault" id="hNl-Wj-X5I">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MSw-4H-lY5" imageView="20b-7f-nJ8" rowHeight="50" style="IBUITableViewCellStyleDefault" id="hNl-Wj-X5I">
                                         <rect key="frame" x="0.0" y="115" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hNl-Wj-X5I" id="3P2-Hf-rFv">
@@ -1685,11 +1689,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Mis Eventos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MSw-4H-lY5">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="49"/>
+                                                    <rect key="frame" x="78" y="0.0" width="207" height="49"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="eventos.png" id="20b-7f-nJ8">
+                                                    <rect key="frame" x="15" y="0.0" width="48" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1697,19 +1705,23 @@
                                             <segue destination="6B6-mT-wRj" kind="push" id="eV5-06-DFl"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Qhd-EZ-ACE" rowHeight="50" style="IBUITableViewCellStyleDefault" id="leE-4C-idE">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="leE-4C-idE">
                                         <rect key="frame" x="0.0" y="165" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="leE-4C-idE" id="XrV-NL-cpG">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Iniciativas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qhd-EZ-ACE">
-                                                    <rect key="frame" x="15" y="0.0" width="270" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Iniciativas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyB-RM-Vbg">
+                                                    <rect key="frame" x="77" y="14" width="114" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iniciativas.png" translatesAutoresizingMaskIntoConstraints="NO" id="dmA-5r-Ncv">
+                                                    <rect key="frame" x="20" y="5" width="49" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1981,8 +1993,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="218" translatesAutoresizingMaskIntoConstraints="NO" id="Y0s-eU-n8o">
-                                <rect key="frame" x="33" y="109" width="218" height="61"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="267" translatesAutoresizingMaskIntoConstraints="NO" id="Y0s-eU-n8o">
+                                <rect key="frame" x="33" y="109" width="267" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -1993,8 +2005,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="pRy-lx-BbU">
-                                <rect key="frame" x="33" y="213" width="236" height="82"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="267" translatesAutoresizingMaskIntoConstraints="NO" id="pRy-lx-BbU">
+                                <rect key="frame" x="33" y="213" width="267" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -2010,23 +2022,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pso-Xq-r8Y">
-                                <rect key="frame" x="73" y="433" width="178" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vse-Ml-kwd">
+                                <rect key="frame" x="64" y="403" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <state key="normal" title="Guardar Puntuación">
-                                    <color key="titleColor" red="0.2470588386" green="0.75294125079999996" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="0.2470588386" green="0.75686281919999998" blue="0.66274511810000003" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="seMandoPuntuacion:" destination="Xpv-TT-eIw" eventType="touchUpInside" id="IEE-13-oAb"/>
+                                    <action selector="seApretoGuardar:" destination="Xpv-TT-eIw" eventType="touchUpInside" id="DtQ-d1-B05"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Pso-Xq-r8Y" secondAttribute="bottom" constant="17" id="im0-Kn-Pfe"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e8H-xb-UB1"/>
                     <connections>
@@ -3057,6 +3066,7 @@
         <image name="LOGOUT.png" width="32" height="32"/>
         <image name="NavigatorBar.png" width="640" height="130"/>
         <image name="Titulo_Plastico.png" width="300" height="300"/>
+        <image name="ambientalizate.png" width="200" height="194"/>
         <image name="atras.png" width="512" height="508"/>
         <image name="backBonito.png" width="24" height="21"/>
         <image name="backButton.png" width="42" height="42"/>
@@ -3078,12 +3088,14 @@
         <image name="continuar2.png" width="50" height="50"/>
         <image name="continuarpartida.png" width="180" height="60"/>
         <image name="email.png" width="512" height="512"/>
+        <image name="eventos.png" width="244" height="248"/>
         <image name="facebookButton.png" width="52" height="52"/>
         <image name="floppy.png" width="256" height="256"/>
         <image name="flower-pot.png" width="30" height="30"/>
         <image name="green.png" width="220" height="220"/>
         <image name="hearts-75.png" width="75" height="75"/>
         <image name="help-50.png" width="50" height="50"/>
+        <image name="iniciativas.png" width="101" height="132"/>
         <image name="iphone_maps_icon_ios6.png" width="542" height="543"/>
         <image name="logo.png" width="420" height="449"/>
         <image name="manito.png" width="52" height="54"/>

@@ -39,7 +39,7 @@ int puntajexusuario;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self recuperoIniciativas];
+    //[self recuperoIniciativas];
     
 
     // Uncomment the following line to preserve selection between presentations.
@@ -54,6 +54,10 @@ int puntajexusuario;
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 
 
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self recuperoIniciativas];
 }
 
 - (void)didReceiveMemoryWarning
@@ -120,9 +124,12 @@ int puntajexusuario;
 //PARA CARGAR LAS INICIATIVAS POR TEMA
 
 -(void) recuperoIniciativas{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
 
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"username", self.nidtema, @"tema", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:nombre, @"username", self.nidtema, @"tema", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"consulta_iniciativaxusuario",@"desc",cuerpo,@"cuerpo" , nil];
     
     NSLog(@"%@", consulta);

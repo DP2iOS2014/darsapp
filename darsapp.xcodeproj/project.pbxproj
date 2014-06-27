@@ -44,6 +44,9 @@
 		12330CC9191AC35A00E85590 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12330CC8191AC35A00E85590 /* SystemConfiguration.framework */; };
 		12330CCD191AC66200E85590 /* MapaTachosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CCC191AC66200E85590 /* MapaTachosViewController.m */; };
 		12330CD3191ADBD500E85590 /* MapaTachosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12330CD2191ADBD500E85590 /* MapaTachosView.m */; };
+		124520C3195DDA9800500FAC /* ambientalizate.png in Resources */ = {isa = PBXBuildFile; fileRef = 124520C2195DDA9800500FAC /* ambientalizate.png */; };
+		124520C5195DDA9E00500FAC /* eventos.png in Resources */ = {isa = PBXBuildFile; fileRef = 124520C4195DDA9E00500FAC /* eventos.png */; };
+		124520C7195DDAA300500FAC /* iniciativas.png in Resources */ = {isa = PBXBuildFile; fileRef = 124520C6195DDAA300500FAC /* iniciativas.png */; };
 		124DAE7B1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */; };
 		124DAE7E1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124DAE7D1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.m */; };
 		1252AEC91947A70F001CCBD3 /* Iniciativas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1252AEC81947A70F001CCBD3 /* Iniciativas.m */; };
@@ -465,6 +468,9 @@
 		12330CCC191AC66200E85590 /* MapaTachosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosViewController.m; sourceTree = "<group>"; };
 		12330CD1191ADBD500E85590 /* MapaTachosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaTachosView.h; sourceTree = "<group>"; };
 		12330CD2191ADBD500E85590 /* MapaTachosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaTachosView.m; sourceTree = "<group>"; };
+		124520C2195DDA9800500FAC /* ambientalizate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ambientalizate.png; path = ../../../Downloads/ambientalizate.png; sourceTree = "<group>"; };
+		124520C4195DDA9E00500FAC /* eventos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eventos.png; path = ../../../Downloads/eventos.png; sourceTree = "<group>"; };
+		124520C6195DDAA300500FAC /* iniciativas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iniciativas.png; path = ../../../Downloads/iniciativas.png; sourceTree = "<group>"; };
 		124DAE791938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeleccionAdmNoAdmTableViewCell.h; sourceTree = "<group>"; };
 		124DAE7A1938F39A00736A7C /* SeleccionAdmNoAdmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeleccionAdmNoAdmTableViewCell.m; sourceTree = "<group>"; };
 		124DAE7C1938F3C500736A7C /* SeleccionAdmNoAdmTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeleccionAdmNoAdmTableViewController.h; sourceTree = "<group>"; };
@@ -1405,6 +1411,9 @@
 		12A128CB191EAE3000397B90 /* Ambientalizate */ = {
 			isa = PBXGroup;
 			children = (
+				124520C2195DDA9800500FAC /* ambientalizate.png */,
+				124520C4195DDA9E00500FAC /* eventos.png */,
+				124520C6195DDAA300500FAC /* iniciativas.png */,
 				12A428F21947976F001C18BF /* Iniciativas */,
 				124DAE781938F31000736A7C /* SeleccionAmbientalizateAdm */,
 				128AC03E192D3E800015AEF4 /* Imagenes lider Ambiental */,
@@ -2105,6 +2114,7 @@
 				12E53C5B191D81BC00911B7C /* 1718.png in Resources */,
 				12D8719D19364CB00035F0E0 /* Papel de Escritorio.png in Resources */,
 				129EE5D019085475008A72CF /* email.png in Resources */,
+				124520C3195DDA9800500FAC /* ambientalizate.png in Resources */,
 				129EDB571938DDC90088735B /* comodines_tittle.png in Resources */,
 				12EEAB14191D4431002F0D6E /* 1_Electricidad.png in Resources */,
 				12EEAB16191D4431002F0D6E /* 3_Electricidad.png in Resources */,
@@ -2180,9 +2190,11 @@
 				12A75837191AF36E00E03C5E /* 4_Separatas.png in Resources */,
 				129EDB631938E4C50088735B /* manito.png in Resources */,
 				129D4DA31919BE2100D12423 /* RuletaSinFondo.png in Resources */,
+				124520C7195DDAA300500FAC /* iniciativas.png in Resources */,
 				12A75836191AF36E00E03C5E /* 3_Separatas.png in Resources */,
 				12A67152192FDF8400E03C72 /* Roboto-LightItalic.ttf in Resources */,
 				129D4DB31919C27200D12423 /* againFinal.png in Resources */,
+				124520C5195DDA9E00500FAC /* eventos.png in Resources */,
 				12EEAB28191D4485002F0D6E /* 4_DaleVidaATusResiduos.png in Resources */,
 				12E53C5D191D81DD00911B7C /* 1682.png in Resources */,
 				12A128E9191ED74C00397B90 /* bicicleta.jpg in Resources */,

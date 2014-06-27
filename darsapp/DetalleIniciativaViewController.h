@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "EDStarRating.h"
 
-@interface DetalleIniciativaViewController : ViewController<EDStarRatingProtocol>
+@interface DetalleIniciativaViewController : ViewController<UIAlertViewDelegate, EDStarRatingProtocol>
 @property (weak, nonatomic) IBOutlet EDStarRating *starRating;
 @property (strong, nonatomic) IBOutlet UILabel *lblIniciativa;
 @property (strong, nonatomic) IBOutlet UILabel *lblDescripcion;

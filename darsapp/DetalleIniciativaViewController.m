@@ -51,6 +51,16 @@ int puntajexusuario;
     
 }
 
+- (IBAction)seApretoGuardar:(id)sender {
+    
+    NSInteger ratingAux = self.starRating.rating*20 ;
+    NSNumber * rating = [[NSNumber alloc] initWithInteger:ratingAux];
+    
+    [self guardoRating:rating];
+    
+}
+
+
 
 -(void) guardoRating:(NSNumber*)rating{
     NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
@@ -75,7 +85,7 @@ int puntajexusuario;
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Mensaje"
                                                             message:@"Su iniciativa se guardo satisfactoriamente"
-                                                           delegate:nil
+                                                           delegate:self
                                                   cancelButtonTitle:@"Ok"
                                                   otherButtonTitles:nil];
         [alertView show];
@@ -116,10 +126,13 @@ int puntajexusuario;
     [alertView show];
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 -(void)viewWillDisappear:(BOOL)animated{
-    NSInteger ratingAux = self.starRating.rating*20 ;
-    NSNumber * rating = [[NSNumber alloc] initWithInteger:ratingAux];
-    [self guardoRating:rating];
+    
+    //[self guardoRating:rating];
 }
 
 @end

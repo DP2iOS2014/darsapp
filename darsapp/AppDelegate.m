@@ -47,7 +47,7 @@
     //[[IBCoreDataStore mainStore] save];
     
     // Initialize Mixpanel with your project token
-    [Mixpanel sharedInstanceWithToken:@"9f685795b4ac3f5d0a9e07fb28e75d92"];
+    [Mixpanel sharedInstanceWithToken:@"71bac9282a80208f8b37ff6ed9bf543e"];
     
     // Tell iOS you want  your app to receive push
     // notifications

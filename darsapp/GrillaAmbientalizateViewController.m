@@ -56,7 +56,7 @@
     estados = [[NSMutableArray alloc]init];
     nids = [[NSMutableArray alloc]init];
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ecotips", @"tipo", @[], @"filtro", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"ecotips", @"tipo", nil];
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Consulta",@"operacion",cuerpo,@"cuerpo" , nil];
     
     NSLog(@"%@", consulta);
@@ -91,7 +91,7 @@
                     [ecotips addObject:postFijo];
                     [nids addObject:nid];
                     [puntajes   addObject:puntaje];
-                    [estados addObject:puntaje];
+                    //[estados addObject:puntaje];
                     
                 }
                 [self.collectionView reloadData];
@@ -178,8 +178,15 @@
     [((GrillaAmbientalizateCell*)cell).imagen setImageWithURL:[NSURL URLWithString:ecotips[indexPath.row]] placeholderImage:[UIImage imageNamed:@"congruent_pentagon"]];
     
     NSArray * indexItems = [self.collectionView indexPathsForSelectedItems];
+    
+    if ([estados count]!=0){
+        
+    }
+    else{
+        
+    }
     if ([ecoTips.ArregloEstados count]!=0) {
-        if([[ecoTips.ArregloEstados objectAtIndex:indexPath.row] isEqual:@100]){
+        if([[ecoTips.ArregloEstados objectAtIndex:indexPath.row] isEqual:@1]){
             cell.imagen.alpha=0.3;
             cell.imagenCheck.alpha = 1;
             [self.collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:nil];
@@ -193,6 +200,10 @@
 
         }
     }else{
+        for(int i=0; i<[puntajes count];i++){
+            [estados addObject:@0];
+        }
+        [ecoTips setArregloEstados:estados];
         cell.imagen.alpha=1;
         cell.imagenCheck.alpha = 0;
     }
@@ -259,16 +270,19 @@
     
     GrillaAmbientalizateCell* celda = [self.collectionView cellForItemAtIndexPath:indexPath];
     
-    NSNumber * mistado = [estados objectAtIndex:indexPath.row];
+    NSNumber * mistado = [ecoTips.ArregloEstados objectAtIndex:indexPath.row];
+    
+    
     
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 
     
     //ESTA DESACTIVADO
-    if (mistado.intValue == 20) {
+    if (mistado.intValue == 0) {
         
         puntajeUsuario = [[puntajes objectAtIndex:indexPath.row] doubleValue] + puntajeUsuario;
-         estados[indexPath.row] = @100;
+        
+        ecoTips.ArregloEstados[indexPath.row] = @1;
         
         [UIView transitionWithView:celda.imagen duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
             
@@ -281,7 +295,7 @@
             self.navigationItem.backBarButtonItem.enabled = YES;
             
         }];
-        [ecoTips setArregloEstados:estados];
+       //[ecoTips setArregloEstados:estados];
         
     }else{
          puntajeUsuario = puntajeUsuario - [[puntajes objectAtIndex:indexPath.row] doubleValue];
@@ -297,8 +311,8 @@
             self.navigationItem.backBarButtonItem.enabled = YES;
         }];
         
-        estados[indexPath.row] = @20;
-        [ecoTips setArregloEstados:estados];
+        ecoTips.ArregloEstados[indexPath.row] = @0;
+        //[ecoTips setArregloEstados:estados];
         
     }
     

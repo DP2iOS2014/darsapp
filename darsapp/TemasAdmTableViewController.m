@@ -22,6 +22,7 @@
 
     NSDictionary * respuesta;
     NSDictionary *respuestatemas;
+    
     NSMutableArray *arregloRespuesta;
     NSMutableArray *titulos;
     NSMutableArray *nombresimagenes;
@@ -284,8 +285,10 @@
         [arreglo addObject:lista];
     }
   
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    NSString * nombre = [datos stringForKey:@"NombreUsuario"];
     
-    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:@"config", @"admin", lista, @"listaNodos", nil];
+    NSDictionary *cuerpo = [NSDictionary dictionaryWithObjectsAndKeys:nombre, @"username", lista, @"listaNodos", nil];
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Accion",@"operacion",@"registro_votoxusuario",@"desc",cuerpo,@"cuerpo" , nil];
     

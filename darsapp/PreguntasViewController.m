@@ -610,13 +610,17 @@ typedef void (^myCompletion)(BOOL);
         
     }else if (Correcta==1){
         //Mandar puntaje a back END
-        [[NSUserDefaults standardUserDefaults] setInteger:vidasActual forKey:@"vidasJuegoRuleta"];
         NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
-        int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
-        if(puntajeActual>puntajeMaximo){
+        
+        NSString * nombreUsuario = [datosUsuario stringForKey:@"Visitante"];
+        [[NSUserDefaults standardUserDefaults] setInteger:vidasActual forKey:@"vidasJuegoRuleta"];
+        
+        if([nombreUsuario isEqualToString:@"N"]){
+            int puntajeMaximo = [datosUsuario doubleForKey:@"puntajeMaximoRuleta"];
+            if(puntajeActual>puntajeMaximo){
             [[NSUserDefaults standardUserDefaults] setDouble:puntajeActual forKey:@"puntajeMaximoRuleta"];
             [self GuardarPuntajeJuego];
-            
+            }
         }
         [self performSelector:@selector(irAHacerHora) withObject:nil afterDelay:2];
         
@@ -646,6 +650,43 @@ typedef void (^myCompletion)(BOOL);
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:@"Almacenamiento",@"operacion",cuerpo,@"cuerpo", nil];
     
     NSLog(@"%@", consulta);
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager POST:RecuperoTemas parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        
+        NSDictionary * respuestajson = responseObject;
+        
+        NSLog(@"JSON: %@", respuestajson);
+        
+        //NSDictionary * cuerpo = [respuestajson objectForKey:@"cuerpo"];
+        
+        //NSArray * listaNodos = [cuerpo objectForKey:@"listaNodos"];
+        
+        //NSString *estado = [[listaNodos objectAtIndex:0] objectForKey:@"estado"];
+        
+        
+    }
+     
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                        
+                                                                  message:[error localizedDescription]
+                                        
+                                                                 delegate:nil
+                                        
+                                                        cancelButtonTitle:@"Ok"
+                                        
+                                                        otherButtonTitles:nil];
+              
+              [alertView show];
+              
+          }];
+    
 
 
 }

@@ -51,15 +51,30 @@
 
 
 - (IBAction)cerrarSesion:(id)sender {
+    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
     
-    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Cerrar Sesión"
+    NSString * nombreUsuario = [datosUsuario stringForKey:@"Visitante"];
+   
+    UIAlertView* alertView;
+    if([nombreUsuario isEqualToString:@"N"]){
+    
+     alertView = [[UIAlertView alloc] initWithTitle:@"Cerrar Sesión"
                                            message:@"Está seguro que desea cerrar sesión?"
                                           delegate:self
                                  cancelButtonTitle:@"No"
                                  otherButtonTitles:@"Si",nil];
     [alertView show];
     
-  
+    }else{
+        alertView = [[UIAlertView alloc] initWithTitle:@"Volver"
+                                               message:@"Está seguro que desea regresar al inicio?"
+                                              delegate:self
+                                     cancelButtonTitle:@"No"
+                                     otherButtonTitles:@"Si",nil];
+        [alertView show];
+    
+    
+    }
 
 }
 

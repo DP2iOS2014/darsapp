@@ -142,9 +142,8 @@
 
         
         NSUserDefaults * datosDeUsuario = [NSUserDefaults standardUserDefaults];
-        
     
-        double puntajeMaximo = [datosDeUsuario doubleForKey:@"puntajeMaximoRuleta"];
+       double puntajeMaximo = [datosDeUsuario doubleForKey:@"puntajeMaximoRuleta"];
         
         self.ptjMaximo.text = [NSString stringWithFormat:@"%0.2f",puntajeMaximo];
     

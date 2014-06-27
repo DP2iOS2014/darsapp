@@ -10,6 +10,8 @@
 #import "URLsJson.h"
 #import "Login.h"
 
+typedef void (^myCompletion)(BOOL);
+
 @interface LoginViewController ()
 
 @end
@@ -80,9 +82,11 @@
     
     
 }
+
 - (IBAction)ApretoVisitante:(id)sender {
     [[NSUserDefaults standardUserDefaults] setObject:@"S" forKey:@"Visitante"];
     [self performSegueWithIdentifier:@"exito_login" sender:self];
+   [[NSUserDefaults standardUserDefaults] setDouble:0 forKey:@"puntajeMaximoRuleta"];
     
 }
 
@@ -90,15 +94,27 @@
 - (IBAction)ApretoIngresar:(id)sender {
     self.cargando.alpha = 1 ;
     // Arreglo de los indices(indices son Strings)
-    
     [Login jsonLoginConUsuario:self.tFusuario.text yPassword:self.tFContrasenha.text];
+}
 
+-(void) myMethod:(myCompletion) compblock {
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    NSString * NombreUsuario = [datosDeMemoria stringForKey:@"NombreUsuario"];
+    [self recuperaDatosUsuario:NombreUsuario];
+    compblock (YES);
     
 }
 
--(void) recuperaDatosUsuario:(NSString*)NombreUsuario{
-    NSUserDefaults * datosUsuario = [NSUserDefaults standardUserDefaults];
-    NSString * nombreUsuario = [datosUsuario stringForKey:@"NombreUsuario"];
+-(void)loginExito{
+    [self myMethod:^(BOOL finished) {
+        if(finished){
+              [self performSegueWithIdentifier:@"exito_login" sender:self];
+        }
+    }];
+
+}
+
+-(void) recuperaDatosUsuario:(NSString*)nombreUsuario{
     
     NSDictionary *cuerpo = [[NSDictionary alloc] initWithObjectsAndKeys:@"puntaje_juego",@"tipo",nombreUsuario,@"usuario", nil];
     
@@ -149,14 +165,9 @@
               
           }];
     
-
-
-
+    
 }
 
--(void)loginExito{
-    [self performSegueWithIdentifier:@"exito_login" sender:self];
-}
 
 -(void)loginFallo:(NSString *)mensaje{
     UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:mensaje delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];

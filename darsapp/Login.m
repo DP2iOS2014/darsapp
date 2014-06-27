@@ -124,9 +124,12 @@ manager.requestSerializer = [AFJSONRequestSerializer serializer];
                     [[NSUserDefaults standardUserDefaults] setObject:@"N" forKey:@"netin"];
                 }
                 [objetoLogin.delegate loginExito];
+            }else{
+                //Entra Dos veces
+                [objetoLogin.delegate loginExito];
+            
             }
             
-            [objetoLogin.delegate loginExito];
         }else if([NombreUsuario isEqualToString:@""] && [ContraseñaUsuario isEqualToString:@""]){
             //Falta colocar usuario y contrasena
             [objetoLogin.delegate loginFallo:@"Debe ingresar Usuario y/o Contraseña"];
@@ -168,5 +171,6 @@ manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
  
 }
+
 
 @end

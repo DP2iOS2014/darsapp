@@ -130,6 +130,8 @@
     self.parentViewController.view.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"fondo.png"]];
     self.collectionView.backgroundColor = [UIColor clearColor];
     
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
     
     ///////
     MyFlowLayout *myLayout = [[MyFlowLayout alloc]init];

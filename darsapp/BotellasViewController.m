@@ -123,9 +123,12 @@
 }
 
 - (IBAction)compartirFotos:(UIBarButtonItem*)sender {
+    NSMutableArray * imagenesCompartir = [[NSMutableArray alloc] init];
     
-        
-        UIActivityViewController *miActivity = [[UIActivityViewController alloc] initWithActivityItems:@[@"Te invito a conocer la Ruta de las botellas con la aplicación de la DARS", items] applicationActivities:nil];
+        UIImage * imagen = [UIImage imageNamed:self.items[0]];
+    
+    
+        UIActivityViewController *miActivity = [[UIActivityViewController alloc] initWithActivityItems:@[@"Te invito a conocer la Ruta de las botellas con la aplicación de la DARS", imagen] applicationActivities:nil];
         
         miActivity.excludedActivityTypes = @[UIActivityTypeMail];
         

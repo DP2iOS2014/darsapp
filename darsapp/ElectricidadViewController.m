@@ -123,8 +123,8 @@
     
 }
 - (IBAction)compartirFotos:(UIBarButtonItem*)sender {
-    
-    UIActivityViewController *miActivity = [[UIActivityViewController alloc] initWithActivityItems:@[@"Te invito a conocer la Ruta de la electricidad con la aplicación de la DARS", items] applicationActivities:nil];
+    UIImage * imagen = [UIImage imageNamed:self.items[0]];
+    UIActivityViewController *miActivity = [[UIActivityViewController alloc] initWithActivityItems:@[@"Te invito a conocer la Ruta de la electricidad con la aplicación de la DARS", imagen] applicationActivities:nil];
     
     miActivity.excludedActivityTypes = @[UIActivityTypeMail];
     

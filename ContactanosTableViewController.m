@@ -84,8 +84,8 @@
                 }else{
             //telefono
                 
-                if([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:@"tel://991370292"]]){
-                    miURLString = @"tel://991370292";
+                if([[UIApplication sharedApplication]canOpenURL:[NSURL URLWithString:@"tel://016262000"]]){
+                    miURLString = @"tel://016260000";
                 }else{
                     miURLString = @"";
                     UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"No se puede llamar" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
